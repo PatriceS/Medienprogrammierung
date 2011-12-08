@@ -19,6 +19,11 @@ namespace Programming
                 
         }
 
+        public void rotate(System.Windows.Forms.PictureBox pictureBox1)
+        {
+            Test.rotate(pictureBox1);
+        }
+
         public static Controller getInstance()
         {
             if(con!=null)  return con;

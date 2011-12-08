@@ -24,7 +24,7 @@ namespace Programming
 
             Controller x = Controller.getInstance();
             x.setPictureBox(pictureBox1);
-            x.filter(pictureBox1);
+            x.rotate(pictureBox1);
             
         }
 
