@@ -12,7 +12,7 @@ namespace Programming
         {
             picBox.Image.RotateFlip(RotateFlipType.Rotate180FlipX);
             System.Windows.Forms.MessageBox.Show(picBox.ImageLocation);
-            picBox.Refresh();
+            
         }
     }
 }
