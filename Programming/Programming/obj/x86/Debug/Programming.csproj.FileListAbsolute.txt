@@ -1,0 +1,9 @@
+C:\Users\Patrice\Documents\Github\Programming\Programming\bin\Debug\Programming.exe
+C:\Users\Patrice\Documents\Github\Programming\Programming\bin\Debug\Programming.pdb
+C:\Users\Patrice\Documents\Github\Programming\Programming\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Patrice\Documents\Github\Programming\Programming\obj\x86\Debug\Programming.Datei1.resources
+C:\Users\Patrice\Documents\Github\Programming\Programming\obj\x86\Debug\Programming.Properties.Resources.resources
+C:\Users\Patrice\Documents\Github\Programming\Programming\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Patrice\Documents\Github\Programming\Programming\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Patrice\Documents\Github\Programming\Programming\obj\x86\Debug\Programming.exe
+C:\Users\Patrice\Documents\Github\Programming\Programming\obj\x86\Debug\Programming.pdb
