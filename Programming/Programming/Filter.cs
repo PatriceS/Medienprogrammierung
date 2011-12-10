@@ -6,13 +6,14 @@ using System.Text;
 using System.Drawing.Imaging;
 using System.Drawing;
 using Bitmap     = System.Drawing.Bitmap;
+using System.Threading;
 
 
 namespace Programming
 {
     class Filter
     {
-        private static int threads = 2;
+        private static int threads = 1;
         public static bool kernel( Bitmap b, FilterType.FilterNames filter )
         {
             BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height),
@@ -20,6 +21,7 @@ namespace Programming
             int stride = bmData.Stride;
             System.IntPtr Scan0 = bmData.Scan0;
 
+            /*
             switch (filter)
             {
                 case FilterType.FilterNames.INVERT:
@@ -27,7 +29,9 @@ namespace Programming
                    // Filter.invert(b, stride, Scan0);
                     break;
             }
-            
+             */
+
+            doFilter( b, Scan0, stride, b.Height );
 
             b.UnlockBits(bmData);
             return true;
@@ -35,15 +39,31 @@ namespace Programming
 
         private static void doFilter(Bitmap b, System.IntPtr Scan0, int stride, int height)
         {
-            int step = computeHeightSteps(height);
-            int pos = computePixelPosition(step, b.Width);
+            int steps = computeHeightSteps(height);
+            
            
 
             for (int i = 0; i < threads; i++)
             {
-                FilterThread f = new FilterThread(b, Scan0, stride, b.Height, 11);
+                int height_start = steps * i;
+                int height_end = computeHeightEnd(height_start, steps, height);
+                int pos          = computePixelPosition(height_start, b.Width);
+                FilterThread f = new FilterThread(b, Scan0, stride, height_start,height_end, pos);
+                
+                new Thread( f.invert ).Start();
+               
             }
                 
+        }
+
+        private static int computeHeightEnd(int height_start, int steps, int height)
+        {
+            if ((height_start + steps) <= height)
+            {
+                return (height_start + steps);
+            }
+
+            return height;
         }
 
         private static int computePixelPosition(int step, int width)
