@@ -12,6 +12,7 @@ namespace Programming
 {
     class Filter
     {
+        private static int threads = 2;
         public static bool kernel( Bitmap b, FilterType.FilterNames filter )
         {
             BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height),
@@ -22,7 +23,8 @@ namespace Programming
             switch (filter)
             {
                 case FilterType.FilterNames.INVERT:
-                    Filter.invert(b, stride, Scan0);
+                    FilterThread filterThread = new FilterThread(b, Scan0, stride, b.Height, 11);
+                   // Filter.invert(b, stride, Scan0);
                     break;
             }
             
@@ -31,31 +33,40 @@ namespace Programming
             return true;
         }
 
+        private static void doFilter(Bitmap b, System.IntPtr Scan0, int stride, int height)
+        {
+            int step = computeHeightSteps(height);
+            int pos = computePixelPosition(step, b.Width);
+           
+
+            for (int i = 0; i < threads; i++)
+            {
+                FilterThread f = new FilterThread(b, Scan0, stride, b.Height, 11);
+            }
+                
+        }
+
+        private static int computePixelPosition(int step, int width)
+        {
+            return (step * width);
+        }
+
+        private static int computeHeightSteps(int height)
+        {
+            int step = (int)(height / threads);
+            return Math.Max( 1, step );
+            
+        }
+
+        
+
+
         private static void chooseFilter( Bitmap b, FilterType.FilterNames filter )
         {
 
         }
 
-        private static bool invert(Bitmap b, int stride, System.IntPtr Scan0)
-        {
-
-            unsafe
-            {
-                byte* p = (byte*)(void*)Scan0;
-                int nOffset = stride - b.Width * 3;
-                int nWidth = b.Width * 3;
-                for (int y = 0; y < b.Height; ++y)
-                {
-                    for (int x = 0; x < nWidth; ++x)
-                    {
-                        p[0] = (byte)(255 - p[0]);
-                        ++p;
-                    }
-                    p += nOffset;
-                }
-            }
-            return true;
-        }
+        
 
     }
 }
