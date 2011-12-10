@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Bitmap     = System.Drawing.Bitmap;
+using PictureBox = System.Windows.Forms.PictureBox;
 namespace Programming
 {
     class Controller
@@ -19,9 +20,11 @@ namespace Programming
                 
         }
 
-        public void rotate(System.Windows.Forms.PictureBox pictureBox1)
+        public void invert(PictureBox pictureBox1)
         {
-            Test.rotate(pictureBox1);
+            
+            //Test.rotate(pictureBox1);
+            Filter.kernel( (Bitmap)pictureBox1.Image, FilterType.FilterNames.INVERT  );
             pictureBox1.Refresh();
         }
 

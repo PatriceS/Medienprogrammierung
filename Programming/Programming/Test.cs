@@ -11,7 +11,7 @@ namespace Programming
         public static void rotate(System.Windows.Forms.PictureBox picBox)
         {
             picBox.Image.RotateFlip(RotateFlipType.Rotate180FlipX);
-            System.Windows.Forms.MessageBox.Show(picBox.ImageLocation);
+            
             
         }
     }
