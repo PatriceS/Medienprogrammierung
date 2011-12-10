@@ -12,6 +12,7 @@ namespace Programming
 {
     public partial class Datei1 : Form
     {
+        
         public Datei1()
         {
             InitializeComponent();
@@ -20,10 +21,11 @@ namespace Programming
         private void button1_Click(object sender, EventArgs e)
         {
 
-     
 
+            
             Controller x = Controller.getInstance();
             x.setPictureBox(pictureBox1);
+            
             x.invert(pictureBox1);
             
         }
@@ -40,11 +42,13 @@ namespace Programming
 
         private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+            
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
-                
-            
+
+               
             
             }
         }

@@ -13,10 +13,24 @@ namespace Programming
 {
     class Filter
     {
-        private static int threads = 1;
-        public static bool kernel( Bitmap b, FilterType.FilterNames filter )
+        private Bitmap b;
+        private FilterType.FilterNames filter;
+        private ThreadInfo thInfo;
+
+        static int test = 0;
+
+        public Filter(Bitmap b, FilterType.FilterNames filter, ThreadInfo thInfo)
         {
-            BitmapData bmData = b.LockBits(new Rectangle(0, 0, b.Width, b.Height),
+            this.b = b;
+            this.filter = filter;
+            this.thInfo = thInfo;
+
+        }
+
+        public bool kernel()
+        {
+            
+            BitmapData bmData = this.b.LockBits(new Rectangle(0, 0, this.b.Width, this.b.Height),
             ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
             int stride = bmData.Stride;
             System.IntPtr Scan0 = bmData.Scan0;
@@ -31,32 +45,33 @@ namespace Programming
             }
              */
 
-            doFilter( b, Scan0, stride, b.Height );
+            doFilter( Scan0, stride );
 
-            b.UnlockBits(bmData);
+            this.b.UnlockBits(bmData);
             return true;
         }
 
-        private static void doFilter(Bitmap b, System.IntPtr Scan0, int stride, int height)
+        private void doFilter( System.IntPtr Scan0, int stride)
         {
+            int height = this.b.Height;
             int steps = computeHeightSteps(height);
-            
-           
 
-            for (int i = 0; i < threads; i++)
+
+
+            for (int i = 0; i < thInfo.getThreads(); i++)
             {
                 int height_start = steps * i;
                 int height_end = computeHeightEnd(height_start, steps, height);
                 int pos          = computePixelPosition(height_start, b.Width);
-                FilterThread f = new FilterThread(b, Scan0, stride, height_start,height_end, pos);
+                FilterThread f = new FilterThread(this.b, Scan0, stride, height_start, height_end, pos, this.thInfo);
                 
                 new Thread( f.invert ).Start();
-               
             }
+            
                 
         }
 
-        private static int computeHeightEnd(int height_start, int steps, int height)
+        private int computeHeightEnd(int height_start, int steps, int height)
         {
             if ((height_start + steps) <= height)
             {
@@ -66,14 +81,14 @@ namespace Programming
             return height;
         }
 
-        private static int computePixelPosition(int step, int width)
+        private int computePixelPosition(int step, int width)
         {
             return (step * width);
         }
 
-        private static int computeHeightSteps(int height)
+        private int computeHeightSteps(int height)
         {
-            int step = (int)(height / threads);
+            int step = (int)(height / thInfo.getThreads());
             return Math.Max( 1, step );
             
         }
