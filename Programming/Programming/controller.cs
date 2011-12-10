@@ -10,7 +10,7 @@ namespace Programming
     {
         static Controller con = null;
         System.Windows.Forms.PictureBox pic;
-        private int threads = 2;
+        private int threads = 3;
 
         public Controller()
         {
@@ -26,12 +26,10 @@ namespace Programming
             
             //Test.rotate(pictureBox1);
             ThreadInfo thInfo = new ThreadInfo(threads);
-           
-
             Filter f = new Filter((Bitmap)pictureBox1.Image, FilterType.FilterNames.INVERT, thInfo);
             f.kernel();
             thInfo.isAlive();
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(1000);
             pictureBox1.Refresh();
         }
 

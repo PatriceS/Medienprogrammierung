@@ -60,9 +60,10 @@ namespace Programming
 
             for (int i = 0; i < thInfo.getThreads(); i++)
             {
-                int height_start = steps * i;
+                
+                int height_start = computeHeightStart(steps, i);
                 int height_end = computeHeightEnd(height_start, steps, height);
-                int pos          = computePixelPosition(height_start, b.Width);
+                int pos        = computePixelPosition(height_start, b.Width);
                 FilterThread f = new FilterThread(this.b, Scan0, stride, height_start, height_end, pos, this.thInfo);
                 
                 new Thread( f.invert ).Start();
@@ -71,11 +72,26 @@ namespace Programming
                 
         }
 
+        private int computeHeightStart(int steps, int i)
+        {
+            int height_start = steps * i;
+            if (height_start == 0)
+            {
+                return 0;
+            }
+
+            return height_start + 1;
+        }
+
         private int computeHeightEnd(int height_start, int steps, int height)
         {
-            if ((height_start + steps) <= height)
+            if (height == 0)
             {
-                return (height_start + steps);
+                return (height_start + steps );
+            }
+            if ((height_start + steps ) <= height)
+            {
+                return (height_start + steps );
             }
 
             return height;

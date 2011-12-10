@@ -48,7 +48,7 @@ namespace Programming
             unsafe
             {
                 byte* p = (byte*)(void*)Scan0;
-                //p += this.pos;
+                p += this.pos;
                 int nOffset = stride - b.Width * 3;
                 int nWidth = b.Width * 3;
                 for (int y = height_start; y < height_end; ++y)
@@ -57,7 +57,8 @@ namespace Programming
                     {
                         lock (_locker)
                         {
-                            p[0] = (byte)(255 - p[0]);
+                           // p[0] = (byte)(255 - p[0]);
+                            p[0] = (byte)(0);
                             ++p;
                         }
                        
