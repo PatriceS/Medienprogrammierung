@@ -15,7 +15,7 @@ namespace Programming
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Datei1());
+            Application.Run(new Form1());
         }
     }
 }

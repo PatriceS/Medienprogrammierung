@@ -1,6 +1,6 @@
 ﻿namespace Programming
 {
-    partial class Datei1
+    partial class Form1
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Datei1));
-            this.facebookButton = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.publishFacebook = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -37,30 +37,37 @@
             this.bildÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bildSpeichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manipulationenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überSompeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.publishTwitter = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.loginTwitter = new System.Windows.Forms.Button();
+            this.loginFacebook = new System.Windows.Forms.Button();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
             // 
-            // facebookButton
+            // publishFacebook
             // 
-            this.facebookButton.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.facebookButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("facebookButton.BackgroundImage")));
-            this.facebookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.facebookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.facebookButton.Location = new System.Drawing.Point(16, 106);
-            this.facebookButton.Name = "facebookButton";
-            this.facebookButton.Size = new System.Drawing.Size(125, 125);
-            this.facebookButton.TabIndex = 0;
-            this.facebookButton.Text = "\r\n";
-            this.facebookButton.UseCompatibleTextRendering = true;
-            this.facebookButton.UseVisualStyleBackColor = false;
+            this.publishFacebook.AutoSize = true;
+            this.publishFacebook.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.publishFacebook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishFacebook.BackgroundImage")));
+            this.publishFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.publishFacebook.Location = new System.Drawing.Point(4, 583);
+            this.publishFacebook.Name = "publishFacebook";
+            this.publishFacebook.Size = new System.Drawing.Size(80, 80);
+            this.publishFacebook.TabIndex = 0;
+            this.publishFacebook.Text = "\r\n";
+            this.publishFacebook.UseCompatibleTextRendering = true;
+            this.publishFacebook.UseVisualStyleBackColor = false;
+            this.publishFacebook.Click += new System.EventHandler(this.publishFacebook_Click);
             // 
             // openFileDialog1
             // 
@@ -69,9 +76,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(159, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(750, 470);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 500);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -85,7 +92,7 @@
             this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(914, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(809, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -103,44 +110,23 @@
             // bildÖffnenToolStripMenuItem
             // 
             this.bildÖffnenToolStripMenuItem.Name = "bildÖffnenToolStripMenuItem";
-            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bildÖffnenToolStripMenuItem.Text = "Bild öffnen";
             this.bildÖffnenToolStripMenuItem.Click += new System.EventHandler(this.bildÖffnenToolStripMenuItem_Click);
             // 
             // bildSpeichernToolStripMenuItem
             // 
             this.bildSpeichernToolStripMenuItem.Name = "bildSpeichernToolStripMenuItem";
-            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bildSpeichernToolStripMenuItem.Text = "Bild speichern";
             this.bildSpeichernToolStripMenuItem.Click += new System.EventHandler(this.bildSpeichernToolStripMenuItem_Click);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(16, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 125);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(16, 411);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Rotate";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // filterToolStripMenuItem
             // 
@@ -165,27 +151,93 @@
             // überSompeToolStripMenuItem
             // 
             this.überSompeToolStripMenuItem.Name = "überSompeToolStripMenuItem";
-            this.überSompeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.überSompeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.überSompeToolStripMenuItem.Text = "Über Sompe";
             this.überSompeToolStripMenuItem.Click += new System.EventHandler(this.überSompeToolStripMenuItem_Click);
             // 
-            // Datei1
+            // publishTwitter
+            // 
+            this.publishTwitter.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.publishTwitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishTwitter.BackgroundImage")));
+            this.publishTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.publishTwitter.Location = new System.Drawing.Point(90, 583);
+            this.publishTwitter.Name = "publishTwitter";
+            this.publishTwitter.Size = new System.Drawing.Size(80, 80);
+            this.publishTwitter.TabIndex = 3;
+            this.publishTwitter.UseVisualStyleBackColor = false;
+            this.publishTwitter.Click += new System.EventHandler(this.publishTwitter_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(176, 583);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Rotate";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Location = new System.Drawing.Point(60, 44);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(0, 18);
+            this.usernameLabel.TabIndex = 5;
+            // 
+            // loginTwitter
+            // 
+            this.loginTwitter.Location = new System.Drawing.Point(659, 40);
+            this.loginTwitter.Name = "loginTwitter";
+            this.loginTwitter.Size = new System.Drawing.Size(145, 25);
+            this.loginTwitter.TabIndex = 6;
+            this.loginTwitter.Text = "mit Twitter einloggen";
+            this.loginTwitter.UseVisualStyleBackColor = true;
+            // 
+            // loginFacebook
+            // 
+            this.loginFacebook.Location = new System.Drawing.Point(508, 40);
+            this.loginFacebook.Name = "loginFacebook";
+            this.loginFacebook.Size = new System.Drawing.Size(145, 25);
+            this.loginFacebook.TabIndex = 7;
+            this.loginFacebook.Text = "mit Facebook einloggen";
+            this.loginFacebook.UseVisualStyleBackColor = true;
+            this.loginFacebook.Click += new System.EventHandler(this.loginFacebook_Click);
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxProfile.InitialImage = null;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(4, 27);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxProfile.TabIndex = 8;
+            this.pictureBoxProfile.TabStop = false;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(914, 562);
+            this.ClientSize = new System.Drawing.Size(809, 712);
+            this.Controls.Add(this.pictureBoxProfile);
+            this.Controls.Add(this.loginFacebook);
+            this.Controls.Add(this.loginTwitter);
+            this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.publishTwitter);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.facebookButton);
+            this.Controls.Add(this.publishFacebook);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Datei1";
+            this.Name = "Form1";
             this.Text = "Sompe";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,21 +245,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button facebookButton;
+        private System.Windows.Forms.Button publishFacebook;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bildÖffnenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bildSpeichernToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button publishTwitter;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manipulationenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem überSompeToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Button loginTwitter;
+        private System.Windows.Forms.Button loginFacebook;
+        private System.Windows.Forms.PictureBox pictureBoxProfile;
     }
 }
 

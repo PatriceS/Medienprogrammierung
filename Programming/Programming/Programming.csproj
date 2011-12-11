@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\..\..\Downloads\prabirshrestha-FB-CSharp-SDK-First-FB-Application-3276d7e\prabirshrestha-FB-CSharp-SDK-First-FB-Application-3276d7e\FirstFacebookApplication\bin\Release\Facebook.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FacebookLoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacebookLoginDialog.Designer.cs">
+      <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manipulations.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Form1.cs">
