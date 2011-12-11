@@ -17,7 +17,7 @@ namespace Programming
         private FilterType.FilterNames filter;
         private ThreadInfo thInfo;
 
-        static int test = 0;
+       
 
         public Filter(Bitmap b, FilterType.FilterNames filter, ThreadInfo thInfo)
         {
@@ -75,12 +75,9 @@ namespace Programming
         private int computeHeightStart(int steps, int i)
         {
             int height_start = steps * i;
-            if (height_start == 0)
-            {
-                return 0;
-            }
+            
 
-            return height_start + 1;
+            return Math.Max(0,height_start) ;
         }
 
         private int computeHeightEnd(int height_start, int steps, int height)
@@ -89,9 +86,9 @@ namespace Programming
             {
                 return (height_start + steps );
             }
-            if ((height_start + steps ) <= height)
+            if ((height_start + steps ) < height)
             {
-                return (height_start + steps );
+                return (height_start + steps - 1);
             }
 
             return height;
@@ -104,7 +101,8 @@ namespace Programming
 
         private int computeHeightSteps(int height)
         {
-            int step = (int)(height / thInfo.getThreads());
+            int threads = thInfo.getThreads();
+            int step = (int)(height / threads );
             return Math.Max( 1, step );
             
         }

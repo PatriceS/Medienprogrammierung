@@ -47,7 +47,10 @@ namespace Programming
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
+                Controller x = Controller.getInstance();
+                x.setPictureBox(pictureBox1);
 
+                x.invert(pictureBox1);
                
             
             }

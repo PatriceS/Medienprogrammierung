@@ -44,6 +44,7 @@ namespace Programming
             lock (_locker)
             {
                 alive.Add("finished");
+                
             }
         }
 

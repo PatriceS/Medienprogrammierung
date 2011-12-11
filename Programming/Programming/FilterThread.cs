@@ -44,29 +44,33 @@ namespace Programming
 
             int height_start = this.height_start;
             int height_end = this.height_end;
-
+            int test = 0;
             unsafe
             {
                 byte* p = (byte*)(void*)Scan0;
                 p += this.pos;
-                int nOffset = stride - b.Width * 3;
+                
+               int nOffset = stride - b.Width * 3;
                 int nWidth = b.Width * 3;
-                for (int y = height_start; y < height_end; ++y)
+             //  int nWidth =  1;
+                for (int y = height_start; y < height_end ; y++)
                 {
-                    for (int x = 0; x < nWidth; ++x)
+                    for (int x = 0; x < nWidth; x++)
                     {
                         lock (_locker)
                         {
-                           // p[0] = (byte)(255 - p[0]);
-                            p[0] = (byte)(0);
+                            p[0] = (byte)(255 - p[0]);
+                           // p[0] = (byte)(0);
                             ++p;
+                        test++;
                         }
                        
                     }
                     p += nOffset;
                 }
             }
-
+           // System.Windows.Forms.MessageBox.Show("sart: " + height_start + " end: " + height_end + " p: " + test);
+            test = 0;
             thInfo.finished();
            
         }
