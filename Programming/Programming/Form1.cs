@@ -13,10 +13,11 @@ namespace Programming
 {
     public partial class Form1 : Form
     {
-        Controller con;
+        private Controller con;
         private const int threads = 4;
         private const string AppId = "263439397045819";
         private string[] extendedPermissions = new[] { "user_about_me", "offline_access" };
+        
 
         public Form1()
         {
@@ -49,7 +50,9 @@ namespace Programming
             {
                 pictureBox1.Load(openFileDialog1.FileName);
                 this.con = Controller.getInstance();
-                con.setPictureBox(pictureBox1);
+                this.con.setPictureBox(pictureBox1);
+                this.con.setMainForm(this);
+                
                 filterToolStripMenuItem.Enabled = true;
             }
         }
@@ -151,14 +154,23 @@ namespace Programming
 
         private void negativToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.con = Controller.getInstance();
-
-            con.invert();
+            Controller.getInstance().invert();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void infoBox_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        internal void setInfoBox(int thread_count, long time)
+        {
+            string str = "Threads: " + thread_count.ToString() + " time: " + time.ToString() + " ms ";
+            infoBox.Text = str;
         }
     }
 }

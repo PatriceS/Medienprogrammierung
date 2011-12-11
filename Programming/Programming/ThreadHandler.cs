@@ -6,6 +6,7 @@ using System.Collections;
 using System.Threading;
 using PictureBox = System.Windows.Forms.PictureBox;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 
 
@@ -19,7 +20,9 @@ namespace Programming
         private static readonly object _locker = new object();
         private static ThreadHandler _object = null;
         private PictureBox pic;
-
+        private Stopwatch watch;
+        
+ 
         public static ThreadHandler getInstance()
         {
             return _object;
@@ -38,10 +41,27 @@ namespace Programming
             }
         }
 
+        public long getTime()
+        {
+            if (this.watch != null)
+            {
+                return this.watch.ElapsedMilliseconds;
+            }
+
+            return 0;
+        }
+
+        private void startTime()
+        {
+            this.watch = new Stopwatch();
+            this.watch.Start();
+        }
+
         public ThreadHandler( int threads)
         {
             this.threads = threads;
             alive = new ArrayList(threads);
+            this.startTime();
         }
 
         public bool threadsAreAlive()
@@ -53,7 +73,8 @@ namespace Programming
                     return true;
                 }
             }
-
+            this.watch.Stop();
+          
             return false;
         }
 
@@ -72,7 +93,7 @@ namespace Programming
             while (this.threadsAreAlive())
             {
                 // bg_filter_thread
-                Thread.Sleep(2);
+               // Thread.Sleep(2);
             }
 
             this.pic.Invoke(new MethodInvoker(invoke_refresh));

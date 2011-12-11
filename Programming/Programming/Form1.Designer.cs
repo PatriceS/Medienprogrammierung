@@ -49,6 +49,7 @@
             this.loginTwitter = new System.Windows.Forms.Button();
             this.loginFacebook = new System.Windows.Forms.Button();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
+            this.infoBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -142,7 +143,7 @@
             // negativToolStripMenuItem
             // 
             this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
-            this.negativToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.negativToolStripMenuItem.Text = "Negativ";
             this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click);
             // 
@@ -227,11 +228,23 @@
             this.pictureBoxProfile.TabIndex = 8;
             this.pictureBoxProfile.TabStop = false;
             // 
+            // infoBox
+            // 
+            this.infoBox.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.infoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.infoBox.Location = new System.Drawing.Point(4, 865);
+            this.infoBox.Name = "infoBox";
+            this.infoBox.ReadOnly = true;
+            this.infoBox.Size = new System.Drawing.Size(216, 13);
+            this.infoBox.TabIndex = 3;
+            this.infoBox.TextChanged += new System.EventHandler(this.infoBox_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 862);
+            this.ClientSize = new System.Drawing.Size(1184, 890);
+            this.Controls.Add(this.infoBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.publishFacebook);
             this.Controls.Add(this.menuStrip1);
@@ -270,6 +283,7 @@
         private System.Windows.Forms.Button loginFacebook;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.ToolStripMenuItem negativToolStripMenuItem;
+        private System.Windows.Forms.TextBox infoBox;
     }
 }
 
