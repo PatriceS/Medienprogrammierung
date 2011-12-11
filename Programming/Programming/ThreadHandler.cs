@@ -93,7 +93,7 @@ namespace Programming
             while (this.threadsAreAlive())
             {
                 // bg_filter_thread
-               // Thread.Sleep(2);
+                Thread.Sleep(2);
             }
 
             this.pic.Invoke(new MethodInvoker(invoke_refresh));

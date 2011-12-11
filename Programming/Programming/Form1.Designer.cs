@@ -50,9 +50,13 @@
             this.loginFacebook = new System.Windows.Forms.Button();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.infoBox = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // publishFacebook
@@ -62,7 +66,7 @@
             this.publishFacebook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishFacebook.BackgroundImage")));
             this.publishFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publishFacebook.Location = new System.Drawing.Point(4, 583);
+            this.publishFacebook.Location = new System.Drawing.Point(3, 3);
             this.publishFacebook.Name = "publishFacebook";
             this.publishFacebook.Size = new System.Drawing.Size(80, 80);
             this.publishFacebook.TabIndex = 0;
@@ -78,9 +82,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 80);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1024, 768);
+            this.pictureBox1.Size = new System.Drawing.Size(768, 544);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -93,7 +97,7 @@
             this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1184, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -230,23 +234,48 @@
             // 
             // infoBox
             // 
-            this.infoBox.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.infoBox.AllowDrop = true;
+            this.infoBox.BackColor = System.Drawing.Color.Honeydew;
             this.infoBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.infoBox.Location = new System.Drawing.Point(4, 865);
+            this.infoBox.Location = new System.Drawing.Point(457, 75);
             this.infoBox.Name = "infoBox";
             this.infoBox.ReadOnly = true;
             this.infoBox.Size = new System.Drawing.Size(216, 13);
             this.infoBox.TabIndex = 3;
+            this.infoBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.infoBox.TextChanged += new System.EventHandler(this.infoBox_TextChanged);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.publishFacebook);
+            this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 577);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(784, 100);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.61786F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.38214F));
+            this.tableLayoutPanel1.Controls.Add(this.infoBox, 1, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(89, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(683, 100);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 890);
-            this.Controls.Add(this.infoBox);
+            this.ClientSize = new System.Drawing.Size(784, 677);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.publishFacebook);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -256,6 +285,10 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,6 +317,8 @@
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.ToolStripMenuItem negativToolStripMenuItem;
         private System.Windows.Forms.TextBox infoBox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
