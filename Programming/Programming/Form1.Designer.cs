@@ -133,6 +133,7 @@
             // 
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.negativToolStripMenuItem});
+            this.filterToolStripMenuItem.Enabled = false;
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.filterToolStripMenuItem.Text = "Filter";
@@ -141,7 +142,7 @@
             // negativToolStripMenuItem
             // 
             this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
-            this.negativToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.negativToolStripMenuItem.Text = "Negativ";
             this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click);
             // 

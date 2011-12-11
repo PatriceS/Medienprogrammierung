@@ -39,6 +39,8 @@ namespace Programming
             
         }
 
+        
+
         private void bildÖffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Jpg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Png Image|*.png";
@@ -48,6 +50,7 @@ namespace Programming
                 pictureBox1.Load(openFileDialog1.FileName);
                 this.con = Controller.getInstance();
                 con.setPictureBox(pictureBox1);
+                filterToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -149,6 +152,7 @@ namespace Programming
         private void negativToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.con = Controller.getInstance();
+
             con.invert();
         }
 
