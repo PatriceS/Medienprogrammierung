@@ -10,18 +10,10 @@ namespace Programming
         static Controller con = null;
         System.Windows.Forms.PictureBox pic;
 
-        public Controller()
-        {
-            
-        }
-
-        public void oeffneBild() {
-                
-        }
-
+      
         public void rotate(System.Windows.Forms.PictureBox pictureBox1)
         {
-            Test.rotate(pictureBox1);
+            Manipulations.rotate90(pictureBox1);
             pictureBox1.Refresh();
         }
 
