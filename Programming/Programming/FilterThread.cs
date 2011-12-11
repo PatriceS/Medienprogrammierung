@@ -18,12 +18,12 @@ namespace Programming
         public int height_end;
        
         private static readonly object _locker = new object();
-        private ThreadInfo thInfo;
+        private ThreadHandler thInfo;
 
 
 
 
-        public FilterThread(Bitmap b, System.IntPtr Scan0, int stride, int height_start, int height_end, ThreadInfo thInfo)
+        public FilterThread(Bitmap b, System.IntPtr Scan0, int stride, int height_start, int height_end, ThreadHandler thInfo)
         {
             this.b = b;
             this.Scan0 = Scan0;
@@ -76,7 +76,7 @@ namespace Programming
            
            // System.Windows.Forms.MessageBox.Show("sart: " + height_start + " end: " + height_end + " p: " + test);
             
-            thInfo.finished();
+           
            
         }
 

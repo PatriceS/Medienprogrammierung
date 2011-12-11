@@ -15,15 +15,15 @@ namespace Programming
     {
         private Bitmap b;
         private FilterType.FilterNames filter;
-        private ThreadInfo thInfo;
+        private ThreadHandler thHandler;
 
        
 
-        public Filter(Bitmap b, FilterType.FilterNames filter, ThreadInfo thInfo)
+        public Filter(Bitmap b, FilterType.FilterNames filter, ThreadHandler thHandler)
         {
             this.b = b;
             this.filter = filter;
-            this.thInfo = thInfo;
+            this.thHandler = thHandler;
 
         }
 
@@ -38,16 +38,6 @@ namespace Programming
 
             System.IntPtr Scan0 = bmData.Scan0;
 
-            /*
-            switch (filter)
-            {
-                case FilterType.FilterNames.INVERT:
-                    FilterThread filterThread = new FilterThread(b, Scan0, stride, b.Height, 11);
-                   // Filter.invert(b, stride, Scan0);
-                    break;
-            }
-             */
-
             doFilter( Scan0, stride );
 
             this.b.UnlockBits(bmData);
@@ -60,21 +50,25 @@ namespace Programming
             int steps = computeHeightSteps(height);
 
             // anzahl der threads die mehr als die min elemente berechnen
-            int sectorThreshold = height % thInfo.getThreads();
+            int sectorThreshold = height % thHandler.getThreads();
 
 
-            for (int i = 0; i < thInfo.getThreads(); i++)
+            for (int i = 0; i < thHandler.getThreads(); i++)
             {
                 int startIndex = i * steps + Math.Min(i, sectorThreshold);
                 int stopIndex = startIndex + steps + (i < sectorThreshold ? 1 : 0);
 
 
-               // int height_start = computeHeightStart(steps, i);
-             //   int height_end = computeHeightEnd(height_start, steps, height);
-             //   int pos        = computePixelPosition(height_start, b.Width);
-                FilterThread f = new FilterThread(this.b, Scan0, stride, startIndex, stopIndex, this.thInfo);
-                
-                new Thread( f.invert ).Start();
+                switch (this.filter)
+                {
+                    case FilterType.FilterNames.INVERT:
+                        FilterThread f = new FilterThread(this.b, Scan0, stride, startIndex, stopIndex, this.thHandler);
+                        Thread thread = new Thread( f.invert );
+                        thread.Start();
+                        this.thHandler.register(thread);
+                        break;
+                }
+
             }
             
                 
@@ -109,7 +103,7 @@ namespace Programming
 
         private int computeHeightSteps(int height)
         {
-            int threads = thInfo.getThreads();
+            int threads = thHandler.getThreads();
             int step = (int)(height / threads );
             return Math.Max( 1, step );
             

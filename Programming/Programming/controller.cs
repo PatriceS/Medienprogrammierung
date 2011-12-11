@@ -18,12 +18,11 @@ namespace Programming
         {
             
             //Test.rotate(pictureBox1);
-            ThreadInfo thInfo = new ThreadInfo(threads);
-            Filter f = new Filter((Bitmap)pic.Image, FilterType.FilterNames.INVERT, thInfo);
-            f.kernel();
-            thInfo.isAlive();
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new Filter((Bitmap)pic.Image, FilterType.FilterNames.INVERT, thHandler).kernel();
+            thHandler.isAlive();
             System.Threading.Thread.Sleep(300);
-            pic.Refresh();
+           // pic.Refresh();
         }
 
         public static Controller getInstance()
