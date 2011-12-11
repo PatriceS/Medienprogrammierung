@@ -59,15 +59,20 @@ namespace Programming
             int height = this.b.Height;
             int steps = computeHeightSteps(height);
 
+            // anzahl der threads die mehr als die min elemente berechnen
+            int sectorThreshold = height % thInfo.getThreads();
 
 
             for (int i = 0; i < thInfo.getThreads(); i++)
             {
-                
-                int height_start = computeHeightStart(steps, i);
-                int height_end = computeHeightEnd(height_start, steps, height);
-                int pos        = computePixelPosition(height_start, b.Width);
-                FilterThread f = new FilterThread(this.b, Scan0, stride, height_start, height_end, pos, this.thInfo);
+                int startIndex = i * steps + Math.Min(i, sectorThreshold);
+                int stopIndex = startIndex + steps + (i < sectorThreshold ? 1 : 0);
+
+
+               // int height_start = computeHeightStart(steps, i);
+             //   int height_end = computeHeightEnd(height_start, steps, height);
+             //   int pos        = computePixelPosition(height_start, b.Width);
+                FilterThread f = new FilterThread(this.b, Scan0, stride, startIndex, stopIndex, this.thInfo);
                 
                 new Thread( f.invert ).Start();
             }

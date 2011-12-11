@@ -29,7 +29,7 @@ namespace Programming
             Filter f = new Filter((Bitmap)pictureBox1.Image, FilterType.FilterNames.INVERT, thInfo);
             f.kernel();
             thInfo.isAlive();
-            //System.Threading.Thread.Sleep(300);
+            System.Threading.Thread.Sleep(300);
             pictureBox1.Refresh();
         }
 
