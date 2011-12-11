@@ -10,7 +10,7 @@ namespace Programming
     {
         static Controller con = null;
         System.Windows.Forms.PictureBox pic;
-        private int threads = 3;
+        private int threads = 4;
 
         public Controller()
         {
@@ -29,7 +29,7 @@ namespace Programming
             Filter f = new Filter((Bitmap)pictureBox1.Image, FilterType.FilterNames.INVERT, thInfo);
             f.kernel();
             thInfo.isAlive();
-            System.Threading.Thread.Sleep(300);
+            //System.Threading.Thread.Sleep(300);
             pictureBox1.Refresh();
         }
 

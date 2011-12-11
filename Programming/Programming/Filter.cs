@@ -33,6 +33,9 @@ namespace Programming
             BitmapData bmData = this.b.LockBits(new Rectangle(0, 0, this.b.Width, this.b.Height),
             ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
             int stride = bmData.Stride;
+
+            int bytes = Math.Abs(bmData.Stride) * bmData.Height;
+
             System.IntPtr Scan0 = bmData.Scan0;
 
             /*
@@ -88,7 +91,7 @@ namespace Programming
             }
             if ((height_start + steps ) < height)
             {
-                return (height_start + steps - 1);
+                return (height_start + steps );
             }
 
             return height;
