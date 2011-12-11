@@ -2,7 +2,7 @@
 {
     partial class FacebookLoginDialog
     {
-        /*
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -62,7 +62,7 @@
         }
 
         #endregion
-        */
+        
         private System.Windows.Forms.WebBrowser webBrowser;
     }
 }

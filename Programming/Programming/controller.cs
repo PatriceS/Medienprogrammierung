@@ -5,32 +5,35 @@ using System.Text;
 
 using Bitmap     = System.Drawing.Bitmap;
 using PictureBox = System.Windows.Forms.PictureBox;
+using System.Windows.Forms;
 namespace Programming
 {
     class Controller
     {
         static Controller con = null;
-        System.Windows.Forms.PictureBox pic;
+        private static System.Windows.Forms.PictureBox pic;
+        private Form1 mainForm;
         private int threads = 4;
 
+
       
-        public void invert(PictureBox pictureBox1)
+        public void invert( )
         {
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new Filter((Bitmap)pic.Image, FilterType.FilterNames.INVERT, thHandler).kernel();
+            thHandler.refresh(pic);
+           // ((Form1)this.mainForm).setInfoBox(thHandler.getTime());
+            this.mainForm.setInfoBox(this.threads, thHandler.getTime());
             
-            //Test.rotate(pictureBox1);
-            ThreadInfo thInfo = new ThreadInfo(threads);
-            Filter f = new Filter((Bitmap)pictureBox1.Image, FilterType.FilterNames.INVERT, thInfo);
-            f.kernel();
-            thInfo.isAlive();
-            System.Threading.Thread.Sleep(300);
-            pictureBox1.Refresh();
+           
         }
 
         public static Controller getInstance()
         {
             if(con!=null)  return con;
 
-            return new Controller();
+            con = new Controller();
+            return con;
         }
 
         internal void setPictureBox(System.Windows.Forms.PictureBox pictureBox1)
@@ -41,6 +44,11 @@ namespace Programming
         public void filter(System.Windows.Forms.PictureBox name)
         {
             System.Windows.Forms.MessageBox.Show(name.ImageLocation);
+        }
+
+        public void setMainForm(Form1 form)
+        {
+            mainForm = form;
         }
     }
 }

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
-//using Facebook;
+using Facebook;
 
 namespace Programming
 {
     public partial class FacebookLoginDialog : Form
     {
         private Uri navigateUrl;
-        /*
+        
         public FacebookLoginDialog(string appId, string[] extendedPermissions)
         {
             var oauth = new FacebookOAuthClient { AppId = appId };
@@ -54,7 +54,7 @@ namespace Programming
         }
 
         public FacebookOAuthResult FacebookOAuthResult { get; private set; }
-        */
+        
         private void webBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 
