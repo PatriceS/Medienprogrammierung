@@ -48,6 +48,7 @@
             this.loginTwitter = new System.Windows.Forms.Button();
             this.loginFacebook = new System.Windows.Forms.Button();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
+            this.negativToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -91,7 +92,7 @@
             this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(809, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1184, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -129,9 +130,12 @@
             // 
             // filterToolStripMenuItem
             // 
+            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.negativToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.filterToolStripMenuItem.Text = "Filter";
+            this.filterToolStripMenuItem.Click += new System.EventHandler(this.filterToolStripMenuItem_Click);
             // 
             // manipulationenToolStripMenuItem
             // 
@@ -202,7 +206,6 @@
             this.loginFacebook.TabIndex = 7;
             this.loginFacebook.Text = "mit Facebook einloggen";
             this.loginFacebook.UseVisualStyleBackColor = true;
-            this.loginFacebook.Click += new System.EventHandler(this.loginFacebook_Click);
             // 
             // pictureBoxProfile
             // 
@@ -215,6 +218,13 @@
             this.pictureBoxProfile.TabIndex = 8;
             this.pictureBoxProfile.TabStop = false;
             // 
+            // negativToolStripMenuItem
+            // 
+            this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.negativToolStripMenuItem.Text = "Negativ";
+            this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +236,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Sompe";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -256,6 +267,7 @@
         private System.Windows.Forms.Button loginTwitter;
         private System.Windows.Forms.Button loginFacebook;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
+        private System.Windows.Forms.ToolStripMenuItem negativToolStripMenuItem;
     }
 }
 
