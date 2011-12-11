@@ -13,12 +13,17 @@ namespace Programming
 {
     public partial class Form1 : Form
     {
+<<<<<<< HEAD
+        
+        public Datei1()
+=======
         Controller con = new Controller();
 
         private const string AppId = "263439397045819";
         private string[] extendedPermissions = new[] { "user_about_me", "offline_access" };
 
         public Form1()
+>>>>>>> f3522a23f1dda89ca74de221fccb1820fe166855
         {
             InitializeComponent();
         }
@@ -43,6 +48,14 @@ namespace Programming
         {
             openFileDialog1.Filter = "Jpg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Png Image|*.png";
 
+<<<<<<< HEAD
+
+            
+            Controller x = Controller.getInstance();
+            x.setPictureBox(pictureBox1);
+            
+            x.invert(pictureBox1);
+=======
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
@@ -51,6 +64,7 @@ namespace Programming
 
         private void bildSpeichernToolStripMenuItem_Click(object sender, EventArgs e)
         {
+>>>>>>> f3522a23f1dda89ca74de221fccb1820fe166855
             
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -70,6 +84,19 @@ namespace Programming
 
         private void DisplayAppropriateMessage(FacebookOAuthResult facebookOAuthResult)
         {
+<<<<<<< HEAD
+            
+            
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Load(openFileDialog1.FileName);
+                Controller x = Controller.getInstance();
+                x.setPictureBox(pictureBox1);
+
+                x.invert(pictureBox1);
+               
+            
+=======
             if (facebookOAuthResult != null)
             {
                 if (facebookOAuthResult.IsSuccess)
@@ -101,6 +128,7 @@ namespace Programming
                 {
                     MessageBox.Show(facebookOAuthResult.ErrorDescription);
                 }
+>>>>>>> f3522a23f1dda89ca74de221fccb1820fe166855
             }
         }
 

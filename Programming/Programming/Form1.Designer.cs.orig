@@ -78,7 +78,12 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(4, 80);
             this.pictureBox1.Name = "pictureBox1";
+<<<<<<< HEAD
             this.pictureBox1.Size = new System.Drawing.Size(1024, 768);
+=======
+            this.pictureBox1.Size = new System.Drawing.Size(800, 500);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+>>>>>>> f3522a23f1dda89ca74de221fccb1820fe166855
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -91,7 +96,11 @@
             this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+<<<<<<< HEAD
+            this.menuStrip1.Size = new System.Drawing.Size(1184, 24);
+=======
             this.menuStrip1.Size = new System.Drawing.Size(809, 24);
+>>>>>>> f3522a23f1dda89ca74de221fccb1820fe166855
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -219,7 +228,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1184, 862);
+            this.Controls.Add(this.pictureBox1);
+=======
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(809, 712);
+            this.Controls.Add(this.pictureBoxProfile);
+            this.Controls.Add(this.loginFacebook);
+            this.Controls.Add(this.loginTwitter);
+            this.Controls.Add(this.usernameLabel);
+>>>>>>> f3522a23f1dda89ca74de221fccb1820fe166855
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.publishTwitter);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.publishFacebook);
             this.Controls.Add(this.menuStrip1);
