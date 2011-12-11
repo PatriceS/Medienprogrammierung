@@ -5,11 +5,15 @@ using System.Text;
 using System.Collections;
 using System.Threading;
 using PictureBox = System.Windows.Forms.PictureBox;
+using System.Windows.Forms;
+
+
 
 namespace Programming
 {
     class ThreadHandler
     {
+        delegate void StringParameterDelegate(string value);
         private int threads;
         private ArrayList alive;
         private static readonly object _locker = new object();
@@ -58,20 +62,29 @@ namespace Programming
             this.pic = pic;
             Thread t = new Thread(
 
-               () => refresh_()
+               () => this.pic.Invoke(new MethodInvoker(invoke_refresh))
 
                 );
+            t.Start();
 
         }
 
-        private void refresh_(  )
+        private void invoke_refresh()
         {
+            
             while( this.isAlive() )
             {
-                System.Threading.Thread.Sleep(10);
+                System.Threading.Thread.Sleep(5);
             }
-            pic.Refresh();
+
+            lock (_locker)
+            {
+                this.pic.Refresh();
+            }
+            
         }
+
+      
 
     }
 }

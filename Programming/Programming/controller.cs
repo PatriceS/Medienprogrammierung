@@ -20,8 +20,8 @@ namespace Programming
             //Test.rotate(pictureBox1);
             ThreadHandler thHandler = new ThreadHandler(threads);
             new Filter((Bitmap)pic.Image, FilterType.FilterNames.INVERT, thHandler).kernel();
-            thHandler.isAlive();
-            System.Threading.Thread.Sleep(300);
+            thHandler.refresh(pic);
+           // System.Threading.Thread.Sleep(300);
            // pic.Refresh();
         }
 
