@@ -2,6 +2,7 @@
 {
     partial class FacebookLoginDialog
     {
+        /*
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -40,6 +41,7 @@
             this.webBrowser.ScrollBarsEnabled = false;
             this.webBrowser.Size = new System.Drawing.Size(547, 297);
             this.webBrowser.TabIndex = 0;
+            this.webBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser_DocumentCompleted);
             this.webBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser_Navigated);
             // 
             // FacebookLoginDialog
@@ -60,7 +62,7 @@
         }
 
         #endregion
-
+        */
         private System.Windows.Forms.WebBrowser webBrowser;
     }
 }

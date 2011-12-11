@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Bitmap     = System.Drawing.Bitmap;
 using PictureBox = System.Windows.Forms.PictureBox;
 namespace Programming
@@ -13,7 +12,16 @@ namespace Programming
         System.Windows.Forms.PictureBox pic;
         private int threads = 4;
 
-      
+<<<<<<< HEAD
+        public Controller()
+        {
+            
+        }
+
+        public void oeffneBild() {
+                
+        }
+
         public void invert(PictureBox pictureBox1)
         {
             
@@ -23,6 +31,12 @@ namespace Programming
             f.kernel();
             thInfo.isAlive();
             System.Threading.Thread.Sleep(300);
+=======
+      
+        public void rotate(System.Windows.Forms.PictureBox pictureBox1)
+        {
+            Manipulations.rotate90(pictureBox1);
+>>>>>>> f3522a23f1dda89ca74de221fccb1820fe166855
             pictureBox1.Refresh();
         }
 
