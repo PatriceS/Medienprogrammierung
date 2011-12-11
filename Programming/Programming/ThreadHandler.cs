@@ -13,7 +13,7 @@ namespace Programming
 {
     class ThreadHandler
     {
-        delegate void StringParameterDelegate(string value);
+      
         private int threads;
         private ArrayList alive;
         private static readonly object _locker = new object();
@@ -44,7 +44,7 @@ namespace Programming
             alive = new ArrayList(threads);
         }
 
-        public bool isAlive()
+        public bool threadsAreAlive()
         {
             foreach (Thread thread in alive)
             {
@@ -60,28 +60,28 @@ namespace Programming
         public void refresh(PictureBox pic)
         {
             this.pic = pic;
-            Thread t = new Thread(
-
-               () => this.pic.Invoke(new MethodInvoker(invoke_refresh))
-
-                );
+            Thread t = new Thread(  () => this.try_refresh()  );
+            t.Name = "bg_filter_thread";
             t.Start();
 
         }
 
-        private void invoke_refresh()
+        private void try_refresh()
         {
-            
-            while( this.isAlive() )
+
+            while (this.threadsAreAlive())
             {
-                System.Threading.Thread.Sleep(5);
+                // bg_filter_thread
+                Thread.Sleep(2);
             }
 
-            lock (_locker)
-            {
-                this.pic.Refresh();
-            }
-            
+            this.pic.Invoke(new MethodInvoker(invoke_refresh));
+                
+        }
+
+        private void invoke_refresh()
+        {
+            this.pic.Refresh();
         }
 
       
