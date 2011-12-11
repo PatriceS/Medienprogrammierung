@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Facebook">
-      <HintPath>..\..\..\Downloads\prabirshrestha-FB-CSharp-SDK-First-FB-Application-3276d7e\prabirshrestha-FB-CSharp-SDK-First-FB-Application-3276d7e\FirstFacebookApplication\bin\Release\Facebook.dll</HintPath>
+      <HintPath>bin\Release\Facebook.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

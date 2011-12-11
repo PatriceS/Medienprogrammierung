@@ -10,20 +10,20 @@ namespace Programming
     class Controller
     {
         static Controller con = null;
-        System.Windows.Forms.PictureBox pic;
+        private static System.Windows.Forms.PictureBox pic;
         private int threads = 4;
 
       
-        public void invert(PictureBox pictureBox1)
+        public void invert( )
         {
             
             //Test.rotate(pictureBox1);
             ThreadInfo thInfo = new ThreadInfo(threads);
-            Filter f = new Filter((Bitmap)pictureBox1.Image, FilterType.FilterNames.INVERT, thInfo);
+            Filter f = new Filter((Bitmap)pic.Image, FilterType.FilterNames.INVERT, thInfo);
             f.kernel();
             thInfo.isAlive();
             System.Threading.Thread.Sleep(300);
-            pictureBox1.Refresh();
+            pic.Refresh();
         }
 
         public static Controller getInstance()

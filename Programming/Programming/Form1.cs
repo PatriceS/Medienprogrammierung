@@ -6,14 +6,14 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-// using Facebook;
+using Facebook;
 
 
 namespace Programming
 {
     public partial class Form1 : Form
     {
-        Controller con = new Controller();
+        Controller con;
         private const int threads = 4;
         private const string AppId = "263439397045819";
         private string[] extendedPermissions = new[] { "user_about_me", "offline_access" };
@@ -46,6 +46,8 @@ namespace Programming
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
+                this.con = Controller.getInstance();
+                con.setPictureBox(pictureBox1);
             }
         }
 
@@ -67,7 +69,7 @@ namespace Programming
         {
             MessageBox.Show("SOcialMediaPictureEditor SOMPE");
         }
-        /*
+        
         private void DisplayAppropriateMessage(FacebookOAuthResult facebookOAuthResult)
         {
             if (facebookOAuthResult != null)
@@ -123,7 +125,7 @@ namespace Programming
 
             DisplayAppropriateMessage(fbLoginDialog.FacebookOAuthResult);
         }
-        */
+        
         private void publishTwitter_Click(object sender, EventArgs e)
         {
 
@@ -146,13 +148,13 @@ namespace Programming
 
         private void negativToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThreadInfo thInfo = new ThreadInfo(threads);
-            Filter f = new Filter((Bitmap)pictureBox1.Image, FilterType.FilterNames.INVERT, thInfo);
-            f.kernel();
+            this.con = Controller.getInstance();
+            con.invert();
+        }
 
-            thInfo.isAlive();
-            System.Threading.Thread.Sleep(300);
-            pictureBox1.Refresh();
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
