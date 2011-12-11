@@ -48,9 +48,11 @@
             this.loginTwitter = new System.Windows.Forms.Button();
             this.loginFacebook = new System.Windows.Forms.Button();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // publishFacebook
@@ -60,9 +62,9 @@
             this.publishFacebook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishFacebook.BackgroundImage")));
             this.publishFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publishFacebook.Location = new System.Drawing.Point(4, 583);
+            this.publishFacebook.Location = new System.Drawing.Point(3, 622);
             this.publishFacebook.Name = "publishFacebook";
-            this.publishFacebook.Size = new System.Drawing.Size(80, 80);
+            this.publishFacebook.Size = new System.Drawing.Size(80, 75);
             this.publishFacebook.TabIndex = 0;
             this.publishFacebook.Text = "\r\n";
             this.publishFacebook.UseCompatibleTextRendering = true;
@@ -76,9 +78,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 80);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 71);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 500);
+            this.pictureBox1.Size = new System.Drawing.Size(799, 545);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -209,12 +212,29 @@
             // 
             this.pictureBoxProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxProfile.InitialImage = null;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(4, 27);
+            this.pictureBoxProfile.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
             this.pictureBoxProfile.Size = new System.Drawing.Size(50, 50);
             this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxProfile.TabIndex = 8;
             this.pictureBoxProfile.TabStop = false;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxProfile, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.publishFacebook, 0, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 27);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(805, 701);
+            this.tableLayoutPanel1.TabIndex = 9;
             // 
             // Form1
             // 
@@ -222,15 +242,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(809, 712);
-            this.Controls.Add(this.pictureBoxProfile);
             this.Controls.Add(this.loginFacebook);
             this.Controls.Add(this.loginTwitter);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.publishTwitter);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.publishFacebook);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Sompe";
@@ -238,6 +256,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,6 +284,7 @@
         private System.Windows.Forms.Button loginTwitter;
         private System.Windows.Forms.Button loginFacebook;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 
