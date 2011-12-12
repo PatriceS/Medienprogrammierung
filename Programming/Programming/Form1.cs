@@ -170,7 +170,7 @@ namespace Programming
         internal void setInfoBox(int thread_count, long time)
         {
             string str = "Threads: " + thread_count.ToString() + " time: " + time.ToString() + " ms ";
-            infoBox.Text = str;
+            // infoBox.Text = str;
         }
     }
 }
