@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -46,22 +47,24 @@
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.publishTwitter = new System.Windows.Forms.Button();
-            this.publishFacebook = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.selectAlbumComboBox = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.publishFacebook = new System.Windows.Forms.Button();
+            this.publishTwitter = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -146,7 +149,7 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(89, 0);
+            this.usernameLabel.Location = new System.Drawing.Point(83, 0);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(0, 18);
             this.usernameLabel.TabIndex = 5;
@@ -176,9 +179,11 @@
             this.pictureBoxProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxProfile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxProfile.InitialImage = null;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxProfile.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxProfile.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(80, 80);
+            this.pictureBoxProfile.Size = new System.Drawing.Size(80, 86);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxProfile.TabIndex = 8;
             this.pictureBoxProfile.TabStop = false;
             // 
@@ -208,44 +213,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(198, 662);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // publishTwitter
-            // 
-            this.publishTwitter.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.publishTwitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishTwitter.BackgroundImage")));
-            this.publishTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.publishTwitter.Location = new System.Drawing.Point(3, 169);
-            this.publishTwitter.Name = "publishTwitter";
-            this.publishTwitter.Size = new System.Drawing.Size(80, 80);
-            this.publishTwitter.TabIndex = 3;
-            this.publishTwitter.UseVisualStyleBackColor = false;
-            this.publishTwitter.Click += new System.EventHandler(this.publishTwitter_Click);
-            // 
-            // publishFacebook
-            // 
-            this.publishFacebook.AutoSize = true;
-            this.publishFacebook.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.publishFacebook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishFacebook.BackgroundImage")));
-            this.publishFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publishFacebook.Location = new System.Drawing.Point(3, 83);
-            this.publishFacebook.Name = "publishFacebook";
-            this.publishFacebook.Size = new System.Drawing.Size(80, 80);
-            this.publishFacebook.TabIndex = 0;
-            this.publishFacebook.Text = "\r\n";
-            this.publishFacebook.UseCompatibleTextRendering = true;
-            this.publishFacebook.UseVisualStyleBackColor = false;
-            this.publishFacebook.Click += new System.EventHandler(this.publishFacebook_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 484);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Rotate";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // selectAlbumComboBox
             // 
             this.selectAlbumComboBox.FormattingEnabled = true;
@@ -253,17 +220,7 @@
             this.selectAlbumComboBox.Name = "selectAlbumComboBox";
             this.selectAlbumComboBox.Size = new System.Drawing.Size(121, 21);
             this.selectAlbumComboBox.TabIndex = 9;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(207, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(814, 662);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.selectAlbumComboBox.SelectedIndexChanged += new System.EventHandler(this.selectAlbumComboBox_SelectedIndexChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -275,10 +232,10 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 448);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
@@ -293,8 +250,59 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(194, 74);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(194, 86);
             this.tableLayoutPanel3.TabIndex = 8;
+            // 
+            // publishFacebook
+            // 
+            this.publishFacebook.AutoSize = true;
+            this.publishFacebook.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.publishFacebook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishFacebook.BackgroundImage")));
+            this.publishFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.publishFacebook.Location = new System.Drawing.Point(0, 94);
+            this.publishFacebook.Margin = new System.Windows.Forms.Padding(0);
+            this.publishFacebook.Name = "publishFacebook";
+            this.publishFacebook.Size = new System.Drawing.Size(83, 83);
+            this.publishFacebook.TabIndex = 0;
+            this.publishFacebook.Text = "\r\n";
+            this.publishFacebook.UseCompatibleTextRendering = true;
+            this.publishFacebook.UseVisualStyleBackColor = false;
+            this.publishFacebook.Click += new System.EventHandler(this.publishFacebook_Click);
+            // 
+            // publishTwitter
+            // 
+            this.publishTwitter.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.publishTwitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishTwitter.BackgroundImage")));
+            this.publishTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.publishTwitter.Location = new System.Drawing.Point(0, 177);
+            this.publishTwitter.Margin = new System.Windows.Forms.Padding(0);
+            this.publishTwitter.Name = "publishTwitter";
+            this.publishTwitter.Size = new System.Drawing.Size(83, 83);
+            this.publishTwitter.TabIndex = 3;
+            this.publishTwitter.UseVisualStyleBackColor = false;
+            this.publishTwitter.Click += new System.EventHandler(this.publishTwitter_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 484);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Rotate";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(207, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(814, 662);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel4
             // 
@@ -312,6 +320,10 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(498, 44);
             this.tableLayoutPanel4.TabIndex = 8;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataSource = typeof(Programming.User);
             // 
             // Form1
             // 
@@ -331,12 +343,13 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,6 +382,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.BindingSource userBindingSource;
     }
 }
 

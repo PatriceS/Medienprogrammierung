@@ -92,20 +92,30 @@ namespace Programming
             loginFacebook.Text = "bei Facebook eingeloggt";
             loginFacebook.Enabled = false;
 
-           this.albumNames = this.user.getAlbumNames();
+            this.albumNames = this.user.getAlbumNames();
             foreach(KeyValuePair<string, string> albumName in this.albumNames)
             {
                 selectAlbumComboBox.Items.Add(albumName.Value);
+
+                if (this.selectedAlbumID == null)
+                    this.selectedAlbumID = albumName.Key;
             }
             if (selectAlbumComboBox.Items.Count > 0)
             {
-                selectAlbumComboBox.SelectedIndex = 2;
-                this.selectedAlbumID = this.albumNames[selectAlbumComboBox.SelectedIndex][(string)selectAlbumComboBox.SelectedItem];
+                selectAlbumComboBox.SelectedIndex = 0;
             }
-            else
-                MessageBox.Show("Keine Elemente vorhanden");
+        }
 
-
+        private void selectAlbumComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (KeyValuePair<string, string> albumName in this.albumNames)
+            {
+                if (selectAlbumComboBox.SelectedItem.ToString() == albumName.Value)
+                {
+                    this.selectedAlbumID = albumName.Key;
+                }
+            }
+            
         }
 
         private void setProfilePicture()
@@ -163,5 +173,6 @@ namespace Programming
             string str = "Threads: " + thread_count.ToString() + " time: " + time.ToString() + " ms ";
             // infoBox.Text = str;
         }
+
     }
 }

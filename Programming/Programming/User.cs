@@ -55,6 +55,11 @@ namespace Programming
                 setUserData();
                 setAlbumNames();
             }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Fehler bei der Authentifizierung");
+              
+            }
                
         }
 
@@ -84,8 +89,6 @@ namespace Programming
             this.facebookID = result.id;
         }
 
-        
-
         private void setAlbumNames()
         {   
             string albumUrl = string.Format("https://graph.facebook.com/{0}/albums", this.facebookID);
@@ -110,21 +113,19 @@ namespace Programming
             return this.names;
         }
 
-        public void uploadPicture(string albumID, String Fileame)
+        public void uploadPicture(string albumID, String FileName)
         {
 
-            //string photoAlbumID = "1106973079181";
+            FacebookMediaObject facebookUploader = new FacebookMediaObject { FileName = FileName, ContentType = "image/jpg" };
 
-            //FacebookMediaObject facebookUploader = new FacebookMediaObject { FileName = pictureBox1.ImageLocation, ContentType = "image/jpg" };
+            var bytes = System.IO.File.ReadAllBytes(facebookUploader.FileName);
+            facebookUploader.SetValue(bytes);
 
-            //var bytes = System.IO.File.ReadAllBytes(facebookUploader.FileName);
-            //facebookUploader.SetValue(bytes);
-
-            //var postInfo = new Dictionary<string, object>();
-            //postInfo.Add("message", "test photo");
-            //postInfo.Add("image", facebookUploader);
-            //var fbResult = fb.Post("/" + photoAlbumID + "/photos", postInfo);
-            //dynamic resultDic = (IDictionary<string, object>)fbResult;
+            var postInfo = new Dictionary<string, object>();
+            postInfo.Add("message", "Tolle Nachricht");
+            postInfo.Add("image", facebookUploader);
+            var fbResult = this.fb.Post("/" + albumID + "/photos", postInfo);
+            dynamic resultDic = (IDictionary<string, object>)fbResult;
         }
 
       }
