@@ -55,6 +55,7 @@ namespace Programming
                 this.con = Controller.getInstance();
                 this.con.setPictureBox(pictureBox1);
                 this.con.setMainForm(this);
+                this.user.setMainForm(this);
                 
                 filterToolStripMenuItem.Enabled = true;
             }
@@ -153,11 +154,6 @@ namespace Programming
 
         }
 
-        private void negativToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Controller.getInstance().invert();
-        }
-
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -171,8 +167,17 @@ namespace Programming
         internal void setInfoBox(int thread_count, long time)
         {
             string str = "Threads: " + thread_count.ToString() + " time: " + time.ToString() + " ms ";
-            // infoBox.Text = str;
+            infoBox.Text = str;
         }
 
+        private void filterToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void negativToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Controller.getInstance().invert();
+        }
     }
 }
