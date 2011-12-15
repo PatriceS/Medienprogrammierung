@@ -125,6 +125,7 @@ namespace Programming
             facebookUploader.SetValue(bytes);
 
             this.fb.UploadProgressChanged += fb_UploadProgressChanged;
+            
             var postInfo = new Dictionary<string, object>();
             postInfo.Add("message", "Tolle Nachricht");
             postInfo.Add("image", facebookUploader);
