@@ -6,6 +6,7 @@ using System.Text;
 using Bitmap     = System.Drawing.Bitmap;
 using PictureBox = System.Windows.Forms.PictureBox;
 using System.Windows.Forms;
+
 namespace Programming
 {
     class Controller
@@ -24,8 +25,6 @@ namespace Programming
             thHandler.refresh(pic);
            // ((Form1)this.mainForm).setInfoBox(thHandler.getTime());
             this.mainForm.setInfoBox(this.threads, thHandler.getTime());
-            
-           
         }
 
         public static Controller getInstance()

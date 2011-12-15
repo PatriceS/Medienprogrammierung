@@ -55,6 +55,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.negativToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoBox = new System.Windows.Forms.TextBox();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -99,30 +102,33 @@
             // bildÖffnenToolStripMenuItem
             // 
             this.bildÖffnenToolStripMenuItem.Name = "bildÖffnenToolStripMenuItem";
-            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bildÖffnenToolStripMenuItem.Text = "Bild öffnen";
             this.bildÖffnenToolStripMenuItem.Click += new System.EventHandler(this.bildÖffnenToolStripMenuItem_Click);
             // 
             // bildSpeichernToolStripMenuItem
             // 
             this.bildSpeichernToolStripMenuItem.Name = "bildSpeichernToolStripMenuItem";
-            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bildSpeichernToolStripMenuItem.Text = "Bild speichern";
             this.bildSpeichernToolStripMenuItem.Click += new System.EventHandler(this.bildSpeichernToolStripMenuItem_Click);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
             // filterToolStripMenuItem
             // 
+            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.negativToolStripMenuItem});
             this.filterToolStripMenuItem.Enabled = false;
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.filterToolStripMenuItem.Text = "Filter";
+            this.filterToolStripMenuItem.Click += new System.EventHandler(this.filterToolStripMenuItem_Click_1);
             // 
             // manipulationenToolStripMenuItem
             // 
@@ -141,7 +147,7 @@
             // überSompeToolStripMenuItem
             // 
             this.überSompeToolStripMenuItem.Name = "überSompeToolStripMenuItem";
-            this.überSompeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.überSompeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.überSompeToolStripMenuItem.Text = "Über Sompe";
             this.überSompeToolStripMenuItem.Click += new System.EventHandler(this.überSompeToolStripMenuItem_Click);
             // 
@@ -157,7 +163,7 @@
             // 
             // loginTwitter
             // 
-            this.loginTwitter.Location = new System.Drawing.Point(409, 3);
+            this.loginTwitter.Location = new System.Drawing.Point(408, 3);
             this.loginTwitter.Name = "loginTwitter";
             this.loginTwitter.Size = new System.Drawing.Size(86, 25);
             this.loginTwitter.TabIndex = 6;
@@ -166,7 +172,7 @@
             // 
             // loginFacebook
             // 
-            this.loginFacebook.Location = new System.Drawing.Point(305, 3);
+            this.loginFacebook.Location = new System.Drawing.Point(304, 3);
             this.loginFacebook.Name = "loginFacebook";
             this.loginFacebook.Size = new System.Drawing.Size(98, 25);
             this.loginFacebook.TabIndex = 7;
@@ -229,6 +235,7 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.publishFacebook, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.publishTwitter, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.progressBar1, 0, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -309,17 +316,40 @@
             this.tableLayoutPanel4.ColumnCount = 5;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
             this.tableLayoutPanel4.Controls.Add(this.loginFacebook, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.loginTwitter, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.infoBox, 2, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 27);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(498, 44);
             this.tableLayoutPanel4.TabIndex = 8;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(3, 263);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(192, 37);
+            this.progressBar1.TabIndex = 9;
+            // 
+            // negativToolStripMenuItem
+            // 
+            this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.negativToolStripMenuItem.Text = "Negativ";
+            this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click_1);
+            // 
+            // infoBox
+            // 
+            this.infoBox.Location = new System.Drawing.Point(153, 3);
+            this.infoBox.Multiline = true;
+            this.infoBox.Name = "infoBox";
+            this.infoBox.Size = new System.Drawing.Size(145, 25);
+            this.infoBox.TabIndex = 11;
             // 
             // userBindingSource
             // 
@@ -349,6 +379,7 @@
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -383,6 +414,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ToolStripMenuItem negativToolStripMenuItem;
+        private System.Windows.Forms.TextBox infoBox;
     }
 }
 

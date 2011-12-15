@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Windows.Forms;
 using Facebook;
+
 
 namespace Programming
 {
     public class User
     {
         static User user = null;
+        private Form1 mainForm;
         public String name;
         public String first_name;
         public String facebookID;
@@ -103,7 +106,7 @@ namespace Programming
                     }
                     catch (System.ArgumentException e)
                     {
-                       
+                        System.Windows.Forms.MessageBox.Show("Fehler: " + e.Message);
                     }
                 }
         }
@@ -121,11 +124,22 @@ namespace Programming
             var bytes = System.IO.File.ReadAllBytes(facebookUploader.FileName);
             facebookUploader.SetValue(bytes);
 
+            this.fb.UploadProgressChanged += fb_UploadProgressChanged;
             var postInfo = new Dictionary<string, object>();
             postInfo.Add("message", "Tolle Nachricht");
             postInfo.Add("image", facebookUploader);
             var fbResult = this.fb.Post("/" + albumID + "/photos", postInfo);
             dynamic resultDic = (IDictionary<string, object>)fbResult;
+        }
+
+        public void fb_UploadProgressChanged(object sender, FacebookUploadProgressChangedEventArgs e)
+        {
+            
+        }
+
+        public void setMainForm(Form1 form)
+        {
+            mainForm = form;
         }
 
       }
