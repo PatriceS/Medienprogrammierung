@@ -10,7 +10,7 @@ using Facebook;
 
 namespace Programming
 {
-    class User
+    public class User
     {
         static User user = null;
         private Form1 mainForm;
@@ -125,9 +125,12 @@ namespace Programming
             facebookUploader.SetValue(bytes);
 
             
+            this.fb.UploadProgressChanged += fb_UploadProgressChanged;
+            
             var postInfo = new Dictionary<string, object>();
             postInfo.Add("message", "Tolle Nachricht");
             postInfo.Add("image", facebookUploader);
+            dynamic resultDic = (IDictionary<string, object>)fbResult;
             this.fb.PostAsync("/" + albumID + "/photos", postInfo);
 
             this.fb.UploadProgressChanged += fb_UploadProgressChanged;
@@ -146,6 +149,16 @@ namespace Programming
                    var state = e.UserState;
                    this.mainForm.progressBar1.Value = e.ProgressPercentage;
                }));
+        }
+
+        public void setMainForm(Form1 form)
+        {
+            mainForm = form;
+        }
+
+        public void fb_UploadProgressChanged(object sender, FacebookUploadProgressChangedEventArgs e)
+        {
+            
         }
 
         public void setMainForm(Form1 form)
