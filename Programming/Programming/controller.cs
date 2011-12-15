@@ -13,7 +13,7 @@ namespace Programming
         static Controller con = null;
         private static System.Windows.Forms.PictureBox pic;
         private Form1 mainForm;
-        private int threads = 4;
+        private int threads = 2;
 
 
       
@@ -22,7 +22,7 @@ namespace Programming
             ThreadHandler thHandler = new ThreadHandler(threads);
             new Filter((Bitmap)pic.Image, FilterType.FilterNames.INVERT, thHandler).kernel();
             thHandler.refresh(pic);
-           // ((Form1)this.mainForm).setInfoBox(thHandler.getTime());
+        
             this.mainForm.setInfoBox(this.threads, thHandler.getTime());
             
            
