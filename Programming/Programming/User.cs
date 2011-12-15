@@ -10,7 +10,7 @@ using Facebook;
 
 namespace Programming
 {
-    class User
+    class User : Form
     {
         static User user = null;
         private Form1 mainForm;
@@ -46,10 +46,11 @@ namespace Programming
         {
             this.authError = error;
         }
-
+        
         public void getLoginDialog()
         {
             var fbLoginDialog = new FacebookLoginDialog(AppId, extendedPermissions);
+
             fbLoginDialog.ShowDialog();
 
             if (DisplayAppropriateMessage(fbLoginDialog.FacebookOAuthResult))
@@ -60,9 +61,8 @@ namespace Programming
             else
             {
                 System.Windows.Forms.MessageBox.Show("Fehler bei der Authentifizierung");
-              
+                Environment.Exit(-1);
             }
-               
         }
 
         private bool DisplayAppropriateMessage(FacebookOAuthResult facebookOAuthResult)
@@ -72,9 +72,8 @@ namespace Programming
                 if (facebookOAuthResult.IsSuccess)
                 {
                     this.fb = new FacebookClient(facebookOAuthResult.AccessToken);
-
+                    
                     return true;
-
                 }
                 else
                     return false;
@@ -127,10 +126,37 @@ namespace Programming
             postInfo.Add("message", "Tolle Nachricht");
             postInfo.Add("image", facebookUploader);
             this.fb.UploadProgressChanged += fb_UploadProgressChanged;
+            this.fb.PostCompleted += fb_PostCompleted;
             this.fb.PostAsync("/" + albumID + "/photos", postInfo);
+            this.mainForm.cancelUploadButton.Enabled = true;
             
         }
-        
+
+        public void cancelUpload()
+        {
+            this.fb.CancelAsync();
+            this.mainForm.progressBar1.Value = 0;
+        }
+        private void fb_PostCompleted(object sender, FacebookApiEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                var cancellationError = e.Error;
+                MessageBox.Show("Upload cancelled");
+            }
+            else if (e.Error == null)
+            {
+
+                // upload successful.
+                MessageBox.Show(e.GetResultData().ToString());
+            }
+            else
+            {
+
+                // upload failed
+                MessageBox.Show(e.Error.Message);
+            }
+        }
 
         public void fb_UploadProgressChanged(object sender, FacebookUploadProgressChangedEventArgs e)
         {

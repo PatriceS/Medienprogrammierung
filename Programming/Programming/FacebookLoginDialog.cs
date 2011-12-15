@@ -9,8 +9,14 @@ namespace Programming
     public partial class FacebookLoginDialog : Form
     {
         private Uri navigateUrl;
-        
+
         public FacebookLoginDialog(string appId, string[] extendedPermissions)
+            : this(appId, extendedPermissions, false)
+        {
+
+        }
+
+        public FacebookLoginDialog(string appId, string[] extendedPermissions, bool logout)
         {
             var oauth = new FacebookOAuthClient { AppId = appId };
 
@@ -29,7 +35,17 @@ namespace Programming
 
             var loginUrl = oauth.GetLoginUrl(loginParameters);
 
-            this.navigateUrl = loginUrl;
+            if (logout)
+            {
+                var logoutParameters = new Dictionary<string, object>
+                    {
+                        { "next", loginUrl }
+                    };
+            }
+            else
+            {
+                this.navigateUrl = loginUrl;
+            }
 
             InitializeComponent();
         }
@@ -54,7 +70,7 @@ namespace Programming
         }
 
         public FacebookOAuthResult FacebookOAuthResult { get; private set; }
-        
+
         private void webBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 

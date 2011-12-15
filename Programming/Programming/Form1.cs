@@ -88,6 +88,11 @@ namespace Programming
             this.user.setMainForm(this);
             this.user.getLoginDialog();
 
+            setSettings();
+        }
+
+        private void setSettings()
+        {
             setProfilePicture();
 
             usernameLabel.Text = "Hi " + this.user.first_name;
@@ -107,6 +112,8 @@ namespace Programming
                 selectAlbumComboBox.SelectedIndex = 0;
             }
         }
+         
+    
 
         private void selectAlbumComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -183,5 +190,13 @@ namespace Programming
         {
             Controller.getInstance().invert();
         }
+
+        private void cancelUploadButton_Click(object sender, EventArgs e)
+        {
+            this.user.cancelUpload();
+            cancelUploadButton.Enabled = false;
+        }
+
+       
     }
 }

@@ -37,6 +37,7 @@
             this.bildSpeichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.negativToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manipulationenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überSompeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,11 +53,11 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.publishFacebook = new System.Windows.Forms.Button();
             this.publishTwitter = new System.Windows.Forms.Button();
+            this.cancelUploadButton = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.negativToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoBox = new System.Windows.Forms.TextBox();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
@@ -102,21 +103,21 @@
             // bildÖffnenToolStripMenuItem
             // 
             this.bildÖffnenToolStripMenuItem.Name = "bildÖffnenToolStripMenuItem";
-            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bildÖffnenToolStripMenuItem.Text = "Bild öffnen";
             this.bildÖffnenToolStripMenuItem.Click += new System.EventHandler(this.bildÖffnenToolStripMenuItem_Click);
             // 
             // bildSpeichernToolStripMenuItem
             // 
             this.bildSpeichernToolStripMenuItem.Name = "bildSpeichernToolStripMenuItem";
-            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bildSpeichernToolStripMenuItem.Text = "Bild speichern";
             this.bildSpeichernToolStripMenuItem.Click += new System.EventHandler(this.bildSpeichernToolStripMenuItem_Click);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -129,6 +130,13 @@
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.filterToolStripMenuItem.Text = "Filter";
             this.filterToolStripMenuItem.Click += new System.EventHandler(this.filterToolStripMenuItem_Click_1);
+            // 
+            // negativToolStripMenuItem
+            // 
+            this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.negativToolStripMenuItem.Text = "Negativ";
+            this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click_1);
             // 
             // manipulationenToolStripMenuItem
             // 
@@ -147,7 +155,7 @@
             // überSompeToolStripMenuItem
             // 
             this.überSompeToolStripMenuItem.Name = "überSompeToolStripMenuItem";
-            this.überSompeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.überSompeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.überSompeToolStripMenuItem.Text = "Über Sompe";
             this.überSompeToolStripMenuItem.Click += new System.EventHandler(this.überSompeToolStripMenuItem_Click);
             // 
@@ -163,18 +171,20 @@
             // 
             // loginTwitter
             // 
-            this.loginTwitter.Location = new System.Drawing.Point(408, 3);
+            this.loginTwitter.AutoSize = true;
+            this.loginTwitter.Location = new System.Drawing.Point(689, 3);
             this.loginTwitter.Name = "loginTwitter";
-            this.loginTwitter.Size = new System.Drawing.Size(86, 25);
+            this.loginTwitter.Size = new System.Drawing.Size(95, 35);
             this.loginTwitter.TabIndex = 6;
             this.loginTwitter.Text = "mit Twitter einloggen";
             this.loginTwitter.UseVisualStyleBackColor = true;
             // 
             // loginFacebook
             // 
-            this.loginFacebook.Location = new System.Drawing.Point(304, 3);
+            this.loginFacebook.AutoSize = true;
+            this.loginFacebook.Location = new System.Drawing.Point(561, 3);
             this.loginFacebook.Name = "loginFacebook";
-            this.loginFacebook.Size = new System.Drawing.Size(98, 25);
+            this.loginFacebook.Size = new System.Drawing.Size(122, 38);
             this.loginFacebook.TabIndex = 7;
             this.loginFacebook.Text = "mit Facebook einloggen";
             this.loginFacebook.UseVisualStyleBackColor = true;
@@ -234,15 +244,17 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.publishFacebook, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.publishTwitter, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.publishTwitter, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.cancelUploadButton, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.progressBar1, 0, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 448);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
@@ -257,24 +269,23 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(194, 86);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(194, 78);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // publishFacebook
             // 
             this.publishFacebook.AutoSize = true;
-            this.publishFacebook.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.publishFacebook.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishFacebook.BackgroundImage")));
-            this.publishFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publishFacebook.Location = new System.Drawing.Point(0, 94);
+            this.publishFacebook.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.publishFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.publishFacebook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.publishFacebook.Location = new System.Drawing.Point(0, 84);
             this.publishFacebook.Margin = new System.Windows.Forms.Padding(0);
             this.publishFacebook.Name = "publishFacebook";
-            this.publishFacebook.Size = new System.Drawing.Size(83, 83);
+            this.publishFacebook.Size = new System.Drawing.Size(200, 38);
             this.publishFacebook.TabIndex = 0;
-            this.publishFacebook.Text = "\r\n";
-            this.publishFacebook.UseCompatibleTextRendering = true;
-            this.publishFacebook.UseVisualStyleBackColor = false;
+            this.publishFacebook.Text = "\r\nBild auf Facebook veröffentlichen";
+            this.publishFacebook.UseVisualStyleBackColor = true;
             this.publishFacebook.Click += new System.EventHandler(this.publishFacebook_Click);
             // 
             // publishTwitter
@@ -282,13 +293,35 @@
             this.publishTwitter.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.publishTwitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishTwitter.BackgroundImage")));
             this.publishTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.publishTwitter.Location = new System.Drawing.Point(0, 177);
+            this.publishTwitter.Location = new System.Drawing.Point(0, 268);
             this.publishTwitter.Margin = new System.Windows.Forms.Padding(0);
             this.publishTwitter.Name = "publishTwitter";
             this.publishTwitter.Size = new System.Drawing.Size(83, 83);
             this.publishTwitter.TabIndex = 3;
             this.publishTwitter.UseVisualStyleBackColor = false;
             this.publishTwitter.Click += new System.EventHandler(this.publishTwitter_Click);
+            // 
+            // cancelUploadButton
+            // 
+            this.cancelUploadButton.AutoSize = true;
+            this.cancelUploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cancelUploadButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cancelUploadButton.Enabled = false;
+            this.cancelUploadButton.Location = new System.Drawing.Point(0, 122);
+            this.cancelUploadButton.Margin = new System.Windows.Forms.Padding(0);
+            this.cancelUploadButton.Name = "cancelUploadButton";
+            this.cancelUploadButton.Size = new System.Drawing.Size(200, 35);
+            this.cancelUploadButton.TabIndex = 12;
+            this.cancelUploadButton.Text = "Upload abbrechen";
+            this.cancelUploadButton.UseVisualStyleBackColor = true;
+            this.cancelUploadButton.Click += new System.EventHandler(this.cancelUploadButton_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(3, 160);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(192, 37);
+            this.progressBar1.TabIndex = 9;
             // 
             // button1
             // 
@@ -313,39 +346,26 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 5;
+            this.tableLayoutPanel4.ColumnCount = 6;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel4.Controls.Add(this.loginFacebook, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.loginTwitter, 4, 0);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tableLayoutPanel4.Controls.Add(this.loginTwitter, 5, 0);
+            this.tableLayoutPanel4.Controls.Add(this.loginFacebook, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.infoBox, 2, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 27);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(498, 44);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(787, 44);
             this.tableLayoutPanel4.TabIndex = 8;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(3, 263);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(192, 37);
-            this.progressBar1.TabIndex = 9;
-            // 
-            // negativToolStripMenuItem
-            // 
-            this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
-            this.negativToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.negativToolStripMenuItem.Text = "Negativ";
-            this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click_1);
             // 
             // infoBox
             // 
-            this.infoBox.Location = new System.Drawing.Point(153, 3);
+            this.infoBox.Location = new System.Drawing.Point(201, 3);
             this.infoBox.Multiline = true;
             this.infoBox.Name = "infoBox";
             this.infoBox.Size = new System.Drawing.Size(145, 25);
@@ -414,9 +434,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.BindingSource userBindingSource;
-        public System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ToolStripMenuItem negativToolStripMenuItem;
         private System.Windows.Forms.TextBox infoBox;
+        public System.Windows.Forms.Button cancelUploadButton;
+        public System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
