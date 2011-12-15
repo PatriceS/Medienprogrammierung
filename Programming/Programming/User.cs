@@ -10,7 +10,7 @@ using Facebook;
 
 namespace Programming
 {
-    public class User
+    class User
     {
         static User user = null;
         private Form1 mainForm;
@@ -18,7 +18,6 @@ namespace Programming
         public String first_name;
         public String facebookID;
         public String authError;
-        public String graphUrl;
         public FacebookClient fb;
         private const string AppId = "263439397045819";
         private string[] extendedPermissions = new[] { "user_about_me", "offline_access", "user_photos" };
@@ -124,18 +123,12 @@ namespace Programming
             var bytes = System.IO.File.ReadAllBytes(facebookUploader.FileName);
             facebookUploader.SetValue(bytes);
 
-            
-            this.fb.UploadProgressChanged += fb_UploadProgressChanged;
-            
             var postInfo = new Dictionary<string, object>();
             postInfo.Add("message", "Tolle Nachricht");
             postInfo.Add("image", facebookUploader);
-            dynamic resultDic = (IDictionary<string, object>)fbResult;
-            this.fb.PostAsync("/" + albumID + "/photos", postInfo);
-
             this.fb.UploadProgressChanged += fb_UploadProgressChanged;
-
-//dynamic resultDic = (IDictionary<string, object>)fbResult;
+            this.fb.PostAsync("/" + albumID + "/photos", postInfo);
+            
         }
         
 
@@ -149,16 +142,6 @@ namespace Programming
                    var state = e.UserState;
                    this.mainForm.progressBar1.Value = e.ProgressPercentage;
                }));
-        }
-
-        public void setMainForm(Form1 form)
-        {
-            mainForm = form;
-        }
-
-        public void fb_UploadProgressChanged(object sender, FacebookUploadProgressChangedEventArgs e)
-        {
-            
         }
 
         public void setMainForm(Form1 form)

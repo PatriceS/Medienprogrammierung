@@ -55,7 +55,7 @@ namespace Programming
                 this.con = Controller.getInstance();
                 this.con.setPictureBox(pictureBox1);
                 this.con.setMainForm(this);
-                this.user.setMainForm(this);
+               
                 
                 filterToolStripMenuItem.Enabled = true;
             }
@@ -85,6 +85,7 @@ namespace Programming
         private void loginFacebook_Click(object sender, EventArgs e)
         {
             this.user = User.getInstance();
+            this.user.setMainForm(this);
             this.user.getLoginDialog();
 
             setProfilePicture();
@@ -141,12 +142,15 @@ namespace Programming
 
         private void publishFacebook_Click(object sender, EventArgs e)
         {
-            this.user.uploadPicture(this.selectedAlbumID, pictureBox1.ImageLocation);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            if (pictureBox1.Image != null)
+            {
+                this.user.uploadPicture(this.selectedAlbumID, pictureBox1.ImageLocation);
+            }
+            else
+            {
+                MessageBox.Show("Bitte zuerst ein Bild öffnen");
+            }
+            
         }
 
         private void filterToolStripMenuItem_Click(object sender, EventArgs e)
