@@ -15,13 +15,16 @@ namespace Programming
     {
         private Controller con;
         private const int threads = 4;
-        private const string AppId = "263439397045819";
-        private string[] extendedPermissions = new[] { "user_about_me", "offline_access" };
+        private FacebookClient fb;
+        private User user;
+        private string selectedAlbumID;
+        private Dictionary<string, string> albumNames;
         
 
         public Form1()
         {
             InitializeComponent();
+            this.fb = new FacebookClient();
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -76,62 +79,60 @@ namespace Programming
             MessageBox.Show("SOcialMediaPictureEditor SOMPE");
         }
         
-        private void DisplayAppropriateMessage(FacebookOAuthResult facebookOAuthResult)
-        {
-            if (facebookOAuthResult != null)
-            {
-                if (facebookOAuthResult.IsSuccess)
-                {
-                    var fb = new FacebookClient(facebookOAuthResult.AccessToken);
-
-                    dynamic result = fb.Get("/me");
-                    usernameLabel.Text = "Hi " + result.first_name;
-                    loginFacebook.Text = "bei Facebook eingeloggt";
-                    loginFacebook.Enabled = false;
-
-                    // Profilbild einstellen
-                    setProfilePicture(result.id);
-
-                    string photoAlbumID = "1106973079181";
-
-                    FacebookMediaObject facebookUploader = new FacebookMediaObject { FileName = pictureBox1.ImageLocation, ContentType = "image/jpg" };
-
-                    var bytes = System.IO.File.ReadAllBytes(facebookUploader.FileName);
-                    facebookUploader.SetValue(bytes);
-
-                    var postInfo = new Dictionary<string, object>();
-                    postInfo.Add("message", "test photo");
-                    postInfo.Add("image", facebookUploader);
-                    var fbResult = fb.Post("/" + photoAlbumID + "/photos", postInfo);
-                    dynamic resultDic = (IDictionary<string, object>)fbResult;
-                }
-                else
-                {
-                    MessageBox.Show(facebookOAuthResult.ErrorDescription);
-                }
-            }
-        }
         
-        private void setProfilePicture(string id)
-        {
-            string picUrl = string.Format("https://graph.facebook.com/{0}/picture", id);
-
-            WebRequest req = WebRequest.Create(picUrl);
-            WebResponse res = req.GetResponse();
-            
-            Image profilePicture = Image.FromStream(res.GetResponseStream());
-
-            pictureBoxProfile.Image = profilePicture;
-        }
        
         private void loginFacebook_Click(object sender, EventArgs e)
         {
-            var fbLoginDialog = new FacebookLoginDialog(AppId, extendedPermissions);
-            fbLoginDialog.ShowDialog();
+            this.user = User.getInstance();
+            this.user.getLoginDialog();
 
-            DisplayAppropriateMessage(fbLoginDialog.FacebookOAuthResult);
+            setProfilePicture();
+
+            usernameLabel.Text = "Hi " + this.user.first_name;
+            loginFacebook.Text = "bei Facebook eingeloggt";
+            loginFacebook.Enabled = false;
+
+            this.albumNames = this.user.getAlbumNames();
+            foreach(KeyValuePair<string, string> albumName in this.albumNames)
+            {
+                selectAlbumComboBox.Items.Add(albumName.Value);
+
+                if (this.selectedAlbumID == null)
+                    this.selectedAlbumID = albumName.Key;
+            }
+            if (selectAlbumComboBox.Items.Count > 0)
+            {
+                selectAlbumComboBox.SelectedIndex = 0;
+            }
         }
-        
+
+        private void selectAlbumComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (KeyValuePair<string, string> albumName in this.albumNames)
+            {
+                if (selectAlbumComboBox.SelectedItem.ToString() == albumName.Value)
+                {
+                    this.selectedAlbumID = albumName.Key;
+                }
+            }
+            
+        }
+
+        private void setProfilePicture()
+        {
+            string graphUrl = string.Format("https://graph.facebook.com/{0}/", this.user.facebookID);
+            
+            string picUrl = graphUrl + "picture";
+
+            WebRequest req = WebRequest.Create(picUrl);
+            WebResponse res = req.GetResponse();
+
+            Image profilePicture = Image.FromStream(res.GetResponseStream());
+
+            pictureBoxProfile.Image = profilePicture;
+
+        }
+
         private void publishTwitter_Click(object sender, EventArgs e)
         {
 
@@ -139,7 +140,7 @@ namespace Programming
 
         private void publishFacebook_Click(object sender, EventArgs e)
         {
-
+            this.user.uploadPicture(this.selectedAlbumID, pictureBox1.ImageLocation);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -170,7 +171,8 @@ namespace Programming
         internal void setInfoBox(int thread_count, long time)
         {
             string str = "Threads: " + thread_count.ToString() + " time: " + time.ToString() + " ms ";
-            infoBox.Text = str;
+            // infoBox.Text = str;
         }
+
     }
 }
