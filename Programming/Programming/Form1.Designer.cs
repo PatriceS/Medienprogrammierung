@@ -59,6 +59,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.infoBox = new System.Windows.Forms.TextBox();
+            this.bildSchließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -94,6 +95,7 @@
             this.öffnenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bildÖffnenToolStripMenuItem,
             this.bildSpeichernToolStripMenuItem,
+            this.bildSchließenToolStripMenuItem,
             this.beendenToolStripMenuItem});
             this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
             this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
@@ -103,21 +105,22 @@
             // bildÖffnenToolStripMenuItem
             // 
             this.bildÖffnenToolStripMenuItem.Name = "bildÖffnenToolStripMenuItem";
-            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bildÖffnenToolStripMenuItem.Text = "Bild öffnen";
             this.bildÖffnenToolStripMenuItem.Click += new System.EventHandler(this.bildÖffnenToolStripMenuItem_Click);
             // 
             // bildSpeichernToolStripMenuItem
             // 
+            this.bildSpeichernToolStripMenuItem.Enabled = false;
             this.bildSpeichernToolStripMenuItem.Name = "bildSpeichernToolStripMenuItem";
-            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bildSpeichernToolStripMenuItem.Text = "Bild speichern";
             this.bildSpeichernToolStripMenuItem.Click += new System.EventHandler(this.bildSpeichernToolStripMenuItem_Click);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -371,6 +374,14 @@
             this.infoBox.Size = new System.Drawing.Size(145, 25);
             this.infoBox.TabIndex = 11;
             // 
+            // bildSchließenToolStripMenuItem
+            // 
+            this.bildSchließenToolStripMenuItem.Enabled = false;
+            this.bildSchließenToolStripMenuItem.Name = "bildSchließenToolStripMenuItem";
+            this.bildSchließenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bildSchließenToolStripMenuItem.Text = "Bild schließen";
+            this.bildSchließenToolStripMenuItem.Click += new System.EventHandler(this.bildSchließenToolStripMenuItem_Click);
+            // 
             // userBindingSource
             // 
             this.userBindingSource.DataSource = typeof(Programming.User);
@@ -438,6 +449,7 @@
         private System.Windows.Forms.TextBox infoBox;
         public System.Windows.Forms.Button cancelUploadButton;
         public System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ToolStripMenuItem bildSchließenToolStripMenuItem;
     }
 }
 

@@ -58,6 +58,9 @@ namespace Programming
                
                 
                 filterToolStripMenuItem.Enabled = true;
+                bildSchließenToolStripMenuItem.Enabled = true;
+                bildSpeichernToolStripMenuItem.Enabled = true;
+                bildÖffnenToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -68,6 +71,14 @@ namespace Programming
             {
                 MessageBox.Show("Bild gespeichert");
             }
+        }
+
+        private void bildSchließenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
+            bildSpeichernToolStripMenuItem.Enabled = false;
+            bildSchließenToolStripMenuItem.Enabled = false;
+            bildÖffnenToolStripMenuItem.Enabled = true;
         }
 
         private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -196,6 +207,8 @@ namespace Programming
             this.user.cancelUpload();
             cancelUploadButton.Enabled = false;
         }
+
+      
 
        
     }
