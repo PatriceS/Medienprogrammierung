@@ -19,6 +19,7 @@ namespace Programming
         public String facebookID;
         public String authError;
         public FacebookClient fb;
+        private FacebookMediaObject fmo;
         private const string AppId = "263439397045819";
         private string[] extendedPermissions = new[] { "user_about_me", "offline_access", "user_photos" };
         public Dictionary<string, string> names;
@@ -93,7 +94,7 @@ namespace Programming
         private void setAlbumNames()
         {   
             string albumUrl = string.Format("https://graph.facebook.com/{0}/albums", this.facebookID);
-            dynamic albumNames = fb.Get(albumUrl);
+            dynamic albumNames = this.fb.Get(albumUrl);
             this.names = new Dictionary<string, string>();
             
             foreach (dynamic albumObj in albumNames.data)
@@ -116,33 +117,43 @@ namespace Programming
 
         public void uploadPicture(string albumID, String FileName)
         {
-
-            FacebookMediaObject facebookUploader = new FacebookMediaObject { FileName = FileName, ContentType = "image/jpg" };
-
-            var bytes = System.IO.File.ReadAllBytes(facebookUploader.FileName);
-            facebookUploader.SetValue(bytes);
-
+            if (this.fmo == null)
+            {
+                fmo = new FacebookMediaObject { FileName = FileName, ContentType = "image/jpg" };
+            }
+            else
+            {
+                fmo.FileName = FileName;
+                fmo.ContentType = "image/jpg";
+            }
+            
+            var bytes = System.IO.File.ReadAllBytes(fmo.FileName);
+            fmo.SetValue(bytes);
+            
             var postInfo = new Dictionary<string, object>();
             postInfo.Add("message", "Tolle Nachricht");
-            postInfo.Add("image", facebookUploader);
+            postInfo.Add("image", fmo);
             this.fb.UploadProgressChanged += fb_UploadProgressChanged;
             this.fb.PostCompleted += fb_PostCompleted;
             this.fb.PostAsync("/" + albumID + "/photos", postInfo);
             this.mainForm.cancelUploadButton.Enabled = true;
+            this.mainForm.publishFacebook.Enabled = false;
             
         }
 
         public void cancelUpload()
         {
-            this.fb.CancelAsync();
             this.mainForm.progressBar1.Value = 0;
+            this.mainForm.publishFacebook.Enabled = true;
+            this.fb.CancelAsync();
         }
+
         private void fb_PostCompleted(object sender, FacebookApiEventArgs e)
         {
             if (e.Cancelled)
             {
                 var cancellationError = e.Error;
-                MessageBox.Show("Upload cancelled");
+                MessageBox.Show("Upload unterbrochen");
             }
             else if (e.Error == null)
             {
@@ -152,7 +163,6 @@ namespace Programming
             }
             else
             {
-
                 // upload failed
                 MessageBox.Show(e.Error.Message);
             }

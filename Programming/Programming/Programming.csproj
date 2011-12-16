@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\Facebook.PNG" />
+    <Content Include="images\fb.png" />
     <Content Include="images\Twitter.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -109,6 +109,7 @@ namespace Programming
             usernameLabel.Text = "Hi " + this.user.first_name;
             loginFacebook.Text = "bei Facebook eingeloggt";
             loginFacebook.Enabled = false;
+            publishFacebook.Enabled = true;
 
             this.albumNames = this.user.getAlbumNames();
             foreach(KeyValuePair<string, string> albumName in this.albumNames)
