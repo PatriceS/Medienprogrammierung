@@ -55,9 +55,9 @@
     <Compile Include="FacebookLoginDialog.Designer.cs">
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageManipulater.cs" />
+    <Compile Include="ImageManipulator.cs" />
     <Compile Include="Invert.cs" />
-    <Compile Include="ImageManipulaterType.cs" />
+    <Compile Include="ImageManipulatorType.cs" />
     <Compile Include="Manipulate.cs" />
     <Compile Include="Manipulations.cs" />
     <Compile Include="Controller.cs" />

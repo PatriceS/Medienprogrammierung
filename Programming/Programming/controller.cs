@@ -21,10 +21,14 @@ namespace Programming
         public void invert( )
         {
             ThreadHandler thHandler = new ThreadHandler(threads);
-            new ImageManipulater((Bitmap)pic.Image, ImageManipulaterType.Name.INVERT, thHandler).kernel();
+            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT, thHandler).perform();
             thHandler.refresh(pic);
-        
             this.mainForm.setInfoBox(this.threads, thHandler.getTime());
+        }
+
+        public void rotate()
+        {
+            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT ).perform();
         }
 
         public static Controller getInstance()

@@ -16,7 +16,7 @@ namespace Programming
         protected int height_end;
        
         protected static readonly object _locker = new object();
-        public ThreadHandler thInfo;
+        protected ThreadHandler thInfo;
 
 
         public Manipulate(Bitmap b, System.IntPtr Scan0, int stride, int height_start, int height_end, ThreadHandler thInfo)
