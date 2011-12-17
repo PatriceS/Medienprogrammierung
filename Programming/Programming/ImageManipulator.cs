@@ -13,10 +13,10 @@ namespace Programming
 {
     class ImageManipulator
     {
-        private Bitmap b;
+        private Bitmap bitmap;
         private ImageManipulatorType.Name filter;
         private ThreadHandler thHandler;
-        private Bitmap bitmap;
+        
         private ImageManipulatorType.Name name;
 
         public ImageManipulator(Bitmap bitmap, ImageManipulatorType.Name filter, ThreadHandler thHandler)
@@ -25,18 +25,12 @@ namespace Programming
             this.filter = filter;
             this.thHandler = thHandler;
 
-        }
-
-        public ImageManipulator(Bitmap bitmap, ImageManipulatorType.Name filter)
-        {
-            this.bitmap = bitmap;
-            this.filter = filter;
-        }
+        } 
 
         public bool perform()
         {
             
-            BitmapData bmData = this.b.LockBits(new Rectangle(0, 0, this.b.Width, this.b.Height),
+            BitmapData bmData = this.bitmap.LockBits(new Rectangle(0, 0, this.bitmap.Width, this.bitmap.Height),
             ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
             int stride = bmData.Stride;
 
@@ -46,13 +40,13 @@ namespace Programming
 
             perform( Scan0, stride );
 
-            this.b.UnlockBits(bmData);
+            this.bitmap.UnlockBits(bmData);
             return true;
         }
 
         private void perform( System.IntPtr Scan0, int stride)
         {
-            int height = this.b.Height;
+            int height = this.bitmap.Height;
             int steps = computeHeightSteps(height);
 
             // anzahl der threads die mehr als die min elemente berechnen
@@ -68,7 +62,7 @@ namespace Programming
                 switch (this.filter)
                 {
                     case ImageManipulatorType.Name.INVERT:
-                        Invert f = new Invert(this.b, Scan0, stride, startIndex, stopIndex, this.thHandler);
+                        Invert f = new Invert(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler);
                         thread = new Thread( f.perform );
                         break;
                 }

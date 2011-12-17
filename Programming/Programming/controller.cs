@@ -6,6 +6,7 @@ using System.Text;
 using Bitmap     = System.Drawing.Bitmap;
 using PictureBox = System.Windows.Forms.PictureBox;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Programming
 {
@@ -26,9 +27,9 @@ namespace Programming
             this.mainForm.setInfoBox(this.threads, thHandler.getTime());
         }
 
-        public void rotate()
+        public void rotate(RotateFlipType type)
         {
-            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT ).perform();
+            Rotate.rotate((Bitmap)pic.Image, type);
         }
 
         public static Controller getInstance()
