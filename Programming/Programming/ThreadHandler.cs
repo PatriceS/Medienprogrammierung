@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace Programming
 {
-    class ThreadHandler
+    public class ThreadHandler
     {
       
         private int threads;

@@ -21,7 +21,7 @@ namespace Programming
         public void invert( )
         {
             ThreadHandler thHandler = new ThreadHandler(threads);
-            new Filter((Bitmap)pic.Image, FilterType.FilterNames.INVERT, thHandler).kernel();
+            new ImageManipulater((Bitmap)pic.Image, ImageManipulaterType.Name.INVERT, thHandler).kernel();
             thHandler.refresh(pic);
         
             this.mainForm.setInfoBox(this.threads, thHandler.getTime());
