@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
+    <Compile Include="config\Config.cs" />
     <Compile Include="Filter\BlackWhiteFilter.cs" />
     <Compile Include="ErrorDiffusionFilter.cs" />
     <Compile Include="FacebookLoginDialog.cs">
@@ -62,7 +62,7 @@
     </Compile>
     <Compile Include="ImageManipulator.cs" />
     <Compile Include="Filter\InvertFilter.cs" />
-    <Compile Include="ImageManipulatorType.cs" />
+    <Compile Include="config\ImageManipulatorType.cs" />
     <Compile Include="Manipulate.cs" />
     <Compile Include="Manipulations.cs" />
     <Compile Include="Controller.cs" />
