@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -32,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Facebook">
@@ -49,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlackWhiteFilter.cs" />
+    <Compile Include="ErrorDiffusionFilter.cs" />
     <Compile Include="FacebookLoginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,7 +60,7 @@
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageManipulator.cs" />
-    <Compile Include="Invert.cs" />
+    <Compile Include="InvertFilter.cs" />
     <Compile Include="ImageManipulatorType.cs" />
     <Compile Include="Manipulate.cs" />
     <Compile Include="Manipulations.cs" />
@@ -67,9 +71,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="OscillationFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rotate.cs" />
+    <Compile Include="GrayscaleFilter.cs" />
+    <Compile Include="SepiaFilter.cs" />
     <Compile Include="ThreadHandler.cs" />
     <Compile Include="User.cs">
       <SubType>Form</SubType>

@@ -15,7 +15,7 @@ namespace Programming
         static Controller con = null;
         private static System.Windows.Forms.PictureBox pic;
         private Form1 mainForm;
-        private int threads = 2;
+        private const int threads = 2;
 
 
       
@@ -23,8 +23,43 @@ namespace Programming
         {
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT, thHandler).perform();
-            thHandler.refresh(pic);
-            this.mainForm.setInfoBox(this.threads, thHandler.getTime());
+            this.show_picture(thHandler);
+        }
+
+        public void oscillate()
+        {
+            
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.OSCILLATION, thHandler).perform();
+            this.show_picture(thHandler);
+        }
+
+        public void grayscale()
+        {
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.GRAYSCALE, thHandler).perform();
+            this.show_picture(thHandler);
+        }
+
+        public void blackNwhite()
+        {
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.BLACKWHITE, thHandler).perform();
+            this.show_picture(thHandler);
+        }
+
+        public void errorDiffusion()
+        {
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.ERROR_DIFFUSION, thHandler).perform();
+            this.show_picture(thHandler);
+        }
+
+        public void sepia()
+        {
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.SEPIA, thHandler).perform();
+            this.show_picture(thHandler);
         }
 
         public void rotate(RotateFlipType type)
@@ -54,5 +89,12 @@ namespace Programming
         {
             mainForm = form;
         }
+
+        private void show_picture(ThreadHandler thHandler)
+        {
+            thHandler.refresh(pic);
+            this.mainForm.setInfoBox(threads, thHandler.getTime());
+        }
+
     }
 }

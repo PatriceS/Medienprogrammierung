@@ -62,10 +62,27 @@ namespace Programming
                 switch (this.filter)
                 {
                     case ImageManipulatorType.Name.INVERT:
-                        Invert f = new Invert(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler);
-                        thread = new Thread( f.perform );
+                        thread = new Thread(new InvertFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
+                        break;
+
+                    case ImageManipulatorType.Name.OSCILLATION:
+                        thread = new Thread(new OscillationFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
+                        break;
+
+                    case ImageManipulatorType.Name.GRAYSCALE:
+                        thread = new Thread(new GrayscaleFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
+                        break;
+                    case ImageManipulatorType.Name.BLACKWHITE:
+                        thread = new Thread(new BlackWhiteFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
+                        break;
+                    case ImageManipulatorType.Name.ERROR_DIFFUSION:
+                        thread = new Thread(new ErrorDiffusionFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
+                        break;
+                    case ImageManipulatorType.Name.SEPIA:
+                        thread = new Thread(new SepiaFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
                         break;
                 }
+
 
                     // Thread starten
                 thread.Start();

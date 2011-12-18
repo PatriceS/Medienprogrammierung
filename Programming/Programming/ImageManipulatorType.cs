@@ -7,6 +7,7 @@ namespace Programming
 {
     class ImageManipulatorType
     {
-        public enum Name { INVERT };
+        public enum Name { INVERT, OSCILLATION, GRAYSCALE, BLACKWHITE,
+                           ERROR_DIFFUSION, SEPIA };
     }
 }

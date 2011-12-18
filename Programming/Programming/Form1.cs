@@ -60,7 +60,7 @@ namespace Programming
                 filterToolStripMenuItem.Enabled = true;
                 bildSchließenToolStripMenuItem.Enabled = true;
                 bildSpeichernToolStripMenuItem.Enabled = true;
-                bildÖffnenToolStripMenuItem.Enabled = false;
+                //bildÖffnenToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -209,7 +209,40 @@ namespace Programming
             cancelUploadButton.Enabled = false;
         }
 
-      
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*    Mathias Form Anfang                                       */
+        private void schwingungToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().oscillate();
+        }
+
+        private void graustufenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().grayscale();
+        }
+
+        private void schwarzWeißToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().blackNwhite();
+        }
+
+        private void errorDiffusionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().errorDiffusion();
+        }
+
+        private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().sepia();
+        }
+
+        
+
+        /*   Mathias From Ende                                            */
 
        
     }
