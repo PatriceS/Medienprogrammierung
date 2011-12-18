@@ -29,8 +29,8 @@ namespace Programming
                 {
                     for (int x = 0; x < this.bitmap_width; ++x)
                     {
-                        p[0] = (byte)(0 );
-                        p[1] = (byte)(0);
+                        p[0] = (byte)(255 - p[0]);
+                        p[1] = (byte)(255 - p[1]);
                         p[2] = (byte)(255 - p[2]);
 
                         p += 3;

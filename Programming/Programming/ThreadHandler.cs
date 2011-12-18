@@ -7,6 +7,7 @@ using System.Threading;
 using PictureBox = System.Windows.Forms.PictureBox;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Drawing;
 
 
 
@@ -84,7 +85,17 @@ namespace Programming
             Thread t = new Thread(  () => this.try_refresh()  );
             t.Name = "bg_filter_thread";
             t.Start();
+        }
 
+        /**
+         * Funktion zum speichern von veränderten Bildern (Zwischenschritten)
+         * 
+         */
+        public void save_PixelState( Bitmap bitmap )
+        {
+            Thread t = new Thread(() => this.try_save_PixelState(bitmap));
+            t.Name = "bg_PixelState_thread";
+            t.Start();
         }
 
         private void try_refresh()
@@ -98,6 +109,24 @@ namespace Programming
 
             this.pic.Invoke(new MethodInvoker(invoke_refresh));
                 
+        }
+
+
+        private void try_save_PixelState(Bitmap bitmap)
+        {
+                // solange noch nicht alle Threads beendet wurden -> warten
+            while (this.threadsAreAlive())
+            {
+                // bg_filter_thread
+                Thread.Sleep(2);
+            }
+                // PixelState Objekt besorgen
+            PixelState state = PixelState.getInstance();
+                // ab hier Thread sicher speichern
+            lock (_locker)
+            {
+                state.add(bitmap);
+            }
         }
 
         private void invoke_refresh()

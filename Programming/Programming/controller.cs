@@ -24,6 +24,8 @@ namespace Programming
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT, thHandler).perform();
             this.show_picture(thHandler);
+            thHandler.save_PixelState((Bitmap)pic.Image);
+            
         }
 
         public void oscillate()

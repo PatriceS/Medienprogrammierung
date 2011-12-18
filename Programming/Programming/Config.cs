@@ -7,7 +7,7 @@ namespace Programming
 {
     class Config
     {
-        public static enum value : int
+        public enum value : int
         {
             PIXEL_STATE_CONTAINER_AMOUNT = 5
         };
