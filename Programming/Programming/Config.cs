@@ -9,7 +9,7 @@ namespace Programming
     {
         public enum value : int
         {
-            PIXEL_STATE_CONTAINER_AMOUNT = 5
+            PIXEL_STATE_CONTAINER_AMOUNT = 5, THREADS = 5
         };
 
     }

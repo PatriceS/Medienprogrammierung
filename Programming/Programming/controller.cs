@@ -15,9 +15,7 @@ namespace Programming
         private static Controller con = null;
         private static System.Windows.Forms.PictureBox pic;
         private Form1 mainForm;
-        private const int threads = 2;
-
-
+        private static int threads = (int)Config.value.THREADS;
       
         public void invert( )
         {
