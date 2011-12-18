@@ -12,7 +12,7 @@ namespace Programming
 {
     class Controller
     {
-        static Controller con = null;
+        private static Controller con = null;
         private static System.Windows.Forms.PictureBox pic;
         private Form1 mainForm;
         private const int threads = 2;
