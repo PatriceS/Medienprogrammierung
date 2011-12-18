@@ -19,16 +19,15 @@ namespace Programming
       
         public void invert( )
         {
+            PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT, thHandler).perform();
             this.show_picture(thHandler);
-            thHandler.save_PixelState((Bitmap)pic.Image);
-            
         }
 
         public void oscillate()
         {
-            
+            PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.OSCILLATION, thHandler).perform();
             this.show_picture(thHandler);
@@ -36,20 +35,25 @@ namespace Programming
 
         public void grayscale()
         {
+            PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.GRAYSCALE, thHandler).perform();
             this.show_picture(thHandler);
+           
         }
 
         public void blackNwhite()
         {
+            PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.BLACKWHITE, thHandler).perform();
             this.show_picture(thHandler);
+            
         }
 
         public void errorDiffusion()
         {
+            PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.ERROR_DIFFUSION, thHandler).perform();
             this.show_picture(thHandler);
@@ -57,6 +61,7 @@ namespace Programming
 
         public void sepia()
         {
+            PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.SEPIA, thHandler).perform();
             this.show_picture(thHandler);
@@ -64,7 +69,9 @@ namespace Programming
 
         public void rotate(RotateFlipType type)
         {
+            PixelState.getInstance().add((Bitmap)pic.Image);
             Rotate.rotate((Bitmap)pic.Image, type);
+            PixelState.getInstance().add((Bitmap)pic.Image.Clone());
         }
 
         public static Controller getInstance()
@@ -90,11 +97,24 @@ namespace Programming
             mainForm = form;
         }
 
+        public void undo()
+        {
+            PixelState state = PixelState.getInstance();
+            if (state.get_last() != null)
+            {
+                pic.Image = null;
+                pic.Image = PixelState.getInstance().remove_last();
+                pic.Refresh();
+            }
+        }
+
         private void show_picture(ThreadHandler thHandler)
         {
             thHandler.refresh(pic);
             this.mainForm.setInfoBox(threads, thHandler.getTime());
         }
 
+
+        
     }
 }

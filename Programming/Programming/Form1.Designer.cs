@@ -37,10 +37,15 @@
             this.bildSpeichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bildSchließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rückgaengigMachenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.negativToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schwingungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graustufenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schwarzWeißToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.errorDiffusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manipulationenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überSompeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,10 +72,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.infoBox = new System.Windows.Forms.TextBox();
-            this.schwarzWeißToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.errorDiffusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -92,6 +94,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.öffnenToolStripMenuItem,
+            this.bearbeitenToolStripMenuItem,
             this.filterToolStripMenuItem,
             this.manipulationenToolStripMenuItem,
             this.infoToolStripMenuItem});
@@ -144,6 +147,24 @@
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
+            // bearbeitenToolStripMenuItem
+            // 
+            this.bearbeitenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rückgaengigMachenToolStripMenuItem});
+            this.bearbeitenToolStripMenuItem.Name = "bearbeitenToolStripMenuItem";
+            this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.bearbeitenToolStripMenuItem.Text = "Bearbeiten";
+            // 
+            // rückgaengigMachenToolStripMenuItem
+            // 
+            this.rückgaengigMachenToolStripMenuItem.AccessibleName = "rückgaengigMachenToolStripMenuItem";
+            this.rückgaengigMachenToolStripMenuItem.Name = "rückgaengigMachenToolStripMenuItem";
+            this.rückgaengigMachenToolStripMenuItem.ShortcutKeyDisplayString = "(strg+z)";
+            this.rückgaengigMachenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.rückgaengigMachenToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.rückgaengigMachenToolStripMenuItem.Text = "Rückgängig machen";
+            this.rückgaengigMachenToolStripMenuItem.Click += new System.EventHandler(this.rückgaengigMachenToolStripMenuItem_Click);
+            // 
             // filterToolStripMenuItem
             // 
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -162,23 +183,44 @@
             // negativToolStripMenuItem
             // 
             this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
-            this.negativToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.negativToolStripMenuItem.Text = "Negativ";
             this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click_1);
             // 
             // schwingungToolStripMenuItem
             // 
             this.schwingungToolStripMenuItem.Name = "schwingungToolStripMenuItem";
-            this.schwingungToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.schwingungToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.schwingungToolStripMenuItem.Text = "Schwingung";
             this.schwingungToolStripMenuItem.Click += new System.EventHandler(this.schwingungToolStripMenuItem_Click);
             // 
             // graustufenToolStripMenuItem
             // 
             this.graustufenToolStripMenuItem.Name = "graustufenToolStripMenuItem";
-            this.graustufenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.graustufenToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.graustufenToolStripMenuItem.Text = "Graustufen";
             this.graustufenToolStripMenuItem.Click += new System.EventHandler(this.graustufenToolStripMenuItem_Click);
+            // 
+            // schwarzWeißToolStripMenuItem
+            // 
+            this.schwarzWeißToolStripMenuItem.Name = "schwarzWeißToolStripMenuItem";
+            this.schwarzWeißToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.schwarzWeißToolStripMenuItem.Text = "Schwarz/Weiß";
+            this.schwarzWeißToolStripMenuItem.Click += new System.EventHandler(this.schwarzWeißToolStripMenuItem_Click);
+            // 
+            // errorDiffusionToolStripMenuItem
+            // 
+            this.errorDiffusionToolStripMenuItem.Name = "errorDiffusionToolStripMenuItem";
+            this.errorDiffusionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.errorDiffusionToolStripMenuItem.Text = "Error Diffusion";
+            this.errorDiffusionToolStripMenuItem.Click += new System.EventHandler(this.errorDiffusionToolStripMenuItem_Click);
+            // 
+            // sepiaToolStripMenuItem
+            // 
+            this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.sepiaToolStripMenuItem.Text = "Sepia";
+            this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
             // manipulationenToolStripMenuItem
             // 
@@ -478,30 +520,9 @@
             this.infoBox.Size = new System.Drawing.Size(145, 25);
             this.infoBox.TabIndex = 11;
             // 
-            // schwarzWeißToolStripMenuItem
-            // 
-            this.schwarzWeißToolStripMenuItem.Name = "schwarzWeißToolStripMenuItem";
-            this.schwarzWeißToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.schwarzWeißToolStripMenuItem.Text = "Schwarz/Weiß";
-            this.schwarzWeißToolStripMenuItem.Click += new System.EventHandler(this.schwarzWeißToolStripMenuItem_Click);
-            // 
             // userBindingSource
             // 
             this.userBindingSource.DataSource = typeof(Programming.User);
-            // 
-            // errorDiffusionToolStripMenuItem
-            // 
-            this.errorDiffusionToolStripMenuItem.Name = "errorDiffusionToolStripMenuItem";
-            this.errorDiffusionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.errorDiffusionToolStripMenuItem.Text = "Error Diffusion";
-            this.errorDiffusionToolStripMenuItem.Click += new System.EventHandler(this.errorDiffusionToolStripMenuItem_Click);
-            // 
-            // sepiaToolStripMenuItem
-            // 
-            this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sepiaToolStripMenuItem.Text = "Sepia";
-            this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -512,6 +533,7 @@
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Sompe";
@@ -579,6 +601,8 @@
         private System.Windows.Forms.ToolStripMenuItem schwarzWeißToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem errorDiffusionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rückgaengigMachenToolStripMenuItem;
 
     }
 }

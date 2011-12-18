@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Collections;
+using System.Drawing.Imaging;
 
 namespace Programming
 {
@@ -29,14 +30,26 @@ namespace Programming
          */
         public bool add( Bitmap img  )
         {
+
+            BitmapData bmData = img.LockBits(new Rectangle(0, 0, img.Width, img.Height),
+            ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+
+
+
+            Image clone = (Bitmap)img.Clone();
+
+
+
+
+            img.UnlockBits(bmData);
             if (container.Count <= (int)Config.value.PIXEL_STATE_CONTAINER_AMOUNT)
             {
-                container.Add(img);
+                container.Add(clone);
                 return true;
             }
 
             container.RemoveAt(0);
-            container.Add(img);
+            container.Add(clone);
             return false;
         }
 
@@ -72,6 +85,7 @@ namespace Programming
                 if (container[container.Count - 1] != null)
                 {       //letztes element zurückgeben
                     Bitmap img = (Bitmap)container[container.Count - 1];
+                    //Bitmap img = (Bitmap)container[0];
                         // element aus container löschen
                     container.RemoveAt(container.Count - 1);
                     return img;
@@ -79,6 +93,21 @@ namespace Programming
             }
             // wenn kein elment in der liste, null zurück geben
             return null;
+        }
+
+        /**
+        * Leert den container Inhalt.
+        * 
+        *
+        */
+        public void reset()
+        {
+            // wenn min. 1 element im container
+            if (container.Count != 0)
+            {
+                container = new ArrayList(amount);
+            }
+            
         }
 
 

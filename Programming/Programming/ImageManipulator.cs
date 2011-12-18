@@ -17,7 +17,7 @@ namespace Programming
         private ImageManipulatorType.Name filter;
         private ThreadHandler thHandler;
         
-        private ImageManipulatorType.Name name;
+      
 
         public ImageManipulator(Bitmap bitmap, ImageManipulatorType.Name filter, ThreadHandler thHandler)
         {

@@ -240,6 +240,16 @@ namespace Programming
             Controller.getInstance().sepia();
         }
 
+
+        private void rückgaengigMachenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().undo();
+        }
+
+       
+
+        
+
         
 
         /*   Mathias From Ende                                            */
