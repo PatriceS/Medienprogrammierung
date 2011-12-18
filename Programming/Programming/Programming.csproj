@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlackWhiteFilter.cs" />
+    <Compile Include="Filter\BlackWhiteFilter.cs" />
     <Compile Include="ErrorDiffusionFilter.cs" />
     <Compile Include="FacebookLoginDialog.cs">
       <SubType>Form</SubType>
@@ -60,7 +60,7 @@
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageManipulator.cs" />
-    <Compile Include="InvertFilter.cs" />
+    <Compile Include="Filter\InvertFilter.cs" />
     <Compile Include="ImageManipulatorType.cs" />
     <Compile Include="Manipulate.cs" />
     <Compile Include="Manipulations.cs" />
@@ -71,12 +71,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="OscillationFilter.cs" />
+    <Compile Include="Filter\OscillationFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rotate.cs" />
-    <Compile Include="GrayscaleFilter.cs" />
-    <Compile Include="SepiaFilter.cs" />
+    <Compile Include="Filter\Rotate.cs" />
+    <Compile Include="Filter\GrayscaleFilter.cs" />
+    <Compile Include="Filter\SepiaFilter.cs" />
     <Compile Include="ThreadHandler.cs" />
     <Compile Include="User.cs">
       <SubType>Form</SubType>
