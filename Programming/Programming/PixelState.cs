@@ -104,7 +104,7 @@ namespace Programming
             // wenn min. 1 element im container
             if (container.Count != 0)
             {
-                container = new List<ImageObject>(amount);
+                container.Clear();
             }
             
         }
