@@ -264,7 +264,7 @@
             this.loginTwitter.AutoSize = true;
             this.loginTwitter.Location = new System.Drawing.Point(689, 3);
             this.loginTwitter.Name = "loginTwitter";
-            this.loginTwitter.Size = new System.Drawing.Size(95, 35);
+            this.loginTwitter.Size = new System.Drawing.Size(95, 22);
             this.loginTwitter.TabIndex = 6;
             this.loginTwitter.Text = "mit Twitter einloggen";
             this.loginTwitter.UseVisualStyleBackColor = true;
@@ -274,7 +274,7 @@
             this.loginFacebook.AutoSize = true;
             this.loginFacebook.Location = new System.Drawing.Point(561, 3);
             this.loginFacebook.Name = "loginFacebook";
-            this.loginFacebook.Size = new System.Drawing.Size(122, 38);
+            this.loginFacebook.Size = new System.Drawing.Size(122, 22);
             this.loginFacebook.TabIndex = 7;
             this.loginFacebook.Text = "mit Facebook einloggen";
             this.loginFacebook.UseVisualStyleBackColor = true;
@@ -299,7 +299,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 71);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 57);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -423,14 +423,18 @@
             this.selectAlbumComboBox.Location = new System.Drawing.Point(3, 32);
             this.selectAlbumComboBox.Name = "selectAlbumComboBox";
             this.selectAlbumComboBox.Size = new System.Drawing.Size(183, 21);
+            this.selectAlbumComboBox.Sorted = true;
             this.selectAlbumComboBox.TabIndex = 9;
             this.selectAlbumComboBox.SelectedIndexChanged += new System.EventHandler(this.selectAlbumComboBox_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(183, 29);
             this.label2.TabIndex = 10;
             this.label2.Text = "Deine Facebook-Alben";
@@ -439,7 +443,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("flowLayoutPanel2.BackgroundImage")));
-            this.flowLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.flowLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -488,11 +492,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(207, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(214, 134);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(814, 662);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -509,17 +513,16 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
             this.tableLayoutPanel4.Controls.Add(this.loginTwitter, 5, 0);
             this.tableLayoutPanel4.Controls.Add(this.loginFacebook, 4, 0);
-            this.tableLayoutPanel4.Controls.Add(this.infoBox, 2, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 27);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(787, 44);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(787, 28);
             this.tableLayoutPanel4.TabIndex = 8;
             // 
             // infoBox
             // 
-            this.infoBox.Location = new System.Drawing.Point(201, 3);
+            this.infoBox.Location = new System.Drawing.Point(880, 27);
             this.infoBox.Multiline = true;
             this.infoBox.Name = "infoBox";
             this.infoBox.Size = new System.Drawing.Size(145, 25);
@@ -564,10 +567,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1031, 742);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.infoBox);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;

@@ -10,7 +10,7 @@ using Facebook;
 
 namespace Programming
 {
-    class User : Form
+    class User
     {
         static User user = null;
         private Form1 mainForm;
