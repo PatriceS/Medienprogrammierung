@@ -11,7 +11,7 @@ namespace Programming
     class PixelState
     {
         private static PixelState PState = null;
-        private static ArrayList container;
+        private static List<ImageObject> container;
         private static int       amount;
 
         public static PixelState getInstance()
@@ -20,7 +20,7 @@ namespace Programming
 
             PState = new PixelState();
             amount = (int)Config.value.PIXEL_STATE_CONTAINER_AMOUNT;
-            container = new ArrayList(amount);
+            container = new List<ImageObject>(amount);
             return PState;
         }
 
@@ -28,28 +28,27 @@ namespace Programming
          * Fügt dem PixelState Container ein neues Bild hinzu. Ist der Container voll,
          * dann wird das älteste Element entfernt und das neue hinten angefügt.
          */
-        public bool add( Bitmap img  )
+        public bool add( ImageObject imgObj  )
         {
-
+            Bitmap img = (Bitmap)imgObj.get_Image();
             BitmapData bmData = img.LockBits(new Rectangle(0, 0, img.Width, img.Height),
             ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
 
-
-
             Image clone = (Bitmap)img.Clone();
 
-
-
-
             img.UnlockBits(bmData);
+
+                // wenn maximale Grenze des containers noch nicht erreicht
             if (container.Count <= (int)Config.value.PIXEL_STATE_CONTAINER_AMOUNT)
             {
-                container.Add(clone);
+
+                    // Element hinten anfügen
+                container.Add(new ImageObject(clone, imgObj.get_ImageManipulatorType()));
                 return true;
             }
-
+                // ältestes Element löschen und neues "oben reinpacken"
             container.RemoveAt(0);
-            container.Add(clone);
+            container.Add(new ImageObject(clone, imgObj.get_ImageManipulatorType()));
             return false;
         }
 
@@ -58,14 +57,14 @@ namespace Programming
          * leer, dann wird null zurückgegeben.
          *
          */
-        public Bitmap get_last( )
+        public ImageObject get_last( )
         {
                 // wenn min. 1 element im container
             if (container.Count != 0)
             {
                 if (container[container.Count - 1] != null)
                 {       //letztes element zurückgeben
-                    return (Bitmap)container[container.Count - 1];
+                    return container[container.Count - 1];
                 }
             }
                 // wenn kein elment in der liste, null zurück geben
@@ -77,18 +76,18 @@ namespace Programming
          * aus dem container.Wenn container leer, dann wird null zurückgegeben.
         *
         */
-        public Bitmap remove_last( )
+        public ImageObject remove_last()
         {
             // wenn min. 1 element im container
             if (container.Count != 0)
             {
                 if (container[container.Count - 1] != null)
                 {       //letztes element zurückgeben
-                    Bitmap img = (Bitmap)container[container.Count - 1];
+                    ImageObject imgObj = container[container.Count - 1];
                     //Bitmap img = (Bitmap)container[0];
                         // element aus container löschen
                     container.RemoveAt(container.Count - 1);
-                    return img;
+                    return imgObj;
                 }
             }
             // wenn kein elment in der liste, null zurück geben
@@ -105,7 +104,7 @@ namespace Programming
             // wenn min. 1 element im container
             if (container.Count != 0)
             {
-                container = new ArrayList(amount);
+                container = new List<ImageObject>(amount);
             }
             
         }
