@@ -219,7 +219,7 @@ namespace Programming
 
         private void negativToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Controller.getInstance().invert();
+            Controller.getInstance().filter_invert();
         }
 
         private void cancelUploadButton_Click(object sender, EventArgs e)
@@ -236,27 +236,27 @@ namespace Programming
         /*    Mathias Form Anfang                                       */
         private void schwingungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().oscillate();
+            Controller.getInstance().filter_oscillate();
         }
 
         private void graustufenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().grayscale();
+            Controller.getInstance().filter_grayscale();
         }
 
         private void schwarzWeißToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().blackNwhite();
+            Controller.getInstance().filter_blackNwhite();
         }
 
         private void errorDiffusionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().errorDiffusion();
+            Controller.getInstance().filter_errorDiffusion();
         }
 
         private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().sepia();
+            Controller.getInstance().filter_sepia();
         }
 
 
@@ -265,9 +265,25 @@ namespace Programming
             Controller.getInstance().undo();
         }
 
+<<<<<<< HEAD
         private void Form1_Load(object sender, EventArgs e)
         {
 
+=======
+        private void rotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_RED);
+        }
+
+        private void grünToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_GREEN);
+        }
+
+        private void blauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
+>>>>>>> 7f51ce4798d1bf200c4db7405495b06dd40c0a73
         }
 
        

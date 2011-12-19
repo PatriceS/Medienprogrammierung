@@ -80,6 +80,15 @@ namespace Programming
                     case ImageManipulatorType.Name.SEPIA:
                         thread = new Thread(new SepiaFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
                         break;
+                    case ImageManipulatorType.Name.RGB_RED:
+                        thread = new Thread(new RGB_ModeFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, ImageManipulatorType.Name.RGB_RED).perform);
+                        break;   
+                    case ImageManipulatorType.Name.RGB_GREEN:
+                        thread = new Thread(new RGB_ModeFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, ImageManipulatorType.Name.RGB_GREEN).perform);
+                        break;   
+                    case ImageManipulatorType.Name.RGB_BLUE:
+                        thread = new Thread(new RGB_ModeFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, ImageManipulatorType.Name.RGB_BLUE).perform);
+                        break;                
                 }
 
 

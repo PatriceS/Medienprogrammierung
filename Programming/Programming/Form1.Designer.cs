@@ -71,10 +71,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+<<<<<<< HEAD
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.infoThreads = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.infoTime = new System.Windows.Forms.Label();
+=======
+            this.infoBox = new System.Windows.Forms.TextBox();
+            this.farbkanalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grünToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> 7f51ce4798d1bf200c4db7405495b06dd40c0a73
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -176,7 +184,8 @@
             this.graustufenToolStripMenuItem,
             this.schwarzWeißToolStripMenuItem,
             this.errorDiffusionToolStripMenuItem,
-            this.sepiaToolStripMenuItem});
+            this.sepiaToolStripMenuItem,
+            this.farbkanalToolStripMenuItem});
             this.filterToolStripMenuItem.Enabled = false;
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
@@ -186,42 +195,42 @@
             // negativToolStripMenuItem
             // 
             this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
-            this.negativToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.negativToolStripMenuItem.Text = "Negativ";
             this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click_1);
             // 
             // schwingungToolStripMenuItem
             // 
             this.schwingungToolStripMenuItem.Name = "schwingungToolStripMenuItem";
-            this.schwingungToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.schwingungToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.schwingungToolStripMenuItem.Text = "Schwingung";
             this.schwingungToolStripMenuItem.Click += new System.EventHandler(this.schwingungToolStripMenuItem_Click);
             // 
             // graustufenToolStripMenuItem
             // 
             this.graustufenToolStripMenuItem.Name = "graustufenToolStripMenuItem";
-            this.graustufenToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.graustufenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.graustufenToolStripMenuItem.Text = "Graustufen";
             this.graustufenToolStripMenuItem.Click += new System.EventHandler(this.graustufenToolStripMenuItem_Click);
             // 
             // schwarzWeißToolStripMenuItem
             // 
             this.schwarzWeißToolStripMenuItem.Name = "schwarzWeißToolStripMenuItem";
-            this.schwarzWeißToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.schwarzWeißToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.schwarzWeißToolStripMenuItem.Text = "Schwarz/Weiß";
             this.schwarzWeißToolStripMenuItem.Click += new System.EventHandler(this.schwarzWeißToolStripMenuItem_Click);
             // 
             // errorDiffusionToolStripMenuItem
             // 
             this.errorDiffusionToolStripMenuItem.Name = "errorDiffusionToolStripMenuItem";
-            this.errorDiffusionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.errorDiffusionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.errorDiffusionToolStripMenuItem.Text = "Error Diffusion";
             this.errorDiffusionToolStripMenuItem.Click += new System.EventHandler(this.errorDiffusionToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
@@ -568,6 +577,37 @@
             this.infoTime.TabIndex = 15;
             this.infoTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // farbkanalToolStripMenuItem
+            // 
+            this.farbkanalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rotToolStripMenuItem,
+            this.grünToolStripMenuItem,
+            this.blauToolStripMenuItem});
+            this.farbkanalToolStripMenuItem.Name = "farbkanalToolStripMenuItem";
+            this.farbkanalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.farbkanalToolStripMenuItem.Text = "Farbkanal";
+            // 
+            // rotToolStripMenuItem
+            // 
+            this.rotToolStripMenuItem.Name = "rotToolStripMenuItem";
+            this.rotToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.rotToolStripMenuItem.Text = "Rot";
+            this.rotToolStripMenuItem.Click += new System.EventHandler(this.rotToolStripMenuItem_Click);
+            // 
+            // grünToolStripMenuItem
+            // 
+            this.grünToolStripMenuItem.Name = "grünToolStripMenuItem";
+            this.grünToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.grünToolStripMenuItem.Text = "Grün";
+            this.grünToolStripMenuItem.Click += new System.EventHandler(this.grünToolStripMenuItem_Click);
+            // 
+            // blauToolStripMenuItem
+            // 
+            this.blauToolStripMenuItem.Name = "blauToolStripMenuItem";
+            this.blauToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.blauToolStripMenuItem.Text = "Blau";
+            this.blauToolStripMenuItem.Click += new System.EventHandler(this.blauToolStripMenuItem_Click);
+            // 
             // userBindingSource
             // 
             this.userBindingSource.DataSource = typeof(Programming.User);
@@ -655,10 +695,17 @@
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rückgaengigMachenToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label infoThreads;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label infoTime;
+=======
+        private System.Windows.Forms.ToolStripMenuItem farbkanalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grünToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blauToolStripMenuItem;
+>>>>>>> 7f51ce4798d1bf200c4db7405495b06dd40c0a73
 
     }
 }

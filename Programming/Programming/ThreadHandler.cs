@@ -91,9 +91,9 @@ namespace Programming
          * Funktion zum speichern von veränderten Bildern (Zwischenschritten)
          * 
          */
-        public void save_PixelState( Bitmap bitmap )
+        public void save_PixelState( ImageObject imgObj )
         {
-            Thread t = new Thread(() => this.try_save_PixelState(bitmap));
+            Thread t = new Thread(() => this.try_save_PixelState(imgObj));
             t.Name = "bg_PixelState_thread";
             t.Start();
         }
@@ -112,7 +112,7 @@ namespace Programming
         }
 
 
-        private void try_save_PixelState(Bitmap bitmap)
+        private void try_save_PixelState(ImageObject imgObj)
         {
                 // solange noch nicht alle Threads beendet wurden -> warten
             while (this.threadsAreAlive())
@@ -125,7 +125,7 @@ namespace Programming
                 // ab hier Thread sicher speichern
             lock (_locker)
             {
-                state.add(bitmap);
+                state.add(imgObj);
             }
         }
 

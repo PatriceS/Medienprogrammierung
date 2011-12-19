@@ -17,61 +17,95 @@ namespace Programming
         private Form1 mainForm;
         private static int threads = (int)Config.value.THREADS;
       
-        public void invert( )
+        public void filter_invert( )
         {
-            PixelState.getInstance().add((Bitmap)pic.Image);
-            ThreadHandler thHandler = new ThreadHandler(threads);
-            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT, thHandler).perform();
-            this.show_picture(thHandler);
+           // for (int i = 0; i < 19; i++)
+           // {
+                ImageManipulatorType.Name name = ImageManipulatorType.Name.INVERT;
+                PixelState.getInstance().add(new ImageObject(pic.Image, name));
+                ThreadHandler thHandler = new ThreadHandler(threads);
+                new ImageManipulator((Bitmap)pic.Image, name, thHandler).perform();
+                this.show_picture(thHandler);
+           // }
         }
 
-        public void oscillate()
+        public void filter_oscillate()
         {
-            PixelState.getInstance().add((Bitmap)pic.Image);
+            ImageManipulatorType.Name name = ImageManipulatorType.Name.INVERT;
+            PixelState.getInstance().add(new ImageObject(pic.Image, name));
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.OSCILLATION, thHandler).perform();
             this.show_picture(thHandler);
         }
 
-        public void grayscale()
+        public void filter_grayscale()
         {
-            PixelState.getInstance().add((Bitmap)pic.Image);
+            ImageManipulatorType.Name name = ImageManipulatorType.Name.GRAYSCALE;
+            PixelState.getInstance().add(new ImageObject(pic.Image, name));
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.GRAYSCALE, thHandler).perform();
             this.show_picture(thHandler);
            
         }
 
-        public void blackNwhite()
+        public void filter_blackNwhite()
         {
-            PixelState.getInstance().add((Bitmap)pic.Image);
+            ImageManipulatorType.Name name = ImageManipulatorType.Name.BLACKWHITE;
+            PixelState.getInstance().add(new ImageObject(pic.Image, name));
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.BLACKWHITE, thHandler).perform();
             this.show_picture(thHandler);
             
         }
 
-        public void errorDiffusion()
+        public void filter_errorDiffusion()
         {
-            PixelState.getInstance().add((Bitmap)pic.Image);
+            ImageManipulatorType.Name name = ImageManipulatorType.Name.ERROR_DIFFUSION;
+            PixelState.getInstance().add(new ImageObject(pic.Image, name));
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.ERROR_DIFFUSION, thHandler).perform();
             this.show_picture(thHandler);
         }
 
-        public void sepia()
+        public void filter_sepia()
         {
-            PixelState.getInstance().add((Bitmap)pic.Image);
+            ImageManipulatorType.Name name = ImageManipulatorType.Name.SEPIA;
+            PixelState.getInstance().add(new ImageObject(pic.Image, name));
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.SEPIA, thHandler).perform();
             this.show_picture(thHandler);
         }
 
-        public void rotate(RotateFlipType type)
+        public void filter_RGB_Mode( ImageManipulatorType.Name color )
         {
-            PixelState.getInstance().add((Bitmap)pic.Image);
-            Rotate.rotate((Bitmap)pic.Image, type);
-            PixelState.getInstance().add((Bitmap)pic.Image.Clone());
+            PixelState state = PixelState.getInstance();
+            ImageObject imgObj = state.get_last();
+
+            if( imgObj != null)
+            {
+                if (imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.RGB_BLUE
+                                                      ||
+                    imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.RGB_RED
+                                                      ||
+                    imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.RGB_GREEN
+                  )
+                {
+                    this.undo();
+                }
+            
+            }
+            state.add(new ImageObject(pic.Image, color));
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new ImageManipulator((Bitmap)pic.Image, color, thHandler).perform();
+            this.show_picture(thHandler);
+        }
+
+        public void filter_rotate(RotateFlipType type)
+        {
+            ImageManipulatorType.Name name = ImageManipulatorType.Name.ROTATE;
+            PixelState.getInstance().add(new ImageObject(pic.Image, name));
+            RotateFilter.rotate((Bitmap)pic.Image, type);
+            
         }
 
         public static Controller getInstance()
@@ -103,7 +137,7 @@ namespace Programming
             if (state.get_last() != null)
             {
                 pic.Image = null;
-                pic.Image = PixelState.getInstance().remove_last();
+                pic.Image = (Image)PixelState.getInstance().remove_last().get_Image();
                 pic.Refresh();
             }
         }
