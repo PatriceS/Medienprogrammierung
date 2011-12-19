@@ -17,7 +17,7 @@ namespace Programming
         private Form1 mainForm;
         private static int threads = (int)Config.value.THREADS;
       
-        public void invert( )
+        public void filter_invert( )
         {
            // for (int i = 0; i < 19; i++)
            // {
@@ -28,7 +28,7 @@ namespace Programming
            // }
         }
 
-        public void oscillate()
+        public void filter_oscillate()
         {
             PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
@@ -36,7 +36,7 @@ namespace Programming
             this.show_picture(thHandler);
         }
 
-        public void grayscale()
+        public void filter_grayscale()
         {
             PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
@@ -45,7 +45,7 @@ namespace Programming
            
         }
 
-        public void blackNwhite()
+        public void filter_blackNwhite()
         {
             PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
@@ -54,7 +54,7 @@ namespace Programming
             
         }
 
-        public void errorDiffusion()
+        public void filter_errorDiffusion()
         {
             PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
@@ -62,7 +62,7 @@ namespace Programming
             this.show_picture(thHandler);
         }
 
-        public void sepia()
+        public void filter_sepia()
         {
             PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
@@ -70,7 +70,7 @@ namespace Programming
             this.show_picture(thHandler);
         }
 
-        public void RGB_Mode( ImageManipulatorType.Name color )
+        public void filter_RGB_Mode( ImageManipulatorType.Name color )
         {
             this.undo();
             PixelState.getInstance().add((Bitmap)pic.Image);
@@ -79,10 +79,10 @@ namespace Programming
             this.show_picture(thHandler);
         }
 
-        public void rotate(RotateFlipType type)
+        public void filter_rotate(RotateFlipType type)
         {
             PixelState.getInstance().add((Bitmap)pic.Image);
-            Rotate.rotate((Bitmap)pic.Image, type);
+            RotateFilter.rotate((Bitmap)pic.Image, type);
             PixelState.getInstance().add((Bitmap)pic.Image.Clone());
         }
 
