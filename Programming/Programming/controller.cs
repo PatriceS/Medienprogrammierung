@@ -19,10 +19,13 @@ namespace Programming
       
         public void invert( )
         {
-            PixelState.getInstance().add((Bitmap)pic.Image);
-            ThreadHandler thHandler = new ThreadHandler(threads);
-            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT, thHandler).perform();
-            this.show_picture(thHandler);
+           // for (int i = 0; i < 19; i++)
+           // {
+                PixelState.getInstance().add((Bitmap)pic.Image);
+                ThreadHandler thHandler = new ThreadHandler(threads);
+                new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.INVERT, thHandler).perform();
+                this.show_picture(thHandler);
+           // }
         }
 
         public void oscillate()
@@ -64,6 +67,15 @@ namespace Programming
             PixelState.getInstance().add((Bitmap)pic.Image);
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.SEPIA, thHandler).perform();
+            this.show_picture(thHandler);
+        }
+
+        public void RGB_Mode( ImageManipulatorType.Name color )
+        {
+            this.undo();
+            PixelState.getInstance().add((Bitmap)pic.Image);
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            new ImageManipulator((Bitmap)pic.Image, color, thHandler).perform();
             this.show_picture(thHandler);
         }
 

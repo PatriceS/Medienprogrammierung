@@ -30,7 +30,7 @@ namespace Programming
                 {
                     for (int x = 0; x < this.bitmap_width; ++x)
                     {
-                        v = y * 127 / (height_end - 1) * Math.Sin(Math.Exp(x * 0.01));
+                        v = y * 127 / (bitmap_height - 1) * Math.Sin(Math.Exp(x * 0.01));
                         p[0] = (byte)(128 - v);
                         p += 3;
                     }

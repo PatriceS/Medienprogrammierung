@@ -246,6 +246,21 @@ namespace Programming
             Controller.getInstance().undo();
         }
 
+        private void rotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().RGB_Mode(ImageManipulatorType.Name.RGB_RED);
+        }
+
+        private void grünToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().RGB_Mode(ImageManipulatorType.Name.RGB_GREEN);
+        }
+
+        private void blauToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
+        }
+
        
 
         
