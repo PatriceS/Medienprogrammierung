@@ -39,6 +39,10 @@
     <Reference Include="Facebook">
       <HintPath>bin\Release\Facebook.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.3.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -109,6 +113,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\album_icon.png" />
+    <Content Include="images\Earth Stop_32.png" />
+    <Content Include="images\Earth Upload_32.png" />
     <Content Include="images\Facebook.PNG" />
     <Content Include="images\fb.png" />
     <Content Include="images\Twitter.PNG" />

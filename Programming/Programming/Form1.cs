@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Net;
+using System.Web;
 using System.Net.Sockets;
 using System.Threading;
 using Facebook;
-
 
 namespace Programming
 {
@@ -205,15 +205,11 @@ namespace Programming
 
         }
 
-        private void infoBox_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         internal void setInfoBox(int thread_count, long time)
         {
-            string str = "Threads: " + thread_count.ToString() + " time: " + time.ToString() + " ms ";
-            infoBox.Text = str;
+            infoThreads.Text = thread_count.ToString();
+            infoTime.Text = time.ToString() + " ms ";
         }
 
         private void filterToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -267,6 +263,11 @@ namespace Programming
         private void rückgaengigMachenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controller.getInstance().undo();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
        

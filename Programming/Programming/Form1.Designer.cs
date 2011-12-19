@@ -71,7 +71,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.infoBox = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.infoThreads = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.infoTime = new System.Windows.Forms.Label();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -329,10 +332,10 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 221F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(195, 540);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
@@ -341,7 +344,7 @@
             this.publishTwitter.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.publishTwitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishTwitter.BackgroundImage")));
             this.publishTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.publishTwitter.Location = new System.Drawing.Point(0, 317);
+            this.publishTwitter.Location = new System.Drawing.Point(0, 304);
             this.publishTwitter.Margin = new System.Windows.Forms.Padding(0);
             this.publishTwitter.Name = "publishTwitter";
             this.publishTwitter.Size = new System.Drawing.Size(86, 74);
@@ -351,15 +354,19 @@
             // 
             // cancelUploadButton
             // 
+            this.cancelUploadButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cancelUploadButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.cancelUploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cancelUploadButton.Enabled = false;
-            this.cancelUploadButton.Location = new System.Drawing.Point(0, 273);
+            this.cancelUploadButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelUploadButton.Image")));
+            this.cancelUploadButton.Location = new System.Drawing.Point(27, 264);
             this.cancelUploadButton.Margin = new System.Windows.Forms.Padding(0);
             this.cancelUploadButton.Name = "cancelUploadButton";
-            this.cancelUploadButton.Size = new System.Drawing.Size(195, 25);
+            this.cancelUploadButton.Size = new System.Drawing.Size(140, 40);
             this.cancelUploadButton.TabIndex = 12;
             this.cancelUploadButton.Text = "Upload abbrechen";
-            this.cancelUploadButton.UseVisualStyleBackColor = true;
+            this.cancelUploadButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.cancelUploadButton.UseVisualStyleBackColor = false;
             this.cancelUploadButton.Click += new System.EventHandler(this.cancelUploadButton_Click);
             // 
             // tableLayoutPanel5
@@ -368,21 +375,21 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.progressBar1, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 204);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 219);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(189, 66);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.65217F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.34783F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(189, 42);
             this.tableLayoutPanel5.TabIndex = 14;
             // 
             // progressBar1
             // 
             this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.progressBar1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.progressBar1.Location = new System.Drawing.Point(12, 39);
+            this.progressBar1.Location = new System.Drawing.Point(12, 22);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(165, 20);
+            this.progressBar1.Size = new System.Drawing.Size(165, 17);
             this.progressBar1.Step = 1;
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 9;
@@ -390,10 +397,11 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 6);
+            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 20);
+            this.label1.Size = new System.Drawing.Size(165, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Upload-Status";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -424,7 +432,8 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Location = new System.Drawing.Point(3, 0);
@@ -462,17 +471,19 @@
             // publishFacebook
             // 
             this.publishFacebook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.publishFacebook.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.publishFacebook.BackColor = System.Drawing.SystemColors.Highlight;
             this.publishFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.publishFacebook.Enabled = false;
             this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.publishFacebook.Location = new System.Drawing.Point(0, 175);
+            this.publishFacebook.Image = ((System.Drawing.Image)(resources.GetObject("publishFacebook.Image")));
+            this.publishFacebook.Location = new System.Drawing.Point(27, 175);
             this.publishFacebook.Margin = new System.Windows.Forms.Padding(0);
             this.publishFacebook.Name = "publishFacebook";
-            this.publishFacebook.Size = new System.Drawing.Size(195, 25);
+            this.publishFacebook.Size = new System.Drawing.Size(140, 40);
             this.publishFacebook.TabIndex = 0;
             this.publishFacebook.Text = "Bild auf Facebook veröffentlichen";
-            this.publishFacebook.UseVisualStyleBackColor = true;
+            this.publishFacebook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.publishFacebook.UseVisualStyleBackColor = false;
             this.publishFacebook.Click += new System.EventHandler(this.publishFacebook_Click);
             // 
             // button1
@@ -489,9 +500,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(214, 134);
+            this.pictureBox1.Location = new System.Drawing.Point(209, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 400);
+            this.pictureBox1.Size = new System.Drawing.Size(810, 660);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -515,13 +526,47 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(787, 28);
             this.tableLayoutPanel4.TabIndex = 8;
             // 
-            // infoBox
+            // linkLabel1
             // 
-            this.infoBox.Location = new System.Drawing.Point(880, 27);
-            this.infoBox.Multiline = true;
-            this.infoBox.Name = "infoBox";
-            this.infoBox.Size = new System.Drawing.Size(145, 25);
-            this.infoBox.TabIndex = 11;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkArea = new System.Windows.Forms.LinkArea(0, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(891, 27);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(102, 13);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.Text = "Anzahl der Threads:";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // infoThreads
+            // 
+            this.infoThreads.AutoSize = true;
+            this.infoThreads.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoThreads.Location = new System.Drawing.Point(988, 27);
+            this.infoThreads.Name = "infoThreads";
+            this.infoThreads.Size = new System.Drawing.Size(0, 13);
+            this.infoThreads.TabIndex = 13;
+            this.infoThreads.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.LinkArea = new System.Windows.Forms.LinkArea(10, 0);
+            this.linkLabel2.Location = new System.Drawing.Point(965, 41);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(26, 17);
+            this.linkLabel2.TabIndex = 14;
+            this.linkLabel2.Text = "Zeit:";
+            this.linkLabel2.UseCompatibleTextRendering = true;
+            // 
+            // infoTime
+            // 
+            this.infoTime.AutoSize = true;
+            this.infoTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoTime.Location = new System.Drawing.Point(988, 41);
+            this.infoTime.Name = "infoTime";
+            this.infoTime.Size = new System.Drawing.Size(0, 13);
+            this.infoTime.TabIndex = 15;
+            this.infoTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // userBindingSource
             // 
@@ -533,14 +578,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1031, 742);
+            this.Controls.Add(this.infoTime);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.infoThreads);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.infoBox);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Sompe";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
@@ -590,7 +639,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.ToolStripMenuItem negativToolStripMenuItem;
-        private System.Windows.Forms.TextBox infoBox;
         public System.Windows.Forms.Button cancelUploadButton;
         public System.Windows.Forms.ProgressBar progressBar1;
         public System.Windows.Forms.Button publishFacebook;
@@ -607,6 +655,10 @@
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rückgaengigMachenToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label infoThreads;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label infoTime;
 
     }
 }
