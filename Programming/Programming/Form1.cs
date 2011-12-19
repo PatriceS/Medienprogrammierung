@@ -265,11 +265,9 @@ namespace Programming
             Controller.getInstance().undo();
         }
 
-<<<<<<< HEAD
         private void Form1_Load(object sender, EventArgs e)
         {
-
-=======
+        }
         private void rotToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_RED);
@@ -283,7 +281,7 @@ namespace Programming
         private void blauToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
->>>>>>> 7f51ce4798d1bf200c4db7405495b06dd40c0a73
+
         }
 
        

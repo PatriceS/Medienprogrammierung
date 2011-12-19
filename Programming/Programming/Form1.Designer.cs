@@ -71,18 +71,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-<<<<<<< HEAD
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.infoThreads = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.infoTime = new System.Windows.Forms.Label();
-=======
-            this.infoBox = new System.Windows.Forms.TextBox();
             this.farbkanalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grünToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
->>>>>>> 7f51ce4798d1bf200c4db7405495b06dd40c0a73
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -695,17 +691,14 @@
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rückgaengigMachenToolStripMenuItem;
-<<<<<<< HEAD
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label infoThreads;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label infoTime;
-=======
         private System.Windows.Forms.ToolStripMenuItem farbkanalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rotToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grünToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blauToolStripMenuItem;
->>>>>>> 7f51ce4798d1bf200c4db7405495b06dd40c0a73
 
     }
 }
