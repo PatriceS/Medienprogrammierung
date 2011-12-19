@@ -13,6 +13,8 @@ namespace Programming
 {
     public partial class Form1 : Form
     {
+        private int MAX_SIZE = 800;
+        
         private Controller con;
         private const int threads = 4;
         private FacebookClient fb;
@@ -52,10 +54,11 @@ namespace Programming
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
+                
                 this.con = Controller.getInstance();
                 this.con.setPictureBox(pictureBox1);
                 this.con.setMainForm(this);
-               
+                setPictureBoxSize(pictureBox1.Image);
                 
                 filterToolStripMenuItem.Enabled = true;
                 bildSchließenToolStripMenuItem.Enabled = true;
@@ -64,6 +67,26 @@ namespace Programming
             }
         }
 
+        private void setPictureBoxSize(Image img)
+        {
+            if (img.Width > img.Height)
+            {
+                double scaleFactor = ((double)img.Width / (double)MAX_SIZE);
+
+                pictureBox1.Height = (int)(img.Height / scaleFactor);
+                pictureBox1.Width = MAX_SIZE;
+            }
+            else
+            {
+                double scaleFactor = ((double)img.Height / (double)MAX_SIZE);
+
+                pictureBox1.Width = (int)(img.Width / scaleFactor);
+                pictureBox1.Height = MAX_SIZE;
+            }
+            pictureBox1.Refresh();
+          
+        }
+                 
         private void bildSpeichernToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
@@ -167,7 +190,7 @@ namespace Programming
             }
             else
             {
-                MessageBox.Show("Bitte zuerst ein Bild öffnen");
+                MessageBox.Show("Bitte zuerst ein Bild öffnen", "Bitte Bild öffnen", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
