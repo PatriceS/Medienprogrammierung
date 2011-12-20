@@ -283,7 +283,6 @@ namespace Programming
             Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
 
         }
-
        
 
         

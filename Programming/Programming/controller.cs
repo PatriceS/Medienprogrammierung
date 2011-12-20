@@ -90,7 +90,7 @@ namespace Programming
                     imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.RGB_GREEN
                   )
                 {
-                    this.undo();
+                    this.undo(false);
                 }
             
             }
@@ -131,14 +131,18 @@ namespace Programming
             mainForm = form;
         }
 
-        public void undo()
+        public void undo(bool refresh = true)
         {
             PixelState state = PixelState.getInstance();
             if (state.get_last() != null)
             {
                 pic.Image = null;
                 pic.Image = (Image)PixelState.getInstance().remove_last().get_Image();
-                pic.Refresh();
+                if (refresh)
+                {
+                    pic.Refresh();
+                }
+                
             }
         }
 
