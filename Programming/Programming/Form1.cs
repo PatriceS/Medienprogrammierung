@@ -63,7 +63,7 @@ namespace Programming
                 filterToolStripMenuItem.Enabled = true;
                 bildSchließenToolStripMenuItem.Enabled = true;
                 bildSpeichernToolStripMenuItem.Enabled = true;
-                //bildÖffnenToolStripMenuItem.Enabled = false;
+                bildÖffnenToolStripMenuItem.Enabled = false;
             }
         }
 

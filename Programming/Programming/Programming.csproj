@@ -118,8 +118,12 @@
     <Content Include="images\Earth Stop_32.png" />
     <Content Include="images\Earth Upload_32.png" />
     <Content Include="images\Facebook.PNG" />
+    <Content Include="images\facebook_icon.png" />
     <Content Include="images\fb.png" />
+    <Content Include="images\rotate270.png" />
+    <Content Include="images\rotate90.png" />
     <Content Include="images\Twitter.PNG" />
+    <Content Include="images\twitter_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

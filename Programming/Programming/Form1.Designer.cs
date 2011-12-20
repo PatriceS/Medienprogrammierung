@@ -46,6 +46,10 @@
             this.schwarzWeißToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.errorDiffusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.farbkanalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grünToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manipulationenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überSompeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +61,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.publishTwitter = new System.Windows.Forms.Button();
             this.cancelUploadButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -68,17 +71,14 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.publishFacebook = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rotate90 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.rotate270 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.infoThreads = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.infoTime = new System.Windows.Forms.Label();
-            this.farbkanalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grünToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -191,44 +191,75 @@
             // negativToolStripMenuItem
             // 
             this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
-            this.negativToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.negativToolStripMenuItem.Text = "Negativ";
             this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click_1);
             // 
             // schwingungToolStripMenuItem
             // 
             this.schwingungToolStripMenuItem.Name = "schwingungToolStripMenuItem";
-            this.schwingungToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.schwingungToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.schwingungToolStripMenuItem.Text = "Schwingung";
             this.schwingungToolStripMenuItem.Click += new System.EventHandler(this.schwingungToolStripMenuItem_Click);
             // 
             // graustufenToolStripMenuItem
             // 
             this.graustufenToolStripMenuItem.Name = "graustufenToolStripMenuItem";
-            this.graustufenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.graustufenToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.graustufenToolStripMenuItem.Text = "Graustufen";
             this.graustufenToolStripMenuItem.Click += new System.EventHandler(this.graustufenToolStripMenuItem_Click);
             // 
             // schwarzWeißToolStripMenuItem
             // 
             this.schwarzWeißToolStripMenuItem.Name = "schwarzWeißToolStripMenuItem";
-            this.schwarzWeißToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.schwarzWeißToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.schwarzWeißToolStripMenuItem.Text = "Schwarz/Weiß";
             this.schwarzWeißToolStripMenuItem.Click += new System.EventHandler(this.schwarzWeißToolStripMenuItem_Click);
             // 
             // errorDiffusionToolStripMenuItem
             // 
             this.errorDiffusionToolStripMenuItem.Name = "errorDiffusionToolStripMenuItem";
-            this.errorDiffusionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.errorDiffusionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.errorDiffusionToolStripMenuItem.Text = "Error Diffusion";
             this.errorDiffusionToolStripMenuItem.Click += new System.EventHandler(this.errorDiffusionToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
+            // 
+            // farbkanalToolStripMenuItem
+            // 
+            this.farbkanalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rotToolStripMenuItem,
+            this.grünToolStripMenuItem,
+            this.blauToolStripMenuItem});
+            this.farbkanalToolStripMenuItem.Name = "farbkanalToolStripMenuItem";
+            this.farbkanalToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.farbkanalToolStripMenuItem.Text = "Farbkanal";
+            // 
+            // rotToolStripMenuItem
+            // 
+            this.rotToolStripMenuItem.Name = "rotToolStripMenuItem";
+            this.rotToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.rotToolStripMenuItem.Text = "Rot";
+            this.rotToolStripMenuItem.Click += new System.EventHandler(this.rotToolStripMenuItem_Click);
+            // 
+            // grünToolStripMenuItem
+            // 
+            this.grünToolStripMenuItem.Name = "grünToolStripMenuItem";
+            this.grünToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.grünToolStripMenuItem.Text = "Grün";
+            this.grünToolStripMenuItem.Click += new System.EventHandler(this.grünToolStripMenuItem_Click);
+            // 
+            // blauToolStripMenuItem
+            // 
+            this.blauToolStripMenuItem.Name = "blauToolStripMenuItem";
+            this.blauToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.blauToolStripMenuItem.Text = "Blau";
+            this.blauToolStripMenuItem.Click += new System.EventHandler(this.blauToolStripMenuItem_Click);
             // 
             // manipulationenToolStripMenuItem
             // 
@@ -253,34 +284,44 @@
             // 
             // usernameLabel
             // 
-            this.usernameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(119, 16);
+            this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.usernameLabel.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.Location = new System.Drawing.Point(53, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(0, 18);
+            this.usernameLabel.Size = new System.Drawing.Size(0, 51);
             this.usernameLabel.TabIndex = 5;
             this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // loginTwitter
             // 
             this.loginTwitter.AutoSize = true;
-            this.loginTwitter.Location = new System.Drawing.Point(689, 3);
+            this.loginTwitter.BackColor = System.Drawing.SystemColors.Highlight;
+            this.loginTwitter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginTwitter.Image = ((System.Drawing.Image)(resources.GetObject("loginTwitter.Image")));
+            this.loginTwitter.Location = new System.Drawing.Point(128, 3);
             this.loginTwitter.Name = "loginTwitter";
-            this.loginTwitter.Size = new System.Drawing.Size(95, 22);
+            this.loginTwitter.Size = new System.Drawing.Size(119, 35);
             this.loginTwitter.TabIndex = 6;
             this.loginTwitter.Text = "mit Twitter einloggen";
-            this.loginTwitter.UseVisualStyleBackColor = true;
+            this.loginTwitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.loginTwitter.UseVisualStyleBackColor = false;
             // 
             // loginFacebook
             // 
             this.loginFacebook.AutoSize = true;
-            this.loginFacebook.Location = new System.Drawing.Point(561, 3);
+            this.loginFacebook.BackColor = System.Drawing.SystemColors.Highlight;
+            this.loginFacebook.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginFacebook.Image = ((System.Drawing.Image)(resources.GetObject("loginFacebook.Image")));
+            this.loginFacebook.Location = new System.Drawing.Point(3, 3);
             this.loginFacebook.Name = "loginFacebook";
-            this.loginFacebook.Size = new System.Drawing.Size(122, 22);
+            this.loginFacebook.Size = new System.Drawing.Size(119, 35);
             this.loginFacebook.TabIndex = 7;
             this.loginFacebook.Text = "mit Facebook einloggen";
-            this.loginFacebook.UseVisualStyleBackColor = true;
+            this.loginFacebook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.loginFacebook.UseVisualStyleBackColor = false;
             this.loginFacebook.Click += new System.EventHandler(this.loginFacebook_Click);
             // 
             // pictureBoxProfile
@@ -302,7 +343,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 57);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 70);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -313,7 +354,6 @@
             // 
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel2);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -324,7 +364,6 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.publishTwitter, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.cancelUploadButton, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 2);
@@ -344,19 +383,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(195, 540);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
-            // publishTwitter
-            // 
-            this.publishTwitter.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.publishTwitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("publishTwitter.BackgroundImage")));
-            this.publishTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.publishTwitter.Location = new System.Drawing.Point(0, 304);
-            this.publishTwitter.Margin = new System.Windows.Forms.Padding(0);
-            this.publishTwitter.Name = "publishTwitter";
-            this.publishTwitter.Size = new System.Drawing.Size(86, 74);
-            this.publishTwitter.TabIndex = 3;
-            this.publishTwitter.UseVisualStyleBackColor = false;
-            this.publishTwitter.Click += new System.EventHandler(this.publishTwitter_Click);
-            // 
             // cancelUploadButton
             // 
             this.cancelUploadButton.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -364,10 +390,10 @@
             this.cancelUploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cancelUploadButton.Enabled = false;
             this.cancelUploadButton.Image = ((System.Drawing.Image)(resources.GetObject("cancelUploadButton.Image")));
-            this.cancelUploadButton.Location = new System.Drawing.Point(27, 264);
+            this.cancelUploadButton.Location = new System.Drawing.Point(17, 264);
             this.cancelUploadButton.Margin = new System.Windows.Forms.Padding(0);
             this.cancelUploadButton.Name = "cancelUploadButton";
-            this.cancelUploadButton.Size = new System.Drawing.Size(140, 40);
+            this.cancelUploadButton.Size = new System.Drawing.Size(160, 40);
             this.cancelUploadButton.TabIndex = 12;
             this.cancelUploadButton.Text = "Upload abbrechen";
             this.cancelUploadButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -481,29 +507,20 @@
             this.publishFacebook.Enabled = false;
             this.publishFacebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.publishFacebook.Image = ((System.Drawing.Image)(resources.GetObject("publishFacebook.Image")));
-            this.publishFacebook.Location = new System.Drawing.Point(27, 175);
+            this.publishFacebook.Location = new System.Drawing.Point(17, 175);
             this.publishFacebook.Margin = new System.Windows.Forms.Padding(0);
             this.publishFacebook.Name = "publishFacebook";
-            this.publishFacebook.Size = new System.Drawing.Size(140, 40);
+            this.publishFacebook.Size = new System.Drawing.Size(160, 40);
             this.publishFacebook.TabIndex = 0;
             this.publishFacebook.Text = "Bild auf Facebook veröffentlichen";
             this.publishFacebook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.publishFacebook.UseVisualStyleBackColor = false;
             this.publishFacebook.Click += new System.EventHandler(this.publishFacebook_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 549);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Rotate";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(209, 4);
             this.pictureBox1.Name = "pictureBox1";
@@ -513,23 +530,49 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // rotate90
+            // 
+            this.rotate90.BackColor = System.Drawing.SystemColors.Highlight;
+            this.rotate90.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rotate90.Image = ((System.Drawing.Image)(resources.GetObject("rotate90.Image")));
+            this.rotate90.Location = new System.Drawing.Point(253, 3);
+            this.rotate90.Name = "rotate90";
+            this.rotate90.Size = new System.Drawing.Size(39, 35);
+            this.rotate90.TabIndex = 4;
+            this.rotate90.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.rotate90.UseVisualStyleBackColor = false;
+            this.rotate90.Click += new System.EventHandler(this.button1_Click);
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 6;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
-            this.tableLayoutPanel4.Controls.Add(this.loginTwitter, 5, 0);
-            this.tableLayoutPanel4.Controls.Add(this.loginFacebook, 4, 0);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 397F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel4.Controls.Add(this.rotate270, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.rotate90, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.loginFacebook, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.loginTwitter, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 27);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(787, 28);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(787, 41);
             this.tableLayoutPanel4.TabIndex = 8;
+            // 
+            // rotate270
+            // 
+            this.rotate270.BackColor = System.Drawing.SystemColors.Highlight;
+            this.rotate270.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rotate270.Image = ((System.Drawing.Image)(resources.GetObject("rotate270.Image")));
+            this.rotate270.Location = new System.Drawing.Point(298, 3);
+            this.rotate270.Name = "rotate270";
+            this.rotate270.Size = new System.Drawing.Size(39, 35);
+            this.rotate270.TabIndex = 8;
+            this.rotate270.UseVisualStyleBackColor = false;
             // 
             // linkLabel1
             // 
@@ -572,37 +615,6 @@
             this.infoTime.Size = new System.Drawing.Size(0, 13);
             this.infoTime.TabIndex = 15;
             this.infoTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // farbkanalToolStripMenuItem
-            // 
-            this.farbkanalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rotToolStripMenuItem,
-            this.grünToolStripMenuItem,
-            this.blauToolStripMenuItem});
-            this.farbkanalToolStripMenuItem.Name = "farbkanalToolStripMenuItem";
-            this.farbkanalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.farbkanalToolStripMenuItem.Text = "Farbkanal";
-            // 
-            // rotToolStripMenuItem
-            // 
-            this.rotToolStripMenuItem.Name = "rotToolStripMenuItem";
-            this.rotToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.rotToolStripMenuItem.Text = "Rot";
-            this.rotToolStripMenuItem.Click += new System.EventHandler(this.rotToolStripMenuItem_Click);
-            // 
-            // grünToolStripMenuItem
-            // 
-            this.grünToolStripMenuItem.Name = "grünToolStripMenuItem";
-            this.grünToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.grünToolStripMenuItem.Text = "Grün";
-            this.grünToolStripMenuItem.Click += new System.EventHandler(this.grünToolStripMenuItem_Click);
-            // 
-            // blauToolStripMenuItem
-            // 
-            this.blauToolStripMenuItem.Name = "blauToolStripMenuItem";
-            this.blauToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.blauToolStripMenuItem.Text = "Blau";
-            this.blauToolStripMenuItem.Click += new System.EventHandler(this.blauToolStripMenuItem_Click);
             // 
             // userBindingSource
             // 
@@ -665,9 +677,8 @@
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button publishTwitter;
         
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button rotate90;
         private System.Windows.Forms.ComboBox selectAlbumComboBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -699,6 +710,7 @@
         private System.Windows.Forms.ToolStripMenuItem rotToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grünToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blauToolStripMenuItem;
+        private System.Windows.Forms.Button rotate270;
 
     }
 }
