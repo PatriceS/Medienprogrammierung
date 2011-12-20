@@ -190,7 +190,7 @@ namespace Programming
             }
             else
             {
-                MessageBox.Show("Bitte zuerst ein Bild öffnen", "Bitte Bild öffnen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bitte zuerst ein Bild öffnen", "Bitte Bild öffnen", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             
         }

@@ -191,42 +191,44 @@
             // negativToolStripMenuItem
             // 
             this.negativToolStripMenuItem.Name = "negativToolStripMenuItem";
-            this.negativToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.negativToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.negativToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.negativToolStripMenuItem.Text = "Negativ";
             this.negativToolStripMenuItem.Click += new System.EventHandler(this.negativToolStripMenuItem_Click_1);
             // 
             // schwingungToolStripMenuItem
             // 
             this.schwingungToolStripMenuItem.Name = "schwingungToolStripMenuItem";
-            this.schwingungToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.schwingungToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.schwingungToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.schwingungToolStripMenuItem.Text = "Schwingung";
             this.schwingungToolStripMenuItem.Click += new System.EventHandler(this.schwingungToolStripMenuItem_Click);
             // 
             // graustufenToolStripMenuItem
             // 
             this.graustufenToolStripMenuItem.Name = "graustufenToolStripMenuItem";
-            this.graustufenToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.graustufenToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.graustufenToolStripMenuItem.Text = "Graustufen";
             this.graustufenToolStripMenuItem.Click += new System.EventHandler(this.graustufenToolStripMenuItem_Click);
             // 
             // schwarzWeißToolStripMenuItem
             // 
             this.schwarzWeißToolStripMenuItem.Name = "schwarzWeißToolStripMenuItem";
-            this.schwarzWeißToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.schwarzWeißToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.schwarzWeißToolStripMenuItem.Text = "Schwarz/Weiß";
             this.schwarzWeißToolStripMenuItem.Click += new System.EventHandler(this.schwarzWeißToolStripMenuItem_Click);
             // 
             // errorDiffusionToolStripMenuItem
             // 
             this.errorDiffusionToolStripMenuItem.Name = "errorDiffusionToolStripMenuItem";
-            this.errorDiffusionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.errorDiffusionToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.errorDiffusionToolStripMenuItem.Text = "Error Diffusion";
             this.errorDiffusionToolStripMenuItem.Click += new System.EventHandler(this.errorDiffusionToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
@@ -237,7 +239,7 @@
             this.grünToolStripMenuItem,
             this.blauToolStripMenuItem});
             this.farbkanalToolStripMenuItem.Name = "farbkanalToolStripMenuItem";
-            this.farbkanalToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.farbkanalToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.farbkanalToolStripMenuItem.Text = "Farbkanal";
             // 
             // rotToolStripMenuItem
@@ -520,10 +522,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(209, 4);
             this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Size = new System.Drawing.Size(810, 660);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
