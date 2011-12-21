@@ -57,7 +57,7 @@
   <ItemGroup>
     <Compile Include="config\Config.cs" />
     <Compile Include="filter\BlackWhiteFilter.cs" />
-    <Compile Include="ErrorDiffusionFilter.cs" />
+    <Compile Include="filter\ErrorDiffusionFilter.cs" />
     <Compile Include="FacebookLoginDialog.cs">
       <SubType>Form</SubType>
     </Compile>

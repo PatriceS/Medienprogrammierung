@@ -144,7 +144,7 @@ namespace TestProject1
         {
             int threads = 0; // TODO: Passenden Wert initialisieren
             ThreadHandler target = new ThreadHandler(threads); // TODO: Passenden Wert initialisieren
-            PictureBox pic = null; // TODO: Passenden Wert initialisieren
+            PictureBox pic = new PictureBox(); // TODO: Passenden Wert initialisieren
             target.refresh(pic);
            
         }
