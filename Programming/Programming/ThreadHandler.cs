@@ -49,7 +49,7 @@ namespace Programming
                 return this.watch.ElapsedMilliseconds;
             }
 
-            return 0;
+            return -1;
         }
 
         private void startTime()
@@ -63,6 +63,7 @@ namespace Programming
             this.threads = threads;
             alive = new ArrayList(threads);
             this.startTime();
+            _object = this;
         }
 
         public bool threadsAreAlive()

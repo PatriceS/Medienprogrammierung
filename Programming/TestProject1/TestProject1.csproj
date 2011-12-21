@@ -59,14 +59,20 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageManipulatorTest.cs" />
+    <Compile Include="ImageObjectTest.cs" />
     <Compile Include="PixelStateTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThreadHandlerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Programming\Programming.csproj">
       <Project>{99E4D5FE-3734-4D15-86A5-637A3DC6B0DC}</Project>
       <Name>Programming</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Testverweise\Programming.accessor" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

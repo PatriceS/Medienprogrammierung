@@ -101,30 +101,6 @@ namespace Programming
             
         }
 
-        private int computeHeightStart(int steps, int i)
-        {
-            int height_start = steps * i;
-            return Math.Max(0,height_start) ;
-        }
-
-        private int computeHeightEnd(int height_start, int steps, int height)
-        {
-            if (height == 0)
-            {
-                return (height_start + steps );
-            }
-            if ((height_start + steps ) < height)
-            {
-                return (height_start + steps );
-            }
-
-            return height;
-        }
-
-        private int computePixelPosition(int step, int width)
-        {
-            return (step * width);
-        }
 
         private int computeHeightSteps(int height)
         {
