@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d9d8ac38-864c-411e-bc9a-b0e3943f99ca" name="mathias@MATHIAS-PC 2011-12-21 21:48:25" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2011-12-21 21_48_25">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-12-21T21:48:25.7950726+01:00" queuing="2011-12-21T21:48:26.9311376+01:00" start="2011-12-21T21:48:27.1041475+01:00" finish="2011-12-21T21:48:28.1052048+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="getInstanceTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="e94ba4b9-677d-b5cb-1b24-050f26be0897">
+      <Execution id="8dc94dbd-fc1c-4d48-ba7a-fefe7965c817" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getInstanceTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e94ba4b9-677d-b5cb-1b24-050f26be0897" executionId="8dc94dbd-fc1c-4d48-ba7a-fefe7965c817" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8dc94dbd-fc1c-4d48-ba7a-fefe7965c817" testId="e94ba4b9-677d-b5cb-1b24-050f26be0897" testName="getInstanceTest" computerName="MATHIAS-PC" duration="00:00:00.0739735" startTime="2011-12-21T21:48:27.2531560+01:00" endTime="2011-12-21T21:48:28.0502016+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8dc94dbd-fc1c-4d48-ba7a-fefe7965c817">
+      <Output>
+        <ErrorInfo>
+          <Message>Die TestProject1.ControllerTest.MyTestInitialize-Methode für die Initialisierung hat eine Ausnahme ausgelöst. System.MissingFieldException: System.MissingFieldException: Das Feld "TestProject1.ControllerTest.con" wurde nicht gefunden..</Message>
+          <StackTrace>    bei System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   bei TestProject1.ControllerTest.MyTestInitialize() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\TestProject1\ControllerTest.cs:Zeile 59.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

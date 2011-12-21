@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="893a9075-e1f3-4de9-ab1d-a3aca10682b1" name="mathias@MATHIAS-PC 2011-12-21 22:18:32" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2011-12-21 22_18_32">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-12-21T22:18:32.6706542+01:00" queuing="2011-12-21T22:18:32.8226629+01:00" start="2011-12-21T22:18:32.8566648+01:00" finish="2011-12-21T22:18:33.2846893+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="undoTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="e7eac791-de3c-46f2-bce8-f4d477776f01">
+      <Execution id="71fc2f34-dc85-4250-bb76-33206f24dea9" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="undoTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e7eac791-de3c-46f2-bce8-f4d477776f01" executionId="71fc2f34-dc85-4250-bb76-33206f24dea9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="71fc2f34-dc85-4250-bb76-33206f24dea9" testId="e7eac791-de3c-46f2-bce8-f4d477776f01" testName="undoTest" computerName="MATHIAS-PC" duration="00:00:00.0588325" startTime="2011-12-21T22:18:32.8666654+01:00" endTime="2011-12-21T22:18:33.2476872+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71fc2f34-dc85-4250-bb76-33206f24dea9">
+      <Output>
+        <ErrorInfo>
+          <Message>Fehler bei "Assert.AreEqual". Erwartet:&lt;System.Drawing.Bitmap&gt;. Tatsächlich:&lt;System.Drawing.Bitmap&gt;. </Message>
+          <StackTrace>   bei TestProject1.ControllerTest.undoTest() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\TestProject1\ControllerTest.cs:Zeile 150.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

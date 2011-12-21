@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="fb547163-d7d4-4f44-b8e0-af32de012d20" name="mathias@MATHIAS-PC 2011-12-21 21:57:45" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2011-12-21 21_57_45">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-12-21T21:57:45.6443283+01:00" queuing="2011-12-21T21:57:45.6763302+01:00" start="2011-12-21T21:57:45.6853307+01:00" finish="2011-12-21T21:57:46.0923540+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="setMainFormTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="b30649c3-9490-1525-b4f4-8e069a4e79f4">
+      <Execution id="d8fa5894-e3b8-474d-b058-da92a67e6d08" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="setMainFormTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b30649c3-9490-1525-b4f4-8e069a4e79f4" executionId="d8fa5894-e3b8-474d-b058-da92a67e6d08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d8fa5894-e3b8-474d-b058-da92a67e6d08" testId="b30649c3-9490-1525-b4f4-8e069a4e79f4" testName="setMainFormTest" computerName="MATHIAS-PC" duration="00:00:00.1620814" startTime="2011-12-21T21:57:45.6953312+01:00" endTime="2011-12-21T21:57:46.0763530+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8fa5894-e3b8-474d-b058-da92a67e6d08">
+    </UnitTestResult>
+  </Results>
+</TestRun>

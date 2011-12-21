@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7a0a530d-aa5a-4c6a-9e7b-b48700942882" name="mathias@MATHIAS-PC 2011-12-21 22:01:06" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2011-12-21 22_01_06">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-12-21T22:01:06.3468079+01:00" queuing="2011-12-21T22:01:06.3778096+01:00" start="2011-12-21T22:01:06.3848100+01:00" finish="2011-12-21T22:01:06.6588257+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="setPictureBoxTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="e2ad20fc-5473-ee46-2f75-88e5a48cb321">
+      <Execution id="8d023368-9271-48e3-8c07-764befb9e11b" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="setPictureBoxTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="e2ad20fc-5473-ee46-2f75-88e5a48cb321" executionId="8d023368-9271-48e3-8c07-764befb9e11b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8d023368-9271-48e3-8c07-764befb9e11b" testId="e2ad20fc-5473-ee46-2f75-88e5a48cb321" testName="setPictureBoxTest" computerName="MATHIAS-PC" duration="00:00:00.0234958" startTime="2011-12-21T22:01:06.3868101+01:00" endTime="2011-12-21T22:01:06.6438248+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d023368-9271-48e3-8c07-764befb9e11b">
+    </UnitTestResult>
+  </Results>
+</TestRun>

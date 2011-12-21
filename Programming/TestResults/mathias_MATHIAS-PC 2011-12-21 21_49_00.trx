@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="77bd8fa8-b991-42c5-b5e1-712306f5a511" name="mathias@MATHIAS-PC 2011-12-21 21:49:00" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2011-12-21 21_49_00">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-12-21T21:49:00.5130584+01:00" queuing="2011-12-21T21:49:01.7711303+01:00" start="2011-12-21T21:49:01.9421401+01:00" finish="2011-12-21T21:49:32.5648917+01:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="4" executed="4" error="0" failed="0" timeout="0" aborted="1" inconclusive="3" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MATHIAS-PC" outcome="Error" timestamp="2011-12-21T21:49:32.5608914+01:00">
+        <Text>Der Testhostprozess wurde unerwartet beendet.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="setMainFormTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="b30649c3-9490-1525-b4f4-8e069a4e79f4">
+      <Execution id="66dafdda-4376-4361-bb1f-c4ab199f2c3b" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="setMainFormTest" />
+    </UnitTest>
+    <UnitTest name="undoTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="e7eac791-de3c-46f2-bce8-f4d477776f01">
+      <Execution id="10ab565e-9feb-4c17-a6a2-d9082c30c8ad" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="undoTest" />
+    </UnitTest>
+    <UnitTest name="getInstanceTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="e94ba4b9-677d-b5cb-1b24-050f26be0897">
+      <Execution id="ddcd2903-380b-42ac-b0e7-41153f28f050" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getInstanceTest" />
+    </UnitTest>
+    <UnitTest name="setPictureBoxTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="e2ad20fc-5473-ee46-2f75-88e5a48cb321">
+      <Execution id="cd9c5f3f-7f2b-4151-86bd-44fba49508c0" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="setPictureBoxTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b30649c3-9490-1525-b4f4-8e069a4e79f4" executionId="66dafdda-4376-4361-bb1f-c4ab199f2c3b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e2ad20fc-5473-ee46-2f75-88e5a48cb321" executionId="cd9c5f3f-7f2b-4151-86bd-44fba49508c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7eac791-de3c-46f2-bce8-f4d477776f01" executionId="10ab565e-9feb-4c17-a6a2-d9082c30c8ad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e94ba4b9-677d-b5cb-1b24-050f26be0897" executionId="ddcd2903-380b-42ac-b0e7-41153f28f050" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="66dafdda-4376-4361-bb1f-c4ab199f2c3b" testId="b30649c3-9490-1525-b4f4-8e069a4e79f4" testName="setMainFormTest" computerName="MATHIAS-PC" duration="00:00:00.1407961" startTime="2011-12-21T21:49:02.1041494+01:00" endTime="2011-12-21T21:49:02.9271965+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66dafdda-4376-4361-bb1f-c4ab199f2c3b">
+      <Output>
+        <ErrorInfo>
+          <Message>Fehler bei "Assert.Inconclusive". Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.</Message>
+          <StackTrace>   bei TestProject1.ControllerTest.setMainFormTest() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\TestProject1\ControllerTest.cs:Zeile 93.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cd9c5f3f-7f2b-4151-86bd-44fba49508c0" testId="e2ad20fc-5473-ee46-2f75-88e5a48cb321" testName="setPictureBoxTest" computerName="MATHIAS-PC" duration="00:00:00.0234475" startTime="2011-12-21T21:49:02.9341969+01:00" endTime="2011-12-21T21:49:02.9691989+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd9c5f3f-7f2b-4151-86bd-44fba49508c0">
+      <Output>
+        <ErrorInfo>
+          <Message>Fehler bei "Assert.Inconclusive". Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.</Message>
+          <StackTrace>   bei TestProject1.ControllerTest.setPictureBoxTest() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\TestProject1\ControllerTest.cs:Zeile 105.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="10ab565e-9feb-4c17-a6a2-d9082c30c8ad" testId="e7eac791-de3c-46f2-bce8-f4d477776f01" testName="undoTest" computerName="MATHIAS-PC" duration="00:00:00.0265989" startTime="2011-12-21T21:49:02.9781994+01:00" endTime="2011-12-21T21:49:03.0142014+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10ab565e-9feb-4c17-a6a2-d9082c30c8ad">
+      <Output>
+        <ErrorInfo>
+          <Message>Fehler bei "Assert.Inconclusive". Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.</Message>
+          <StackTrace>   bei TestProject1.ControllerTest.undoTest() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\TestProject1\ControllerTest.cs:Zeile 117.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ddcd2903-380b-42ac-b0e7-41153f28f050" testId="e94ba4b9-677d-b5cb-1b24-050f26be0897" testName="getInstanceTest" computerName="MATHIAS-PC" duration="00:00:29.5446899" startTime="2011-12-21T21:49:03.0202018+01:00" endTime="2011-12-21T21:49:32.5648917+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ddcd2903-380b-42ac-b0e7-41153f28f050">
+    </UnitTestResult>
+  </Results>
+</TestRun>
