@@ -186,7 +186,8 @@ namespace Programming
         {
             if (pictureBox1.Image != null)
             {
-                this.user.uploadPicture(this.selectedAlbumID, pictureBox1.ImageLocation);
+               // this.user.uploadPicture(this.selectedAlbumID, pictureBox1.ImageLocation);
+                this.user.uploadPicture(this.selectedAlbumID, pictureBox1);
             }
             else
             {

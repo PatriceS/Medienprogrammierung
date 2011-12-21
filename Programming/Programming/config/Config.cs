@@ -12,5 +12,8 @@ namespace Programming
             PIXEL_STATE_CONTAINER_AMOUNT = 5, THREADS = 2
         };
 
+        public static readonly string SAVE_TEMP_PATH = @"C:\Users\Public\Pictures\Sample Pictures\temp.jpeg";
+
+
     }
 }

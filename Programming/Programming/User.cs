@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Windows.Forms;
 using Facebook;
+using System.Drawing.Imaging;
 
 
 namespace Programming
@@ -114,7 +115,7 @@ namespace Programming
         {
             return this.names;
         }
-
+        /*
         public void uploadPicture(string albumID, String FileName)
         {
             if (this.fmo == null)
@@ -140,7 +141,78 @@ namespace Programming
             this.mainForm.publishFacebook.Enabled = false;
             
         }
+        */
+        
+        public void uploadPicture(string albumID, PictureBox pictureBox)
+        {
 
+
+            String path = Config.SAVE_TEMP_PATH;
+            
+            Bitmap bitmap = (Bitmap)pictureBox.Image;
+            Graphics g = Graphics.FromImage(bitmap);
+            g.Save();
+            g.Dispose();
+
+            bitmap.Save(path, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //bitmap.Dispose();
+
+            /*
+            BitmapData bmData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
+            ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
+
+            int stride = bmData.Stride;
+
+            
+
+            System.IntPtr Scan0 = bmData.Scan0;
+
+           
+           
+
+            // Get the address of the first line.
+       //     IntPtr ptr = bmpData.Scan0;
+
+            // Declare an array to hold the bytes of the bitmap.
+            int testBytes = Math.Abs(bmData.Stride) * bmData.Height;
+            byte[] rgbValues = new byte[testBytes];
+
+            // Copy the RGB values into the array.
+            System.Runtime.InteropServices.Marshal.Copy(Scan0, rgbValues, 0, testBytes);
+
+            // Unlock the bits.
+            bitmap.UnlockBits(bmData);
+            */
+
+            if (this.fmo == null)
+            {
+                fmo = new FacebookMediaObject
+                {
+                    FileName = path, 
+                    ContentType = "image/jpeg" };
+            }
+            else
+            {
+                fmo.FileName = path;
+                fmo.ContentType = "image/jpeg";
+            }
+           // MessageBox.Show(rgbValues.Length.ToString());
+
+            var bytes = System.IO.File.ReadAllBytes(fmo.FileName);
+            fmo.SetValue(bytes);
+
+            var postInfo = new Dictionary<string, object>();
+            postInfo.Add("message", "Tolle Nachricht");
+            postInfo.Add("image", fmo);
+            this.fb.UploadProgressChanged += fb_UploadProgressChanged;
+            this.fb.PostCompleted += fb_PostCompleted;
+            this.fb.PostAsync("/" + albumID + "/photos", postInfo);
+            this.mainForm.cancelUploadButton.Enabled = true;
+            this.mainForm.publishFacebook.Enabled = false;
+
+
+        }
+        
         public void cancelUpload()
         {
             this.mainForm.progressBar1.Value = 0;
