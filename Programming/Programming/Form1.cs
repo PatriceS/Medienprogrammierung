@@ -59,7 +59,7 @@ namespace Programming
                 this.con.setPictureBox(pictureBox1);
                 this.con.setMainForm(this);
                 setPictureBoxSize(pictureBox1.Image);
-                
+                this.con.reset_pixel_state();
                 filterToolStripMenuItem.Enabled = true;
                 bildSchließenToolStripMenuItem.Enabled = true;
                 bildSpeichernToolStripMenuItem.Enabled = true;
@@ -284,6 +284,17 @@ namespace Programming
             Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
 
         }
+
+        private void farben_4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().filter_Sample_Board(4);
+        }
+
+        private void farben_8ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().filter_Sample_Board(8);
+        }
+
        
 
         

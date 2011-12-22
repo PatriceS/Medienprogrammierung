@@ -50,6 +50,10 @@
             this.rotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grünToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blauToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.farbpaletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.farben_4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.farben_8ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.farbenToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.manipulationenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überSompeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -181,7 +185,8 @@
             this.schwarzWeißToolStripMenuItem,
             this.errorDiffusionToolStripMenuItem,
             this.sepiaToolStripMenuItem,
-            this.farbkanalToolStripMenuItem});
+            this.farbkanalToolStripMenuItem,
+            this.farbpaletteToolStripMenuItem});
             this.filterToolStripMenuItem.Enabled = false;
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
@@ -262,6 +267,37 @@
             this.blauToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.blauToolStripMenuItem.Text = "Blau";
             this.blauToolStripMenuItem.Click += new System.EventHandler(this.blauToolStripMenuItem_Click);
+            // 
+            // farbpaletteToolStripMenuItem
+            // 
+            this.farbpaletteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.farben_4ToolStripMenuItem,
+            this.farben_8ToolStripMenuItem1,
+            this.farbenToolStripMenuItem2});
+            this.farbpaletteToolStripMenuItem.Name = "farbpaletteToolStripMenuItem";
+            this.farbpaletteToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.farbpaletteToolStripMenuItem.Text = "Farbpalette";
+            // 
+            // farben_4ToolStripMenuItem
+            // 
+            this.farben_4ToolStripMenuItem.AccessibleName = "4_farbenToolStripMenuItem_Click";
+            this.farben_4ToolStripMenuItem.Name = "farben_4ToolStripMenuItem";
+            this.farben_4ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.farben_4ToolStripMenuItem.Text = "4 Farben";
+            this.farben_4ToolStripMenuItem.Click += new System.EventHandler(this.farben_4ToolStripMenuItem_Click);
+            // 
+            // farben_8ToolStripMenuItem1
+            // 
+            this.farben_8ToolStripMenuItem1.Name = "farben_8ToolStripMenuItem1";
+            this.farben_8ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.farben_8ToolStripMenuItem1.Text = "8 Farben";
+            this.farben_8ToolStripMenuItem1.Click += new System.EventHandler(this.farben_8ToolStripMenuItem1_Click);
+            // 
+            // farbenToolStripMenuItem2
+            // 
+            this.farbenToolStripMenuItem2.Name = "farbenToolStripMenuItem2";
+            this.farbenToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.farbenToolStripMenuItem2.Text = "16 Farben";
             // 
             // manipulationenToolStripMenuItem
             // 
@@ -714,6 +750,10 @@
         private System.Windows.Forms.ToolStripMenuItem grünToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blauToolStripMenuItem;
         private System.Windows.Forms.Button rotate270;
+        private System.Windows.Forms.ToolStripMenuItem farbpaletteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem farben_4ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem farben_8ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem farbenToolStripMenuItem2;
 
     }
 }

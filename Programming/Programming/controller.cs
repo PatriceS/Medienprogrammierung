@@ -108,6 +108,26 @@ namespace Programming
             
         }
 
+        public void filter_Sample_Board( int count )
+        {
+            PixelState state = PixelState.getInstance();
+            ImageObject imgObj = state.get_last();
+
+            if (imgObj != null)
+            {
+                if (imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.SAMPLE_BOARD)
+                {
+                    this.undo(false);
+                }
+
+            }
+            state.add(new ImageObject(pic.Image, ImageManipulatorType.Name.SAMPLE_BOARD));
+            ThreadHandler thHandler = new ThreadHandler(threads);
+            int[] colors = new int[1] { count };
+            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.SAMPLE_BOARD, thHandler, colors).perform();
+            this.show_picture(thHandler);
+        }
+
         public static Controller getInstance()
         {
             if(con!=null)  return con;
@@ -146,6 +166,11 @@ namespace Programming
             }
         }
 
+        public void reset_pixel_state()
+        {
+            PixelState.getInstance().reset();
+        }
+
         private void show_picture(ThreadHandler thHandler)
         {
             thHandler.refresh(pic);
@@ -153,6 +178,5 @@ namespace Programming
         }
 
 
-        
     }
 }

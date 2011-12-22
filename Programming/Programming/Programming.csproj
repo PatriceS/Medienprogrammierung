@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="filter\ColorRangeFilter.cs" />
     <Compile Include="filter\RGB_ModeFilter.cs" />
+    <Compile Include="filter\SampleBoardFilter.cs" />
     <Compile Include="ImageManipulator.cs" />
     <Compile Include="filter\InvertFilter.cs" />
     <Compile Include="config\ImageManipulatorType.cs" />

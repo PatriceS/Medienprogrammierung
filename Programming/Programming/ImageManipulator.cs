@@ -16,14 +16,14 @@ namespace Programming
         private Bitmap bitmap;
         private ImageManipulatorType.Name filter;
         private ThreadHandler thHandler;
-              
+        private int[] values;      
 
-        public ImageManipulator(Bitmap bitmap, ImageManipulatorType.Name filter, ThreadHandler thHandler)
+        public ImageManipulator(Bitmap bitmap, ImageManipulatorType.Name filter, ThreadHandler thHandler, int[] values = null )
         {
             this.bitmap = bitmap;
             this.filter = filter;
             this.thHandler = thHandler;
-
+            this.values = values;
         } 
 
         public bool perform()
@@ -36,6 +36,7 @@ namespace Programming
             int bytes = Math.Abs(bmData.Stride) * bmData.Height;
 
             System.IntPtr Scan0 = bmData.Scan0;
+
 
             perform( Scan0, stride );
 
@@ -88,7 +89,10 @@ namespace Programming
                         break;   
                     case ImageManipulatorType.Name.RGB_BLUE:
                         thread = new Thread(new RGB_ModeFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, ImageManipulatorType.Name.RGB_BLUE).perform);
-                        break;                
+                        break;
+                    case ImageManipulatorType.Name.SAMPLE_BOARD:
+                        thread = new Thread(new SampleBoardFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, this.values).perform);
+                        break; 
                 }
 
 
