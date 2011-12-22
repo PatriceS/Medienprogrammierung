@@ -295,6 +295,11 @@ namespace Programming
             Controller.getInstance().filter_Sample_Board(8);
         }
 
+        private void farben_16ToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Controller.getInstance().filter_Sample_Board(16);
+        }
+
        
 
         
