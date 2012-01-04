@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f34e11f0-f80f-4854-a6bc-45d041dbeafc" name="FactoryPattern_Filter" linkedPackageId="f15bcec7-1898-41cb-b758-031e4c19b03e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="309efff8-1e75-4a8a-b394-ae3a34c7c4d6">
+      <profileInstance Id="0cc8176e-966a-4b2d-b353-b64de8270d0e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="07fded71-88be-4c29-800d-00d124376c9c">
+      <profileInstance Id="3924c0e2-9510-47cb-894a-ea31aa184778" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3d6dffbc-619d-4479-be49-e39d53042bf0" name="ManipulationFactory {abstract}" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1d3f5319-4111-4575-adf2-e3dbe07874fb" />
+        <ownedOperationsInternal>
+          <operation Id="21834143-f6f3-41c7-9b04-e3a13b7a072a" name="create" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5af197c9-294d-48ce-967b-ad990fbdac1b" />
+          </operation>
+          <operation Id="4980e5e2-cd9f-4a25-a27a-05370da52693" name="perform" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c1ca03b0-2376-49d2-8f58-14c1d4f9f78e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0032f837-5c6a-4015-9582-03e36252f0bb" name="FilterFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6d53c6b7-fe6f-472c-99c6-37bd567ac96f" />
+        <generalsInternal>
+          <generalization Id="5f059aa7-89d0-4951-ab7f-3f032c6bbbed" isSubstitutable="false">
+            <classMoniker Id="3d6dffbc-619d-4479-be49-e39d53042bf0" LastKnownName="ManipulationFactory {abstract}" />
+            <elementDefinition Id="660a75f7-79e3-4a4e-b65a-31193c20c4ee" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="4fa23bd5-b04b-4070-894d-a5cd23c88d70" name="perform" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="80c3fc2f-6146-4bc6-9a65-388673b9a749" />
+          </operation>
+          <operation Id="3d165a19-eedf-4c4a-b2ea-2b6e3e6ccf5f" name="create" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="21700486-7e3d-458d-81e2-0cdde463932f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="f15bcec7-1898-41cb-b758-031e4c19b03e" name="ModelingProject1">
+    <elementDefinition Id="d49c7f61-a8b8-472b-a378-14557a0306c9" />
+  </package>
+</logicalClassDesignerModel>

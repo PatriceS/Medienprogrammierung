@@ -27,5 +27,10 @@ namespace Programming
         {
             return this.manipulator;
         }
+
+        public Bitmap get_Bitmap()
+        {
+            return (Bitmap)this.img;
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace Programming
          */
         public bool add( ImageObject imgObj  )
         {
-            Bitmap img = (Bitmap)imgObj.get_Image();
+            Bitmap img = imgObj.get_Bitmap();
             BitmapData bmData = img.LockBits(new Rectangle(0, 0, img.Width, img.Height),
             ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
 

@@ -80,15 +80,14 @@ namespace Programming
         {
             PixelState state = PixelState.getInstance();
             ImageObject imgObj = state.get_last();
+            List<ImageManipulatorType.Name> container = new List<ImageManipulatorType.Name>();
+            container.Add(ImageManipulatorType.Name.RGB_BLUE);
+            container.Add(ImageManipulatorType.Name.RGB_RED);
+            container.Add(ImageManipulatorType.Name.RGB_GREEN);
 
             if( imgObj != null)
             {
-                if (imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.RGB_BLUE
-                                                      ||
-                    imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.RGB_RED
-                                                      ||
-                    imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.RGB_GREEN
-                  )
+                if (container.Contains(imgObj.get_ImageManipulatorType()))
                 {
                     this.undo(false);
                 }
@@ -157,7 +156,7 @@ namespace Programming
             if (state.get_last() != null)
             {
                 pic.Image = null;
-                pic.Image = (Image)PixelState.getInstance().remove_last().get_Image();
+                pic.Image = PixelState.getInstance().remove_last().get_Image();
                 if (refresh)
                 {
                     pic.Refresh();

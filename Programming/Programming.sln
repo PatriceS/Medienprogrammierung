@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{3192630E-4291-4E0A-9E59-17904D774D79}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Programming.vsmdi
@@ -45,6 +47,16 @@ Global
 		{2588D6DE-B2AF-4B46-9329-FA431B4F0A54}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{2588D6DE-B2AF-4B46-9329-FA431B4F0A54}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{2588D6DE-B2AF-4B46-9329-FA431B4F0A54}.Release|x86.ActiveCfg = Release|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3192630E-4291-4E0A-9E59-17904D774D79}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
