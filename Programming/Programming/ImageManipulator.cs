@@ -52,23 +52,30 @@ namespace Programming
             // anzahl der threads die mehr als die min elemente berechnen
             int sectorThreshold = height % thHandler.getThreads();
 
-
-            for (int i = 0; i < thHandler.getThreads(); i++)
+            try
             {
-                int startIndex = i * steps + Math.Min(i, sectorThreshold);
-                int stopIndex = startIndex + steps + (i < sectorThreshold ? 1 : 0);
-               
+                for (int i = 0; i < thHandler.getThreads(); i++)
+                {
+                    int startIndex = i * steps + Math.Min(i, sectorThreshold);
+                    int stopIndex = startIndex + steps + (i < sectorThreshold ? 1 : 0);
 
-                ManipulationFactory factory = new FilterFactory();
-                Manipulate manip = factory.create(this.filter, this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, this.values);
-                Thread thread = new Thread(manip.perform);
-                
+
+                    ManipulationFactory factory = new FilterFactory();
+                    Manipulate manip = factory.create(this.filter, this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, this.values);
+                    Thread thread = new Thread(manip.perform);
+
                     // Thread starten
-                thread.Start();
+                    thread.Start();
                     // Thread registrieren, um später abzufragen ob thread läuft oder nicht
-                this.thHandler.register(thread);
+                    this.thHandler.register(thread);
 
+                }
             }
+            catch (FilterUndefinedException e)
+            {
+                Console.WriteLine( e.Message);
+            }
+            
             
         }
 
