@@ -55,7 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FilterUndefinedException.cs" />
+    <Compile Include="exceptions\FilterUndefinedException.cs" />
     <Compile Include="config\Config.cs" />
     <Compile Include="FilterFactory.cs" />
     <Compile Include="filter\BlackWhiteFilter.cs" />
