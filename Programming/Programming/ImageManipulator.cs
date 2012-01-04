@@ -57,45 +57,12 @@ namespace Programming
             {
                 int startIndex = i * steps + Math.Min(i, sectorThreshold);
                 int stopIndex = startIndex + steps + (i < sectorThreshold ? 1 : 0);
-                Thread thread = null;
+               
 
-                switch (this.filter)
-                {
-                    case ImageManipulatorType.Name.INVERT:
-                        thread = new Thread(new InvertFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
-                        break;
-
-                    case ImageManipulatorType.Name.OSCILLATION:
-                        thread = new Thread(new OscillationFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
-                        break;
-
-                    case ImageManipulatorType.Name.GRAYSCALE:
-                        thread = new Thread(new GrayscaleFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
-                        break;
-                    case ImageManipulatorType.Name.BLACKWHITE:
-                        thread = new Thread(new BlackWhiteFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
-                        break;
-                    case ImageManipulatorType.Name.ERROR_DIFFUSION:
-                        thread = new Thread(new ErrorDiffusionFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
-                        break;
-                    case ImageManipulatorType.Name.SEPIA:
-                        thread = new Thread(new SepiaFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler).perform);
-                        break;
-                    case ImageManipulatorType.Name.RGB_RED:
-                        thread = new Thread(new RGB_ModeFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, ImageManipulatorType.Name.RGB_RED).perform);
-                        break;   
-                    case ImageManipulatorType.Name.RGB_GREEN:
-                        thread = new Thread(new RGB_ModeFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, ImageManipulatorType.Name.RGB_GREEN).perform);
-                        break;   
-                    case ImageManipulatorType.Name.RGB_BLUE:
-                        thread = new Thread(new RGB_ModeFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, ImageManipulatorType.Name.RGB_BLUE).perform);
-                        break;
-                    case ImageManipulatorType.Name.SAMPLE_BOARD:
-                        thread = new Thread(new SampleBoardFilter(this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, this.values).perform);
-                        break; 
-                }
-
-
+                ManipulationFactory factory = new FilterFactory();
+                Manipulate manip = factory.create(this.filter, this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, this.values);
+                Thread thread = new Thread(manip.perform);
+                
                     // Thread starten
                 thread.Start();
                     // Thread registrieren, um später abzufragen ob thread läuft oder nicht

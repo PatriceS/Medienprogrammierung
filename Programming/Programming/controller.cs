@@ -93,6 +93,7 @@ namespace Programming
                 }
             
             }
+            
             state.add(new ImageObject(pic.Image, color));
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, color, thHandler).perform();

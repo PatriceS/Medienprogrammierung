@@ -76,11 +76,27 @@
           <operation
             Id="5af197c9-294d-48ce-967b-ad990fbdac1b"
             name="create"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isAbstract="true"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5192b606-d759-4c32-b2c0-63ca8e7e3f9e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f9d8e348-11cd-4539-b7a2-7b19644cde50"
+                      LastKnownName="Manipulate"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="c1ca03b0-2376-49d2-8f58-14c1d4f9f78e"
             name="perform"
@@ -88,7 +104,22 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c5572f41-f104-4572-a084-0ab0ae4fbf70"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f9d8e348-11cd-4539-b7a2-7b19644cde50"
+                      LastKnownName="Manipulate"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -111,21 +142,29 @@
         </generalsInternal>
         <ownedOperationsInternal>
           <operation
-            Id="80c3fc2f-6146-4bc6-9a65-388673b9a749"
-            name="perform"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="21700486-7e3d-458d-81e2-0cdde463932f"
             name="create"
+            visibility="Protected"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9d4cb1b2-7f1f-4141-b574-4f31d8518fff"
+                  direction="Return">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f9d8e348-11cd-4539-b7a2-7b19644cde50"
+                      LastKnownName="Manipulate"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -136,6 +175,11 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f9d8e348-11cd-4539-b7a2-7b19644cde50"
+        name="Manipulate" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

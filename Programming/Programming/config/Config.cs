@@ -14,6 +14,9 @@ namespace Programming
 
         public static readonly string SAVE_TEMP_PATH = @"C:\Users\Public\Pictures\Sample Pictures\temp.jpeg";
 
+        /**
+         * Array mit RGB Farbwerten für SampleBoadFilter.cs
+         **/
         public static readonly int[,] lut = new int[,] { { 139, 45, 13 }, { 30, 90, 255 },
                                                   { 20, 20, 20 }, { 200, 200, 200 },
                                                   { 0, 128, 0 }, { 128, 0, 0 },

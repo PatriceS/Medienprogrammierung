@@ -12,7 +12,7 @@ namespace Programming
     {
         private const int THRESHOLD = 127;
 
-        public SepiaFilter(Bitmap b, System.IntPtr Scan0, int stride, int height_start, int height_end, ThreadHandler thInfo) 
+        public SepiaFilter(Bitmap b, System.IntPtr Scan0, int stride, int height_start, int height_end, ThreadHandler thInfo, int[] values) 
             : base( b, Scan0, stride,height_start, height_end, thInfo)
         {
           

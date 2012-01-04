@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="config\Config.cs" />
+    <Compile Include="FilterFactory.cs" />
     <Compile Include="filter\BlackWhiteFilter.cs" />
     <Compile Include="filter\ErrorDiffusionFilter.cs" />
     <Compile Include="FacebookLoginDialog.cs">
@@ -80,6 +81,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="filter\OscillationFilter.cs" />
+    <Compile Include="ManipulationFactory.cs" />
     <Compile Include="PixelState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="FacebookLoginDialog.resx">
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

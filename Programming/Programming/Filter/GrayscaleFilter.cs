@@ -12,8 +12,8 @@ namespace Programming
 
     class GrayscaleFilter : Manipulate
     {
-       
-        public GrayscaleFilter(Bitmap b, System.IntPtr Scan0, int stride, int height_start, int height_end, ThreadHandler thInfo)
+
+        public GrayscaleFilter(Bitmap b, System.IntPtr Scan0, int stride, int height_start, int height_end, ThreadHandler thInfo, int[] values)
             : base(b, Scan0, stride, height_start, height_end, thInfo)
         {
 
