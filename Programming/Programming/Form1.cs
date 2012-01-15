@@ -310,6 +310,7 @@ namespace Programming
             PixelState.getInstance().set_pictureBox(pictureBox1);
             WebcamController con = WebcamController.getInstance();
             con.setMainForm(this);
+            con.openWebcamWindow();
         }
 
        

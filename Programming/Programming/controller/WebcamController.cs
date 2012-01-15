@@ -7,19 +7,14 @@ namespace Programming
 {
     class WebcamController
     {
-        private static WebcamController con = null;
+        
         private static System.Windows.Forms.PictureBox pic;
-        private Form1 mainForm;
+        private static Form1 mainForm;
 
 
         public static WebcamController getInstance()
         {
-            if (con != null)
-            {
-                return con;
-            }
-
-            con = new WebcamController();
+            WebcamController con = new WebcamController();
             con.init();
             return con;
         }
@@ -36,6 +31,12 @@ namespace Programming
         public void setMainForm(Form1 form)
         {
             mainForm = form;
+        }
+
+        public void openWebcamWindow()
+        {
+            WebcamOptions cam = new WebcamOptions();
+            cam.Show();
         }
     }
 }

@@ -12,9 +12,9 @@ namespace Programming
 {
     class ManipulationController
     {
-        private static ManipulationController con = null;
+       
         private static System.Windows.Forms.PictureBox pic;
-        private Form1 mainForm;
+        private static Form1 mainForm;
         private static int threads = (int)Config.value.THREADS;
       
         public void filter_invert( )
@@ -129,12 +129,13 @@ namespace Programming
 
         public static ManipulationController getInstance()
         {
+           /*
             if (con != null)
             {
                 return con;
             }
-
-            con = new ManipulationController();
+            */
+            ManipulationController con = new ManipulationController();
             con.init();
             return con;
         }
@@ -172,7 +173,7 @@ namespace Programming
         private void show_picture(ThreadHandler thHandler)
         {
             thHandler.refresh(pic);
-            this.mainForm.setInfoBox(threads, thHandler.getTime());
+            mainForm.setInfoBox(threads, thHandler.getTime());
         }
 
 

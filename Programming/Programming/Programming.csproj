@@ -87,6 +87,7 @@
     </Compile>
     <Compile Include="filter\OscillationFilter.cs" />
     <Compile Include="ManipulationFactory.cs" />
+    <Compile Include="model\WebcamModel.cs" />
     <Compile Include="NullImageObject.cs" />
     <Compile Include="PixelState.cs" />
     <Compile Include="Program.cs" />
@@ -96,6 +97,12 @@
     <Compile Include="filter\SepiaFilter.cs" />
     <Compile Include="ThreadHandler.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="WebcamOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebcamOptions.Designer.cs">
+      <DependentUpon>WebcamOptions.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FacebookLoginDialog.resx">
       <DependentUpon>FacebookLoginDialog.cs</DependentUpon>
       <SubType>Designer</SubType>

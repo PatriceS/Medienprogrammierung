@@ -12,19 +12,14 @@ namespace Programming
 {
     class StatistikController
     {
-        private static StatistikController con = null;
+       
         private static System.Windows.Forms.PictureBox pic;
         private Form1 mainForm;
         
 
         public static StatistikController getInstance()
         {
-            if (con != null)
-            {
-                return con;
-            }
-
-            con = new StatistikController();
+            StatistikController con = new StatistikController();
             con.init();
             return con;
         }
