@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\StatistikController.cs" />
     <Compile Include="exceptions\EmptyPictureBoxException.cs" />
     <Compile Include="exceptions\FilterUndefinedException.cs" />
     <Compile Include="config\Config.cs" />
@@ -76,7 +77,7 @@
     <Compile Include="ImageObject.cs" />
     <Compile Include="I_ImageObject.cs" />
     <Compile Include="Manipulate.cs" />
-    <Compile Include="Controller.cs" />
+    <Compile Include="controller\ManipulationController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

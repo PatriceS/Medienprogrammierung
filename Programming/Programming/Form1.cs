@@ -15,7 +15,7 @@ namespace Programming
     {
         private int MAX_SIZE = 800;
         
-        private Controller con;
+        private ManipulationController con;
         private const int threads = 4;
         private FacebookClient fb;
         private User user;
@@ -58,7 +58,7 @@ namespace Programming
                     // PixelState als ERSTES initialisieren, da pictureBox beim initialisieren der
                     // controller Klassen gebraucht wird. Ansonsten EmptyPixelState exception.
                 PixelState.getInstance().set_pictureBox(pictureBox1);
-                this.con = Controller.getInstance();
+                this.con = ManipulationController.getInstance();
                 this.con.setMainForm(this);
                 setPictureBoxSize(pictureBox1.Image);
                 this.con.reset_pixel_state();
@@ -223,7 +223,7 @@ namespace Programming
 
         private void negativToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_invert();
+            ManipulationController.getInstance().filter_invert();
         }
 
         private void cancelUploadButton_Click(object sender, EventArgs e)
@@ -240,33 +240,33 @@ namespace Programming
         /*    Mathias Form Anfang                                       */
         private void schwingungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_oscillate();
+            ManipulationController.getInstance().filter_oscillate();
         }
 
         private void graustufenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_grayscale();
+            ManipulationController.getInstance().filter_grayscale();
         }
 
         private void schwarzWeißToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_blackNwhite();
+            ManipulationController.getInstance().filter_blackNwhite();
         }
 
         private void errorDiffusionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_errorDiffusion();
+            ManipulationController.getInstance().filter_errorDiffusion();
         }
 
         private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_sepia();
+            ManipulationController.getInstance().filter_sepia();
         }
 
 
         private void rueckgaengigMachenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().undo();
+            ManipulationController.getInstance().undo();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -274,33 +274,33 @@ namespace Programming
         }
         private void rotToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_RED);
+            ManipulationController.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_RED);
         }
 
         private void grünToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_GREEN);
+            ManipulationController.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_GREEN);
         }
 
         private void blauToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
+            ManipulationController.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
 
         }
 
         private void farben_4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_Sample_Board(4);
+            ManipulationController.getInstance().filter_Sample_Board(4);
         }
 
         private void farben_8ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_Sample_Board(8);
+            ManipulationController.getInstance().filter_Sample_Board(8);
         }
 
         private void farben_16ToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Controller.getInstance().filter_Sample_Board(16);
+            ManipulationController.getInstance().filter_Sample_Board(16);
         }
 
        

@@ -57,7 +57,7 @@ namespace TestProject1
         {
             // Reset the sole instance of ClassToBeTested
 
-            new PrivateType(typeof(Controller)).SetStaticField("con", null);
+            new PrivateType(typeof(ManipulationController)).SetStaticField("con", null);
         }
         //
         //Mit TestCleanup können Sie nach jedem einzelnen Test Code ausführen.
@@ -75,12 +75,12 @@ namespace TestProject1
         [TestMethod()]
         public void getInstanceTest()
         {
-            Controller expected = null; // TODO: Passenden Wert initialisieren
-            Controller actual;
-            actual = Controller.getInstance();
+            ManipulationController expected = null; // TODO: Passenden Wert initialisieren
+            ManipulationController actual;
+            actual = ManipulationController.getInstance();
             Assert.AreNotEqual(expected, actual);
 
-            Assert.IsInstanceOfType(actual, typeof(Controller));
+            Assert.IsInstanceOfType(actual, typeof(ManipulationController));
             
         }
 
@@ -90,7 +90,7 @@ namespace TestProject1
         [TestMethod()]
         public void setMainFormTest()
         {
-            Controller t = Controller.getInstance(); 
+            ManipulationController t = ManipulationController.getInstance(); 
 
             Form1 form = new Form1(); // TODO: Passenden Wert initialisieren
             t.setMainForm(form);
@@ -107,7 +107,7 @@ namespace TestProject1
         [TestMethod()]
         public void setPictureBoxTest()
         {
-            Controller t = Controller.getInstance();
+            ManipulationController t = ManipulationController.getInstance();
             PrivateObject param0 = new PrivateObject(t);
             Controller_Accessor target = new Controller_Accessor(param0);
 
@@ -123,7 +123,7 @@ namespace TestProject1
         [TestMethod()]
         public void undoTest()
         {
-            Controller t = Controller.getInstance();
+            ManipulationController t = ManipulationController.getInstance();
             PrivateObject param0 = new PrivateObject(t);
             Controller_Accessor target = new Controller_Accessor(param0);
 
