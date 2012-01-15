@@ -11,28 +11,23 @@ namespace Programming
 {
     public partial class WebcamOptions : Form
     {
-        private List<String> devices;
-        Dictionary<string, string> data;
-        public WebcamOptions(List<String> devices)
+
+        public WebcamOptions(Dictionary<int, string> data)
         {
             
             InitializeComponent();
-            this.devices = devices;
-            data = new Dictionary<string, string>();
-            int i = 0;
-            foreach(String device in devices)
-            {
-                data.Add(i.ToString(),device);
-                i++;
-            }
+            show_devices(data);
+            
+            
+        }
 
+        private void show_devices(Dictionary<int, string> data)
+        {
             BindingSource myBindingSource = new BindingSource();
-
             myBindingSource.DataSource = data;
             WebcamDevicescomboBox.DataSource = myBindingSource;
             WebcamDevicescomboBox.DisplayMember = "Value";
             WebcamDevicescomboBox.ValueMember = "Key";
-            
         }
 
         private void WebcamDevicescomboBox_SelectedIndexChanged(object sender, EventArgs e)

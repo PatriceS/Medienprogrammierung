@@ -12,9 +12,9 @@ namespace Programming
         //Anlegen eines Webcam-Objektes
         VideoCaptureDevice videoSource;
 
-        public List<String> get_devices()
+        public Dictionary<int, string> get_devices()
         {
-            List<String> container = new List<string>();
+            Dictionary<int, string> data = new Dictionary<int, string>();
             //Anlegen einer Liste mit allen Videoquellen. (Hier können neben der gewünschten Webcam
             //auch TV-Karten, etc. auftauchen)
             FilterInfoCollection videosources = new FilterInfoCollection(FilterCategory.VideoInputDevice);
@@ -22,13 +22,16 @@ namespace Programming
             //Überprüfen, ob mindestens eine Aufnahmequelle vorhanden ist
             if (videosources != null)
             {
+                
+
                 for(int i = 0; i < videosources.Count; i++)
                 {
-                    container.Add(videosources[i].Name);
+                    data.Add(i, videosources[i].Name);
                 }
+                
             }
 
-            return container;
+            return data;
 
         }
     }

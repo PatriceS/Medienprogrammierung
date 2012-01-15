@@ -37,7 +37,7 @@ namespace Programming
         {
             
             WebcamModel model = new WebcamModel();
-            List<String> devices = model.get_devices();
+            Dictionary<int, string> devices = model.get_devices();
             WebcamOptions cam = new WebcamOptions(devices);
             cam.Show();
         }
