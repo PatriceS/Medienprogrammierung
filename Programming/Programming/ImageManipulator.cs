@@ -56,10 +56,11 @@ namespace Programming
             {
                 for (int i = 0; i < thHandler.getThreads(); i++)
                 {
+                        // Zu bearbeitende Zeilen für jeden Thread berechnen
                     int startIndex = i * steps + Math.Min(i, sectorThreshold);
                     int stopIndex = startIndex + steps + (i < sectorThreshold ? 1 : 0);
 
-
+                        // Das entsprechende Filterobjekt erzeugen und aufrufen
                     ManipulationFactory factory = new FilterFactory();
                     Manipulate manip = factory.create(this.filter, this.bitmap, Scan0, stride, startIndex, stopIndex, this.thHandler, this.values);
                     Thread thread = new Thread(manip.perform);
@@ -79,7 +80,9 @@ namespace Programming
             
         }
 
-
+        /**
+         * Anzahl der zu bearbeitenden Zeilen pro Thread berechnen.
+         */
         private int computeHeightSteps(int height)
         {
             int threads = thHandler.getThreads();

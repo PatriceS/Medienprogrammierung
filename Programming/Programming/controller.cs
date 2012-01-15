@@ -141,6 +141,11 @@ namespace Programming
             pic = pictureBox1;
         }
 
+        internal PictureBox getPictureBox()
+        {
+            return pic;
+        }
+
         public void filter(System.Windows.Forms.PictureBox name)
         {
             System.Windows.Forms.MessageBox.Show(name.ImageLocation);

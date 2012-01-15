@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace Programming
 {
-    public class ImageObject
+    public class ImageObject : I_ImageObject
     {
         private ImageManipulatorType.Name manipulator;
         private Image img;
