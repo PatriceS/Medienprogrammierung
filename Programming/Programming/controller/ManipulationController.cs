@@ -8,7 +8,7 @@ using PictureBox = System.Windows.Forms.PictureBox;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace Programming.controller
+namespace Programming
 {
     class ManipulationController
     {

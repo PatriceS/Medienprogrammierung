@@ -303,6 +303,11 @@ namespace Programming
             ManipulationController.getInstance().filter_Sample_Board(16);
         }
 
+        private void webcamPictureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
        
 
         

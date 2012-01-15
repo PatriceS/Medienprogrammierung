@@ -84,6 +84,7 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.infoTime = new System.Windows.Forms.Label();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.webcamPictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -122,6 +123,7 @@
             this.bildÖffnenToolStripMenuItem,
             this.bildSpeichernToolStripMenuItem,
             this.bildSchließenToolStripMenuItem,
+            this.webcamPictureToolStripMenuItem,
             this.beendenToolStripMenuItem});
             this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
             this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
@@ -131,7 +133,7 @@
             // bildÖffnenToolStripMenuItem
             // 
             this.bildÖffnenToolStripMenuItem.Name = "bildÖffnenToolStripMenuItem";
-            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bildÖffnenToolStripMenuItem.Text = "Bild öffnen";
             this.bildÖffnenToolStripMenuItem.Click += new System.EventHandler(this.bildÖffnenToolStripMenuItem_Click);
             // 
@@ -139,7 +141,7 @@
             // 
             this.bildSpeichernToolStripMenuItem.Enabled = false;
             this.bildSpeichernToolStripMenuItem.Name = "bildSpeichernToolStripMenuItem";
-            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bildSpeichernToolStripMenuItem.Text = "Bild speichern";
             this.bildSpeichernToolStripMenuItem.Click += new System.EventHandler(this.bildSpeichernToolStripMenuItem_Click);
             // 
@@ -147,14 +149,14 @@
             // 
             this.bildSchließenToolStripMenuItem.Enabled = false;
             this.bildSchließenToolStripMenuItem.Name = "bildSchließenToolStripMenuItem";
-            this.bildSchließenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.bildSchließenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bildSchließenToolStripMenuItem.Text = "Bild schließen";
             this.bildSchließenToolStripMenuItem.Click += new System.EventHandler(this.bildSchließenToolStripMenuItem_Click);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -661,6 +663,14 @@
             // 
             this.userBindingSource.DataSource = typeof(Programming.User);
             // 
+            // webcamPictureToolStripMenuItem
+            // 
+            this.webcamPictureToolStripMenuItem.Name = "webcamPictureToolStripMenuItem";
+            this.webcamPictureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.webcamPictureToolStripMenuItem.Text = "Webcam Bild";
+            this.webcamPictureToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.webcamPictureToolStripMenuItem.Click += new System.EventHandler(this.webcamPictureToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -756,6 +766,7 @@
         private System.Windows.Forms.ToolStripMenuItem farben_4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem farben_8ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem farben_16ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem webcamPictureToolStripMenuItem;
 
     }
 }

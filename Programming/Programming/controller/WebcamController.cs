@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Programming.controller
+namespace Programming
 {
     class WebcamController
     {
