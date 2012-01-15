@@ -8,9 +8,15 @@ namespace Programming
 {
     class NullImageObject : I_ImageObject
     {
+        private System.Windows.Forms.PictureBox pic;
+
+        public NullImageObject(System.Windows.Forms.PictureBox pic)
+        {
+            this.pic = pic;
+        }
         public Image get_Image()
         {
-            return Controller.getInstance().getPictureBox().Image;
+            return pic.Image;
         }
 
         public ImageManipulatorType.Name get_ImageManipulatorType()
@@ -20,7 +26,7 @@ namespace Programming
 
         public Bitmap get_Bitmap()
         {
-            return (Bitmap)Controller.getInstance().getPictureBox().Image;
+            return (Bitmap)pic.Image;
         }
     }
 }

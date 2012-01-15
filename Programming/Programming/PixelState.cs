@@ -13,6 +13,7 @@ namespace Programming
         private static PixelState PState = null;
         private static List<I_ImageObject> container;
         private static int       amount;
+        private static System.Windows.Forms.PictureBox pic;
 
         public static PixelState getInstance()
         {
@@ -23,6 +24,8 @@ namespace Programming
             container = new List<I_ImageObject>(amount);
             return PState;
         }
+
+        
 
         /**
          * Fügt dem PixelState Container ein neues Bild hinzu. Ist der Container voll,
@@ -68,7 +71,7 @@ namespace Programming
                 }
             }
                 // wenn kein elment in der liste, null zurück geben
-            return new NullImageObject();
+            return new NullImageObject(pic);
         }
 
         /**
@@ -92,7 +95,7 @@ namespace Programming
             }
             
           
-            return new NullImageObject();
+            return new NullImageObject(pic);
         }
 
         /**
@@ -110,8 +113,18 @@ namespace Programming
             
         }
 
+        internal void set_pictureBox(System.Windows.Forms.PictureBox pictureBox)
+        {
+            pic = pictureBox;
+        }
 
-
-
+        internal System.Windows.Forms.PictureBox get_pictureBox()
+        {
+            if (pic == null)
+            {
+                throw new EmptyPictureBoxException("Undefined PictureBox. PictureBox is null.");
+            }
+            return pic;
+        }
     }
 }

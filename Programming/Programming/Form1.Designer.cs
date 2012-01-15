@@ -38,7 +38,7 @@
             this.bildSchließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rückgaengigMachenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rueckgaengigMachenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.negativToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schwingungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -161,20 +161,21 @@
             // bearbeitenToolStripMenuItem
             // 
             this.bearbeitenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rückgaengigMachenToolStripMenuItem});
+            this.rueckgaengigMachenToolStripMenuItem});
             this.bearbeitenToolStripMenuItem.Name = "bearbeitenToolStripMenuItem";
             this.bearbeitenToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
             this.bearbeitenToolStripMenuItem.Text = "Bearbeiten";
             // 
-            // rückgaengigMachenToolStripMenuItem
+            // rueckgaengigMachenToolStripMenuItem
             // 
-            this.rückgaengigMachenToolStripMenuItem.AccessibleName = "rückgaengigMachenToolStripMenuItem";
-            this.rückgaengigMachenToolStripMenuItem.Name = "rückgaengigMachenToolStripMenuItem";
-            this.rückgaengigMachenToolStripMenuItem.ShortcutKeyDisplayString = "(strg+z)";
-            this.rückgaengigMachenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.rückgaengigMachenToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.rückgaengigMachenToolStripMenuItem.Text = "Rückgängig machen";
-            this.rückgaengigMachenToolStripMenuItem.Click += new System.EventHandler(this.rückgaengigMachenToolStripMenuItem_Click);
+            this.rueckgaengigMachenToolStripMenuItem.AccessibleName = "rueckgaengigMachenToolStripMenuItem";
+            this.rueckgaengigMachenToolStripMenuItem.Enabled = false;
+            this.rueckgaengigMachenToolStripMenuItem.Name = "rueckgaengigMachenToolStripMenuItem";
+            this.rueckgaengigMachenToolStripMenuItem.ShortcutKeyDisplayString = "(strg+z)";
+            this.rueckgaengigMachenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.rueckgaengigMachenToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.rueckgaengigMachenToolStripMenuItem.Text = "Rückgängig machen";
+            this.rueckgaengigMachenToolStripMenuItem.Click += new System.EventHandler(this.rueckgaengigMachenToolStripMenuItem_Click);
             // 
             // filterToolStripMenuItem
             // 
@@ -282,21 +283,21 @@
             // 
             this.farben_4ToolStripMenuItem.AccessibleName = "4_farbenToolStripMenuItem_Click";
             this.farben_4ToolStripMenuItem.Name = "farben_4ToolStripMenuItem";
-            this.farben_4ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.farben_4ToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.farben_4ToolStripMenuItem.Text = "4 Farben";
             this.farben_4ToolStripMenuItem.Click += new System.EventHandler(this.farben_4ToolStripMenuItem_Click);
             // 
             // farben_8ToolStripMenuItem1
             // 
             this.farben_8ToolStripMenuItem1.Name = "farben_8ToolStripMenuItem1";
-            this.farben_8ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.farben_8ToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.farben_8ToolStripMenuItem1.Text = "8 Farben";
             this.farben_8ToolStripMenuItem1.Click += new System.EventHandler(this.farben_8ToolStripMenuItem1_Click);
             // 
             // farben_16ToolStripMenuItem2
             // 
             this.farben_16ToolStripMenuItem2.Name = "farben_16ToolStripMenuItem2";
-            this.farben_16ToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.farben_16ToolStripMenuItem2.Size = new System.Drawing.Size(125, 22);
             this.farben_16ToolStripMenuItem2.Text = "16 Farben";
             this.farben_16ToolStripMenuItem2.Click += new System.EventHandler(this.farben_16ToolStripMenuItem2_Click);
             // 
@@ -741,7 +742,7 @@
         private System.Windows.Forms.ToolStripMenuItem errorDiffusionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bearbeitenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rückgaengigMachenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rueckgaengigMachenToolStripMenuItem;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label infoThreads;
         private System.Windows.Forms.LinkLabel linkLabel2;

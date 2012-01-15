@@ -54,9 +54,11 @@ namespace Programming
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
-                
+
+                    // PixelState als ERSTES initialisieren, da pictureBox beim initialisieren der
+                    // controller Klassen gebraucht wird. Ansonsten EmptyPixelState exception.
+                PixelState.getInstance().set_pictureBox(pictureBox1);
                 this.con = Controller.getInstance();
-                this.con.setPictureBox(pictureBox1);
                 this.con.setMainForm(this);
                 setPictureBoxSize(pictureBox1.Image);
                 this.con.reset_pixel_state();
@@ -64,6 +66,7 @@ namespace Programming
                 bildSchließenToolStripMenuItem.Enabled = true;
                 bildSpeichernToolStripMenuItem.Enabled = true;
                 bildÖffnenToolStripMenuItem.Enabled = false;
+                rueckgaengigMachenToolStripMenuItem.Enabled = true;
             }
         }
 
@@ -261,7 +264,7 @@ namespace Programming
         }
 
 
-        private void rückgaengigMachenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void rueckgaengigMachenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Controller.getInstance().undo();
         }

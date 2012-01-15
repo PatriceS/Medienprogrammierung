@@ -21,12 +21,13 @@ namespace Programming
         {
            // for (int i = 0; i < 19; i++)
            // {
+                
                 ImageManipulatorType.Name name = ImageManipulatorType.Name.INVERT;
                 PixelState.getInstance().add(new ImageObject(pic.Image, name));
                 ThreadHandler thHandler = new ThreadHandler(threads);
                 new ImageManipulator((Bitmap)pic.Image, name, thHandler).perform();
                 this.show_picture(thHandler);
-                Controller.getInstance().setPictureBox(pic);
+               
            // }
         }
 
@@ -80,15 +81,23 @@ namespace Programming
         
         public void filter_RGB_Mode( ImageManipulatorType.Name color )
         {
+                // letztes zwischengespeichertes Bild holen
             PixelState state = PixelState.getInstance();
             I_ImageObject imgObj = state.get_last();
+                // Vergleichsliste mit RGB Klassen Typen erstellen
             List<ImageManipulatorType.Name> container = new List<ImageManipulatorType.Name>();
             container.Add(ImageManipulatorType.Name.RGB_BLUE);
             container.Add(ImageManipulatorType.Name.RGB_RED);
             container.Add(ImageManipulatorType.Name.RGB_GREEN);
 
+                // wenn das letzte zwischengespeicherte Bild mit dieser funktion verändert wurde
             if (container.Contains(imgObj.get_ImageManipulatorType()))
             {
+                    /* dann diese Veränderung rückgängig machen, da ansonsten das Bild schwarz wird.
+                     * 2 aufeinander folgende Kanal filter => schwarzes bild, da jeweils 2 Farbkanäle
+                     * pro Funktions aufruf auf 0 gesetzt werden. Nach 2 Funktionsaufrufen sind also
+                     * alle Kanäle 0 was schwarzes Bild ergibt.
+                     */ 
                 this.undo();
             }
             
@@ -122,27 +131,21 @@ namespace Programming
         {
             if (con != null)
             {
-                con.getPictureBox();
                 return con;
             }
-               
 
             con = new Controller();
+            con.init();
             return con;
         }
 
-        public void setPictureBox(System.Windows.Forms.PictureBox pictureBox1)
+        private void init()
         {
-            pic = pictureBox1;
-        }
-
-        public PictureBox getPictureBox()
-        {
-            Image ddfgd = pic.Image;
-            int sdf = threads;
-            Form1 ddddd = mainForm;
-           
-            return pic;
+            try
+            {
+                pic = PixelState.getInstance().get_pictureBox();
+            }
+            catch { throw new EmptyPictureBoxException("Before initializing this controller, initialize PictureBox attribute of class PixelState first!"); }
         }
 
         public void filter(System.Windows.Forms.PictureBox name)
