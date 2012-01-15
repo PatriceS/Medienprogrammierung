@@ -35,9 +35,10 @@ namespace Programming
 
         public void openWebcamWindow()
         {
-            WebcamOptions cam = new WebcamOptions();
+            
             WebcamModel model = new WebcamModel();
             List<String> devices = model.get_devices();
+            WebcamOptions cam = new WebcamOptions(devices);
             cam.Show();
         }
     }

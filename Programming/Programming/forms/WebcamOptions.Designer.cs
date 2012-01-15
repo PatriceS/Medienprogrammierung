@@ -28,11 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.WebcamDevicescomboBox = new System.Windows.Forms.ComboBox();
+            this.SuspendLayout();
+            // 
+            // WebcamDevicescomboBox
+            // 
+            this.WebcamDevicescomboBox.FormattingEnabled = true;
+            this.WebcamDevicescomboBox.Location = new System.Drawing.Point(12, 70);
+            this.WebcamDevicescomboBox.Name = "WebcamDevicescomboBox";
+            this.WebcamDevicescomboBox.Size = new System.Drawing.Size(260, 21);
+            this.WebcamDevicescomboBox.TabIndex = 0;
+            this.WebcamDevicescomboBox.SelectedIndexChanged += new System.EventHandler(this.WebcamDevicescomboBox_SelectedIndexChanged);
+            // 
+            // WebcamOptions
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.WebcamDevicescomboBox);
+            this.Name = "WebcamOptions";
             this.Text = "WebcamOptions";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox WebcamDevicescomboBox;
     }
 }
