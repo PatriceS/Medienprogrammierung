@@ -15,8 +15,6 @@ namespace Programming
     {
         private int MAX_SIZE = 800;
         
-        private ManipulationController con;
-        private const int threads = 4;
         private FacebookClient fb;
         private User user;
         private string selectedAlbumID;
@@ -58,10 +56,12 @@ namespace Programming
                     // PixelState als ERSTES initialisieren, da pictureBox beim initialisieren der
                     // controller Klassen gebraucht wird. Ansonsten EmptyPixelState exception.
                 PixelState.getInstance().set_pictureBox(pictureBox1);
-                this.con = ManipulationController.getInstance();
-                this.con.setMainForm(this);
+               
+                ManipulationController con = ManipulationController.getInstance();
+                con.setMainForm(this);
+                
                 setPictureBoxSize(pictureBox1.Image);
-                this.con.reset_pixel_state();
+                con.reset_pixel_state();
                 filterToolStripMenuItem.Enabled = true;
                 bildSchließenToolStripMenuItem.Enabled = true;
                 bildSpeichernToolStripMenuItem.Enabled = true;
@@ -105,6 +105,8 @@ namespace Programming
             bildSpeichernToolStripMenuItem.Enabled = false;
             bildSchließenToolStripMenuItem.Enabled = false;
             bildÖffnenToolStripMenuItem.Enabled = true;
+            rueckgaengigMachenToolStripMenuItem.Enabled = false;
+            filterToolStripMenuItem.Enabled = false;
         }
 
         private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -305,7 +307,9 @@ namespace Programming
 
         private void webcamPictureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            PixelState.getInstance().set_pictureBox(pictureBox1);
+            WebcamController con = WebcamController.getInstance();
+            con.setMainForm(this);
         }
 
        
@@ -314,7 +318,7 @@ namespace Programming
 
         
 
-        /*   Mathias From Ende                                            */
+        /*   Mathias Form Ende                                            */
 
        
     }
