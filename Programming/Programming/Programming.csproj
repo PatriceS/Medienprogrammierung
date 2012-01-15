@@ -73,6 +73,7 @@
     <Compile Include="filter\InvertFilter.cs" />
     <Compile Include="config\ImageManipulatorType.cs" />
     <Compile Include="ImageObject.cs" />
+    <Compile Include="I_ImageObject.cs" />
     <Compile Include="Manipulate.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Form1.cs">
@@ -83,6 +84,7 @@
     </Compile>
     <Compile Include="filter\OscillationFilter.cs" />
     <Compile Include="ManipulationFactory.cs" />
+    <Compile Include="NullImageObject.cs" />
     <Compile Include="PixelState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

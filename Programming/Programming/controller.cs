@@ -26,6 +26,7 @@ namespace Programming
                 ThreadHandler thHandler = new ThreadHandler(threads);
                 new ImageManipulator((Bitmap)pic.Image, name, thHandler).perform();
                 this.show_picture(thHandler);
+                Controller.getInstance().setPictureBox(pic);
            // }
         }
 
@@ -76,25 +77,23 @@ namespace Programming
             this.show_picture(thHandler);
         }
 
+        
         public void filter_RGB_Mode( ImageManipulatorType.Name color )
         {
             PixelState state = PixelState.getInstance();
-            ImageObject imgObj = state.get_last();
+            I_ImageObject imgObj = state.get_last();
             List<ImageManipulatorType.Name> container = new List<ImageManipulatorType.Name>();
             container.Add(ImageManipulatorType.Name.RGB_BLUE);
             container.Add(ImageManipulatorType.Name.RGB_RED);
             container.Add(ImageManipulatorType.Name.RGB_GREEN);
 
-            if( imgObj != null)
+            if (container.Contains(imgObj.get_ImageManipulatorType()))
             {
-                if (container.Contains(imgObj.get_ImageManipulatorType()))
-                {
-                    this.undo(false);
-                }
-            
+                this.undo();
             }
             
             state.add(new ImageObject(pic.Image, color));
+            
             ThreadHandler thHandler = new ThreadHandler(threads);
             new ImageManipulator((Bitmap)pic.Image, color, thHandler).perform();
             this.show_picture(thHandler);
@@ -108,19 +107,10 @@ namespace Programming
             
         }
 
+        
         public void filter_Sample_Board( int count )
         {
             PixelState state = PixelState.getInstance();
-            ImageObject imgObj = state.get_last();
-
-            if (imgObj != null)
-            {
-                if (imgObj.get_ImageManipulatorType() == ImageManipulatorType.Name.SAMPLE_BOARD)
-                {
-                    this.undo(false);
-                }
-
-            }
             state.add(new ImageObject(pic.Image, ImageManipulatorType.Name.SAMPLE_BOARD));
             ThreadHandler thHandler = new ThreadHandler(threads);
             int[] colors = new int[1] { count };
@@ -130,19 +120,28 @@ namespace Programming
 
         public static Controller getInstance()
         {
-            if(con!=null)  return con;
+            if (con != null)
+            {
+                con.getPictureBox();
+                return con;
+            }
+               
 
             con = new Controller();
             return con;
         }
 
-        internal void setPictureBox(System.Windows.Forms.PictureBox pictureBox1)
+        public void setPictureBox(System.Windows.Forms.PictureBox pictureBox1)
         {
             pic = pictureBox1;
         }
 
-        internal PictureBox getPictureBox()
+        public PictureBox getPictureBox()
         {
+            Image ddfgd = pic.Image;
+            int sdf = threads;
+            Form1 ddddd = mainForm;
+           
             return pic;
         }
 
@@ -156,19 +155,10 @@ namespace Programming
             mainForm = form;
         }
 
-        public void undo(bool refresh = true)
+        //@todo
+        public void undo( )
         {
-            PixelState state = PixelState.getInstance();
-            if (state.get_last() != null)
-            {
-                pic.Image = null;
-                pic.Image = PixelState.getInstance().remove_last().get_Image();
-                if (refresh)
-                {
-                    pic.Refresh();
-                }
-                
-            }
+            pic.Image = PixelState.getInstance().remove_last().get_Image();
         }
 
         public void reset_pixel_state()
