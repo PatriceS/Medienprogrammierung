@@ -52,6 +52,8 @@ namespace Programming
             mainForm.setPictureBoxSize(pic.Image);
             pic.Refresh();
             mainForm.enable_filter_menue();
+            mainForm.enable_edit_menue();
+
         }
 
         public void stop_capture()
