@@ -41,5 +41,13 @@ namespace Programming
             WebcamOptions cam = new WebcamOptions(devices);
             cam.Show();
         }
+
+        public void set_Webcam_picture(KeyValuePair<int, string> src)
+        {
+            WebcamModel model = new WebcamModel();
+            model.get_picture(src, pic);
+            pic.Image = model.get_Image();
+            pic.Refresh();
+        }
     }
 }

@@ -12,13 +12,12 @@ namespace Programming
     public partial class WebcamOptions : Form
     {
 
+        KeyValuePair<int, string> selob;
+
         public WebcamOptions(Dictionary<int, string> data)
         {
-            
             InitializeComponent();
             show_devices(data);
-            
-            
         }
 
         private void show_devices(Dictionary<int, string> data)
@@ -32,7 +31,12 @@ namespace Programming
 
         private void WebcamDevicescomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            selob = (KeyValuePair<int, string>)WebcamDevicescomboBox.SelectedItem;
+        }
 
+        private void ok_Click(object sender, EventArgs e)
+        {
+            new WebcamController().set_Webcam_picture(selob);
         }
     }
 }
