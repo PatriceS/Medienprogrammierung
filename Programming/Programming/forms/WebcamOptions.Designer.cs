@@ -31,6 +31,7 @@
             this.WebcamDevicescomboBox = new System.Windows.Forms.ComboBox();
             this.ok = new System.Windows.Forms.Button();
             this.webcamPictureBox = new System.Windows.Forms.PictureBox();
+            this.resolutionComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.webcamPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             // 
             // ok
             // 
-            this.ok.Location = new System.Drawing.Point(278, 12);
+            this.ok.Location = new System.Drawing.Point(616, 11);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(71, 22);
             this.ok.TabIndex = 1;
@@ -62,11 +63,22 @@
             this.webcamPictureBox.TabIndex = 2;
             this.webcamPictureBox.TabStop = false;
             // 
+            // resolutionComboBox
+            // 
+            this.resolutionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.resolutionComboBox.FormattingEnabled = true;
+            this.resolutionComboBox.Location = new System.Drawing.Point(278, 12);
+            this.resolutionComboBox.Name = "resolutionComboBox";
+            this.resolutionComboBox.Size = new System.Drawing.Size(327, 21);
+            this.resolutionComboBox.TabIndex = 3;
+            this.resolutionComboBox.SelectedIndexChanged += new System.EventHandler(this.resolutionComboBox_SelectedIndexChanged);
+            // 
             // WebcamOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 433);
+            this.ClientSize = new System.Drawing.Size(873, 433);
+            this.Controls.Add(this.resolutionComboBox);
             this.Controls.Add(this.webcamPictureBox);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.WebcamDevicescomboBox);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.ComboBox WebcamDevicescomboBox;
         private System.Windows.Forms.Button ok;
         private System.Windows.Forms.PictureBox webcamPictureBox;
+        private System.Windows.Forms.ComboBox resolutionComboBox;
     }
 }

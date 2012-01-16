@@ -11,6 +11,7 @@ namespace Programming
         private static System.Windows.Forms.PictureBox pic;
         private static Form1 mainForm;
         private WebcamModel model;
+        private WebcamOptions cam;
 
         public WebcamController()
         {
@@ -41,8 +42,9 @@ namespace Programming
 
         public void openWebcamWindow()
         {
-            Dictionary<int, string> devices = model.get_devices();
-            WebcamOptions cam = new WebcamOptions(devices);
+            Dictionary<int, string> devices  = model.get_devices();
+            Dictionary<int, string> solutions = model.get_solution_modes();
+            cam = new WebcamOptions(devices, solutions);
             cam.Show();
         }
 
@@ -64,9 +66,20 @@ namespace Programming
             model.stop_capture();
         }
 
-        public void show_Webcam_picture(KeyValuePair<int, string> src, System.Windows.Forms.PictureBox webcamPictureBox)
+        public void show_Webcam_picture( System.Windows.Forms.PictureBox webcamPictureBox, WebcamOptions form)
         {
-            model.show_picture(src, webcamPictureBox);
+            model.show_picture(webcamPictureBox, form);
+        }
+
+
+        public void set_solution(KeyValuePair<int, string> selob)
+        {
+            model.set_solution(selob);
+        }
+
+        public void set_device(KeyValuePair<int, string> selob)
+        {
+            model.set_device(selob);
         }
     }
 }

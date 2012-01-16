@@ -12,10 +12,11 @@ namespace Programming
     class WebcamModel
     {
         //Anlegen eines Webcam-Objektes
-        static VideoCaptureDevice videoSource;
-        FilterInfoCollection videosources;
-       
-        PictureBox pic;
+        private static VideoCaptureDevice videoSource;
+        private FilterInfoCollection videosources;
+        private PictureBox pic;
+        private KeyValuePair<int, string> solution;
+        private KeyValuePair<int, string> device;
         
 
         public Dictionary<int, string> get_devices()
@@ -39,40 +40,55 @@ namespace Programming
 
         public Dictionary<int, string> get_solution_modes()
         {
+            VideoCaptureDevice videoSource;
+            FilterInfoCollection videosources;
+            videosources = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            videoSource = new VideoCaptureDevice(videosources[this.get_device().Key].MonikerString);
 
+            return get_solution_modes(videoSource);
         }
 
-        public void show_picture(KeyValuePair<int, string> src, PictureBox pic)
+        private Dictionary<int, string> get_solution_modes(VideoCaptureDevice videoSource)
+        {
+            Dictionary<int, string> data = new Dictionary<int, string>();
+
+            try
+            {
+                //Überprüfen ob die Aufnahmequelle eine Liste mit möglichen Aufnahme-
+                //Auflösungen mitliefert.
+                if (videoSource.VideoCapabilities.Length > 0)
+                {
+                    string solution = "0;0";
+                    //Das Profil mit der höchsten Auflösung suchen
+                    for (int i = 0; i < videoSource.VideoCapabilities.Length; i++)
+                    {
+                        if (videoSource.VideoCapabilities[i].FrameSize.Width > Convert.ToInt32(solution.Split(';')[0]))
+                        {
+                            solution = videoSource.VideoCapabilities[i].FrameSize.Width.ToString() + ";" + i.ToString();
+                            data.Add(i, solution);
+                        }
+                    }
+                }
+            }
+            catch { }
+            return data;
+        }
+
+        public void show_picture( PictureBox pic, WebcamOptions form)
         {
             this.pic = pic;
             Dictionary<int, string> devices = this.get_devices();
-            if (videosources.Count > src.Key)
+            if (videosources.Count > this.device.Key)
             {
-                videoSource = new VideoCaptureDevice(videosources[src.Key].MonikerString);
-                
+                videoSource = new VideoCaptureDevice(videosources[this.get_device().Key].MonikerString);
+                string solution = "0;0";
+                solution = get_solution(videoSource).Value;
 
-                try
-                {
-                    //Überprüfen ob die Aufnahmequelle eine Liste mit möglichen Aufnahme-
-                    //Auflösungen mitliefert.
-                    if (videoSource.VideoCapabilities.Length > 0)
-                    {
-                        string highestSolution = "0;0";
-                        //Das Profil mit der höchsten Auflösung suchen
-                        for (int i = 0; i < videoSource.VideoCapabilities.Length; i++)
-                        {
-                            if (videoSource.VideoCapabilities[i].FrameSize.Width > Convert.ToInt32(highestSolution.Split(';')[0]))
-                            {
-                                highestSolution = videoSource.VideoCapabilities[i].FrameSize.Width.ToString() + ";" + i.ToString();
-                                pic.Size = new Size(videoSource.VideoCapabilities[i].FrameSize.Width, videoSource.VideoCapabilities[i].FrameSize.Height);
-                            }
-                               
-                        }
-                        //Dem Webcam Objekt ermittelte Auflösung übergeben
-                        videoSource.DesiredFrameSize = videoSource.VideoCapabilities[Convert.ToInt32(highestSolution.Split(';')[1])].FrameSize;
-                    }
-                }
-                catch { }
+                //Dem Webcam Objekt ermittelte Auflösung übergeben
+                videoSource.DesiredFrameSize = videoSource.VideoCapabilities[Convert.ToInt32(solution.Split(';')[1])].FrameSize;
+                pic.Size = new Size(videoSource.DesiredFrameSize.Width, videoSource.DesiredFrameSize.Height);
+                form.Size = new Size(videoSource.DesiredFrameSize.Width +100, videoSource.DesiredFrameSize.Height +100);
+                
             //    
                 //NewFrame Eventhandler zuweisen anlegen.
                 //(Dieser registriert jeden neuen Frame der Webcam)
@@ -103,6 +119,41 @@ namespace Programming
                 videoSource.SignalToStop();
                 videoSource = null;
             }
+        }
+
+        internal void set_solution(KeyValuePair<int, string> selob)
+        {
+            this.solution = selob;
+        }
+
+        internal void set_device(KeyValuePair<int, string> selob)
+        {
+            this.device = selob;
+        }
+
+        private KeyValuePair<int, string> get_solution(VideoCaptureDevice videoSource)
+        {
+            String str = this.solution.Value;
+            if (str != null)
+            {
+                return this.solution;
+            }
+            Dictionary<int, string> data = get_solution_modes( videoSource);
+            return new KeyValuePair<int, string>(data.First().Key, data.First().Value);
+
+            
+        }
+
+        private KeyValuePair<int, string> get_device()
+        {
+            String str = this.device.Value;
+            if (str != null)
+            {
+                return this.device;
+            }
+
+            Dictionary<int, string> data = get_devices();
+            return new KeyValuePair<int, string>(data.First().Key, data.First().Value);
         }
     }
 }
