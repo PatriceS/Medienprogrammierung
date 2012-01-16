@@ -13,6 +13,7 @@ namespace Programming
     {
 
         KeyValuePair<int, string> selob;
+        private WebcamController con;
 
         public WebcamOptions(Dictionary<int, string> data)
         {
@@ -36,7 +37,16 @@ namespace Programming
 
         private void ok_Click(object sender, EventArgs e)
         {
-            new WebcamController().set_Webcam_picture(selob);
+            this.con = new WebcamController();
+            con.set_Webcam_picture(selob);
         }
+
+        private void WebcamOptions_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            con.stop_webcam();
+            
+        }
+
+
     }
 }

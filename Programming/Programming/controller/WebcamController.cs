@@ -10,7 +10,7 @@ namespace Programming
         
         private static System.Windows.Forms.PictureBox pic;
         private static Form1 mainForm;
-
+        private WebcamModel model;
 
         public static WebcamController getInstance()
         {
@@ -44,10 +44,15 @@ namespace Programming
 
         public void set_Webcam_picture(KeyValuePair<int, string> src)
         {
-            WebcamModel model = new WebcamModel();
+            model = new WebcamModel();
             model.get_picture(src, pic);
             pic.Image = model.get_Image();
             pic.Refresh();
+        }
+
+        public void stop_webcam()
+        {
+            model.stop_webcam();
         }
     }
 }

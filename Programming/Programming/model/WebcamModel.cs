@@ -12,7 +12,7 @@ namespace Programming
     class WebcamModel
     {
         //Anlegen eines Webcam-Objektes
-        VideoCaptureDevice videoSource;
+        static VideoCaptureDevice videoSource;
         FilterInfoCollection videosources;
         Image img;
         PictureBox pic;
@@ -41,52 +41,57 @@ namespace Programming
         {
             ii = 0;
             Dictionary<int, string> devices = this.get_devices();
-            VideoCaptureDevice videoSource = new VideoCaptureDevice(videosources[src.Key].MonikerString);
+           
             videoSource = new VideoCaptureDevice(videosources[src.Key].MonikerString);
             this.pic = pic;
-            try
+            if (ii <= 10)
             {
-                //Überprüfen ob die Aufnahmequelle eine Liste mit möglichen Aufnahme-
-                //Auflösungen mitliefert.
-                if (videoSource.VideoCapabilities.Length > 0)
+                try
                 {
-                    string highestSolution = "0;0";
-                    //Das Profil mit der höchsten Auflösung suchen
-                    for (int i = 0; i < videoSource.VideoCapabilities.Length; i++)
+                    //Überprüfen ob die Aufnahmequelle eine Liste mit möglichen Aufnahme-
+                    //Auflösungen mitliefert.
+                    if (videoSource.VideoCapabilities.Length > 0)
                     {
-                        if (videoSource.VideoCapabilities[i].FrameSize.Width > Convert.ToInt32(highestSolution.Split(';')[0]))
-                            highestSolution = videoSource.VideoCapabilities[i].FrameSize.Width.ToString() + ";" + i.ToString();
+                        string highestSolution = "0;0";
+                        //Das Profil mit der höchsten Auflösung suchen
+                        for (int i = 0; i < videoSource.VideoCapabilities.Length; i++)
+                        {
+                            if (videoSource.VideoCapabilities[i].FrameSize.Width > Convert.ToInt32(highestSolution.Split(';')[0]))
+                                highestSolution = videoSource.VideoCapabilities[i].FrameSize.Width.ToString() + ";" + i.ToString();
+                        }
+                        //Dem Webcam Objekt ermittelte Auflösung übergeben
+                        videoSource.DesiredFrameSize = videoSource.VideoCapabilities[Convert.ToInt32(highestSolution.Split(';')[1])].FrameSize;
                     }
-                    //Dem Webcam Objekt ermittelte Auflösung übergeben
-                    videoSource.DesiredFrameSize = videoSource.VideoCapabilities[Convert.ToInt32(highestSolution.Split(';')[1])].FrameSize;
                 }
+                catch { }
+
+                //NewFrame Eventhandler zuweisen anlegen.
+                //(Dieser registriert jeden neuen Frame der Webcam)
+                videoSource.NewFrame += new AForge.Video.NewFrameEventHandler(videoSource_NewFrame);
+                //  videoSource.SnapshotFrame += new AForge.Video.NewFrameEventHandler(videoSource_NewFrame);
+                //Das Aufnahmegerät aktivieren
+                videoSource.Start();
             }
-            catch { }
-            //Das Aufnahmegerät aktivieren
-            videoSource.Start();
-            //NewFrame Eventhandler zuweisen anlegen.
-            //(Dieser registriert jeden neuen Frame der Webcam)
-            videoSource.NewFrame += new AForge.Video.NewFrameEventHandler(videoSource_NewFrame);
-          //  videoSource.SnapshotFrame += new AForge.Video.NewFrameEventHandler(videoSource_NewFrame);
-            //Das Aufnahmegerät aktivieren
-            videoSource.Start();
-           // videoSource.SignalToStop();
-            
+            else
+            {
+                 //videoSource.SignalToStop();
+            }
+
+     //       videoSource.SignalToStop();
         }
 
         void videoSource_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
             //Jedes ankommende Objekt als Bitmap casten und der Picturebox zuweisen
             //(Denkt an das ".Clone()", um Zugriffsverletzungen aus dem Weg zu gehen.)
-            
-            if(ii == 10)
-            this.pic.Image = (Image)eventArgs.Frame.Clone();
-            ii++;
-            if (videoSource != null && videoSource.IsRunning)
+
+            if (ii <= 10)
             {
-                videoSource.SignalToStop();
-                videoSource = null;
+
+                this.pic.Image = (Image)eventArgs.Frame.Clone();
             }
+            ii++;
+           
             int b = 0;
         }
 
@@ -108,5 +113,15 @@ namespace Programming
             }
         }
          * */
+
+        public void stop_webcam()
+        {
+            Image img = pic.Image;
+            if (videoSource != null && videoSource.IsRunning)
+            {
+                videoSource.SignalToStop();
+                videoSource = null;
+            }
+        }
     }
 }

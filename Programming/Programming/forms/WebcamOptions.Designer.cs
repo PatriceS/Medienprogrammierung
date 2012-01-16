@@ -60,6 +60,7 @@
             this.Controls.Add(this.WebcamDevicescomboBox);
             this.Name = "WebcamOptions";
             this.Text = "WebcamOptions";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WebcamOptions_FormClosing);
             this.ResumeLayout(false);
 
         }
