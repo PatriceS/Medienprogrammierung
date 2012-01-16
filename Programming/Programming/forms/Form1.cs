@@ -109,7 +109,7 @@ namespace Programming
 
         private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
             Application.Exit();
         }
 

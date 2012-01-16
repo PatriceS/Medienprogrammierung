@@ -37,6 +37,11 @@ namespace Programming
             return data;
         }
 
+        public Dictionary<int, string> get_solution_modes()
+        {
+
+        }
+
         public void show_picture(KeyValuePair<int, string> src, PictureBox pic)
         {
             this.pic = pic;

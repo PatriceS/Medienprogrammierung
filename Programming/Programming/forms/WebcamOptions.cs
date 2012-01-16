@@ -20,8 +20,6 @@ namespace Programming
             InitializeComponent();
             this.con = new WebcamController();
             show_devices(data);
-            
-            
         }
 
         private void show_devices(Dictionary<int, string> data)
