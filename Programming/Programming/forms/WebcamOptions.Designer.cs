@@ -30,12 +30,15 @@
         {
             this.WebcamDevicescomboBox = new System.Windows.Forms.ComboBox();
             this.ok = new System.Windows.Forms.Button();
+            this.webcamPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.webcamPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // WebcamDevicescomboBox
             // 
+            this.WebcamDevicescomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.WebcamDevicescomboBox.FormattingEnabled = true;
-            this.WebcamDevicescomboBox.Location = new System.Drawing.Point(12, 70);
+            this.WebcamDevicescomboBox.Location = new System.Drawing.Point(12, 12);
             this.WebcamDevicescomboBox.Name = "WebcamDevicescomboBox";
             this.WebcamDevicescomboBox.Size = new System.Drawing.Size(260, 21);
             this.WebcamDevicescomboBox.TabIndex = 0;
@@ -43,7 +46,7 @@
             // 
             // ok
             // 
-            this.ok.Location = new System.Drawing.Point(13, 192);
+            this.ok.Location = new System.Drawing.Point(278, 12);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(71, 22);
             this.ok.TabIndex = 1;
@@ -51,16 +54,26 @@
             this.ok.UseVisualStyleBackColor = true;
             this.ok.Click += new System.EventHandler(this.ok_Click);
             // 
+            // webcamPictureBox
+            // 
+            this.webcamPictureBox.Location = new System.Drawing.Point(12, 39);
+            this.webcamPictureBox.Name = "webcamPictureBox";
+            this.webcamPictureBox.Size = new System.Drawing.Size(675, 354);
+            this.webcamPictureBox.TabIndex = 2;
+            this.webcamPictureBox.TabStop = false;
+            // 
             // WebcamOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(699, 433);
+            this.Controls.Add(this.webcamPictureBox);
             this.Controls.Add(this.ok);
             this.Controls.Add(this.WebcamDevicescomboBox);
             this.Name = "WebcamOptions";
             this.Text = "WebcamOptions";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WebcamOptions_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.webcamPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,5 +82,6 @@
 
         private System.Windows.Forms.ComboBox WebcamDevicescomboBox;
         private System.Windows.Forms.Button ok;
+        private System.Windows.Forms.PictureBox webcamPictureBox;
     }
 }

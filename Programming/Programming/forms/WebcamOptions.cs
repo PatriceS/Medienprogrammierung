@@ -18,7 +18,10 @@ namespace Programming
         public WebcamOptions(Dictionary<int, string> data)
         {
             InitializeComponent();
+            this.con = new WebcamController();
             show_devices(data);
+            
+            
         }
 
         private void show_devices(Dictionary<int, string> data)
@@ -32,18 +35,19 @@ namespace Programming
 
         private void WebcamDevicescomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            con.stop_capture();
             selob = (KeyValuePair<int, string>)WebcamDevicescomboBox.SelectedItem;
+            con.show_Webcam_picture(selob, webcamPictureBox);
         }
 
         private void ok_Click(object sender, EventArgs e)
         {
-            this.con = new WebcamController();
             con.set_Webcam_picture(selob);
         }
 
         private void WebcamOptions_FormClosing(object sender, FormClosingEventArgs e)
         {
-            con.stop_webcam();
+            con.stop_capture();
             
         }
 

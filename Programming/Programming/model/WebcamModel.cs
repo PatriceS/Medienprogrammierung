@@ -37,15 +37,15 @@ namespace Programming
             return data;
         }
 
-        public void get_picture(KeyValuePair<int, string> src, PictureBox pic)
+        public void show_picture(KeyValuePair<int, string> src, PictureBox pic)
         {
-            ii = 0;
+            
             Dictionary<int, string> devices = this.get_devices();
-           
-            videoSource = new VideoCaptureDevice(videosources[src.Key].MonikerString);
-            this.pic = pic;
-            if (ii <= 10)
+            if (videosources.Count > src.Key)
             {
+                videoSource = new VideoCaptureDevice(videosources[src.Key].MonikerString);
+                this.pic = pic;
+
                 try
                 {
                     //Überprüfen ob die Aufnahmequelle eine Liste mit möglichen Aufnahme-
@@ -57,14 +57,18 @@ namespace Programming
                         for (int i = 0; i < videoSource.VideoCapabilities.Length; i++)
                         {
                             if (videoSource.VideoCapabilities[i].FrameSize.Width > Convert.ToInt32(highestSolution.Split(';')[0]))
+                            {
                                 highestSolution = videoSource.VideoCapabilities[i].FrameSize.Width.ToString() + ";" + i.ToString();
+                                pic.Size = new Size(videoSource.VideoCapabilities[i].FrameSize.Width, videoSource.VideoCapabilities[i].FrameSize.Height);
+                            }
+                               
                         }
                         //Dem Webcam Objekt ermittelte Auflösung übergeben
                         videoSource.DesiredFrameSize = videoSource.VideoCapabilities[Convert.ToInt32(highestSolution.Split(';')[1])].FrameSize;
                     }
                 }
                 catch { }
-
+            //    
                 //NewFrame Eventhandler zuweisen anlegen.
                 //(Dieser registriert jeden neuen Frame der Webcam)
                 videoSource.NewFrame += new AForge.Video.NewFrameEventHandler(videoSource_NewFrame);
@@ -72,51 +76,23 @@ namespace Programming
                 //Das Aufnahmegerät aktivieren
                 videoSource.Start();
             }
-            else
-            {
-                 //videoSource.SignalToStop();
             }
-
-     //       videoSource.SignalToStop();
-        }
+            
+              
 
         void videoSource_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
-            //Jedes ankommende Objekt als Bitmap casten und der Picturebox zuweisen
-            //(Denkt an das ".Clone()", um Zugriffsverletzungen aus dem Weg zu gehen.)
-
-            if (ii <= 10)
-            {
-
-                this.pic.Image = (Image)eventArgs.Frame.Clone();
-            }
-            ii++;
-           
-            int b = 0;
+            this.pic.Image = (Image)eventArgs.Frame.Clone();
         }
 
         public Image get_Image()
         {
-            Image i = img;
-            return img;
+            return this.pic.Image;
         }
 
-        /*
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        public void stop_capture()
         {
-            //Beim Beenden des Programmes die Webcam wieder "freigeben",
-            //damit sie von anderen Anwendungen benutzt werden kann.
-            if (videoSource != null && videoSource.IsRunning)
-            {
-                videoSource.SignalToStop();
-                videoSource = null;
-            }
-        }
-         * */
-
-        public void stop_webcam()
-        {
-            Image img = pic.Image;
+            
             if (videoSource != null && videoSource.IsRunning)
             {
                 videoSource.SignalToStop();

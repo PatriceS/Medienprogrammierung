@@ -12,6 +12,11 @@ namespace Programming
         private static Form1 mainForm;
         private WebcamModel model;
 
+        public WebcamController()
+        {
+            model = new WebcamModel();
+        }
+
         public static WebcamController getInstance()
         {
             WebcamController con = new WebcamController();
@@ -21,6 +26,7 @@ namespace Programming
 
         private void init()
         {
+
             try
             {
                 pic = PixelState.getInstance().get_pictureBox();
@@ -35,8 +41,6 @@ namespace Programming
 
         public void openWebcamWindow()
         {
-            
-            WebcamModel model = new WebcamModel();
             Dictionary<int, string> devices = model.get_devices();
             WebcamOptions cam = new WebcamOptions(devices);
             cam.Show();
@@ -44,15 +48,18 @@ namespace Programming
 
         public void set_Webcam_picture(KeyValuePair<int, string> src)
         {
-            model = new WebcamModel();
-            model.get_picture(src, pic);
             pic.Image = model.get_Image();
             pic.Refresh();
         }
 
-        public void stop_webcam()
+        public void stop_capture()
         {
-            model.stop_webcam();
+            model.stop_capture();
+        }
+
+        public void show_Webcam_picture(KeyValuePair<int, string> src, System.Windows.Forms.PictureBox webcamPictureBox)
+        {
+            model.show_picture(src, webcamPictureBox);
         }
     }
 }
