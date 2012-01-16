@@ -19,12 +19,18 @@ namespace Programming
         private User user;
         private string selectedAlbumID;
         private Dictionary<string, string> albumNames;
-        
+        private ManipulationController manipulateCon;
 
         public Form1()
         {
             InitializeComponent();
             this.fb = new FacebookClient();
+            // PixelState als ERSTES initialisieren, da pictureBox beim initialisieren der
+            // controller Klassen gebraucht wird. Ansonsten EmptyPixelState exception.
+            PixelState.getInstance().set_pictureBox(pictureBox1);
+            manipulateCon = ManipulationController.getInstance();
+            manipulateCon.setMainForm(this);
+
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -52,25 +58,17 @@ namespace Programming
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
-
-                    // PixelState als ERSTES initialisieren, da pictureBox beim initialisieren der
-                    // controller Klassen gebraucht wird. Ansonsten EmptyPixelState exception.
-                PixelState.getInstance().set_pictureBox(pictureBox1);
-               
-                ManipulationController con = ManipulationController.getInstance();
-                con.setMainForm(this);
-                
                 setPictureBoxSize(pictureBox1.Image);
-                con.reset_pixel_state();
+                manipulateCon.reset_pixel_state();
                 filterToolStripMenuItem.Enabled = true;
                 bildSchließenToolStripMenuItem.Enabled = true;
                 bildSpeichernToolStripMenuItem.Enabled = true;
                 bildÖffnenToolStripMenuItem.Enabled = false;
-                rueckgaengigMachenToolStripMenuItem.Enabled = true;
+                enable_edit_menue(true);
             }
         }
 
-        private void setPictureBoxSize(Image img)
+        public void setPictureBoxSize(Image img)
         {
             if (img.Width > img.Height)
             {
@@ -106,12 +104,13 @@ namespace Programming
             bildSchließenToolStripMenuItem.Enabled = false;
             bildÖffnenToolStripMenuItem.Enabled = true;
             rueckgaengigMachenToolStripMenuItem.Enabled = false;
-            filterToolStripMenuItem.Enabled = false;
+            
         }
 
         private void beendenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         private void überSompeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -225,7 +224,7 @@ namespace Programming
 
         private void negativToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_invert();
+            manipulateCon.filter_invert();
         }
 
         private void cancelUploadButton_Click(object sender, EventArgs e)
@@ -242,33 +241,33 @@ namespace Programming
         /*    Mathias Form Anfang                                       */
         private void schwingungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_oscillate();
+            manipulateCon.filter_oscillate();
         }
 
         private void graustufenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_grayscale();
+            manipulateCon.filter_grayscale();
         }
 
         private void schwarzWeißToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_blackNwhite();
+            manipulateCon.filter_blackNwhite();
         }
 
         private void errorDiffusionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_errorDiffusion();
+            manipulateCon.filter_errorDiffusion();
         }
 
         private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_sepia();
+            manipulateCon.filter_sepia();
         }
 
 
         private void rueckgaengigMachenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().undo();
+            manipulateCon.undo();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -276,33 +275,33 @@ namespace Programming
         }
         private void rotToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_RED);
+            manipulateCon.filter_RGB_Mode(ImageManipulatorType.Name.RGB_RED);
         }
 
         private void grünToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_GREEN);
+            manipulateCon.filter_RGB_Mode(ImageManipulatorType.Name.RGB_GREEN);
         }
 
         private void blauToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
+            manipulateCon.filter_RGB_Mode(ImageManipulatorType.Name.RGB_BLUE);
 
         }
 
         private void farben_4ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_Sample_Board(4);
+            manipulateCon.filter_Sample_Board(4);
         }
 
         private void farben_8ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_Sample_Board(8);
+            manipulateCon.filter_Sample_Board(8);
         }
 
         private void farben_16ToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            ManipulationController.getInstance().filter_Sample_Board(16);
+            manipulateCon.filter_Sample_Board(16);
         }
 
         private void webcamPictureToolStripMenuItem_Click(object sender, EventArgs e)
@@ -313,7 +312,25 @@ namespace Programming
             con.openWebcamWindow();
         }
 
-       
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // this.Close();
+            Application.Exit();
+        }
+
+        public void enable_filter_menue(bool enable = true)
+        {
+            filterToolStripMenuItem.Enabled = (enable) ?  true :  false;
+        }
+
+        public void enable_edit_menue( bool enable = true )
+        {
+            rueckgaengigMachenToolStripMenuItem.Enabled = (enable) ? true : false;
+        }
+
+
+
+        
 
         
 

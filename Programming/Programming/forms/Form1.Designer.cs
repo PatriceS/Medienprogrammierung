@@ -36,6 +36,7 @@
             this.bildÖffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bildSpeichernToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bildSchließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.webcamPictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bearbeitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rueckgaengigMachenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +85,6 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.infoTime = new System.Windows.Forms.Label();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.webcamPictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -152,6 +152,14 @@
             this.bildSchließenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bildSchließenToolStripMenuItem.Text = "Bild schließen";
             this.bildSchließenToolStripMenuItem.Click += new System.EventHandler(this.bildSchließenToolStripMenuItem_Click);
+            // 
+            // webcamPictureToolStripMenuItem
+            // 
+            this.webcamPictureToolStripMenuItem.Name = "webcamPictureToolStripMenuItem";
+            this.webcamPictureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.webcamPictureToolStripMenuItem.Text = "Webcam Bild";
+            this.webcamPictureToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.webcamPictureToolStripMenuItem.Click += new System.EventHandler(this.webcamPictureToolStripMenuItem_Click);
             // 
             // beendenToolStripMenuItem
             // 
@@ -663,14 +671,6 @@
             // 
             this.userBindingSource.DataSource = typeof(Programming.User);
             // 
-            // webcamPictureToolStripMenuItem
-            // 
-            this.webcamPictureToolStripMenuItem.Name = "webcamPictureToolStripMenuItem";
-            this.webcamPictureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.webcamPictureToolStripMenuItem.Text = "Webcam Bild";
-            this.webcamPictureToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.webcamPictureToolStripMenuItem.Click += new System.EventHandler(this.webcamPictureToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,6 +688,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Sompe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

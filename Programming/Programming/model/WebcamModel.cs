@@ -14,9 +14,9 @@ namespace Programming
         //Anlegen eines Webcam-Objektes
         static VideoCaptureDevice videoSource;
         FilterInfoCollection videosources;
-        Image img;
+       
         PictureBox pic;
-        static int ii = 0;
+        
 
         public Dictionary<int, string> get_devices()
         {
@@ -39,12 +39,12 @@ namespace Programming
 
         public void show_picture(KeyValuePair<int, string> src, PictureBox pic)
         {
-            
+            this.pic = pic;
             Dictionary<int, string> devices = this.get_devices();
             if (videosources.Count > src.Key)
             {
                 videoSource = new VideoCaptureDevice(videosources[src.Key].MonikerString);
-                this.pic = pic;
+                
 
                 try
                 {
@@ -76,7 +76,7 @@ namespace Programming
                 //Das Aufnahmegerät aktivieren
                 videoSource.Start();
             }
-            }
+        }
             
               
 

@@ -49,7 +49,9 @@ namespace Programming
         public void set_Webcam_picture(KeyValuePair<int, string> src)
         {
             pic.Image = model.get_Image();
+            mainForm.setPictureBoxSize(pic.Image);
             pic.Refresh();
+            mainForm.enable_filter_menue();
         }
 
         public void stop_capture()
