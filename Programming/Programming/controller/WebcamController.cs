@@ -12,6 +12,7 @@ namespace Programming
         private static Form1 mainForm;
         private WebcamModel model;
         private WebcamOptions cam;
+        private static bool capture_possible = false;
 
         public WebcamController()
         {
@@ -44,21 +45,36 @@ namespace Programming
         {
             Dictionary<int, string> devices  = model.get_devices();
             Dictionary<int, string> solutions = model.get_solution_modes();
+            // Aufnahmegeräte verfügbar
+            if (devices.Count > 0 && solutions.Count > 0)
+            {
+                // Aufnahmemöglichkeit aktivieren
+                capture_possible = true;
+            }
             cam = new WebcamOptions(devices, solutions);
             cam.Show();
+             
+            
         }
 
+        /*
+         * Wenn ok button geklickt wurde, bild in das hauptformular übernehmen.
+         */
         public void set_Webcam_picture(KeyValuePair<int, string> src)
         {
-            pic.Image = model.get_Image();
-            mainForm.setPictureBoxSize(pic.Image);
-            pic.Refresh();
-            mainForm.enable_filter_menue();
-            mainForm.enable_edit_menue();
-            PixelState state = PixelState.getInstance();
-            state.set_pictureBox(pic);
-            state.reset();
-
+                // wenn aufnahme geräate verfügbar
+            if (capture_possible)
+            {
+                pic.Image = model.get_Image();
+                mainForm.setPictureBoxSize(pic.Image);
+                pic.Refresh();
+                mainForm.enable_filter_menue();
+                mainForm.enable_edit_menue();
+                PixelState state = PixelState.getInstance();
+                state.set_pictureBox(pic);
+                state.reset();
+            }
+            
         }
 
         public void stop_capture()
@@ -68,7 +84,9 @@ namespace Programming
 
         public void show_Webcam_picture( System.Windows.Forms.PictureBox webcamPictureBox, WebcamOptions form)
         {
-            model.show_picture(webcamPictureBox, form);
+             
+             if (capture_possible)
+                model.show_picture(webcamPictureBox, form);
         }
 
 

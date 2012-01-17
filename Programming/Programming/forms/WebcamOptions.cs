@@ -21,6 +21,7 @@ namespace Programming
             this.con = new WebcamController();
             show_devices(devices);
             show_solutions(solutions);
+            
         }
 
         private void show_devices(Dictionary<int, string> data)
