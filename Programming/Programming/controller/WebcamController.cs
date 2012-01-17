@@ -70,6 +70,7 @@ namespace Programming
                 pic.Refresh();
                 mainForm.enable_filter_menue();
                 mainForm.enable_edit_menue();
+                mainForm.enable_menue();
                 PixelState state = PixelState.getInstance();
                 state.set_pictureBox(pic);
                 state.reset();

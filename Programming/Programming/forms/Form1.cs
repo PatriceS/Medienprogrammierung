@@ -8,6 +8,7 @@ using System.Web;
 using System.Net.Sockets;
 using System.Threading;
 using Facebook;
+using System.Drawing.Imaging;
 
 namespace Programming
 {
@@ -87,15 +88,37 @@ namespace Programming
             pictureBox1.Refresh();
           
         }
-                 
+
         private void bildSpeichernToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "BMP|*.bmp|PNG|*.png|JPEG|*.jpeg";
+            saveFileDialog1.FilterIndex = 1;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                Bitmap bild = new Bitmap(pictureBox1.Image);
+                ImageFormat format;
+                switch (saveFileDialog1.FilterIndex)
+                {
+                    case 1:
+                    default:
+                        format = ImageFormat.Jpeg;
+                        break;
+                    case 2:
+                        format = ImageFormat.Png;
+                        break;
+                    case 3:
+                        format = ImageFormat.Bmp;
+                        break;
+                }
+                bild.Save(saveFileDialog1.FileName, format);
                 MessageBox.Show("Bild gespeichert");
             }
         }
+             
+           
+    
 
         private void bildSchließenToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -326,6 +349,12 @@ namespace Programming
         public void enable_edit_menue( bool enable = true )
         {
             rueckgaengigMachenToolStripMenuItem.Enabled = (enable) ? true : false;
+        }
+
+        public void enable_menue()
+        {
+            bildSpeichernToolStripMenuItem.Enabled = true;
+            bildSchließenToolStripMenuItem.Enabled = true;
         }
 
 
