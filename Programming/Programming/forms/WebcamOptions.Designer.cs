@@ -41,13 +41,13 @@
             this.WebcamDevicescomboBox.FormattingEnabled = true;
             this.WebcamDevicescomboBox.Location = new System.Drawing.Point(12, 12);
             this.WebcamDevicescomboBox.Name = "WebcamDevicescomboBox";
-            this.WebcamDevicescomboBox.Size = new System.Drawing.Size(260, 21);
+            this.WebcamDevicescomboBox.Size = new System.Drawing.Size(175, 21);
             this.WebcamDevicescomboBox.TabIndex = 0;
             this.WebcamDevicescomboBox.SelectedIndexChanged += new System.EventHandler(this.WebcamDevicescomboBox_SelectedIndexChanged);
             // 
             // ok
             // 
-            this.ok.Location = new System.Drawing.Point(616, 11);
+            this.ok.Location = new System.Drawing.Point(366, 12);
             this.ok.Name = "ok";
             this.ok.Size = new System.Drawing.Size(71, 22);
             this.ok.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             this.webcamPictureBox.Location = new System.Drawing.Point(12, 39);
             this.webcamPictureBox.Name = "webcamPictureBox";
-            this.webcamPictureBox.Size = new System.Drawing.Size(675, 354);
+            this.webcamPictureBox.Size = new System.Drawing.Size(425, 354);
             this.webcamPictureBox.TabIndex = 2;
             this.webcamPictureBox.TabStop = false;
             // 
@@ -67,9 +67,9 @@
             // 
             this.resolutionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.resolutionComboBox.FormattingEnabled = true;
-            this.resolutionComboBox.Location = new System.Drawing.Point(278, 12);
+            this.resolutionComboBox.Location = new System.Drawing.Point(193, 12);
             this.resolutionComboBox.Name = "resolutionComboBox";
-            this.resolutionComboBox.Size = new System.Drawing.Size(327, 21);
+            this.resolutionComboBox.Size = new System.Drawing.Size(167, 21);
             this.resolutionComboBox.TabIndex = 3;
             this.resolutionComboBox.SelectedIndexChanged += new System.EventHandler(this.resolutionComboBox_SelectedIndexChanged);
             // 
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 433);
+            this.ClientSize = new System.Drawing.Size(452, 433);
             this.Controls.Add(this.resolutionComboBox);
             this.Controls.Add(this.webcamPictureBox);
             this.Controls.Add(this.ok);

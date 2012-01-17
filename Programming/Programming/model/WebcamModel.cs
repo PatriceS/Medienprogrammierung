@@ -86,9 +86,9 @@ namespace Programming
 
                 //Dem Webcam Objekt ermittelte Auflösung übergeben
                 videoSource.DesiredFrameSize = videoSource.VideoCapabilities[Convert.ToInt32(solution.Split(';')[1])].FrameSize;
-                pic.Size = new Size(videoSource.DesiredFrameSize.Width, videoSource.DesiredFrameSize.Height);
-                form.Size = new Size(videoSource.DesiredFrameSize.Width +100, videoSource.DesiredFrameSize.Height +100);
-                
+                //pic.Size = new Size(videoSource.DesiredFrameSize.Width, videoSource.DesiredFrameSize.Height);
+                //form.Size = new Size(videoSource.DesiredFrameSize.Width +100, videoSource.DesiredFrameSize.Height +100);
+                pic.SizeMode = PictureBoxSizeMode.Zoom; 
             //    
                 //NewFrame Eventhandler zuweisen anlegen.
                 //(Dieser registriert jeden neuen Frame der Webcam)

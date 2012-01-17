@@ -53,6 +53,7 @@ namespace Programming
         private void ok_Click(object sender, EventArgs e)
         {
             con.set_Webcam_picture(selob);
+            this.Close();
         }
 
         private void WebcamOptions_FormClosing(object sender, FormClosingEventArgs e)
@@ -67,6 +68,7 @@ namespace Programming
             selob = (KeyValuePair<int, string>)resolutionComboBox.SelectedItem;
             con.set_solution(selob);
             con.show_Webcam_picture(webcamPictureBox, this);
+            
         }
 
 
