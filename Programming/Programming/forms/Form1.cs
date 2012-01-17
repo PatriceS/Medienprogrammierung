@@ -14,7 +14,7 @@ namespace Programming
 {
     public partial class Form1 : Form
     {
-        private int MAX_SIZE = 800;
+        
         
         private FacebookClient fb;
         private User user;
@@ -73,17 +73,17 @@ namespace Programming
         {
             if (img.Width > img.Height)
             {
-                double scaleFactor = ((double)img.Width / (double)MAX_SIZE);
+                double scaleFactor = ((double)img.Width / (double)Config.value.MAX_PICTUREBOX_SIZE);
 
                 pictureBox1.Height = (int)(img.Height / scaleFactor);
-                pictureBox1.Width = MAX_SIZE;
+                pictureBox1.Width = (int)Config.value.MAX_PICTUREBOX_SIZE;
             }
             else
             {
-                double scaleFactor = ((double)img.Height / (double)MAX_SIZE);
+                double scaleFactor = ((double)img.Height / (double)Config.value.MAX_PICTUREBOX_SIZE);
 
                 pictureBox1.Width = (int)(img.Width / scaleFactor);
-                pictureBox1.Height = MAX_SIZE;
+                pictureBox1.Height = (int)Config.value.MAX_PICTUREBOX_SIZE;
             }
             pictureBox1.Refresh();
           

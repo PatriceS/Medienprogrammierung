@@ -9,7 +9,9 @@ namespace Programming
     {
         public enum value : int
         {
-            PIXEL_STATE_CONTAINER_AMOUNT = 5, THREADS = 2
+            PIXEL_STATE_CONTAINER_AMOUNT = 5, 
+            THREADS                      = 2,
+            MAX_PICTUREBOX_SIZE          = 800
         };
 
         public static readonly string SAVE_TEMP_PATH = @"C:\Users\Public\Pictures\Sample Pictures\temp.jpeg";
