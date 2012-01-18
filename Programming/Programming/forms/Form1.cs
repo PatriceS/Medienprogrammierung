@@ -247,7 +247,7 @@ namespace Programming
 
         private void negativToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            manipulateCon.filter_invert();
+            manipulateCon.filter(ImageManipulatorType.Name.INVERT);
         }
 
         private void cancelUploadButton_Click(object sender, EventArgs e)
@@ -264,27 +264,27 @@ namespace Programming
         /*    Mathias Form Anfang                                       */
         private void schwingungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manipulateCon.filter_oscillate();
+            manipulateCon.filter(ImageManipulatorType.Name.OSCILLATION);
         }
 
         private void graustufenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manipulateCon.filter_grayscale();
+            manipulateCon.filter(ImageManipulatorType.Name.GRAYSCALE);
         }
 
         private void schwarzWeißToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manipulateCon.filter_blackNwhite();
+            manipulateCon.filter(ImageManipulatorType.Name.BLACKWHITE);
         }
 
         private void errorDiffusionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manipulateCon.filter_errorDiffusion();
+            manipulateCon.filter(ImageManipulatorType.Name.ERROR_DIFFUSION);
         }
 
         private void sepiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manipulateCon.filter_sepia();
+            manipulateCon.filter(ImageManipulatorType.Name.SEPIA);
         }
 
 

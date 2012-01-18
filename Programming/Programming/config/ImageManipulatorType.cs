@@ -7,6 +7,7 @@ namespace Programming
 {
     public class ImageManipulatorType
     {
+            // Filter Manipulationstypen
         public enum Name { DEFAULT, INVERT, OSCILLATION, GRAYSCALE, BLACKWHITE,
         ERROR_DIFFUSION, SEPIA, RGB_RED, RGB_GREEN, RGB_BLUE, ROTATE, SAMPLE_BOARD
         

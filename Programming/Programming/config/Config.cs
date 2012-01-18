@@ -9,11 +9,15 @@ namespace Programming
     {
         public enum value : int
         {
+                // Anzahl der zwischenzuspeichernden Bilder
             PIXEL_STATE_CONTAINER_AMOUNT = 5, 
+                // Threads fuer filterbildberechnung
             THREADS                      = 2,
+                // Max maße der picturebox
             MAX_PICTUREBOX_SIZE          = 800
         };
 
+            // temp pfad zum zwischenspeichern der bilder für facebook upload
         public static readonly string SAVE_TEMP_PATH = @"C:\Users\Public\Pictures\Sample Pictures\temp.jpeg";
 
         /**

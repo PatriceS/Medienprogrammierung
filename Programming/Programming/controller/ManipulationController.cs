@@ -16,69 +16,15 @@ namespace Programming
         private static System.Windows.Forms.PictureBox pic;
         private static Form1 mainForm;
         private static int threads = (int)Config.value.THREADS;
-      
-        public void filter_invert( )
+
+        public void filter(ImageManipulatorType.Name name)
         {
-           // for (int i = 0; i < 19; i++)
-           // {
-                
-                ImageManipulatorType.Name name = ImageManipulatorType.Name.INVERT;
                 PixelState.getInstance().add(new ImageObject(pic.Image, name));
                 ThreadHandler thHandler = new ThreadHandler(threads);
                 new ImageManipulator((Bitmap)pic.Image, name, thHandler).perform();
                 this.show_picture(thHandler);
-               
-           // }
         }
 
-        public void filter_oscillate()
-        {
-            ImageManipulatorType.Name name = ImageManipulatorType.Name.INVERT;
-            PixelState.getInstance().add(new ImageObject(pic.Image, name));
-            ThreadHandler thHandler = new ThreadHandler(threads);
-            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.OSCILLATION, thHandler).perform();
-            this.show_picture(thHandler);
-        }
-
-        public void filter_grayscale()
-        {
-            ImageManipulatorType.Name name = ImageManipulatorType.Name.GRAYSCALE;
-            PixelState.getInstance().add(new ImageObject(pic.Image, name));
-            ThreadHandler thHandler = new ThreadHandler(threads);
-            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.GRAYSCALE, thHandler).perform();
-            this.show_picture(thHandler);
-           
-        }
-
-        public void filter_blackNwhite()
-        {
-            ImageManipulatorType.Name name = ImageManipulatorType.Name.BLACKWHITE;
-            PixelState.getInstance().add(new ImageObject(pic.Image, name));
-            ThreadHandler thHandler = new ThreadHandler(threads);
-            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.BLACKWHITE, thHandler).perform();
-            this.show_picture(thHandler);
-            
-        }
-
-        public void filter_errorDiffusion()
-        {
-            ImageManipulatorType.Name name = ImageManipulatorType.Name.ERROR_DIFFUSION;
-            PixelState.getInstance().add(new ImageObject(pic.Image, name));
-            ThreadHandler thHandler = new ThreadHandler(threads);
-            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.ERROR_DIFFUSION, thHandler).perform();
-            this.show_picture(thHandler);
-        }
-
-        public void filter_sepia()
-        {
-            ImageManipulatorType.Name name = ImageManipulatorType.Name.SEPIA;
-            PixelState.getInstance().add(new ImageObject(pic.Image, name));
-            ThreadHandler thHandler = new ThreadHandler(threads);
-            new ImageManipulator((Bitmap)pic.Image, ImageManipulatorType.Name.SEPIA, thHandler).perform();
-            this.show_picture(thHandler);
-        }
-
-        
         public void filter_RGB_Mode( ImageManipulatorType.Name color )
         {
                 // letztes zwischengespeichertes Bild holen
