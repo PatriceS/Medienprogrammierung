@@ -12,7 +12,7 @@ namespace Programming
         private Bitmap bitmap;
         private int[,] histo = new int[4, (int)Config.value.HISTOGRAM_VALUE_COUNT];
         private int[] peak = new int[4];
-        private int min_grey = 0;
+        private int min_grey = 255;
         private int max_grey = 0;
         private int average  = 0;
         private double entropy = 0.0;

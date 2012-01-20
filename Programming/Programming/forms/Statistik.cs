@@ -27,7 +27,7 @@ namespace Programming
         {
             con = new StatistikController();
             con.set_statistik_form(this);
-            con.set_statistik_picture_box(statistikPictureBox);
+            con.calculate_histogram(statistikPictureBox);
             con.draw_histogram(statistikPictureBox, this, Config.histogram_canal.GREY);
             all_channel_radio.Select();
         }
@@ -52,8 +52,34 @@ namespace Programming
             con.draw_histogram(statistikPictureBox, this, Config.histogram_canal.BLUE);
         }
 
-        
+        internal void set_entropyLabel(double p)
+        {
+            entropyLabel.Text = "Entropie: " +  p.ToString();
+        }
 
-        
+        internal void set_maxLabel(int p)
+        {
+            maxLabel.Text = "Max: " + p.ToString();
+        }
+
+        internal void set_minLabel(int p)
+        {
+            minLabel.Text = "Min: " + p.ToString();
+        }
+
+        internal void set_averageLabel(int p)
+        {
+            averageLabel.Text = "Mittelwert: " + p.ToString();
+        }
+
+        internal void set_varianceLabel(double p)
+        {
+            varianceLabel.Text = "Varianz: " + p.ToString();
+        }
+
+        private void statistikRefreshButton_Click(object sender, EventArgs e)
+        {
+            con.calculate_histogram(statistikPictureBox);
+        }
     }
 }

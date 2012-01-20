@@ -59,11 +59,10 @@ namespace Programming
 
         public void draw_histogram(System.Windows.Forms.PictureBox statistikPictureBox, Statistik form, Config.histogram_canal canal)
         {
-            
             model.draw_histogram(statistikPictureBox, canal);
         }
 
-        public void set_statistik_picture_box(PictureBox statistikPictureBox)
+        public void calculate_histogram(PictureBox statistikPictureBox)
         {
             statistic_pic = statistikPictureBox;
 
@@ -79,9 +78,16 @@ namespace Programming
                 
             }
             model.prepare_histogram_data();
+            statistikForm.set_entropyLabel(model.get_entropy());
+            statistikForm.set_varianceLabel(model.get_variance());
+            statistikForm.set_averageLabel(model.get_average());
+            statistikForm.set_minLabel(model.get_min_value());
+            statistikForm.set_maxLabel(model.get_max_value());
             
             
         }
+
+
     }
 }
 
