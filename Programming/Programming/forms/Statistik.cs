@@ -30,7 +30,7 @@ namespace Programming
             con.set_statistik_form(this);
             con.calculate_histogram(statistikPictureBox);
             con.draw_histogram(statistikPictureBox, this, Config.histogram_canal.GREY);
-   //         all_channel_radio.Select();
+            all_channel_radio.Select();
             
         }
 
