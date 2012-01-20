@@ -13,6 +13,7 @@ namespace Programming
     {
 
         private static StatistikController con;
+        private static Config.histogram_canal radio_button= Config.histogram_canal.GREY;
         public Statistik()
         {
             InitializeComponent();
@@ -20,36 +21,59 @@ namespace Programming
 
         private void Statistik_Load(object sender, EventArgs e)
         {
-
+            all_channel_radio.Checked = false;
         }
 
         private void Statistik_Shown(object sender, EventArgs e)
         {
-            con = new StatistikController();
+            con = StatistikController.getInstance();
             con.set_statistik_form(this);
             con.calculate_histogram(statistikPictureBox);
             con.draw_histogram(statistikPictureBox, this, Config.histogram_canal.GREY);
-            all_channel_radio.Select();
+   //         all_channel_radio.Select();
+            
         }
 
         private void all_channel_radio_CheckedChanged(object sender, EventArgs e)
         {
-            con.draw_histogram(statistikPictureBox, this, Config.histogram_canal.GREY);
+            if (all_channel_radio.Checked)
+            {
+                radio_button = Config.histogram_canal.GREY;
+                con.draw_histogram(
+                    statistikPictureBox,
+                    this, 
+                    radio_button);
+            }
+            
+
         }
 
         private void red_channel_radio_CheckedChanged(object sender, EventArgs e)
         {
-            con.draw_histogram(statistikPictureBox, this, Config.histogram_canal.RED);
+            if (red_channel_radio.Checked)
+            {
+                radio_button = Config.histogram_canal.RED;
+                con.draw_histogram(statistikPictureBox, this, radio_button);
+            }
         }
 
         private void green_channel_radio_CheckedChanged(object sender, EventArgs e)
         {
-            con.draw_histogram(statistikPictureBox, this, Config.histogram_canal.GREEN);
+            if (green_channel_radio.Checked)
+            {
+                radio_button = Config.histogram_canal.GREEN;
+                con.draw_histogram(statistikPictureBox, this, radio_button);
+            }
         }
 
         private void blue_channel_radio_CheckedChanged(object sender, EventArgs e)
         {
-            con.draw_histogram(statistikPictureBox, this, Config.histogram_canal.BLUE);
+            if (blue_channel_radio.Checked)
+            {
+                radio_button = Config.histogram_canal.BLUE;
+                con.draw_histogram(statistikPictureBox, this, radio_button);
+            }
+            
         }
 
         internal void set_entropyLabel(double p)
@@ -80,6 +104,9 @@ namespace Programming
         private void statistikRefreshButton_Click(object sender, EventArgs e)
         {
             con.calculate_histogram(statistikPictureBox);
+            con.draw_histogram(statistikPictureBox, this, radio_button);
+            
+            
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Windows.Forms;
 
 namespace Programming
 {
@@ -40,13 +41,15 @@ namespace Programming
             int canal_blue = (int)Config.histogram_canal.BLUE;
             int canal_green = (int)Config.histogram_canal.GREEN;
             int sum_grey_values = 0;
+            int bitmap_height = this.bitmap.Height;
+            int bitmap_width = this.bitmap.Width;
             unsafe
             {
                 byte* p = (byte*)(void*)Scan0;
 
-                for (int y = 0; y < this.bitmap.Height; ++y)
+                for (int y = 0; y < bitmap_height; ++y)
                 {
-                    for (int x = 0; x < this.bitmap.Width; ++x)
+                    for (int x = 0; x < bitmap_width; ++x)
                     {
                         // BGR
                         red = p[2]; green = p[1]; blue = p[0];
@@ -105,6 +108,7 @@ namespace Programming
             }
             catch (DivideByZeroException e)
             {
+                MessageBox.Show(e.Message);
                 return 0.0;
             }
 
@@ -125,6 +129,7 @@ namespace Programming
                 }
                 catch (DivideByZeroException e)
                 {
+                    MessageBox.Show(e.Message);
                     p[i] = 0;
                 }
 
@@ -146,6 +151,7 @@ namespace Programming
             }
             catch (DivideByZeroException e)
             {
+                MessageBox.Show(e.Message);
                 return 0;
             }
         }
