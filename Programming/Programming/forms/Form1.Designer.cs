@@ -56,6 +56,7 @@
             this.farben_8ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.farben_16ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.manipulationenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.histogrammToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.überSompeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -133,7 +134,7 @@
             // bildÖffnenToolStripMenuItem
             // 
             this.bildÖffnenToolStripMenuItem.Name = "bildÖffnenToolStripMenuItem";
-            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bildÖffnenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bildÖffnenToolStripMenuItem.Text = "Bild öffnen";
             this.bildÖffnenToolStripMenuItem.Click += new System.EventHandler(this.bildÖffnenToolStripMenuItem_Click);
             // 
@@ -141,7 +142,7 @@
             // 
             this.bildSpeichernToolStripMenuItem.Enabled = false;
             this.bildSpeichernToolStripMenuItem.Name = "bildSpeichernToolStripMenuItem";
-            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bildSpeichernToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bildSpeichernToolStripMenuItem.Text = "Bild speichern";
             this.bildSpeichernToolStripMenuItem.Click += new System.EventHandler(this.bildSpeichernToolStripMenuItem_Click);
             // 
@@ -149,14 +150,14 @@
             // 
             this.bildSchließenToolStripMenuItem.Enabled = false;
             this.bildSchließenToolStripMenuItem.Name = "bildSchließenToolStripMenuItem";
-            this.bildSchließenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bildSchließenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.bildSchließenToolStripMenuItem.Text = "Bild schließen";
             this.bildSchließenToolStripMenuItem.Click += new System.EventHandler(this.bildSchließenToolStripMenuItem_Click);
             // 
             // webcamPictureToolStripMenuItem
             // 
             this.webcamPictureToolStripMenuItem.Name = "webcamPictureToolStripMenuItem";
-            this.webcamPictureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.webcamPictureToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.webcamPictureToolStripMenuItem.Text = "Webcam Bild";
             this.webcamPictureToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.webcamPictureToolStripMenuItem.Click += new System.EventHandler(this.webcamPictureToolStripMenuItem_Click);
@@ -164,7 +165,7 @@
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -313,9 +314,18 @@
             // 
             // manipulationenToolStripMenuItem
             // 
+            this.manipulationenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.histogrammToolStripMenuItem});
             this.manipulationenToolStripMenuItem.Name = "manipulationenToolStripMenuItem";
-            this.manipulationenToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.manipulationenToolStripMenuItem.Text = "Manipulationen";
+            this.manipulationenToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.manipulationenToolStripMenuItem.Text = "Ansicht";
+            // 
+            // histogrammToolStripMenuItem
+            // 
+            this.histogrammToolStripMenuItem.Name = "histogrammToolStripMenuItem";
+            this.histogrammToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.histogrammToolStripMenuItem.Text = "Histogramm";
+            this.histogrammToolStripMenuItem.Click += new System.EventHandler(this.histogrammToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
@@ -690,6 +700,7 @@
             this.Text = "Sompe";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
@@ -768,6 +779,7 @@
         private System.Windows.Forms.ToolStripMenuItem farben_8ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem farben_16ToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem webcamPictureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem histogrammToolStripMenuItem;
 
     }
 }

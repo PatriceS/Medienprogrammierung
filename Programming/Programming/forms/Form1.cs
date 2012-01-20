@@ -357,6 +357,20 @@ namespace Programming
             bildSchließenToolStripMenuItem.Enabled = true;
         }
 
+        private void histogrammToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PixelState.getInstance().set_pictureBox(pictureBox1);
+            StatistikController con = StatistikController.getInstance();
+            con.setMainForm(this);
+            con.openStatistikWindow();
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            //Bitmap bitmap = new Bitmap("C:\\test.bmp");
+            //pictureBox1.Image = bitmap;
+        }
+
 
 
         

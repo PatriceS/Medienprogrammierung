@@ -14,8 +14,10 @@ namespace Programming
     {
        
         private static System.Windows.Forms.PictureBox pic;
-        private Form1 mainForm;
-        
+        private static PictureBox  statistic_pic;
+        private static Form1 mainForm;
+        private Programming.Statistik statistikForm;
+        private StatistikModel model;
 
         public static StatistikController getInstance()
         {
@@ -38,8 +40,48 @@ namespace Programming
             mainForm = form;
         }
 
+        public void setStatisticForm(Statistik form)
+        {
+            statistikForm = form;
+        }
+
+        internal void set_statistik_form(Statistik statistik)
+        {
+            statistikForm = statistik;
+        }
+
+        public void openStatistikWindow()
+        {
+            statistikForm = new Statistik();
+            statistikForm.Show();
+        }
 
 
+        public void draw_histogram(System.Windows.Forms.PictureBox statistikPictureBox, Statistik form, Config.histogram_canal canal)
+        {
+            
+            model.draw_histogram(statistikPictureBox, canal);
+        }
+
+        public void set_statistik_picture_box(PictureBox statistikPictureBox)
+        {
+            statistic_pic = statistikPictureBox;
+
+            if (pic.Image == null)
+            {
+                Bitmap b = new Bitmap(1, 1);
+                pic.Image = b;
+                model = new StatistikModel(pic.Image);
+            }
+            else
+            {
+                model = new StatistikModel(pic.Image);
+                
+            }
+            model.prepare_histogram_data();
+            
+            
+        }
     }
 }
 

@@ -14,7 +14,17 @@ namespace Programming
                 // Threads fuer filterbildberechnung
             THREADS                      = 2,
                 // Max maße der picturebox
-            MAX_PICTUREBOX_SIZE          = 800
+            MAX_PICTUREBOX_SIZE          = 800,
+                // benutzen um offset von stride zu berechnen
+            BITMAP_OFFSET_MULTIPLIKATOR  = 3,
+                // max Anzahl der histogramm werte 
+            HISTOGRAM_VALUE_COUNT        = 256
+        };
+
+        public enum histogram_canal : int
+        {
+            
+            GREY = 0, RED = 1, GREEN = 2, BLUE = 3
         };
 
             // temp pfad zum zwischenspeichern der bilder für facebook upload

@@ -18,7 +18,6 @@ namespace Programming
         private KeyValuePair<int, string> solution;
         private KeyValuePair<int, string> device;
         
-
         public Dictionary<int, string> get_devices()
         {
             Dictionary<int, string> data = new Dictionary<int, string>();
@@ -33,7 +32,6 @@ namespace Programming
                 {
                     data.Add(i, videosources[i].Name);
                 }
-                
             }
             return data;
         }

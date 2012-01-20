@@ -14,7 +14,6 @@ namespace Programming
         protected int           stride;
         protected int           height_start;
         protected int           height_end;
-        protected int           rgb_step        = 3;
         protected int           nOffset;
         protected int           bitmap_height;
         protected int           bitmap_width;
@@ -38,9 +37,9 @@ namespace Programming
                 this.bitmap_height = b.Height;
                 this.bitmap_width = b.Width;
             }
-            
 
-            nOffset = stride - (bitmap_width * 3);
+
+            nOffset = stride - (bitmap_width * (int)Config.value.BITMAP_OFFSET_MULTIPLIKATOR);
 
         }
 

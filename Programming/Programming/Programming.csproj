@@ -71,6 +71,7 @@
     <Compile Include="FilterFactory.cs" />
     <Compile Include="filter\BlackWhiteFilter.cs" />
     <Compile Include="filter\ErrorDiffusionFilter.cs" />
+    <Compile Include="forms\BitmapImage.cs" />
     <Compile Include="forms\FacebookLoginDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +96,7 @@
     </Compile>
     <Compile Include="filter\OscillationFilter.cs" />
     <Compile Include="ManipulationFactory.cs" />
+    <Compile Include="model\StatistikModel.cs" />
     <Compile Include="model\WebcamModel.cs" />
     <Compile Include="NullImageObject.cs" />
     <Compile Include="PixelState.cs" />
@@ -103,6 +105,12 @@
     <Compile Include="filter\RotateFilter.cs" />
     <Compile Include="filter\GrayscaleFilter.cs" />
     <Compile Include="filter\SepiaFilter.cs" />
+    <Compile Include="forms\Statistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Statistik.Designer.cs">
+      <DependentUpon>Statistik.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThreadHandler.cs" />
     <Compile Include="User.cs" />
     <Compile Include="forms\WebcamOptions.cs">
@@ -130,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="forms\Statistik.resx">
+      <DependentUpon>Statistik.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

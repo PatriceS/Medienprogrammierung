@@ -23,6 +23,7 @@ namespace Programming
                 ThreadHandler thHandler = new ThreadHandler(threads);
                 new ImageManipulator((Bitmap)pic.Image, name, thHandler).perform();
                 this.show_picture(thHandler);
+
         }
 
         public void filter_RGB_Mode( ImageManipulatorType.Name color )

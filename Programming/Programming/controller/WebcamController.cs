@@ -28,7 +28,6 @@ namespace Programming
 
         private void init()
         {
-
             try
             {
                 pic = PixelState.getInstance().get_pictureBox();
@@ -53,8 +52,6 @@ namespace Programming
             }
             cam = new WebcamOptions(devices, solutions);
             cam.Show();
-             
-            
         }
 
         /*
