@@ -34,48 +34,9 @@ namespace Programming
             
         }
 
-        private void all_channel_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (all_channel_radio.Checked)
-            {
-                radio_button = Config.histogram_canal.GREY;
-                con.draw_histogram(
-                    statistikPictureBox,
-                    this, 
-                    radio_button);
-            }
-            
+        
 
-        }
-
-        private void red_channel_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (red_channel_radio.Checked)
-            {
-                radio_button = Config.histogram_canal.RED;
-                con.draw_histogram(statistikPictureBox, this, radio_button);
-            }
-        }
-
-        private void green_channel_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (green_channel_radio.Checked)
-            {
-                radio_button = Config.histogram_canal.GREEN;
-                con.draw_histogram(statistikPictureBox, this, radio_button);
-            }
-        }
-
-        private void blue_channel_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            if (blue_channel_radio.Checked)
-            {
-                radio_button = Config.histogram_canal.BLUE;
-                con.draw_histogram(statistikPictureBox, this, radio_button);
-            }
-            
-        }
-
+       
         internal void set_entropyLabel(double p)
         {
             entropyLabel.Text = "Entropie: " +  p.ToString();
@@ -107,6 +68,45 @@ namespace Programming
             con.draw_histogram(statistikPictureBox, this, radio_button);
             
             
+        }
+
+        private void all_channel_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (all_channel_radio.Checked)
+            {
+                radio_button = Config.histogram_canal.GREY;
+                con.draw_histogram(
+                    statistikPictureBox,
+                    this,
+                    radio_button);
+            }
+        }
+
+        private void red_channel_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (red_channel_radio.Checked)
+            {
+                radio_button = Config.histogram_canal.RED;
+                con.draw_histogram(statistikPictureBox, this, radio_button);
+            }
+        }
+
+        private void green_channel_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (green_channel_radio.Checked)
+            {
+                radio_button = Config.histogram_canal.GREEN;
+                con.draw_histogram(statistikPictureBox, this, radio_button);
+            }
+        }
+
+        private void blue_channel_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (blue_channel_radio.Checked)
+            {
+                radio_button = Config.histogram_canal.BLUE;
+                con.draw_histogram(statistikPictureBox, this, radio_button);
+            }
         }
     }
 }

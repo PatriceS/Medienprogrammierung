@@ -367,8 +367,8 @@ namespace Programming
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            Bitmap bitmap = new Bitmap("C:\\test.bmp");
-            pictureBox1.Image = bitmap;
+           // Bitmap bitmap = new Bitmap("C:\\test.bmp");
+           // pictureBox1.Image = bitmap;
         }
 
 

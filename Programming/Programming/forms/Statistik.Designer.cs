@@ -115,6 +115,7 @@
             this.all_channel_radio.TabStop = true;
             this.all_channel_radio.Text = "alle Kanäle";
             this.all_channel_radio.UseVisualStyleBackColor = true;
+            this.all_channel_radio.CheckedChanged += new System.EventHandler(this.all_channel_radio_CheckedChanged);
             // 
             // red_channel_radio
             // 
@@ -126,6 +127,7 @@
             this.red_channel_radio.TabStop = true;
             this.red_channel_radio.Text = "Roter Kanal";
             this.red_channel_radio.UseVisualStyleBackColor = true;
+            this.red_channel_radio.CheckedChanged += new System.EventHandler(this.red_channel_radio_CheckedChanged);
             // 
             // green_channel_radio
             // 
@@ -137,6 +139,7 @@
             this.green_channel_radio.TabStop = true;
             this.green_channel_radio.Text = "Grüner Kanal";
             this.green_channel_radio.UseVisualStyleBackColor = true;
+            this.green_channel_radio.CheckedChanged += new System.EventHandler(this.green_channel_radio_CheckedChanged);
             // 
             // blue_channel_radio
             // 
@@ -148,6 +151,7 @@
             this.blue_channel_radio.TabStop = true;
             this.blue_channel_radio.Text = "Blauer Kanal";
             this.blue_channel_radio.UseVisualStyleBackColor = true;
+            this.blue_channel_radio.CheckedChanged += new System.EventHandler(this.blue_channel_radio_CheckedChanged);
             // 
             // Statistik
             // 
