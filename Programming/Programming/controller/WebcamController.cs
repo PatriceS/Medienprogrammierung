@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
+using System.Threading;
+using System.Drawing;
 
 namespace Programming
 {
@@ -42,16 +45,34 @@ namespace Programming
 
         public void openWebcamWindow()
         {
-            Dictionary<int, string> devices  = model.get_devices();
-            Dictionary<int, string> solutions = model.get_solution_modes();
+            Dictionary<int, string> devices   = new Dictionary<int,string>();
+            Dictionary<int, string> solutions = new Dictionary<int, string>();
+            devices = model.get_devices();
+            
             // Aufnahmegeräte verfügbar
-            if (devices.Count > 0 && solutions.Count > 0)
+            if (devices.Count > 0)
             {
-                // Aufnahmemöglichkeit aktivieren
-                capture_possible = true;
+                solutions = model.get_solution_modes();
+                if (solutions.Count > 0)
+                {
+                    cam = new WebcamOptions(devices, solutions);
+                    cam.Show();
+                    // Aufnahmemöglichkeit aktivieren
+                    capture_possible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Kein Eingabegerät vorhanden.");
+                }
             }
-            cam = new WebcamOptions(devices, solutions);
-            cam.Show();
+            else
+            {
+                MessageBox.Show("Kein Eingabegerät vorhanden.");
+            }
+
+            
+           
+            
         }
 
         /*
@@ -62,16 +83,30 @@ namespace Programming
                 // wenn aufnahme geräate verfügbar
             if (capture_possible)
             {
-                pic.Image = model.get_Image();
-                mainForm.setPictureBoxSize(pic.Image);
-                pic.Refresh();
-                mainForm.enable_filter_menue();
-                mainForm.enable_edit_menue();
-                mainForm.enable_menue();
-                PixelState state = PixelState.getInstance();
-                state.set_pictureBox(pic);
-                state.reset();
+                Image image = model.get_Image();
+                if (image != null)
+                {
+                    pic.Image = image;
+                    mainForm.setPictureBoxSize(pic.Image);
+                    pic.Refresh();
+                    mainForm.enable_filter_menue();
+                    mainForm.enable_edit_menue();
+                    mainForm.enable_menue();
+                    PixelState state = PixelState.getInstance();
+                    state.set_pictureBox(pic);
+                    state.reset();
+                }
+                else
+                {
+                    MessageBox.Show("Bitte auf Geräteinitialisierung warten.");
+                }
+                
             }
+            else
+            {
+                MessageBox.Show("Kein Eingabegerät vorhanden.");
+            }
+            this.stop_capture();
             
         }
 
@@ -82,7 +117,6 @@ namespace Programming
 
         public void show_Webcam_picture( System.Windows.Forms.PictureBox webcamPictureBox, WebcamOptions form)
         {
-             
              if (capture_possible)
                 model.show_picture(webcamPictureBox, form);
         }
@@ -90,12 +124,14 @@ namespace Programming
 
         public void set_solution(KeyValuePair<int, string> selob)
         {
-            model.set_solution(selob);
+            if (capture_possible)
+                model.set_solution(selob);
         }
 
         public void set_device(KeyValuePair<int, string> selob)
         {
-            model.set_device(selob);
+            if (capture_possible)
+                model.set_device(selob);
         }
     }
 }

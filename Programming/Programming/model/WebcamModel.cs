@@ -32,7 +32,9 @@ namespace Programming
                 {
                     data.Add(i, videosources[i].Name);
                 }
+                
             }
+            
             return data;
         }
 
@@ -41,8 +43,16 @@ namespace Programming
             VideoCaptureDevice videoSource;
             FilterInfoCollection videosources;
             videosources = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            
+            //Überprüfen, ob mindestens eine Aufnahmequelle vorhanden ist
+            if (videosources == null)
+            {
+                Dictionary<int, string> solutions = new Dictionary<int, string>();
+            //    solutions.Add(1, "");
+                return solutions;
+                
+            }
             videoSource = new VideoCaptureDevice(videosources[this.get_device().Key].MonikerString);
-
             return get_solution_modes(videoSource);
         }
 
@@ -76,7 +86,7 @@ namespace Programming
         {
             this.pic = pic;
             Dictionary<int, string> devices = this.get_devices();
-            if (videosources.Count > this.device.Key)
+            if (videosources.Count > this.device.Key && devices.Count > 1)
             {
                 videoSource = new VideoCaptureDevice(videosources[this.get_device().Key].MonikerString);
                 string solution = "0;0";
@@ -106,7 +116,11 @@ namespace Programming
 
         public Image get_Image()
         {
-            return this.pic.Image;
+            if (this.pic != null)
+            {
+                return this.pic.Image;
+            }
+            return null;
         }
 
         public void stop_capture()
