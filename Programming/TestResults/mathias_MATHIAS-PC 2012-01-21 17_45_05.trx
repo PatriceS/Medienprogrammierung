@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="47a7d2ee-e106-4acf-bbcf-cca23ca6a849" name="mathias@MATHIAS-PC 2012-01-21 17:45:05" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2012-01-21 17_45_05">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\AForge.Video.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\AForge.Video.DirectShow.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-01-21T17:45:05.0362369+01:00" queuing="2012-01-21T17:45:05.1012406+01:00" start="2012-01-21T17:45:05.1222418+01:00" finish="2012-01-21T17:45:06.1292960+01:00" />
+  <ResultSummary outcome="Warning">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MATHIAS-PC" outcome="Warning" timestamp="2012-01-21T17:45:05.1002405+01:00">
+        <Text>Die Bereitstellung ist zurzeit deaktiviert. Das Bereitstellungselement "Programming.exe" für Test "TestProject1.StatistikModelTest.calculate_averageTest" wurde nicht bereitgestellt.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="calculate_averageTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="b5a171f4-555d-d48d-95fd-4d3236eb99e9">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="3d186023-26f2-4890-a5f9-1fdd6fd8fe23" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="calculate_averageTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b5a171f4-555d-d48d-95fd-4d3236eb99e9" executionId="3d186023-26f2-4890-a5f9-1fdd6fd8fe23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3d186023-26f2-4890-a5f9-1fdd6fd8fe23" testId="b5a171f4-555d-d48d-95fd-4d3236eb99e9" testName="calculate_averageTest" computerName="MATHIAS-PC" duration="00:00:00.0496168" startTime="2012-01-21T17:45:05.1232418+01:00" endTime="2012-01-21T17:45:05.6392680+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d186023-26f2-4890-a5f9-1fdd6fd8fe23">
+    </UnitTestResult>
+  </Results>
+</TestRun>

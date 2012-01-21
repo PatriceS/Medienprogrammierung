@@ -80,6 +80,7 @@
     <Compile Include="RGB_ModeFilterTest.cs" />
     <Compile Include="RotateFilterTest.cs" />
     <Compile Include="SepiaFilterTest.cs" />
+    <Compile Include="StatistikModelTest.cs" />
     <Compile Include="ThreadHandlerTest.cs" />
     <Compile Include="UserTest.cs" />
     <Compile Include="WebcamControllerTest.cs" />

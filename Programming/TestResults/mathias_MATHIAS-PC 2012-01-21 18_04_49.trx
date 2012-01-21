@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3167636e-9d1d-4ea4-befe-043bca38662f" name="mathias@MATHIAS-PC 2012-01-21 18:04:49" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2012-01-21 18_04_49">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\AForge.Video.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\AForge.Video.DirectShow.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-01-21T18:04:49.6425385+01:00" queuing="2012-01-21T18:04:49.7075386+01:00" start="2012-01-21T18:04:49.7675387+01:00" finish="2012-01-21T18:04:50.7275744+01:00" />
+  <ResultSummary outcome="Warning">
+    <Counters total="13" executed="13" passed="13" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MATHIAS-PC" outcome="Warning" timestamp="2012-01-21T18:04:49.7075386+01:00">
+        <Text>Die Bereitstellung ist zurzeit deaktiviert. Das Bereitstellungselement "Programming.exe" für Test "TestProject1.StatistikModelTest.calculate_averageTest" wurde nicht bereitgestellt.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="calculate_averageTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="b5a171f4-555d-d48d-95fd-4d3236eb99e9">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="728ec87a-97ec-4372-ba1b-9c55c46aa370" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="calculate_averageTest" />
+    </UnitTest>
+    <UnitTest name="get_entropyTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="30dd9463-321b-199e-ad5c-eae4c197a4b3">
+      <Execution id="a611cc59-00b1-46d3-8786-4565a4c42990" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_entropyTest" />
+    </UnitTest>
+    <UnitTest name="calculate_peakTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="6d9e8802-5fbb-f07e-dd87-99c02ddec495">
+      <Execution id="6f8699ca-430d-4f0c-a130-bbfc3bf7410a" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="calculate_peakTest" />
+    </UnitTest>
+    <UnitTest name="findMinMaxTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="482c2e23-2601-54ff-de58-13f0b85157f8">
+      <Execution id="b8e578cd-908a-4b09-a271-b76a1d083eaa" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="findMinMaxTest" />
+    </UnitTest>
+    <UnitTest name="draw_histogramTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="57285c67-e4dc-4166-ce8b-6145309e025f">
+      <Execution id="57b6641d-6631-456f-9693-7e0de45771aa" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="draw_histogramTest" />
+    </UnitTest>
+    <UnitTest name="get_averageTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="47c22d4e-2fc9-8433-5d1b-f17728642aa6">
+      <Execution id="943ad524-43e8-4a92-ac64-9eea5d698283" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_averageTest" />
+    </UnitTest>
+    <UnitTest name="calculate_varianceTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="c6e3639b-a091-d5f4-6fff-7ef59270ed6c">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="0fc8f74a-2cc8-437f-9b5a-636116b36073" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="calculate_varianceTest" />
+    </UnitTest>
+    <UnitTest name="StatistikModelConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="54af8eb8-9f4d-3f4a-d32b-b5dde569a8ef">
+      <Execution id="16fc9a84-4301-4095-b879-edde789dbdb4" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="StatistikModelConstructorTest" />
+    </UnitTest>
+    <UnitTest name="calculate_entropyTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="6a2ce9f8-73c7-c0ca-b41f-ff6d538a08a1">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="33eb7302-fd60-4e16-bf40-fcccf7e5960a" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="calculate_entropyTest" />
+    </UnitTest>
+    <UnitTest name="prepare_histogram_dataTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="a17e11b3-218b-41a1-e257-f2c0cac662ff">
+      <Execution id="5e1a8a73-5e09-4ce7-8803-c3313865649d" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="prepare_histogram_dataTest" />
+    </UnitTest>
+    <UnitTest name="get_max_valueTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="0f5700ac-a451-b131-f7e6-cd705e736052">
+      <Execution id="aca1203a-3650-407c-b239-da002548383b" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_max_valueTest" />
+    </UnitTest>
+    <UnitTest name="get_varianceTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="2580d14c-4bb1-2ca6-856a-90be216a62aa">
+      <Execution id="81586c87-3aa2-4bc8-9c09-b4f33295f302" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_varianceTest" />
+    </UnitTest>
+    <UnitTest name="get_min_valueTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="0f107fbf-ef5c-29e2-8236-37d1c0c26375">
+      <Execution id="06d4a45f-0e90-4bf4-a395-45d2e0bbe9a7" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.StatistikModelTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_min_valueTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0f107fbf-ef5c-29e2-8236-37d1c0c26375" executionId="06d4a45f-0e90-4bf4-a395-45d2e0bbe9a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f5700ac-a451-b131-f7e6-cd705e736052" executionId="aca1203a-3650-407c-b239-da002548383b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2580d14c-4bb1-2ca6-856a-90be216a62aa" executionId="81586c87-3aa2-4bc8-9c09-b4f33295f302" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="30dd9463-321b-199e-ad5c-eae4c197a4b3" executionId="a611cc59-00b1-46d3-8786-4565a4c42990" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="47c22d4e-2fc9-8433-5d1b-f17728642aa6" executionId="943ad524-43e8-4a92-ac64-9eea5d698283" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="482c2e23-2601-54ff-de58-13f0b85157f8" executionId="b8e578cd-908a-4b09-a271-b76a1d083eaa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="54af8eb8-9f4d-3f4a-d32b-b5dde569a8ef" executionId="16fc9a84-4301-4095-b879-edde789dbdb4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57285c67-e4dc-4166-ce8b-6145309e025f" executionId="57b6641d-6631-456f-9693-7e0de45771aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a2ce9f8-73c7-c0ca-b41f-ff6d538a08a1" executionId="33eb7302-fd60-4e16-bf40-fcccf7e5960a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6d9e8802-5fbb-f07e-dd87-99c02ddec495" executionId="6f8699ca-430d-4f0c-a130-bbfc3bf7410a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a17e11b3-218b-41a1-e257-f2c0cac662ff" executionId="5e1a8a73-5e09-4ce7-8803-c3313865649d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5a171f4-555d-d48d-95fd-4d3236eb99e9" executionId="728ec87a-97ec-4372-ba1b-9c55c46aa370" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c6e3639b-a091-d5f4-6fff-7ef59270ed6c" executionId="0fc8f74a-2cc8-437f-9b5a-636116b36073" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="06d4a45f-0e90-4bf4-a395-45d2e0bbe9a7" testId="0f107fbf-ef5c-29e2-8236-37d1c0c26375" testName="get_min_valueTest" computerName="MATHIAS-PC" duration="00:00:00.0361906" startTime="2012-01-21T18:04:49.7675387+01:00" endTime="2012-01-21T18:04:50.3665537+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06d4a45f-0e90-4bf4-a395-45d2e0bbe9a7">
+    </UnitTestResult>
+    <UnitTestResult executionId="aca1203a-3650-407c-b239-da002548383b" testId="0f5700ac-a451-b131-f7e6-cd705e736052" testName="get_max_valueTest" computerName="MATHIAS-PC" duration="00:00:00.0012197" startTime="2012-01-21T18:04:50.3715540+01:00" endTime="2012-01-21T18:04:50.3895550+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aca1203a-3650-407c-b239-da002548383b">
+    </UnitTestResult>
+    <UnitTestResult executionId="81586c87-3aa2-4bc8-9c09-b4f33295f302" testId="2580d14c-4bb1-2ca6-856a-90be216a62aa" testName="get_varianceTest" computerName="MATHIAS-PC" duration="00:00:00.0011094" startTime="2012-01-21T18:04:50.3945553+01:00" endTime="2012-01-21T18:04:50.4095562+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81586c87-3aa2-4bc8-9c09-b4f33295f302">
+    </UnitTestResult>
+    <UnitTestResult executionId="a611cc59-00b1-46d3-8786-4565a4c42990" testId="30dd9463-321b-199e-ad5c-eae4c197a4b3" testName="get_entropyTest" computerName="MATHIAS-PC" duration="00:00:00.0021675" startTime="2012-01-21T18:04:50.4115563+01:00" endTime="2012-01-21T18:04:50.4265572+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a611cc59-00b1-46d3-8786-4565a4c42990">
+    </UnitTestResult>
+    <UnitTestResult executionId="943ad524-43e8-4a92-ac64-9eea5d698283" testId="47c22d4e-2fc9-8433-5d1b-f17728642aa6" testName="get_averageTest" computerName="MATHIAS-PC" duration="00:00:00.0010268" startTime="2012-01-21T18:04:50.4285573+01:00" endTime="2012-01-21T18:04:50.4435581+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="943ad524-43e8-4a92-ac64-9eea5d698283">
+    </UnitTestResult>
+    <UnitTestResult executionId="b8e578cd-908a-4b09-a271-b76a1d083eaa" testId="482c2e23-2601-54ff-de58-13f0b85157f8" testName="findMinMaxTest" computerName="MATHIAS-PC" duration="00:00:00.0011544" startTime="2012-01-21T18:04:50.4455582+01:00" endTime="2012-01-21T18:04:50.4575589+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b8e578cd-908a-4b09-a271-b76a1d083eaa">
+    </UnitTestResult>
+    <UnitTestResult executionId="16fc9a84-4301-4095-b879-edde789dbdb4" testId="54af8eb8-9f4d-3f4a-d32b-b5dde569a8ef" testName="StatistikModelConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0128556" startTime="2012-01-21T18:04:50.4605591+01:00" endTime="2012-01-21T18:04:50.4825604+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16fc9a84-4301-4095-b879-edde789dbdb4">
+    </UnitTestResult>
+    <UnitTestResult executionId="57b6641d-6631-456f-9693-7e0de45771aa" testId="57285c67-e4dc-4166-ce8b-6145309e025f" testName="draw_histogramTest" computerName="MATHIAS-PC" duration="00:00:00.0219848" startTime="2012-01-21T18:04:50.4845605+01:00" endTime="2012-01-21T18:04:50.5195625+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57b6641d-6631-456f-9693-7e0de45771aa">
+    </UnitTestResult>
+    <UnitTestResult executionId="33eb7302-fd60-4e16-bf40-fcccf7e5960a" testId="6a2ce9f8-73c7-c0ca-b41f-ff6d538a08a1" testName="calculate_entropyTest" computerName="MATHIAS-PC" duration="00:00:00.0041928" startTime="2012-01-21T18:04:50.5425638+01:00" endTime="2012-01-21T18:04:50.5895665+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33eb7302-fd60-4e16-bf40-fcccf7e5960a">
+    </UnitTestResult>
+    <UnitTestResult executionId="6f8699ca-430d-4f0c-a130-bbfc3bf7410a" testId="6d9e8802-5fbb-f07e-dd87-99c02ddec495" testName="calculate_peakTest" computerName="MATHIAS-PC" duration="00:00:00.0023758" startTime="2012-01-21T18:04:50.6045673+01:00" endTime="2012-01-21T18:04:50.6195682+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f8699ca-430d-4f0c-a130-bbfc3bf7410a">
+    </UnitTestResult>
+    <UnitTestResult executionId="5e1a8a73-5e09-4ce7-8803-c3313865649d" testId="a17e11b3-218b-41a1-e257-f2c0cac662ff" testName="prepare_histogram_dataTest" computerName="MATHIAS-PC" duration="00:00:00.0107513" startTime="2012-01-21T18:04:50.6245685+01:00" endTime="2012-01-21T18:04:50.6575704+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e1a8a73-5e09-4ce7-8803-c3313865649d">
+    </UnitTestResult>
+    <UnitTestResult executionId="728ec87a-97ec-4372-ba1b-9c55c46aa370" testId="b5a171f4-555d-d48d-95fd-4d3236eb99e9" testName="calculate_averageTest" computerName="MATHIAS-PC" duration="00:00:00.0019106" startTime="2012-01-21T18:04:50.6595705+01:00" endTime="2012-01-21T18:04:50.6845719+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="728ec87a-97ec-4372-ba1b-9c55c46aa370">
+    </UnitTestResult>
+    <UnitTestResult executionId="0fc8f74a-2cc8-437f-9b5a-636116b36073" testId="c6e3639b-a091-d5f4-6fff-7ef59270ed6c" testName="calculate_varianceTest" computerName="MATHIAS-PC" duration="00:00:00.0020451" startTime="2012-01-21T18:04:50.6875721+01:00" endTime="2012-01-21T18:04:50.7005728+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0fc8f74a-2cc8-437f-9b5a-636116b36073">
+    </UnitTestResult>
+  </Results>
+</TestRun>

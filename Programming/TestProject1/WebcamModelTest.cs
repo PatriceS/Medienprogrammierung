@@ -69,15 +69,7 @@ namespace TestProject1
         #endregion
 
 
-        /// <summary>
-        ///Ein Test für "WebcamModel-Konstruktor"
-        ///</summary>
-        [TestMethod()]
-        public void WebcamModelConstructorTest()
-        {
-            WebcamModel target = new WebcamModel();
-            Assert.Inconclusive("TODO: Code zum Überprüfen des Ziels implementieren");
-        }
+      
 
         /// <summary>
         ///Ein Test für "get_Image"
@@ -85,12 +77,12 @@ namespace TestProject1
         [TestMethod()]
         public void get_ImageTest()
         {
-            WebcamModel target = new WebcamModel(); // TODO: Passenden Wert initialisieren
-            Image expected = null; // TODO: Passenden Wert initialisieren
+            WebcamModel target = new WebcamModel(); 
+            Image expected = null; 
             Image actual;
             actual = target.get_Image();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
+           
         }
 
         /// <summary>
@@ -104,8 +96,8 @@ namespace TestProject1
             KeyValuePair<int, string> expected = new KeyValuePair<int, string>(); // TODO: Passenden Wert initialisieren
             KeyValuePair<int, string> actual;
             actual = target.get_device();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
+            Assert.IsInstanceOfType(expected, typeof(KeyValuePair<int, string>));
+         
         }
 
         /// <summary>
@@ -115,58 +107,15 @@ namespace TestProject1
         public void get_devicesTest()
         {
             WebcamModel target = new WebcamModel(); // TODO: Passenden Wert initialisieren
-            Dictionary<int, string> expected = null; // TODO: Passenden Wert initialisieren
+            
             Dictionary<int, string> actual;
             actual = target.get_devices();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
+            Assert.IsInstanceOfType(actual, typeof(Dictionary<int, string>));
+            
         }
 
-        /// <summary>
-        ///Ein Test für "get_solution"
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("Programming.exe")]
-        public void get_solutionTest()
-        {
-            WebcamModel_Accessor target = new WebcamModel_Accessor(); // TODO: Passenden Wert initialisieren
-            VideoCaptureDevice videoSource = null; // TODO: Passenden Wert initialisieren
-            KeyValuePair<int, string> expected = new KeyValuePair<int, string>(); // TODO: Passenden Wert initialisieren
-            KeyValuePair<int, string> actual;
-            actual = target.get_solution(videoSource);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
-        }
 
-        /// <summary>
-        ///Ein Test für "get_solution_modes"
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("Programming.exe")]
-        public void get_solution_modesTest()
-        {
-            WebcamModel_Accessor target = new WebcamModel_Accessor(); // TODO: Passenden Wert initialisieren
-            VideoCaptureDevice videoSource = null; // TODO: Passenden Wert initialisieren
-            Dictionary<int, string> expected = null; // TODO: Passenden Wert initialisieren
-            Dictionary<int, string> actual;
-            actual = target.get_solution_modes(videoSource);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
-        }
 
-        /// <summary>
-        ///Ein Test für "get_solution_modes"
-        ///</summary>
-        [TestMethod()]
-        public void get_solution_modesTest1()
-        {
-            WebcamModel target = new WebcamModel(); // TODO: Passenden Wert initialisieren
-            Dictionary<int, string> expected = null; // TODO: Passenden Wert initialisieren
-            Dictionary<int, string> actual;
-            actual = target.get_solution_modes();
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
-        }
 
         /// <summary>
         ///Ein Test für "set_device"
@@ -174,10 +123,10 @@ namespace TestProject1
         [TestMethod()]
         public void set_deviceTest()
         {
-            WebcamModel target = new WebcamModel(); // TODO: Passenden Wert initialisieren
-            KeyValuePair<int, string> selob = new KeyValuePair<int, string>(); // TODO: Passenden Wert initialisieren
+            WebcamModel target = new WebcamModel(); 
+            KeyValuePair<int, string> selob = new KeyValuePair<int, string>(); 
             target.set_device(selob);
-            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            
         }
 
         /// <summary>
@@ -186,10 +135,10 @@ namespace TestProject1
         [TestMethod()]
         public void set_solutionTest()
         {
-            WebcamModel target = new WebcamModel(); // TODO: Passenden Wert initialisieren
-            KeyValuePair<int, string> selob = new KeyValuePair<int, string>(); // TODO: Passenden Wert initialisieren
+            WebcamModel target = new WebcamModel(); 
+            KeyValuePair<int, string> selob = new KeyValuePair<int, string>(); 
             target.set_solution(selob);
-            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            
         }
 
         /// <summary>
@@ -198,11 +147,15 @@ namespace TestProject1
         [TestMethod()]
         public void show_pictureTest()
         {
-            WebcamModel target = new WebcamModel(); // TODO: Passenden Wert initialisieren
-            PictureBox pic = null; // TODO: Passenden Wert initialisieren
-            WebcamOptions form = null; // TODO: Passenden Wert initialisieren
+            PictureBox pic = new PictureBox();
+            PixelState.getInstance().set_pictureBox(pic);
+            WebcamModel target = new WebcamModel();
+            Dictionary<int, string> devices = new Dictionary<int, string>();
+            Dictionary<int, string> solutions = new Dictionary<int, string>();
+            devices.Add(1,"");
+            solutions.Add(1, "");
+            WebcamOptions form = new WebcamOptions(devices, solutions); 
             target.show_picture(pic, form);
-            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
         }
 
         /// <summary>
@@ -213,21 +166,9 @@ namespace TestProject1
         {
             WebcamModel target = new WebcamModel(); // TODO: Passenden Wert initialisieren
             target.stop_capture();
-            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            
         }
 
-        /// <summary>
-        ///Ein Test für "videoSource_NewFrame"
-        ///</summary>
-        [TestMethod()]
-        [DeploymentItem("Programming.exe")]
-        public void videoSource_NewFrameTest()
-        {
-            WebcamModel_Accessor target = new WebcamModel_Accessor(); // TODO: Passenden Wert initialisieren
-            object sender = null; // TODO: Passenden Wert initialisieren
-            NewFrameEventArgs eventArgs = null; // TODO: Passenden Wert initialisieren
-            target.videoSource_NewFrame(sender, eventArgs);
-            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
-        }
+        
     }
 }

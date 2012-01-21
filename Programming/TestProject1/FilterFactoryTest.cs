@@ -72,7 +72,7 @@ namespace TestProject1
         public void FilterFactoryConstructorTest()
         {
             FilterFactory target = new FilterFactory();
-            Assert.Inconclusive("TODO: Code zum Überprüfen des Ziels implementieren");
+            Assert.IsInstanceOfType(target, typeof(FilterFactory));
         }
 
         /// <summary>
@@ -95,6 +95,7 @@ namespace TestProject1
             actual = target.create(name, bitmap, Scan0, stride, height_start, height_end, thHandler, values);
             Assert.AreNotEqual(expected, actual);
             Assert.IsInstanceOfType(actual, typeof(Manipulate));
+            
             
         }
     }
