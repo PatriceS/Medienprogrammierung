@@ -24,14 +24,16 @@ namespace Programming
             this.bitmap = (Bitmap)image;
         }
 
+        /*Berechnet Werte für Histogramm auf Grundlage des im Konstruktor übergebenen
+         * Bildes
+         */
         public void prepare_histogram_data()
         {
+                // Bild sperren
             BitmapData bmData = this.bitmap.LockBits(new Rectangle(0, 0, this.bitmap.Width, this.bitmap.Height),
             ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
             int stride = bmData.Stride;
-
-            int bytes = Math.Abs(bmData.Stride) * bmData.Height;
-
+                // Pointer auf Bild array
             System.IntPtr Scan0 = bmData.Scan0;
             int nOffset = stride - (bitmap.Width * (int)Config.value.BITMAP_OFFSET_MULTIPLIKATOR);
             int grey = 0;
@@ -53,7 +55,7 @@ namespace Programming
                     {
                         // BGR
                         red = p[2]; green = p[1]; blue = p[0];
-
+                        // Grau Werte berechnen
                         grey = (int)Math.Round(0.3 * red + 0.6 * green + 0.1 * blue);
 
                          // min und maximum berechnen
@@ -173,6 +175,9 @@ namespace Programming
             return peak;
         }
 
+        /*
+         * Histogramm in die PictureBox des Fensters zeichnen auf Grundlage der Histogramm daten
+         */
         public void draw_histogram(System.Windows.Forms.PictureBox statistik_pic, Config.histogram_canal canal)
         {
 
@@ -192,6 +197,7 @@ namespace Programming
             for (int x = 1; x < width; x++)
             {
                 value = histo[c, x];
+                    // Höchstwert des Kanal Wertes berechnen <- normalisiert
                 peak = (value == 0) ? 0 : (value * height) / this.peak[(int)canal];
                 objGraphic.DrawLine(pen, x, height, x, height - peak);
 

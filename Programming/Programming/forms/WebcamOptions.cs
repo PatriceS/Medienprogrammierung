@@ -23,7 +23,7 @@ namespace Programming
             show_solutions(solutions);
             
         }
-
+            /*Vorhandene Geräte in Form einbinden*/
         private void show_devices(Dictionary<int, string> data)
         {
             BindingSource myBindingSource = new BindingSource();
@@ -32,7 +32,7 @@ namespace Programming
             WebcamDevicescomboBox.DisplayMember = "Value";
             WebcamDevicescomboBox.ValueMember = "Key";
         }
-
+            /*Vorhandene Auflösungen in Form einbinden*/
         private void show_solutions(Dictionary<int, string> data)
         {
             BindingSource myBindingSource = new BindingSource();
@@ -41,7 +41,7 @@ namespace Programming
             resolutionComboBox.DisplayMember = "Value";
             resolutionComboBox.ValueMember = "Key";
         }
-
+            /*Event für Geräte auswahl*/
         private void WebcamDevicescomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             con.stop_capture();
@@ -61,7 +61,7 @@ namespace Programming
             con.stop_capture();
             
         }
-
+            /*Event für Geräte auswahl*/
         private void resolutionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             con.stop_capture();

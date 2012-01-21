@@ -67,12 +67,22 @@ namespace TestProject1
         /// <summary>
         ///Ein Test für "Main"
         ///</summary>
-        [TestMethod()]
         [DeploymentItem("Programming.exe")]
         public void MainTest()
         {
             Program_Accessor.Main();
             
+        }
+
+        /// <summary>
+        ///Ein Test für "Main"
+        ///</summary>
+        [TestMethod()]
+        [DeploymentItem("Programming.exe")]
+        public void MainTest1()
+        {
+            Program_Accessor.Main();
+           
         }
     }
 }

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="285f7b20-56e2-45a4-a14d-2a70b9fbcee7" name="mathias@MATHIAS-PC 2012-01-21 15:44:40" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2012-01-21 15_44_40">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\AForge.Video.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\AForge.Video.DirectShow.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-01-21T15:44:40.1136029+01:00" queuing="2012-01-21T15:44:40.1626057+01:00" start="2012-01-21T15:44:40.1906073+01:00" finish="2012-01-21T15:44:40.7636401+01:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="4" executed="4" passed="2" error="0" failed="2" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="get_ImageTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="002c1d11-d5b0-9d8f-3f74-b7cf6f535e8a">
+      <Execution id="97df4fbd-0887-4662-bd34-8f1bf5b68938" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.NullImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_ImageTest" />
+    </UnitTest>
+    <UnitTest name="get_ImageManipulatorTypeTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="077e8d8c-fbc7-c3fb-6643-80bef911c8ad">
+      <Execution id="12aa22ad-3f1c-4a55-a0da-8467722fa9f3" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.NullImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_ImageManipulatorTypeTest" />
+    </UnitTest>
+    <UnitTest name="NullImageObjectConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="62772180-5e91-c353-0985-15028ab2631c">
+      <Execution id="c5b11891-0e89-4de7-b94c-0f6db01dd157" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.NullImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NullImageObjectConstructorTest" />
+    </UnitTest>
+    <UnitTest name="get_BitmapTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="efdb3c32-d60e-1f4f-6290-2e9ad6091d12">
+      <Execution id="b39791a5-5edc-4db9-affa-e6d70a3b6913" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.NullImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_BitmapTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="002c1d11-d5b0-9d8f-3f74-b7cf6f535e8a" executionId="97df4fbd-0887-4662-bd34-8f1bf5b68938" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="077e8d8c-fbc7-c3fb-6643-80bef911c8ad" executionId="12aa22ad-3f1c-4a55-a0da-8467722fa9f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62772180-5e91-c353-0985-15028ab2631c" executionId="c5b11891-0e89-4de7-b94c-0f6db01dd157" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efdb3c32-d60e-1f4f-6290-2e9ad6091d12" executionId="b39791a5-5edc-4db9-affa-e6d70a3b6913" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="97df4fbd-0887-4662-bd34-8f1bf5b68938" testId="002c1d11-d5b0-9d8f-3f74-b7cf6f535e8a" testName="get_ImageTest" computerName="MATHIAS-PC" duration="00:00:00.0668427" startTime="2012-01-21T15:44:40.1986078+01:00" endTime="2012-01-21T15:44:40.6636344+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="97df4fbd-0887-4662-bd34-8f1bf5b68938">
+      <Output>
+        <ErrorInfo>
+          <Message>Die TestProject1.NullImageObjectTest.get_ImageTest-Testmethode hat eine Ausnahme ausgelöst: System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.</Message>
+          <StackTrace>    bei Programming.NullImageObject.get_Image() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\NullImageObject.cs:Zeile 19.
+   bei TestProject1.NullImageObjectTest.get_ImageTest() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\TestProject1\NullImageObjectTest.cs:Zeile 79.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="12aa22ad-3f1c-4a55-a0da-8467722fa9f3" testId="077e8d8c-fbc7-c3fb-6643-80bef911c8ad" testName="get_ImageManipulatorTypeTest" computerName="MATHIAS-PC" duration="00:00:00.0078564" startTime="2012-01-21T15:44:40.6726349+01:00" endTime="2012-01-21T15:44:40.6916360+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12aa22ad-3f1c-4a55-a0da-8467722fa9f3">
+    </UnitTestResult>
+    <UnitTestResult executionId="c5b11891-0e89-4de7-b94c-0f6db01dd157" testId="62772180-5e91-c353-0985-15028ab2631c" testName="NullImageObjectConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0035699" startTime="2012-01-21T15:44:40.6956362+01:00" endTime="2012-01-21T15:44:40.7116371+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5b11891-0e89-4de7-b94c-0f6db01dd157">
+    </UnitTestResult>
+    <UnitTestResult executionId="b39791a5-5edc-4db9-affa-e6d70a3b6913" testId="efdb3c32-d60e-1f4f-6290-2e9ad6091d12" testName="get_BitmapTest" computerName="MATHIAS-PC" duration="00:00:00.0030245" startTime="2012-01-21T15:44:40.7156373+01:00" endTime="2012-01-21T15:44:40.7266380+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b39791a5-5edc-4db9-affa-e6d70a3b6913">
+      <Output>
+        <ErrorInfo>
+          <Message>Die TestProject1.NullImageObjectTest.get_BitmapTest-Testmethode hat eine Ausnahme ausgelöst: System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.</Message>
+          <StackTrace>    bei Programming.NullImageObject.get_Bitmap() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\NullImageObject.cs:Zeile 29.
+   bei TestProject1.NullImageObjectTest.get_BitmapTest() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\TestProject1\NullImageObjectTest.cs:Zeile 94.
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

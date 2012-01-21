@@ -21,6 +21,7 @@ namespace Programming
             HISTOGRAM_VALUE_COUNT        = 256
         };
 
+            // RGB Kanäle + grau wert
         public enum histogram_canal : int
         {
             

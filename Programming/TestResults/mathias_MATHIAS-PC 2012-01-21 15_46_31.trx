@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7fb9ffaf-4870-4a26-88ba-89865186355c" name="mathias@MATHIAS-PC 2012-01-21 15:46:31" runUser="mathias-PC\mathias" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Lokal" id="2f49c074-a861-4ffa-afec-cc51f40226af">
+    <Description>Dies sind die standardmäßigen Testeinstellungen für einen lokalen Testlauf.</Description>
+    <Deployment enabled="false" runDeploymentRoot="mathias_MATHIAS-PC 2012-01-21 15_46_31">
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\AForge.Video.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\AForge.Video.DirectShow.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Release\Facebook.dll" />
+      <DeploymentItem filename="C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\bin\Debug\Programming.exe" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-01-21T15:46:31.1739552+01:00" queuing="2012-01-21T15:46:31.2149575+01:00" start="2012-01-21T15:46:31.2649604+01:00" finish="2012-01-21T15:46:36.7212725+01:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="56" executed="56" passed="54" error="2" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MATHIAS-PC" outcome="Error" timestamp="2012-01-21T15:46:31.9509996+01:00">
+        <Text>Einer der Hintergrundthreads hat eine Ausnahme ausgelöst: 
+System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Programming.ThreadHandler.try_refresh() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\ThreadHandler.cs:Zeile 111.
+   bei Programming.ThreadHandler.&lt;refresh&gt;b__1() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\ThreadHandler.cs:Zeile 86.
+   bei System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   bei System.Threading.ExecutionContext.runTryCode(Object userData)
+   bei System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode code, CleanupCode backoutCode, Object userData)
+   bei System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   bei System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)
+   bei System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   bei System.Threading.ThreadHelper.ThreadStart()</Text>
+      </RunInfo>
+      <RunInfo computerName="MATHIAS-PC" outcome="Error" timestamp="2012-01-21T15:46:34.4191408+01:00">
+        <Text>Einer der Hintergrundthreads hat eine Ausnahme ausgelöst: 
+System.InvalidOperationException: Invoke oder BeginInvoke kann für ein Steuerelement erst aufgerufen werden, wenn das Fensterhandle erstellt wurde.
+   bei System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   bei System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   bei System.Windows.Forms.Control.Invoke(Delegate method)
+   bei Programming.ThreadHandler.try_refresh() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\ThreadHandler.cs:Zeile 111.
+   bei Programming.ThreadHandler.&lt;refresh&gt;b__1() in C:\Users\mathias\studium\master\semester 1\programmierung\Medienprogrammierung\Programming\Programming\ThreadHandler.cs:Zeile 86.
+   bei System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   bei System.Threading.ExecutionContext.runTryCode(Object userData)
+   bei System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode code, CleanupCode backoutCode, Object userData)
+   bei System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   bei System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)
+   bei System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   bei System.Threading.ThreadHelper.ThreadStart()</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="stop_captureTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="38dff47a-7dba-e3f1-22bd-fcae75232126">
+      <Execution id="c291713a-3a67-4e00-b59e-f249d5823c09" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="stop_captureTest" />
+    </UnitTest>
+    <UnitTest name="ErrorDiffusionFilterConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="cb6f91e9-958d-53a3-511f-f5e378b3ee24">
+      <Execution id="1278bdc8-a943-4e63-b1ac-0c816a85aa06" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ErrorDiffusionFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ErrorDiffusionFilterConstructorTest" />
+    </UnitTest>
+    <UnitTest name="ImageObjectConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="002d83ad-e4d7-31f9-b4df-1f60f1b5d3b4">
+      <Execution id="a983c6bf-43a4-4946-9f53-d355030608f2" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ImageObjectConstructorTest" />
+    </UnitTest>
+    <UnitTest name="InvertFilterConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="d9cbe861-7ec5-3099-ba38-2c605d306673">
+      <Execution id="dcf13db8-12ff-4d61-a108-6a0798feaab4" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.InvertFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InvertFilterConstructorTest" />
+    </UnitTest>
+    <UnitTest name="get_ImageManipulatorTypeTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="077e8d8c-fbc7-c3fb-6643-80bef911c8ad">
+      <Execution id="e1bb09ca-96e7-4fe8-979e-4ab6f76710db" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.NullImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_ImageManipulatorTypeTest" />
+    </UnitTest>
+    <UnitTest name="RotateFilterConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="5d17ee44-b5cd-0e62-ac4b-1bc91d9bc224">
+      <Execution id="b49a85b1-5361-4f45-ab46-263ea6faf456" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.RotateFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RotateFilterConstructorTest" />
+    </UnitTest>
+    <UnitTest name="startTimeTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="0dfe1cd7-d495-1876-69e7-6ac597aa1bbd">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="c6b0b951-4110-490d-982e-6fbaf9f33303" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="startTimeTest" />
+    </UnitTest>
+    <UnitTest name="NullImageObjectConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="62772180-5e91-c353-0985-15028ab2631c">
+      <Execution id="cf2a8444-67b1-46c9-b0a3-8f8ecdc36f59" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.NullImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NullImageObjectConstructorTest" />
+    </UnitTest>
+    <UnitTest name="performTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="0154749f-78bc-bf28-ca06-2e5f09a33e51">
+      <Execution id="5f58399c-f1d9-47be-80dd-c03e09db3450" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.BlackWhiteFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest" />
+    </UnitTest>
+    <UnitTest name="invoke_refreshTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="12236330-5422-6a79-c41f-2614bfda9226">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="c2401b6c-d217-4c07-a453-bb7c45bcefc9" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="invoke_refreshTest" />
+    </UnitTest>
+    <UnitTest name="initTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="d0bba9bc-b5bb-2a6c-4475-b61c8d67b000">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="3267e2fe-c392-44b4-b966-7c88e9ed5e53" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="initTest" />
+    </UnitTest>
+    <UnitTest name="openWebcamWindowTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="c0c10d26-1016-1b3b-be9d-3dac26dd0d63">
+      <Execution id="4f55f38c-345b-4ca2-8e25-0d8e5d933168" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="openWebcamWindowTest" />
+    </UnitTest>
+    <UnitTest name="get_ImageManipulatorTypeTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="7890454c-0a6b-e2f7-057c-7d73ddaaa939">
+      <Execution id="e4323481-20fb-4ec3-ad72-62a4087f77b6" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_ImageManipulatorTypeTest" />
+    </UnitTest>
+    <UnitTest name="SepiaFilterConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="2230829b-1f4f-d9e4-adb1-df3b8d64f72f">
+      <Execution id="9493b748-240a-47ab-8316-6a5eefccfc76" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.SepiaFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SepiaFilterConstructorTest" />
+    </UnitTest>
+    <UnitTest name="get_ImageTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="78001a50-ff7e-88eb-9e4c-1447d4837f35">
+      <Execution id="912455d1-5adc-4e18-b70a-c08d6496d84d" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_ImageTest" />
+    </UnitTest>
+    <UnitTest name="addTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="37f7fa63-e38f-d747-b2a4-90104bd11c78">
+      <Execution id="8308af65-c9bb-47cf-9b9d-7d5926a20413" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.PixelStateTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="addTest" />
+    </UnitTest>
+    <UnitTest name="try_refreshTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="04f5fa0a-27c4-cb2b-5bf8-37a8a1374577">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="46330e38-c909-4357-9fdc-71eff93f41f1" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="try_refreshTest" />
+    </UnitTest>
+    <UnitTest name="ThreadHandlerConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="cf2f512f-e3ec-d64c-76cd-f2dad22b45cd">
+      <Execution id="6c227a3a-41a6-4e11-8efd-02a0553b46eb" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThreadHandlerConstructorTest" />
+    </UnitTest>
+    <UnitTest name="show_Webcam_pictureTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="5694bef5-fbcd-f717-8901-1348ecdba087">
+      <Execution id="c4c1ed67-3973-407b-bf79-db1d0b4421aa" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="show_Webcam_pictureTest" />
+    </UnitTest>
+    <UnitTest name="performTest1" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="d6f5ee68-bc22-0ee5-b9c1-df81399fcf61">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="d53bf6df-7a7e-448e-a210-085e438c706c" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ImageManipulatorTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest1" />
+    </UnitTest>
+    <UnitTest name="remove_lastTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="3196b23b-28ea-1580-8a76-65c8297f7f0d">
+      <Execution id="ae0cd22a-f32f-4700-8629-cf44f35c6def" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.PixelStateTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="remove_lastTest" />
+    </UnitTest>
+    <UnitTest name="OscillationFilterConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="0ff7e0d0-a263-d910-623c-cc55a9dbcac2">
+      <Execution id="336efccc-a97d-438f-af39-1e2d560c9637" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.OscillationFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="OscillationFilterConstructorTest" />
+    </UnitTest>
+    <UnitTest name="get_BitmapTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="efdb3c32-d60e-1f4f-6290-2e9ad6091d12">
+      <Execution id="ae7bb2eb-547d-490e-8e3a-40b8b2594c22" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.NullImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_BitmapTest" />
+    </UnitTest>
+    <UnitTest name="RGB_ModeFilterConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="a09dfaf6-7239-4f0d-306e-6ed80bf95595">
+      <Execution id="ee7bcdcf-f606-466d-8d48-171a0879bae4" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.RGB_ModeFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RGB_ModeFilterConstructorTest" />
+    </UnitTest>
+    <UnitTest name="set_Webcam_pictureTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="33a1462e-9d73-e911-3c6d-16b35104b689">
+      <Execution id="33aebb95-d0e7-41a3-b498-122901b158d4" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="set_Webcam_pictureTest" />
+    </UnitTest>
+    <UnitTest name="getInstanceTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="b6d985b7-8ac2-ad2d-96aa-548b788286c5">
+      <Execution id="39e8759f-521a-41e8-a56e-c0bc90e73647" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.PixelStateTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getInstanceTest" />
+    </UnitTest>
+    <UnitTest name="getInstanceTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="af31cf30-9dd9-0a4a-6e4c-d2bbb853ff73">
+      <Execution id="7a93f11e-50eb-4f2b-8a0b-cdebd5aa3947" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getInstanceTest" />
+    </UnitTest>
+    <UnitTest name="WebcamControllerConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="71c40672-4568-084c-9dcf-ec4fac8c82e8">
+      <Execution id="3ba78d04-9ed4-4df9-9d73-88f458241e70" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="WebcamControllerConstructorTest" />
+    </UnitTest>
+    <UnitTest name="rotateTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="3be80adf-bcab-b9a9-d0fe-a1804ca70733">
+      <Execution id="10fb79ab-dc8a-4469-ad54-93920b2e5e4e" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.RotateFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="rotateTest" />
+    </UnitTest>
+    <UnitTest name="registerTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="5ca0c1f6-2d3a-88b6-1bfe-844668d71a0a">
+      <Execution id="a3edd1d6-1a65-4cd9-b53c-7d8eb41b5142" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="registerTest" />
+    </UnitTest>
+    <UnitTest name="set_solutionTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="3f931057-a5a1-c80b-16bc-3727154b6a57">
+      <Execution id="cbfe725c-b659-4a66-a761-f9d2a9c79e79" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="set_solutionTest" />
+    </UnitTest>
+    <UnitTest name="GrayscaleFilterConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="cfa535a2-756a-5d02-badb-8fb7df1ef388">
+      <Execution id="7a07850a-ec19-4aed-80b3-fd7477664875" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.GrayscaleFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="GrayscaleFilterConstructorTest" />
+    </UnitTest>
+    <UnitTest name="threadsAreAliveTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="7d71edaf-c14b-63d9-80d9-3ceb4795ab69">
+      <Execution id="b14de1fe-4eda-48bf-8254-a5107f11fa69" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="threadsAreAliveTest" />
+    </UnitTest>
+    <UnitTest name="performTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="5fafb705-0681-66bb-8720-8f83850173f6">
+      <Execution id="4c221d8d-b36e-489a-9642-34bba05f768a" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.GrayscaleFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest" />
+    </UnitTest>
+    <UnitTest name="performTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="7870b940-fe6b-7b30-3290-675eea668a00">
+      <Execution id="e62c4795-e7b6-4962-84f2-e9ea09d432b4" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.SepiaFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest" />
+    </UnitTest>
+    <UnitTest name="setMainFormTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="b433c2d4-cdc9-e771-9e94-8baef9ea3cf8">
+      <Execution id="3f3d6d1a-57e2-414d-b912-5f63702910ec" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="setMainFormTest" />
+    </UnitTest>
+    <UnitTest name="refreshTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="518d9429-f1e2-c6b6-191d-aa275e2ecffe">
+      <Execution id="a1fb3f8a-0141-415a-bacd-a1502f501084" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="refreshTest" />
+    </UnitTest>
+    <UnitTest name="resetTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="fafc4f6d-5127-6b3c-75ce-070639d10101">
+      <Execution id="d05ed53e-65ed-485c-b52a-7c2f3924b560" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.PixelStateTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="resetTest" />
+    </UnitTest>
+    <UnitTest name="performTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="ed98a529-aab6-d61c-cfb4-73dfff4d2c0d">
+      <Execution id="0d1ce630-42c5-4d0e-8487-31cb9c26ff33" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ImageManipulatorTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest" />
+    </UnitTest>
+    <UnitTest name="get_ImageTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="002c1d11-d5b0-9d8f-3f74-b7cf6f535e8a">
+      <Execution id="6ba5226e-b58d-455a-8c1b-da28bf582460" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.NullImageObjectTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_ImageTest" />
+    </UnitTest>
+    <UnitTest name="ImageManipulatorConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="c54b7c3d-97a4-cf3e-1b61-db666fb0b2b4">
+      <Execution id="55d0edd3-b7c7-4edf-b40a-081c866f9395" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ImageManipulatorTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ImageManipulatorConstructorTest" />
+    </UnitTest>
+    <UnitTest name="performTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="69e27bca-8834-dbda-d579-a227f1d890a9">
+      <Execution id="db58e67e-6426-43ce-90fa-579b70aecba4" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ErrorDiffusionFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest" />
+    </UnitTest>
+    <UnitTest name="performTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="75cc471e-1517-af11-e8dc-a61e8ea83941">
+      <Execution id="799dc8d2-e097-4b70-b857-c407bb31f2b9" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.RGB_ModeFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest" />
+    </UnitTest>
+    <UnitTest name="performTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="f7cd8541-dc96-429d-5112-23b12e0d7bcb">
+      <Execution id="cc79ca29-f0d1-4639-9ae1-c9b43b57c242" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.InvertFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest" />
+    </UnitTest>
+    <UnitTest name="getInstanceTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="c17a41ff-1724-776a-23b7-c9e08163c9a8">
+      <Execution id="8d016ba7-efe3-43c9-995d-e842055196bd" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getInstanceTest" />
+    </UnitTest>
+    <UnitTest name="getThreadsTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="b573db96-268a-85a5-d513-a40b0110ca2d">
+      <Execution id="46681436-acbe-4704-9951-e4486cdc32ec" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getThreadsTest" />
+    </UnitTest>
+    <UnitTest name="MainTest1" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="32b13811-adb6-ec77-d94c-bf5c860951be">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="3d268757-d553-4347-960b-4a4481e16f9c" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ProgramTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="MainTest1" />
+    </UnitTest>
+    <UnitTest name="performTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="c4c3c443-7469-c3ab-1664-55cbef9492d7">
+      <Execution id="2c28dd2c-5bd2-4314-88ef-50dfd5dc6a7c" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.OscillationFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="performTest" />
+    </UnitTest>
+    <UnitTest name="try_save_PixelStateTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="d595057a-93cd-79ea-b780-b06fe4591bbc">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="d0bac7b3-3070-4d2b-9d4c-644e3ad1d548" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="try_save_PixelStateTest" />
+    </UnitTest>
+    <UnitTest name="setNameTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="808b215a-6a8c-b953-5df1-d3c332ac032c">
+      <Execution id="223da082-d899-4a45-a721-5af494727388" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.UserTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="setNameTest" />
+    </UnitTest>
+    <UnitTest name="BlackWhiteFilterConstructorTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="04635d02-4f9e-45d8-3e06-60b4ba2dbebd">
+      <Execution id="9f0e4992-b590-4cda-b074-360a0900dfeb" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.BlackWhiteFilterTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="BlackWhiteFilterConstructorTest" />
+    </UnitTest>
+    <UnitTest name="getTimeTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="70a1c56b-2926-56d3-d384-a7aa4f5f64e3">
+      <Execution id="6007663d-a159-49d2-ad6d-0b73f60456af" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getTimeTest" />
+    </UnitTest>
+    <UnitTest name="get_lastTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="e47e284a-b0f2-867a-9c3d-a3b9b019db7c">
+      <Execution id="99ec2e8e-75e0-478e-9711-e49dcaf7e819" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.PixelStateTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="get_lastTest" />
+    </UnitTest>
+    <UnitTest name="set_deviceTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="25c7f40f-f705-2c0e-0d5a-1c8405235583">
+      <Execution id="04ad512a-e502-44a3-83a8-067a3cf040a8" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.WebcamControllerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="set_deviceTest" />
+    </UnitTest>
+    <UnitTest name="computeHeightStepsTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="c8cc5580-ead3-5acf-a1e1-3282adddd441">
+      <DeploymentItems>
+        <DeploymentItem filename="Programming.exe" />
+      </DeploymentItems>
+      <Execution id="0e9a5850-fb7b-40e5-b302-dbaa5fd8b8d8" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ImageManipulatorTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="computeHeightStepsTest" />
+    </UnitTest>
+    <UnitTest name="save_PixelStateTest" storage="c:\users\mathias\studium\master\semester 1\programmierung\medienprogrammierung\programming\testproject1\bin\debug\testproject1.dll" id="9f5c1e07-d3c6-a508-adce-b5381cb99ec2">
+      <Execution id="36b4e37d-8e78-4122-aea6-1c45ce699665" />
+      <TestMethod codeBase="C:/Users/mathias/studium/master/semester 1/programmierung/Medienprogrammierung/Programming/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.ThreadHandlerTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="save_PixelStateTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Nicht in einer Liste enthaltene Ergebnisse" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Alle geladenen Ergebnisse" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="002c1d11-d5b0-9d8f-3f74-b7cf6f535e8a" executionId="6ba5226e-b58d-455a-8c1b-da28bf582460" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="002d83ad-e4d7-31f9-b4df-1f60f1b5d3b4" executionId="a983c6bf-43a4-4946-9f53-d355030608f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0154749f-78bc-bf28-ca06-2e5f09a33e51" executionId="5f58399c-f1d9-47be-80dd-c03e09db3450" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="04635d02-4f9e-45d8-3e06-60b4ba2dbebd" executionId="9f0e4992-b590-4cda-b074-360a0900dfeb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="04f5fa0a-27c4-cb2b-5bf8-37a8a1374577" executionId="46330e38-c909-4357-9fdc-71eff93f41f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="077e8d8c-fbc7-c3fb-6643-80bef911c8ad" executionId="e1bb09ca-96e7-4fe8-979e-4ab6f76710db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0dfe1cd7-d495-1876-69e7-6ac597aa1bbd" executionId="c6b0b951-4110-490d-982e-6fbaf9f33303" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ff7e0d0-a263-d910-623c-cc55a9dbcac2" executionId="336efccc-a97d-438f-af39-1e2d560c9637" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12236330-5422-6a79-c41f-2614bfda9226" executionId="c2401b6c-d217-4c07-a453-bb7c45bcefc9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2230829b-1f4f-d9e4-adb1-df3b8d64f72f" executionId="9493b748-240a-47ab-8316-6a5eefccfc76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25c7f40f-f705-2c0e-0d5a-1c8405235583" executionId="04ad512a-e502-44a3-83a8-067a3cf040a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3196b23b-28ea-1580-8a76-65c8297f7f0d" executionId="ae0cd22a-f32f-4700-8629-cf44f35c6def" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32b13811-adb6-ec77-d94c-bf5c860951be" executionId="3d268757-d553-4347-960b-4a4481e16f9c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33a1462e-9d73-e911-3c6d-16b35104b689" executionId="33aebb95-d0e7-41a3-b498-122901b158d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37f7fa63-e38f-d747-b2a4-90104bd11c78" executionId="8308af65-c9bb-47cf-9b9d-7d5926a20413" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="38dff47a-7dba-e3f1-22bd-fcae75232126" executionId="c291713a-3a67-4e00-b59e-f249d5823c09" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3be80adf-bcab-b9a9-d0fe-a1804ca70733" executionId="10fb79ab-dc8a-4469-ad54-93920b2e5e4e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f931057-a5a1-c80b-16bc-3727154b6a57" executionId="cbfe725c-b659-4a66-a761-f9d2a9c79e79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="518d9429-f1e2-c6b6-191d-aa275e2ecffe" executionId="a1fb3f8a-0141-415a-bacd-a1502f501084" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5694bef5-fbcd-f717-8901-1348ecdba087" executionId="c4c1ed67-3973-407b-bf79-db1d0b4421aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ca0c1f6-2d3a-88b6-1bfe-844668d71a0a" executionId="a3edd1d6-1a65-4cd9-b53c-7d8eb41b5142" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d17ee44-b5cd-0e62-ac4b-1bc91d9bc224" executionId="b49a85b1-5361-4f45-ab46-263ea6faf456" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5fafb705-0681-66bb-8720-8f83850173f6" executionId="4c221d8d-b36e-489a-9642-34bba05f768a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62772180-5e91-c353-0985-15028ab2631c" executionId="cf2a8444-67b1-46c9-b0a3-8f8ecdc36f59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69e27bca-8834-dbda-d579-a227f1d890a9" executionId="db58e67e-6426-43ce-90fa-579b70aecba4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70a1c56b-2926-56d3-d384-a7aa4f5f64e3" executionId="6007663d-a159-49d2-ad6d-0b73f60456af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71c40672-4568-084c-9dcf-ec4fac8c82e8" executionId="3ba78d04-9ed4-4df9-9d73-88f458241e70" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75cc471e-1517-af11-e8dc-a61e8ea83941" executionId="799dc8d2-e097-4b70-b857-c407bb31f2b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="78001a50-ff7e-88eb-9e4c-1447d4837f35" executionId="912455d1-5adc-4e18-b70a-c08d6496d84d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7870b940-fe6b-7b30-3290-675eea668a00" executionId="e62c4795-e7b6-4962-84f2-e9ea09d432b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7890454c-0a6b-e2f7-057c-7d73ddaaa939" executionId="e4323481-20fb-4ec3-ad72-62a4087f77b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7d71edaf-c14b-63d9-80d9-3ceb4795ab69" executionId="b14de1fe-4eda-48bf-8254-a5107f11fa69" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="808b215a-6a8c-b953-5df1-d3c332ac032c" executionId="223da082-d899-4a45-a721-5af494727388" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f5c1e07-d3c6-a508-adce-b5381cb99ec2" executionId="36b4e37d-8e78-4122-aea6-1c45ce699665" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a09dfaf6-7239-4f0d-306e-6ed80bf95595" executionId="ee7bcdcf-f606-466d-8d48-171a0879bae4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="af31cf30-9dd9-0a4a-6e4c-d2bbb853ff73" executionId="7a93f11e-50eb-4f2b-8a0b-cdebd5aa3947" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b433c2d4-cdc9-e771-9e94-8baef9ea3cf8" executionId="3f3d6d1a-57e2-414d-b912-5f63702910ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b573db96-268a-85a5-d513-a40b0110ca2d" executionId="46681436-acbe-4704-9951-e4486cdc32ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b6d985b7-8ac2-ad2d-96aa-548b788286c5" executionId="39e8759f-521a-41e8-a56e-c0bc90e73647" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0c10d26-1016-1b3b-be9d-3dac26dd0d63" executionId="4f55f38c-345b-4ca2-8e25-0d8e5d933168" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c17a41ff-1724-776a-23b7-c9e08163c9a8" executionId="8d016ba7-efe3-43c9-995d-e842055196bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4c3c443-7469-c3ab-1664-55cbef9492d7" executionId="2c28dd2c-5bd2-4314-88ef-50dfd5dc6a7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c54b7c3d-97a4-cf3e-1b61-db666fb0b2b4" executionId="55d0edd3-b7c7-4edf-b40a-081c866f9395" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c8cc5580-ead3-5acf-a1e1-3282adddd441" executionId="0e9a5850-fb7b-40e5-b302-dbaa5fd8b8d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb6f91e9-958d-53a3-511f-f5e378b3ee24" executionId="1278bdc8-a943-4e63-b1ac-0c816a85aa06" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cf2f512f-e3ec-d64c-76cd-f2dad22b45cd" executionId="6c227a3a-41a6-4e11-8efd-02a0553b46eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cfa535a2-756a-5d02-badb-8fb7df1ef388" executionId="7a07850a-ec19-4aed-80b3-fd7477664875" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0bba9bc-b5bb-2a6c-4475-b61c8d67b000" executionId="3267e2fe-c392-44b4-b966-7c88e9ed5e53" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d595057a-93cd-79ea-b780-b06fe4591bbc" executionId="d0bac7b3-3070-4d2b-9d4c-644e3ad1d548" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6f5ee68-bc22-0ee5-b9c1-df81399fcf61" executionId="d53bf6df-7a7e-448e-a210-085e438c706c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9cbe861-7ec5-3099-ba38-2c605d306673" executionId="dcf13db8-12ff-4d61-a108-6a0798feaab4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e47e284a-b0f2-867a-9c3d-a3b9b019db7c" executionId="99ec2e8e-75e0-478e-9711-e49dcaf7e819" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ed98a529-aab6-d61c-cfb4-73dfff4d2c0d" executionId="0d1ce630-42c5-4d0e-8487-31cb9c26ff33" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efdb3c32-d60e-1f4f-6290-2e9ad6091d12" executionId="ae7bb2eb-547d-490e-8e3a-40b8b2594c22" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7cd8541-dc96-429d-5112-23b12e0d7bcb" executionId="cc79ca29-f0d1-4639-9ae1-c9b43b57c242" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fafc4f6d-5127-6b3c-75ce-070639d10101" executionId="d05ed53e-65ed-485c-b52a-7c2f3924b560" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="6ba5226e-b58d-455a-8c1b-da28bf582460" testId="002c1d11-d5b0-9d8f-3f74-b7cf6f535e8a" testName="get_ImageTest" computerName="MATHIAS-PC" duration="00:00:00.0373025" startTime="2012-01-21T15:46:31.3059627+01:00" endTime="2012-01-21T15:46:31.7999910+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ba5226e-b58d-455a-8c1b-da28bf582460">
+    </UnitTestResult>
+    <UnitTestResult executionId="a983c6bf-43a4-4946-9f53-d355030608f2" testId="002d83ad-e4d7-31f9-b4df-1f60f1b5d3b4" testName="ImageObjectConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0031744" startTime="2012-01-21T15:46:31.8039912+01:00" endTime="2012-01-21T15:46:31.8169920+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a983c6bf-43a4-4946-9f53-d355030608f2">
+    </UnitTestResult>
+    <UnitTestResult executionId="5f58399c-f1d9-47be-80dd-c03e09db3450" testId="0154749f-78bc-bf28-ca06-2e5f09a33e51" testName="performTest" computerName="MATHIAS-PC" duration="00:00:00.0024090" startTime="2012-01-21T15:46:31.8189921+01:00" endTime="2012-01-21T15:46:31.8329929+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f58399c-f1d9-47be-80dd-c03e09db3450">
+    </UnitTestResult>
+    <UnitTestResult executionId="9f0e4992-b590-4cda-b074-360a0900dfeb" testId="04635d02-4f9e-45d8-3e06-60b4ba2dbebd" testName="BlackWhiteFilterConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0007476" startTime="2012-01-21T15:46:31.8399933+01:00" endTime="2012-01-21T15:46:31.8689949+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f0e4992-b590-4cda-b074-360a0900dfeb">
+    </UnitTestResult>
+    <UnitTestResult executionId="46330e38-c909-4357-9fdc-71eff93f41f1" testId="04f5fa0a-27c4-cb2b-5bf8-37a8a1374577" testName="try_refreshTest" computerName="MATHIAS-PC" duration="00:00:00.0004732" startTime="2012-01-21T15:46:31.8709951+01:00" endTime="2012-01-21T15:46:31.8819957+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46330e38-c909-4357-9fdc-71eff93f41f1">
+    </UnitTestResult>
+    <UnitTestResult executionId="e1bb09ca-96e7-4fe8-979e-4ab6f76710db" testId="077e8d8c-fbc7-c3fb-6643-80bef911c8ad" testName="get_ImageManipulatorTypeTest" computerName="MATHIAS-PC" duration="00:00:00.0022437" startTime="2012-01-21T15:46:31.8839958+01:00" endTime="2012-01-21T15:46:31.8969966+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1bb09ca-96e7-4fe8-979e-4ab6f76710db">
+    </UnitTestResult>
+    <UnitTestResult executionId="c6b0b951-4110-490d-982e-6fbaf9f33303" testId="0dfe1cd7-d495-1876-69e7-6ac597aa1bbd" testName="startTimeTest" computerName="MATHIAS-PC" duration="00:00:00.0002500" startTime="2012-01-21T15:46:31.8979966+01:00" endTime="2012-01-21T15:46:31.9109974+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6b0b951-4110-490d-982e-6fbaf9f33303">
+    </UnitTestResult>
+    <UnitTestResult executionId="336efccc-a97d-438f-af39-1e2d560c9637" testId="0ff7e0d0-a263-d910-623c-cc55a9dbcac2" testName="OscillationFilterConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0013112" startTime="2012-01-21T15:46:31.9129975+01:00" endTime="2012-01-21T15:46:31.9239981+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="336efccc-a97d-438f-af39-1e2d560c9637">
+    </UnitTestResult>
+    <UnitTestResult executionId="c2401b6c-d217-4c07-a453-bb7c45bcefc9" testId="12236330-5422-6a79-c41f-2614bfda9226" testName="invoke_refreshTest" computerName="MATHIAS-PC" duration="00:00:00.0016585" startTime="2012-01-21T15:46:31.9289984+01:00" endTime="2012-01-21T15:46:31.9409991+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2401b6c-d217-4c07-a453-bb7c45bcefc9">
+    </UnitTestResult>
+    <UnitTestResult executionId="9493b748-240a-47ab-8316-6a5eefccfc76" testId="2230829b-1f4f-d9e4-adb1-df3b8d64f72f" testName="SepiaFilterConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0015066" startTime="2012-01-21T15:46:31.9449993+01:00" endTime="2012-01-21T15:46:31.9570000+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9493b748-240a-47ab-8316-6a5eefccfc76">
+    </UnitTestResult>
+    <UnitTestResult executionId="04ad512a-e502-44a3-83a8-067a3cf040a8" testId="25c7f40f-f705-2c0e-0d5a-1c8405235583" testName="set_deviceTest" computerName="MATHIAS-PC" duration="00:00:00.0017837" startTime="2012-01-21T15:46:31.9600002+01:00" endTime="2012-01-21T15:46:31.9740010+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04ad512a-e502-44a3-83a8-067a3cf040a8">
+    </UnitTestResult>
+    <UnitTestResult executionId="ae0cd22a-f32f-4700-8629-cf44f35c6def" testId="3196b23b-28ea-1580-8a76-65c8297f7f0d" testName="remove_lastTest" computerName="MATHIAS-PC" duration="00:00:00.0047585" startTime="2012-01-21T15:46:31.9780012+01:00" endTime="2012-01-21T15:46:31.9930020+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae0cd22a-f32f-4700-8629-cf44f35c6def">
+    </UnitTestResult>
+    <UnitTestResult executionId="3d268757-d553-4347-960b-4a4481e16f9c" testId="32b13811-adb6-ec77-d94c-bf5c860951be" testName="MainTest1" computerName="MATHIAS-PC" startTime="2012-01-21T15:46:31.9990024+01:00" endTime="2012-01-21T15:46:32.3760239+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d268757-d553-4347-960b-4a4481e16f9c">
+      <Output>
+        <ErrorInfo>
+          <Message>Der Agent-Prozess wurde angehalten, solange der Test ausgeführt wird.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="33aebb95-d0e7-41a3-b498-122901b158d4" testId="33a1462e-9d73-e911-3c6d-16b35104b689" testName="set_Webcam_pictureTest" computerName="MATHIAS-PC" duration="00:00:01.3201886" startTime="2012-01-21T15:46:32.3890247+01:00" endTime="2012-01-21T15:46:34.1871275+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="33aebb95-d0e7-41a3-b498-122901b158d4">
+    </UnitTestResult>
+    <UnitTestResult executionId="8308af65-c9bb-47cf-9b9d-7d5926a20413" testId="37f7fa63-e38f-d747-b2a4-90104bd11c78" testName="addTest" computerName="MATHIAS-PC" duration="00:00:00.0146552" startTime="2012-01-21T15:46:34.1991282+01:00" endTime="2012-01-21T15:46:34.2281299+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8308af65-c9bb-47cf-9b9d-7d5926a20413">
+    </UnitTestResult>
+    <UnitTestResult executionId="c291713a-3a67-4e00-b59e-f249d5823c09" testId="38dff47a-7dba-e3f1-22bd-fcae75232126" testName="stop_captureTest" computerName="MATHIAS-PC" duration="00:00:00.0003249" startTime="2012-01-21T15:46:34.2491311+01:00" endTime="2012-01-21T15:46:34.2631319+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c291713a-3a67-4e00-b59e-f249d5823c09">
+    </UnitTestResult>
+    <UnitTestResult executionId="10fb79ab-dc8a-4469-ad54-93920b2e5e4e" testId="3be80adf-bcab-b9a9-d0fe-a1804ca70733" testName="rotateTest" computerName="MATHIAS-PC" duration="00:00:00.0011447" startTime="2012-01-21T15:46:34.2691322+01:00" endTime="2012-01-21T15:46:34.2901334+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10fb79ab-dc8a-4469-ad54-93920b2e5e4e">
+    </UnitTestResult>
+    <UnitTestResult executionId="cbfe725c-b659-4a66-a761-f9d2a9c79e79" testId="3f931057-a5a1-c80b-16bc-3727154b6a57" testName="set_solutionTest" computerName="MATHIAS-PC" duration="00:00:00.0099870" startTime="2012-01-21T15:46:34.2921335+01:00" endTime="2012-01-21T15:46:34.3451366+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbfe725c-b659-4a66-a761-f9d2a9c79e79">
+    </UnitTestResult>
+    <UnitTestResult executionId="a1fb3f8a-0141-415a-bacd-a1502f501084" testId="518d9429-f1e2-c6b6-191d-aa275e2ecffe" testName="refreshTest" computerName="MATHIAS-PC" duration="00:00:00.0039626" startTime="2012-01-21T15:46:34.3501369+01:00" endTime="2012-01-21T15:46:34.3711381+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a1fb3f8a-0141-415a-bacd-a1502f501084">
+    </UnitTestResult>
+    <UnitTestResult executionId="c4c1ed67-3973-407b-bf79-db1d0b4421aa" testId="5694bef5-fbcd-f717-8901-1348ecdba087" testName="show_Webcam_pictureTest" computerName="MATHIAS-PC" duration="00:00:00.0020568" startTime="2012-01-21T15:46:34.3821387+01:00" endTime="2012-01-21T15:46:34.3961395+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4c1ed67-3973-407b-bf79-db1d0b4421aa">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3edd1d6-1a65-4cd9-b53c-7d8eb41b5142" testId="5ca0c1f6-2d3a-88b6-1bfe-844668d71a0a" testName="registerTest" computerName="MATHIAS-PC" duration="00:00:00.0009429" startTime="2012-01-21T15:46:34.4061401+01:00" endTime="2012-01-21T15:46:34.4211409+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3edd1d6-1a65-4cd9-b53c-7d8eb41b5142">
+    </UnitTestResult>
+    <UnitTestResult executionId="b49a85b1-5361-4f45-ab46-263ea6faf456" testId="5d17ee44-b5cd-0e62-ac4b-1bc91d9bc224" testName="RotateFilterConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0005069" startTime="2012-01-21T15:46:34.4261412+01:00" endTime="2012-01-21T15:46:34.4391420+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b49a85b1-5361-4f45-ab46-263ea6faf456">
+    </UnitTestResult>
+    <UnitTestResult executionId="4c221d8d-b36e-489a-9642-34bba05f768a" testId="5fafb705-0681-66bb-8720-8f83850173f6" testName="performTest" computerName="MATHIAS-PC" duration="00:00:00.0058923" startTime="2012-01-21T15:46:34.4411421+01:00" endTime="2012-01-21T15:46:34.4661435+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4c221d8d-b36e-489a-9642-34bba05f768a">
+    </UnitTestResult>
+    <UnitTestResult executionId="cf2a8444-67b1-46c9-b0a3-8f8ecdc36f59" testId="62772180-5e91-c353-0985-15028ab2631c" testName="NullImageObjectConstructorTest" computerName="MATHIAS-PC" startTime="2012-01-21T15:46:34.4801443+01:00" endTime="2012-01-21T15:46:34.9461710+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf2a8444-67b1-46c9-b0a3-8f8ecdc36f59">
+      <Output>
+        <ErrorInfo>
+          <Message>Der Agent-Prozess wurde angehalten, solange der Test ausgeführt wird.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="db58e67e-6426-43ce-90fa-579b70aecba4" testId="69e27bca-8834-dbda-d579-a227f1d890a9" testName="performTest" computerName="MATHIAS-PC" duration="00:00:00.0418673" startTime="2012-01-21T15:46:34.9611718+01:00" endTime="2012-01-21T15:46:35.5532057+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db58e67e-6426-43ce-90fa-579b70aecba4">
+    </UnitTestResult>
+    <UnitTestResult executionId="6007663d-a159-49d2-ad6d-0b73f60456af" testId="70a1c56b-2926-56d3-d384-a7aa4f5f64e3" testName="getTimeTest" computerName="MATHIAS-PC" duration="00:00:00.0017623" startTime="2012-01-21T15:46:35.5672065+01:00" endTime="2012-01-21T15:46:35.5802072+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6007663d-a159-49d2-ad6d-0b73f60456af">
+    </UnitTestResult>
+    <UnitTestResult executionId="3ba78d04-9ed4-4df9-9d73-88f458241e70" testId="71c40672-4568-084c-9dcf-ec4fac8c82e8" testName="WebcamControllerConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0013100" startTime="2012-01-21T15:46:35.5862076+01:00" endTime="2012-01-21T15:46:35.5972082+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ba78d04-9ed4-4df9-9d73-88f458241e70">
+    </UnitTestResult>
+    <UnitTestResult executionId="799dc8d2-e097-4b70-b857-c407bb31f2b9" testId="75cc471e-1517-af11-e8dc-a61e8ea83941" testName="performTest" computerName="MATHIAS-PC" duration="00:00:00.0019616" startTime="2012-01-21T15:46:35.6002084+01:00" endTime="2012-01-21T15:46:35.6112090+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="799dc8d2-e097-4b70-b857-c407bb31f2b9">
+    </UnitTestResult>
+    <UnitTestResult executionId="912455d1-5adc-4e18-b70a-c08d6496d84d" testId="78001a50-ff7e-88eb-9e4c-1447d4837f35" testName="get_ImageTest" computerName="MATHIAS-PC" duration="00:00:00.0022400" startTime="2012-01-21T15:46:35.6152092+01:00" endTime="2012-01-21T15:46:35.6282100+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="912455d1-5adc-4e18-b70a-c08d6496d84d">
+    </UnitTestResult>
+    <UnitTestResult executionId="e62c4795-e7b6-4962-84f2-e9ea09d432b4" testId="7870b940-fe6b-7b30-3290-675eea668a00" testName="performTest" computerName="MATHIAS-PC" duration="00:00:00.0017935" startTime="2012-01-21T15:46:35.6312101+01:00" endTime="2012-01-21T15:46:35.6452109+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e62c4795-e7b6-4962-84f2-e9ea09d432b4">
+    </UnitTestResult>
+    <UnitTestResult executionId="e4323481-20fb-4ec3-ad72-62a4087f77b6" testId="7890454c-0a6b-e2f7-057c-7d73ddaaa939" testName="get_ImageManipulatorTypeTest" computerName="MATHIAS-PC" duration="00:00:00.0034549" startTime="2012-01-21T15:46:35.6472111+01:00" endTime="2012-01-21T15:46:35.6642120+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4323481-20fb-4ec3-ad72-62a4087f77b6">
+    </UnitTestResult>
+    <UnitTestResult executionId="b14de1fe-4eda-48bf-8254-a5107f11fa69" testId="7d71edaf-c14b-63d9-80d9-3ceb4795ab69" testName="threadsAreAliveTest" computerName="MATHIAS-PC" duration="00:00:00.0054088" startTime="2012-01-21T15:46:35.6662121+01:00" endTime="2012-01-21T15:46:35.6862133+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b14de1fe-4eda-48bf-8254-a5107f11fa69">
+    </UnitTestResult>
+    <UnitTestResult executionId="223da082-d899-4a45-a721-5af494727388" testId="808b215a-6a8c-b953-5df1-d3c332ac032c" testName="setNameTest" computerName="MATHIAS-PC" duration="00:00:00.0020735" startTime="2012-01-21T15:46:35.6872133+01:00" endTime="2012-01-21T15:46:35.7112147+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="223da082-d899-4a45-a721-5af494727388">
+    </UnitTestResult>
+    <UnitTestResult executionId="36b4e37d-8e78-4122-aea6-1c45ce699665" testId="9f5c1e07-d3c6-a508-adce-b5381cb99ec2" testName="save_PixelStateTest" computerName="MATHIAS-PC" duration="00:00:00.0066152" startTime="2012-01-21T15:46:35.7192152+01:00" endTime="2012-01-21T15:46:35.7362161+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36b4e37d-8e78-4122-aea6-1c45ce699665">
+    </UnitTestResult>
+    <UnitTestResult executionId="ee7bcdcf-f606-466d-8d48-171a0879bae4" testId="a09dfaf6-7239-4f0d-306e-6ed80bf95595" testName="RGB_ModeFilterConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0006937" startTime="2012-01-21T15:46:35.7382163+01:00" endTime="2012-01-21T15:46:35.7492169+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee7bcdcf-f606-466d-8d48-171a0879bae4">
+    </UnitTestResult>
+    <UnitTestResult executionId="7a93f11e-50eb-4f2b-8a0b-cdebd5aa3947" testId="af31cf30-9dd9-0a4a-6e4c-d2bbb853ff73" testName="getInstanceTest" computerName="MATHIAS-PC" duration="00:00:00.0109766" startTime="2012-01-21T15:46:35.7532171+01:00" endTime="2012-01-21T15:46:35.7762184+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a93f11e-50eb-4f2b-8a0b-cdebd5aa3947">
+    </UnitTestResult>
+    <UnitTestResult executionId="3f3d6d1a-57e2-414d-b912-5f63702910ec" testId="b433c2d4-cdc9-e771-9e94-8baef9ea3cf8" testName="setMainFormTest" computerName="MATHIAS-PC" duration="00:00:00.2911019" startTime="2012-01-21T15:46:35.7812187+01:00" endTime="2012-01-21T15:46:36.0792358+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f3d6d1a-57e2-414d-b912-5f63702910ec">
+    </UnitTestResult>
+    <UnitTestResult executionId="46681436-acbe-4704-9951-e4486cdc32ec" testId="b573db96-268a-85a5-d513-a40b0110ca2d" testName="getThreadsTest" computerName="MATHIAS-PC" duration="00:00:00.0023956" startTime="2012-01-21T15:46:36.0832360+01:00" endTime="2012-01-21T15:46:36.0962367+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46681436-acbe-4704-9951-e4486cdc32ec">
+    </UnitTestResult>
+    <UnitTestResult executionId="39e8759f-521a-41e8-a56e-c0bc90e73647" testId="b6d985b7-8ac2-ad2d-96aa-548b788286c5" testName="getInstanceTest" computerName="MATHIAS-PC" duration="00:00:00.0008217" startTime="2012-01-21T15:46:36.0982368+01:00" endTime="2012-01-21T15:46:36.1112376+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39e8759f-521a-41e8-a56e-c0bc90e73647">
+    </UnitTestResult>
+    <UnitTestResult executionId="4f55f38c-345b-4ca2-8e25-0d8e5d933168" testId="c0c10d26-1016-1b3b-be9d-3dac26dd0d63" testName="openWebcamWindowTest" computerName="MATHIAS-PC" duration="00:00:00.2195910" startTime="2012-01-21T15:46:36.1132377+01:00" endTime="2012-01-21T15:46:36.3412507+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f55f38c-345b-4ca2-8e25-0d8e5d933168">
+    </UnitTestResult>
+    <UnitTestResult executionId="8d016ba7-efe3-43c9-995d-e842055196bd" testId="c17a41ff-1724-776a-23b7-c9e08163c9a8" testName="getInstanceTest" computerName="MATHIAS-PC" duration="00:00:00.0008355" startTime="2012-01-21T15:46:36.3522514+01:00" endTime="2012-01-21T15:46:36.3692523+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d016ba7-efe3-43c9-995d-e842055196bd">
+    </UnitTestResult>
+    <UnitTestResult executionId="2c28dd2c-5bd2-4314-88ef-50dfd5dc6a7c" testId="c4c3c443-7469-c3ab-1664-55cbef9492d7" testName="performTest" computerName="MATHIAS-PC" duration="00:00:00.0026177" startTime="2012-01-21T15:46:36.3712525+01:00" endTime="2012-01-21T15:46:36.3872534+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c28dd2c-5bd2-4314-88ef-50dfd5dc6a7c">
+    </UnitTestResult>
+    <UnitTestResult executionId="55d0edd3-b7c7-4edf-b40a-081c866f9395" testId="c54b7c3d-97a4-cf3e-1b61-db666fb0b2b4" testName="ImageManipulatorConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0100766" startTime="2012-01-21T15:46:36.3902536+01:00" endTime="2012-01-21T15:46:36.4092546+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55d0edd3-b7c7-4edf-b40a-081c866f9395">
+    </UnitTestResult>
+    <UnitTestResult executionId="0e9a5850-fb7b-40e5-b302-dbaa5fd8b8d8" testId="c8cc5580-ead3-5acf-a1e1-3282adddd441" testName="computeHeightStepsTest" computerName="MATHIAS-PC" duration="00:00:00.0020350" startTime="2012-01-21T15:46:36.4132549+01:00" endTime="2012-01-21T15:46:36.4282557+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e9a5850-fb7b-40e5-b302-dbaa5fd8b8d8">
+    </UnitTestResult>
+    <UnitTestResult executionId="1278bdc8-a943-4e63-b1ac-0c816a85aa06" testId="cb6f91e9-958d-53a3-511f-f5e378b3ee24" testName="ErrorDiffusionFilterConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0007144" startTime="2012-01-21T15:46:36.4312559+01:00" endTime="2012-01-21T15:46:36.4422565+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1278bdc8-a943-4e63-b1ac-0c816a85aa06">
+    </UnitTestResult>
+    <UnitTestResult executionId="6c227a3a-41a6-4e11-8efd-02a0553b46eb" testId="cf2f512f-e3ec-d64c-76cd-f2dad22b45cd" testName="ThreadHandlerConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0003817" startTime="2012-01-21T15:46:36.4442566+01:00" endTime="2012-01-21T15:46:36.4542572+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c227a3a-41a6-4e11-8efd-02a0553b46eb">
+    </UnitTestResult>
+    <UnitTestResult executionId="7a07850a-ec19-4aed-80b3-fd7477664875" testId="cfa535a2-756a-5d02-badb-8fb7df1ef388" testName="GrayscaleFilterConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0014069" startTime="2012-01-21T15:46:36.4562573+01:00" endTime="2012-01-21T15:46:36.4692581+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a07850a-ec19-4aed-80b3-fd7477664875">
+    </UnitTestResult>
+    <UnitTestResult executionId="3267e2fe-c392-44b4-b966-7c88e9ed5e53" testId="d0bba9bc-b5bb-2a6c-4475-b61c8d67b000" testName="initTest" computerName="MATHIAS-PC" duration="00:00:00.0036040" startTime="2012-01-21T15:46:36.4732583+01:00" endTime="2012-01-21T15:46:36.4872591+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3267e2fe-c392-44b4-b966-7c88e9ed5e53">
+    </UnitTestResult>
+    <UnitTestResult executionId="d0bac7b3-3070-4d2b-9d4c-644e3ad1d548" testId="d595057a-93cd-79ea-b780-b06fe4591bbc" testName="try_save_PixelStateTest" computerName="MATHIAS-PC" duration="00:00:00.0026789" startTime="2012-01-21T15:46:36.4912593+01:00" endTime="2012-01-21T15:46:36.5032600+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d0bac7b3-3070-4d2b-9d4c-644e3ad1d548">
+    </UnitTestResult>
+    <UnitTestResult executionId="d53bf6df-7a7e-448e-a210-085e438c706c" testId="d6f5ee68-bc22-0ee5-b9c1-df81399fcf61" testName="performTest1" computerName="MATHIAS-PC" duration="00:00:00.0079398" startTime="2012-01-21T15:46:36.5072602+01:00" endTime="2012-01-21T15:46:36.5272614+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d53bf6df-7a7e-448e-a210-085e438c706c">
+    </UnitTestResult>
+    <UnitTestResult executionId="dcf13db8-12ff-4d61-a108-6a0798feaab4" testId="d9cbe861-7ec5-3099-ba38-2c605d306673" testName="InvertFilterConstructorTest" computerName="MATHIAS-PC" duration="00:00:00.0012087" startTime="2012-01-21T15:46:36.5292615+01:00" endTime="2012-01-21T15:46:36.5442624+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dcf13db8-12ff-4d61-a108-6a0798feaab4">
+    </UnitTestResult>
+    <UnitTestResult executionId="99ec2e8e-75e0-478e-9711-e49dcaf7e819" testId="e47e284a-b0f2-867a-9c3d-a3b9b019db7c" testName="get_lastTest" computerName="MATHIAS-PC" duration="00:00:00.0011767" startTime="2012-01-21T15:46:36.5522628+01:00" endTime="2012-01-21T15:46:36.5652636+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99ec2e8e-75e0-478e-9711-e49dcaf7e819">
+    </UnitTestResult>
+    <UnitTestResult executionId="0d1ce630-42c5-4d0e-8487-31cb9c26ff33" testId="ed98a529-aab6-d61c-cfb4-73dfff4d2c0d" testName="performTest" computerName="MATHIAS-PC" duration="00:00:00.0023506" startTime="2012-01-21T15:46:36.5722640+01:00" endTime="2012-01-21T15:46:36.5842646+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d1ce630-42c5-4d0e-8487-31cb9c26ff33">
+    </UnitTestResult>
+    <UnitTestResult executionId="ae7bb2eb-547d-490e-8e3a-40b8b2594c22" testId="efdb3c32-d60e-1f4f-6290-2e9ad6091d12" testName="get_BitmapTest" computerName="MATHIAS-PC" duration="00:00:00.0055657" startTime="2012-01-21T15:46:36.5852647+01:00" endTime="2012-01-21T15:46:36.6122662+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae7bb2eb-547d-490e-8e3a-40b8b2594c22">
+    </UnitTestResult>
+    <UnitTestResult executionId="cc79ca29-f0d1-4639-9ae1-c9b43b57c242" testId="f7cd8541-dc96-429d-5112-23b12e0d7bcb" testName="performTest" computerName="MATHIAS-PC" duration="00:00:00.0011714" startTime="2012-01-21T15:46:36.6172665+01:00" endTime="2012-01-21T15:46:36.6322674+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc79ca29-f0d1-4639-9ae1-c9b43b57c242">
+    </UnitTestResult>
+    <UnitTestResult executionId="d05ed53e-65ed-485c-b52a-7c2f3924b560" testId="fafc4f6d-5127-6b3c-75ce-070639d10101" testName="resetTest" computerName="MATHIAS-PC" duration="00:00:00.0012468" startTime="2012-01-21T15:46:36.6342675+01:00" endTime="2012-01-21T15:46:36.6442681+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d05ed53e-65ed-485c-b52a-7c2f3924b560">
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\Programming\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\Programming\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="Facebook">
       <HintPath>..\Programming\bin\Release\Facebook.dll</HintPath>
     </Reference>
@@ -60,12 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlackWhiteFilterTest.cs" />
-    <Compile Include="ControllerTest.cs" />
     <Compile Include="ErrorDiffusionFilterTest.cs" />
+    <Compile Include="FilterFactoryTest.cs" />
     <Compile Include="GrayscaleFilterTest.cs" />
     <Compile Include="ImageManipulatorTest.cs" />
     <Compile Include="ImageObjectTest.cs" />
     <Compile Include="InvertFilterTest.cs" />
+    <Compile Include="NullImageObjectTest.cs" />
     <Compile Include="OscillationFilterTest.cs" />
     <Compile Include="PixelStateTest.cs" />
     <Compile Include="ProgramTest.cs" />
@@ -75,6 +82,8 @@
     <Compile Include="SepiaFilterTest.cs" />
     <Compile Include="ThreadHandlerTest.cs" />
     <Compile Include="UserTest.cs" />
+    <Compile Include="WebcamControllerTest.cs" />
+    <Compile Include="WebcamModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Programming\Programming.csproj">

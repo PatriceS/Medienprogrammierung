@@ -77,13 +77,13 @@ namespace TestProject1
             Image img = (Image)b;
             ImageObject imgObj = new ImageObject(img, ImageManipulatorType.Name.GRAYSCALE);
 
-            ImageObject imgObj2 = target.get_last();
-            Assert.IsNull(imgObj2);
+            I_ImageObject imgObj2 = target.get_last();
+            Assert.IsNotNull(imgObj2);
             target.add(imgObj);
 
             imgObj2 = target.get_last();
 
-            Assert.IsInstanceOfType(imgObj2, typeof(ImageObject));
+            Assert.IsInstanceOfType(imgObj2, typeof(I_ImageObject));
             Assert.IsNotNull(imgObj2);
         }
 
@@ -118,7 +118,7 @@ namespace TestProject1
             target.add(imgObj2);
             target.add(imgObj1);
 
-            ImageObject img_last = target.get_last();
+            I_ImageObject img_last = target.get_last();
 
             Assert.AreEqual(img_last.get_ImageManipulatorType(), imgObj1.get_ImageManipulatorType());
 
@@ -145,7 +145,7 @@ namespace TestProject1
             target.add(imgObj2);
             target.add(imgObj1);
 
-            ImageObject img_last = target.remove_last();
+            I_ImageObject img_last = target.remove_last();
 
             Assert.AreEqual(img_last.get_ImageManipulatorType(), imgObj1.get_ImageManipulatorType());
 
@@ -157,7 +157,7 @@ namespace TestProject1
             Assert.AreEqual(img_last.get_ImageManipulatorType(), imgObj3.get_ImageManipulatorType());
 
             img_last = target.remove_last(); 
-            Assert.IsNull(img_last);
+            Assert.IsNotNull(img_last);
 
         }
 
@@ -178,14 +178,14 @@ namespace TestProject1
             target.add(imgObj3);
             target.add(imgObj2);
             target.add(imgObj1);
-            ImageObject img_last = target.get_last();
+            I_ImageObject img_last = target.get_last();
             
 
             img_last = target.get_last();
             Assert.AreEqual(img_last.get_ImageManipulatorType(), imgObj1.get_ImageManipulatorType());
             target.reset();
-            ImageObject img_last2 = target.get_last();
-            Assert.IsNull(img_last2);
+            I_ImageObject img_last2 = target.get_last();
+            Assert.IsNotNull(img_last2);
         }
     }
 }

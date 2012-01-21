@@ -94,7 +94,7 @@ namespace TestProject1
         public void performTest1()
         {
 
-            Bitmap bitmap = new Bitmap(10, 10);
+            Bitmap bitmap = new Bitmap(100, 100);
             ImageManipulatorType.Name filter = ImageManipulatorType.Name.GRAYSCALE; // TODO: Passenden Wert initialisieren
             int threads = 2; // TODO: Passenden Wert initialisieren
             ThreadHandler thHandler = new ThreadHandler(threads);

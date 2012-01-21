@@ -123,6 +123,7 @@ namespace Programming
             return null;
         }
 
+        /*Stopt die Aufnahme und gibt die Aufnahmequelle frei.*/
         public void stop_capture()
         {
             

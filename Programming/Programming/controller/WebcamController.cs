@@ -84,14 +84,19 @@ namespace Programming
             if (capture_possible)
             {
                 Image image = model.get_Image();
+                    // Bild eventuell noch nicht vorhanden, wenn Webcam
+                    // noch nicht initialisiert
                 if (image != null)
                 {
                     pic.Image = image;
+                        
                     mainForm.setPictureBoxSize(pic.Image);
                     pic.Refresh();
+                       // menüs freischalten
                     mainForm.enable_filter_menue();
                     mainForm.enable_edit_menue();
                     mainForm.enable_menue();
+                        // Bild zwischenspeichern
                     PixelState state = PixelState.getInstance();
                     state.set_pictureBox(pic);
                     state.reset();

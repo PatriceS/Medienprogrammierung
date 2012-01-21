@@ -77,7 +77,8 @@ namespace TestProject1
             int height_start = 0; // TODO: Passenden Wert initialisieren
             int height_end = 0; // TODO: Passenden Wert initialisieren
             ThreadHandler thInfo = null; // TODO: Passenden Wert initialisieren
-            InvertFilter target = new InvertFilter(b, Scan0, stride, height_start, height_end, thInfo);
+            int[] i = new int[2];
+            InvertFilter target = new InvertFilter(b, Scan0, stride, height_start, height_end, thInfo, i);
             
         }
 
@@ -93,7 +94,8 @@ namespace TestProject1
             int height_start = 0; // TODO: Passenden Wert initialisieren
             int height_end = 0; // TODO: Passenden Wert initialisieren
             ThreadHandler thInfo = null; // TODO: Passenden Wert initialisieren
-            InvertFilter target = new InvertFilter(b, Scan0, stride, height_start, height_end, thInfo); // TODO: Passenden Wert initialisieren
+            int[] i = new int[2];
+            InvertFilter target = new InvertFilter(b, Scan0, stride, height_start, height_end, thInfo, i); // TODO: Passenden Wert initialisieren
             target.perform();
             
         }
