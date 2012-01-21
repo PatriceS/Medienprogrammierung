@@ -44,16 +44,16 @@
             // 
             // statistikPictureBox
             // 
-            this.statistikPictureBox.Location = new System.Drawing.Point(12, 17);
+            this.statistikPictureBox.Location = new System.Drawing.Point(3, 12);
             this.statistikPictureBox.Name = "statistikPictureBox";
-            this.statistikPictureBox.Size = new System.Drawing.Size(395, 101);
+            this.statistikPictureBox.Size = new System.Drawing.Size(266, 101);
             this.statistikPictureBox.TabIndex = 0;
             this.statistikPictureBox.TabStop = false;
             // 
             // minLabel
             // 
             this.minLabel.AutoSize = true;
-            this.minLabel.Location = new System.Drawing.Point(12, 121);
+            this.minLabel.Location = new System.Drawing.Point(0, 123);
             this.minLabel.Name = "minLabel";
             this.minLabel.Size = new System.Drawing.Size(75, 13);
             this.minLabel.TabIndex = 9;
@@ -62,7 +62,7 @@
             // maxLabel
             // 
             this.maxLabel.AutoSize = true;
-            this.maxLabel.Location = new System.Drawing.Point(12, 149);
+            this.maxLabel.Location = new System.Drawing.Point(0, 151);
             this.maxLabel.Name = "maxLabel";
             this.maxLabel.Size = new System.Drawing.Size(78, 13);
             this.maxLabel.TabIndex = 10;
@@ -71,7 +71,7 @@
             // averageLabel
             // 
             this.averageLabel.AutoSize = true;
-            this.averageLabel.Location = new System.Drawing.Point(12, 176);
+            this.averageLabel.Location = new System.Drawing.Point(0, 178);
             this.averageLabel.Name = "averageLabel";
             this.averageLabel.Size = new System.Drawing.Size(58, 13);
             this.averageLabel.TabIndex = 11;
@@ -80,7 +80,7 @@
             // varianceLabel
             // 
             this.varianceLabel.AutoSize = true;
-            this.varianceLabel.Location = new System.Drawing.Point(12, 202);
+            this.varianceLabel.Location = new System.Drawing.Point(0, 204);
             this.varianceLabel.Name = "varianceLabel";
             this.varianceLabel.Size = new System.Drawing.Size(51, 13);
             this.varianceLabel.TabIndex = 12;
@@ -89,7 +89,7 @@
             // entropyLabel
             // 
             this.entropyLabel.AutoSize = true;
-            this.entropyLabel.Location = new System.Drawing.Point(12, 229);
+            this.entropyLabel.Location = new System.Drawing.Point(0, 231);
             this.entropyLabel.Name = "entropyLabel";
             this.entropyLabel.Size = new System.Drawing.Size(52, 13);
             this.entropyLabel.TabIndex = 13;
@@ -97,7 +97,7 @@
             // 
             // statistikRefreshButton
             // 
-            this.statistikRefreshButton.Location = new System.Drawing.Point(377, 216);
+            this.statistikRefreshButton.Location = new System.Drawing.Point(3, 256);
             this.statistikRefreshButton.Name = "statistikRefreshButton";
             this.statistikRefreshButton.Size = new System.Drawing.Size(113, 23);
             this.statistikRefreshButton.TabIndex = 14;
@@ -108,7 +108,7 @@
             // all_channel_radio
             // 
             this.all_channel_radio.AutoSize = true;
-            this.all_channel_radio.Location = new System.Drawing.Point(413, 15);
+            this.all_channel_radio.Location = new System.Drawing.Point(192, 119);
             this.all_channel_radio.Name = "all_channel_radio";
             this.all_channel_radio.Size = new System.Drawing.Size(77, 17);
             this.all_channel_radio.TabIndex = 15;
@@ -120,7 +120,7 @@
             // red_channel_radio
             // 
             this.red_channel_radio.AutoSize = true;
-            this.red_channel_radio.Location = new System.Drawing.Point(413, 38);
+            this.red_channel_radio.Location = new System.Drawing.Point(192, 147);
             this.red_channel_radio.Name = "red_channel_radio";
             this.red_channel_radio.Size = new System.Drawing.Size(81, 17);
             this.red_channel_radio.TabIndex = 16;
@@ -132,7 +132,7 @@
             // green_channel_radio
             // 
             this.green_channel_radio.AutoSize = true;
-            this.green_channel_radio.Location = new System.Drawing.Point(413, 61);
+            this.green_channel_radio.Location = new System.Drawing.Point(192, 174);
             this.green_channel_radio.Name = "green_channel_radio";
             this.green_channel_radio.Size = new System.Drawing.Size(87, 17);
             this.green_channel_radio.TabIndex = 17;
@@ -144,7 +144,7 @@
             // blue_channel_radio
             // 
             this.blue_channel_radio.AutoSize = true;
-            this.blue_channel_radio.Location = new System.Drawing.Point(413, 84);
+            this.blue_channel_radio.Location = new System.Drawing.Point(192, 200);
             this.blue_channel_radio.Name = "blue_channel_radio";
             this.blue_channel_radio.Size = new System.Drawing.Size(85, 17);
             this.blue_channel_radio.TabIndex = 18;
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 251);
+            this.ClientSize = new System.Drawing.Size(291, 284);
             this.Controls.Add(this.blue_channel_radio);
             this.Controls.Add(this.green_channel_radio);
             this.Controls.Add(this.red_channel_radio);
@@ -169,8 +169,14 @@
             this.Controls.Add(this.maxLabel);
             this.Controls.Add(this.minLabel);
             this.Controls.Add(this.statistikPictureBox);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Location = new System.Drawing.Point(5, 470);
+            this.MinimizeBox = false;
             this.Name = "Statistik";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Statistik";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.Statistik_Load);
             this.Shown += new System.EventHandler(this.Statistik_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.statistikPictureBox)).EndInit();

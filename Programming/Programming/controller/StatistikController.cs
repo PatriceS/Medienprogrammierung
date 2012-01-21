@@ -54,12 +54,14 @@ namespace Programming
         {
             statistikForm = new Statistik();
             statistikForm.Show();
+            mainForm.Focus();
         }
 
 
         public void draw_histogram(System.Windows.Forms.PictureBox statistikPictureBox, Statistik form, Config.histogram_canal canal)
         {
             model.draw_histogram(statistikPictureBox, canal);
+            mainForm.Focus();
         }
 
         public void calculate_histogram(PictureBox statistikPictureBox)
@@ -83,7 +85,7 @@ namespace Programming
             statistikForm.set_averageLabel(model.get_average());
             statistikForm.set_minLabel(model.get_min_value());
             statistikForm.set_maxLabel(model.get_max_value());
-            
+            mainForm.Focus();
             
         }
 
