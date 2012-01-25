@@ -61,7 +61,6 @@
             this.überSompeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.usernameLabel = new System.Windows.Forms.Label();
-            this.loginTwitter = new System.Windows.Forms.Button();
             this.loginFacebook = new System.Windows.Forms.Button();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -78,9 +77,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.publishFacebook = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rotate90 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.rotate270 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.infoThreads = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
@@ -353,21 +350,6 @@
             this.usernameLabel.TabIndex = 5;
             this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // loginTwitter
-            // 
-            this.loginTwitter.AutoSize = true;
-            this.loginTwitter.BackColor = System.Drawing.SystemColors.Highlight;
-            this.loginTwitter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginTwitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginTwitter.Image = ((System.Drawing.Image)(resources.GetObject("loginTwitter.Image")));
-            this.loginTwitter.Location = new System.Drawing.Point(128, 3);
-            this.loginTwitter.Name = "loginTwitter";
-            this.loginTwitter.Size = new System.Drawing.Size(119, 35);
-            this.loginTwitter.TabIndex = 6;
-            this.loginTwitter.Text = "mit Twitter einloggen";
-            this.loginTwitter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.loginTwitter.UseVisualStyleBackColor = false;
-            // 
             // loginFacebook
             // 
             this.loginFacebook.AutoSize = true;
@@ -591,19 +573,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // rotate90
-            // 
-            this.rotate90.BackColor = System.Drawing.SystemColors.Highlight;
-            this.rotate90.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rotate90.Image = ((System.Drawing.Image)(resources.GetObject("rotate90.Image")));
-            this.rotate90.Location = new System.Drawing.Point(253, 3);
-            this.rotate90.Name = "rotate90";
-            this.rotate90.Size = new System.Drawing.Size(39, 35);
-            this.rotate90.TabIndex = 4;
-            this.rotate90.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.rotate90.UseVisualStyleBackColor = false;
-            this.rotate90.Click += new System.EventHandler(this.button1_Click);
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 6;
@@ -613,27 +582,13 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 397F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
-            this.tableLayoutPanel4.Controls.Add(this.rotate270, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.rotate90, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.loginFacebook, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.loginTwitter, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 27);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(787, 41);
             this.tableLayoutPanel4.TabIndex = 8;
-            // 
-            // rotate270
-            // 
-            this.rotate270.BackColor = System.Drawing.SystemColors.Highlight;
-            this.rotate270.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rotate270.Image = ((System.Drawing.Image)(resources.GetObject("rotate270.Image")));
-            this.rotate270.Location = new System.Drawing.Point(298, 3);
-            this.rotate270.Name = "rotate270";
-            this.rotate270.Size = new System.Drawing.Size(39, 35);
-            this.rotate270.TabIndex = 8;
-            this.rotate270.UseVisualStyleBackColor = false;
             // 
             // linkLabel1
             // 
@@ -736,13 +691,10 @@
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem überSompeToolStripMenuItem;
         private System.Windows.Forms.Label usernameLabel;
-        private System.Windows.Forms.Button loginTwitter;
         private System.Windows.Forms.Button loginFacebook;
         private System.Windows.Forms.PictureBox pictureBoxProfile;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        
-        private System.Windows.Forms.Button rotate90;
         private System.Windows.Forms.ComboBox selectAlbumComboBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -774,7 +726,6 @@
         private System.Windows.Forms.ToolStripMenuItem rotToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grünToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blauToolStripMenuItem;
-        private System.Windows.Forms.Button rotate270;
         private System.Windows.Forms.ToolStripMenuItem farbpaletteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem farben_4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem farben_8ToolStripMenuItem1;
